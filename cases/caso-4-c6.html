@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal C6 Bank · PayGo — Renan Marçal</title>
+<link rel="stylesheet" href="../case.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a href="../index.html">← portfólio</a>
+    <a class="crumb">Portal C6 Bank</a>
+  </div>
+  <div class="progress-bar" id="progress"></div>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">PayGo · C6 Bank · 2020–2021</div>
+        <h1>
+          <span class="h1-line">Portal B2B</span>
+          <span class="h1-line">pra lojistas PJ</span>
+        </h1>
+      </div>
+      <div class="hero-right">
+        <p class="hero-summary">[ a preencher — resumo em 2 frases: contexto + o que você resolveu ]</p>
+        <div class="spec">
+          <div><div class="s-label">plataforma</div><div class="s-val">Web · portal institucional B2B</div></div>
+          <div><div class="s-label">papel</div><div class="s-val">[ a preencher ]</div></div>
+          <div><div class="s-label">responsável por</div><div class="s-val">[ a preencher ]</div></div>
+          <div><div class="s-label">escopo</div><div class="s-val">Redesign do portal PJ para merchants com maquininha</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTEÚDO A DESENVOLVER -->
+<!-- Seguir a mesma estrutura de blocos dos outros cases -->
+<!-- Stages sugeridos: contexto · problema · discovery · solução · resultado -->
+
+<div class="wrap">
+  <div class="foot" data-reveal="fade">
+    // case 4 · portal c6 bank · paygo · 2020–2021
+  </div>
+</div>
+
+<script>
+(function(){
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+  }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  const bar = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+    bar.style.width = pct + '%';
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>

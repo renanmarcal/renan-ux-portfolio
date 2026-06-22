@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard de Carteira · Mercado Pago — Renan Marçal</title>
+<link rel="stylesheet" href="../case.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a href="../index.html">← portfólio</a>
+    <a class="crumb">Dashboard de Carteira</a>
+  </div>
+  <div class="progress-bar" id="progress"></div>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">Mercado Pago · 2023–2024</div>
+        <h1>
+          <span class="h1-line">Dashboard de</span>
+          <span class="h1-line">gestão de carteira</span>
+        </h1>
+      </div>
+      <div class="hero-right">
+        <p class="hero-summary">O gestor passava uma hora por dia cruzando dados no Excel antes de conseguir liderar. <b>Organizar os dados pelo momento da pergunta tirou ele da planilha.</b></p>
+        <div class="spec">
+          <div><div class="s-label">plataforma</div><div class="s-val">Web · ferramenta interna</div></div>
+          <div><div class="s-label">papel</div><div class="s-val">[ a preencher ]</div></div>
+          <div><div class="s-label">responsável por</div><div class="s-val">[ a preencher ]</div></div>
+          <div><div class="s-label">escopo</div><div class="s-val">[ a preencher ]</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTEÚDO A DESENVOLVER -->
+<!-- Seguir a mesma estrutura de blocos do caso-1-crm.html -->
+<!-- Stages sugeridos: problema · discovery · definição · solução · resultado -->
+
+<div class="wrap">
+  <div class="foot" data-reveal="fade">
+    // case 2 · dashboard de carteira mercado pago · 2023–2024
+  </div>
+</div>
+
+<script>
+(function(){
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+  }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  const bar = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+    bar.style.width = pct + '%';
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>
