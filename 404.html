@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página não encontrada · Renan Marçal</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --paper:    #f3efe7;
+  --ink:      #1c1916;
+  --ink-soft: #5c554b;
+  --ink-faint:#9b9183;
+  --line:     #d8d0c0;
+  --accent:   #b8451f;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.625;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: .94;
+  letter-spacing: -.03em;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 430px) { h1 { font-size: 52px; } }
+
+p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  max-width: 38ch;
+  margin-bottom: 40px;
+}
+
+a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+  transition: color .2s, border-color .2s;
+}
+
+a:hover { color: var(--accent); border-color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="code">404</div>
+  <h1>Página não<br>encontrada</h1>
+  <p>O endereço que você acessou não existe ou foi movido.</p>
+  <a href="index.html">← voltar pro portfólio</a>
+</body>
+</html>
