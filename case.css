@@ -104,6 +104,7 @@ h1 {
 
 /* ─── blocks ─── */
 .block { padding: 120px 0; border-bottom: 1px solid var(--line); }
+.block:last-of-type { border-bottom: none; }
 .block-grid { display: grid; grid-template-columns: 160px 1fr; gap: 40px; }
 @media (max-width: 720px) { .block-grid { grid-template-columns: 1fr; gap: 20px; } }
 .block-body { max-width: 62ch; }

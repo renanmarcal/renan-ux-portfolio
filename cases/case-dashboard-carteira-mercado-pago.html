@@ -69,8 +69,8 @@
   const bar = document.getElementById('progress');
   window.addEventListener('scroll', () => {
     const h = document.documentElement;
-    const pct = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
-    bar.style.width = pct + '%';
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
   }, { passive: true });
 })();
 </script>
