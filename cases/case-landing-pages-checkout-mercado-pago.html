@@ -6,10 +6,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<title>Landing Pages e Checkout · Renan Marçal</title>
-<meta name="description" content="Designer central da iniciativa de landing pages no Mercado Pago. Criei um sistema de componentes no Figma que padronizou e acelerou lançamentos de produto.">
-<meta property="og:title" content="Landing Pages e Checkout · Renan Marçal">
-<meta property="og:description" content="Designer central da iniciativa de landing pages no Mercado Pago. Criei um sistema de componentes no Figma que padronizou e acelerou lançamentos de produto.">
+<title>Landing pages de adquirência em escala · Renan Marçal</title>
+<meta name="description" content="Engenharia, produto e marketing tinham necessidades que competiam entre si na criação das landing pages do Mercado Pago. O trabalho foi encontrar uma estrutura que atendesse os três sem recomeçar a cada lançamento.">
+<meta property="og:title" content="Landing pages de adquirência em escala · Renan Marçal">
+<meta property="og:description" content="Engenharia, produto e marketing tinham necessidades que competiam entre si na criação das landing pages do Mercado Pago. O trabalho foi encontrar uma estrutura que atendesse os três sem recomeçar a cada lançamento.">
 <meta property="og:image" content="https://renanmarcal.github.io/renan-ux-portfolio/favicon.svg">
 <meta property="og:url" content="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-landing-pages-checkout-mercado-pago.html">
 <link rel="canonical" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-landing-pages-checkout-mercado-pago.html">
@@ -21,7 +21,7 @@
 <div class="topbar">
   <div class="wrap">
     <a href="../index.html">← Renan Marçal</a>
-    <span class="crumb">Landing Pages</span>
+    <span class="crumb">Landing pages</span>
   </div>
   <div class="progress-bar" id="progress"></div>
 </div>
@@ -32,224 +32,218 @@
       <div>
         <div class="kicker">Mercado Pago · 2021–2022</div>
         <h1>
-          <span class="h1-line">Componentes pra</span>
-          <span class="h1-line">landing de produto</span>
+          <span class="h1-line">Landing pages</span>
+          <span class="h1-line">em escala</span>
         </h1>
       </div>
       <div class="hero-right">
-        <p class="hero-summary">As landing pages de produto do site do Mercado Pago eram construídas uma a uma, sem padrão. Cada lançamento recomeçava do zero. <b>Montei um sistema de componentes no Figma pra padronizar as páginas e acelerar lançamento e manutenção.</b></p>
+        <p class="hero-summary">Engenharia, produto e marketing tinham necessidades que competiam entre si na criação das páginas. O trabalho foi encontrar uma estrutura que atendesse os três sem que cada lançamento virasse um projeto do zero.</p>
         <div class="spec">
-          <div><div class="s-label">plataforma</div><div class="s-val">Web · mercadopago.com</div></div>
-          <div><div class="s-label">papel</div><div class="s-val">Designer central da iniciativa</div></div>
-          <div><div class="s-label">responsável por</div><div class="s-val">Auditoria · Componentização · Regras de conteúdo · QA</div></div>
-          <div><div class="s-label">escopo</div><div class="s-val">Linha completa de produtos para sellers</div></div>
+          <div><div class="s-label">Plataforma</div><div class="s-val">Web</div></div>
+          <div><div class="s-label">Áreas</div><div class="s-val">Design de sistema · Componentes · Escalabilidade</div></div>
+          <div><div class="s-label">Papel</div><div class="s-val">Designer</div></div>
         </div>
+        <a class="dl" href="../assets/pdf/case-landing-pages-adquirencia.pdf" download target="_blank" rel="noopener" style="margin-top:28px">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+          Baixar apresentação
+        </a>
+        <!-- PDF pendente: adicionar arquivo em assets/pdf/case-landing-pages-adquirencia.pdf -->
       </div>
     </div>
   </div>
 </div>
 
-<!-- 01 OBJETIVO -->
-<div class="block">
+<!-- 01 ESTRUTURA -->
+<div class="block" id="b01" data-stage="01" data-name="Estrutura">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage problema">problema de negócio</span>
+        <span class="stage problema">Estrutura</span>
         <span class="stage-num">01</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Lançamento de produto levava quase um trimestre</h2>
-        <p class="body-text" data-reveal="up" data-d="1">O Mercado Pago lança produtos pra sellers o tempo todo: maquininha Point, QR Code, Link de Pagamento, Pix, Checkout pra loja virtual. Cada produto tem sua landing page no site, e cada página ainda precisa de uma versão por país, com value prop, assets e conteúdo adaptados.</p>
-        <p class="body-text" data-reveal="up" data-d="1">Um lançamento que cobria o Brasil e mais alguns países levava quase um trimestre. O tempo não vinha do processo em si, vinha do fato de cada página ser construída do zero, por designers diferentes, em momentos diferentes.</p>
-        <div class="keypoint" data-reveal="up">O objetivo era montar uma estrutura de componentes pra lançar e manter qualquer produto, em qualquer país, sem recomeçar toda vez.</div>
+        <h2 data-reveal="up">Cada produto novo, uma landing page nova</h2>
+        <p class="body-text" data-reveal="up" data-d="1">O Mercado Pago lança produtos de adquirência pra sellers o tempo todo: maquininha Point, QR Code, Link de Pagamento, Pix, Checkout pra loja virtual. Cada um tem sua landing page no site, e cada página ainda precisa de uma versão por país, com proposta de valor, assets e conteúdo adaptados.</p>
+        <p class="body-text" data-reveal="up" data-d="1">Atuei como designer central da iniciativa de landing pages de produto, responsável por dar a essas páginas uma base comum.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- 02 AUDITORIA -->
-<div class="block">
+<!-- 02 CONTEXTO OPERACIONAL -->
+<div class="block" id="b02" data-stage="02" data-name="Contexto operacional">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage discovery">auditoria</span>
+        <span class="stage problema">Contexto operacional</span>
         <span class="stage-num">02</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Mais de 100 páginas mapeadas, dezenas de componentes fora do DS</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Comecei levantando todas as landing pages ativas e catalogando os blocos que se repetiam entre elas. O padrão ficou claro rápido: o mesmo bloco, com a mesma estrutura de conteúdo (título, imagem, lista de benefícios), estava construído de um jeito diferente em cada página.</p>
-        <p class="body-text" data-reveal="up" data-d="1">Em paralelo entendi como marketing aplicava campanhas temporárias nas landings: o que mudava por sazonalidade, o que era adaptado por país, quais slots eram trocados com frequência. Isso definia o que no componente precisava ser flexível e o que podia ser fixo.</p>
-      </div>
-    </div>
-    <div class="full-slot">
-      <div class="img-slot wide" data-reveal="up" style="margin-top:24px">
-        <span class="slot-corner">auditoria</span>
-        <span class="slot-mark">mapeamento dos organismos recorrentes e variações fora do DS</span>
-      </div>
-    </div>
-    <div class="block-grid" style="margin-top:32px">
-      <div></div>
-      <div class="block-body">
-        <div class="audit-grid" data-reveal="up">
-          <div class="audit-card">
-            <div class="audit-label">problema 1</div>
-            <div class="audit-val">Mesmo bloco, UI diferente em cada página. A cada lançamento, mais inconsistência.</div>
-          </div>
-          <div class="audit-card">
-            <div class="audit-label">problema 2</div>
-            <div class="audit-val">Código próprio por página: corrigir um bug numa não corrigia nas outras.</div>
-          </div>
-          <div class="audit-card">
-            <div class="audit-label">problema 3</div>
-            <div class="audit-val">Asset de cada país feito à mão no Photoshop, um por um.</div>
-          </div>
-        </div>
+        <h2 data-reveal="up">Múltiplos mercados, três times puxando para lados diferentes</h2>
+        <p class="body-text" data-reveal="up" data-d="1">As landing pages cobriam múltiplos mercados, com idioma, proposta de valor e exigências regulatórias mudando de um país pro outro. <!-- Conteúdo pendente: confirmar número de mercados — o brief menciona 7, o conteúdo anterior dizia "Brasil e mais alguns países" --></p>
+        <p class="body-text" data-reveal="up" data-d="1">Três áreas dependiam dessas páginas ao mesmo tempo. Engenharia queria código sustentável, produto queria lançar rápido, marketing queria adaptar campanha por sazonalidade e país. Sem uma base comum, cada lançamento tentava equilibrar os três do zero.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- 03 DEFINIÇÃO -->
-<div class="block">
+<!-- 03 PRINCIPAL USUÁRIO -->
+<div class="block" id="b03" data-stage="03" data-name="Principal usuário">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage definicao">definição do problema</span>
+        <span class="stage problema">Principal usuário</span>
         <span class="stage-num">03</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Sem base comum, cada lançamento gerava mais dívida técnica</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Os designers que fizeram essas páginas não erraram, faltava base comum. Sem componentes compartilhados, cada lançamento gerava mais página solta, cada ajuste passava por engenharia e cada país novo era outro pacote de assets do zero.</p>
-        <div class="keypoint" data-reveal="up">Corrigir página por página não resolveria. O que faltava era um sistema de componentes que as páginas pudessem compartilhar.</div>
+        <h2 data-reveal="up">Quem montava as páginas começava sempre do zero</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Os designers que criavam as landing pages eram os principais usuários dessa estrutura. A cada lançamento, montavam a página inteira manualmente, sem componentes compartilhados pra partir.</p>
+        <p class="body-text" data-reveal="up" data-d="1">O mesmo bloco, título, imagem e lista de benefícios, era reconstruído de um jeito diferente em cada página, por pessoas diferentes, em momentos diferentes.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- 04 ABORDAGEM -->
-<div class="block">
+<!-- 04 GARGALO OPERACIONAL -->
+<div class="block" id="b04" data-stage="04" data-name="Gargalo operacional">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage hipotese">abordagem</span>
+        <span class="stage problema">Gargalo operacional</span>
         <span class="stage-num">04</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Atomic design, de átomos a organismos de página</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Usei atomic design pra organizar o trabalho de baixo pra cima. Primeiro os átomos: tipografia, espaçamento, cor, ícone. Depois os blocos compostos: card de benefício, hero, seção de comparação. Por último, os templates que montavam esses blocos na sequência certa pra cada tipo de produto.</p>
-        <p class="body-text" data-reveal="up" data-d="1">Cada componente foi pro Figma com variações, slots definidos e regra de uso documentada: qual slot aceita texto curto, onde a imagem é obrigatória. Essa documentação foi o que deixou outros designers usarem os componentes sem inventar variação fora do padrão.</p>
-        <div class="role-note" data-reveal="up">
-          <span class="rn-label">meu papel</span>
-          Eu era o designer central da iniciativa. <b>Defini as regras de desenho e de conteúdo dos componentes.</b> Outros designers entravam pra dividir a execução, mas a arquitetura dos componentes e os critérios de uso eram meus.
-        </div>
-      </div>
-    </div>
-    <div class="slot-pair">
-      <div class="img-slot tall" data-reveal="up">
-        <span class="slot-corner">figma · átomos</span>
-        <span class="slot-mark">biblioteca de base: cores, tipo, espaçamento</span>
-      </div>
-      <div class="img-slot tall" data-reveal="up" data-d="1">
-        <span class="slot-corner">figma · componentes</span>
-        <span class="slot-mark">blocos compostos com variações e slots documentados</span>
+        <h2 data-reveal="up">Um lançamento levava quase um trimestre</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Um lançamento que cobria o Brasil e mais alguns mercados levava quase um trimestre. O tempo não vinha do processo, vinha de cada página ser construída isolada.</p>
+        <p class="body-text" data-reveal="up" data-d="1">Sem base comum, cada lançamento gerava mais página solta, cada ajuste passava por engenharia e cada país novo era outro pacote de assets feito à mão no Photoshop.</p>
+        <div class="keypoint" data-reveal="up">Corrigir um bug numa página não corrigia nas outras. A inconsistência crescia a cada produto.</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- 05 DS CENTRAL -->
-<div class="block">
+<!-- 05 ALINHANDO OBJETIVOS -->
+<div class="block" id="b05" data-stage="05" data-name="Alinhando objetivos">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage discovery">DS central</span>
+        <span class="stage discovery">Alinhando objetivos</span>
         <span class="stage-num">05</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Alinhamento com o Design System central do Mercado Pago</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Durante o processo, tive checkpoints frequentes com o time de UX do Design System central. Esses encontros serviam pra duas coisas: garantir que meus componentes não escalassem fora do DS e virassem um sistema paralelo; e identificar o que o DS central ainda não cobria.</p>
-        <div class="keypoint" data-reveal="up">O sistema escalou dentro do DS do Mercado Pago, não ao lado dele. Os componentes novos que criei no caminho voltaram documentados pro DS central.</div>
+        <h2 data-reveal="up">Lançar e manter qualquer produto sem recomeçar</h2>
+        <p class="body-text" data-reveal="up" data-d="1">O objetivo era reduzir o tempo de lançamento e aumentar a consistência entre mercados. Em vez de páginas isoladas, uma base que qualquer produto, em qualquer país, pudesse compartilhar.</p>
+        <p class="body-text" data-reveal="up" data-d="1">Comecei auditando todas as landing pages ativas e catalogando os blocos que se repetiam. O padrão ficou claro: a mesma estrutura de conteúdo, construída de formas diferentes em cada página.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- 06 ESCALA E QA -->
-<div class="block">
+<!-- 06 A NOVA EXPERIÊNCIA -->
+<div class="block" id="b06" data-stage="06" data-name="A nova experiência">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage solucao">escala e QA</span>
+        <span class="stage discovery">A nova experiência</span>
         <span class="stage-num">06</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Migração do legado e revisão de qualidade de uso</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Com os componentes prontos, veio a migração das páginas antigas pra estrutura nova. Não era troca de visual: cada bloco precisava ser mapeado pro componente certo, com o conteúdo ajustado pra caber nos slots e nas regras.</p>
-        <p class="body-text" data-reveal="up" data-d="1">Acompanhei a migração de perto, revisando cada página. Quando algo fugia da regra, o feedback ia com a explicação do porquê, não só a correção.</p>
-        <div class="role-note" data-reveal="up">
-          <span class="rn-label">gargalo de assets · resolvido no caminho</span>
-          Um gargalo paralelo era o asset por país, feito um a um no Photoshop. No meio do processo, levamos esse fluxo pro Figma com componentes de conteúdo variável, o que deixou gerar as versões de país a partir de um arquivo base, sem refazer imagem do zero.
+        <h2 data-reveal="up">Atomic design, de átomos a templates de página</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Organizei o sistema de baixo pra cima. Primeiro os átomos: tipografia, espaçamento, cor, ícone. Depois os blocos compostos: card de benefício, hero, seção de comparação. Por último, os templates que montavam esses blocos na sequência certa pra cada tipo de produto.</p>
+        <div class="keypoint" data-reveal="up">Cada componente carregava sua própria regra de uso. O sistema não dependia de ninguém lembrar como montar.</div>
+        <div class="tldr" data-reveal="up">
+          <div class="tldr-card">
+            <span class="tldr-label">A base</span>
+            <div class="tldr-text">Átomos, blocos compostos e templates documentados no Figma, com variações e slots definidos</div>
+          </div>
+          <div class="tldr-card">
+            <span class="tldr-label">A regra</span>
+            <div class="tldr-text">Cada slot com critério de uso: onde cabe texto curto, onde a imagem é obrigatória</div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="slot-pair">
-      <div class="img-slot" data-reveal="up">
-        <span class="slot-corner">QA · figma</span>
-        <span class="slot-mark">revisão de página migrada com anotações de ajuste</span>
-      </div>
-      <div class="img-slot" data-reveal="up" data-d="1">
-        <span class="slot-corner">escala · assets</span>
-        <span class="slot-mark">componente com variáveis de país no figma</span>
-      </div>
-    </div>
   </div>
 </div>
 
-<!-- 07 RESULTADO -->
-<div class="block">
+<!-- 07 VALIDAÇÃO -->
+<div class="block" id="b07" data-stage="07" data-name="Validação">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage resultado">resultado</span>
+        <span class="stage solucao">Validação</span>
         <span class="stage-num">07</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Resultado</h2>
-        <p class="body-text" data-reveal="up" data-d="1">O ganho foi de velocidade e autonomia. Um lançamento que antes passava por adaptação manual de página e geração de asset no Photoshop passou a montar a partir de componentes prontos, com assets saindo direto do Figma.</p>
-        <p class="body-text" data-reveal="up" data-d="1">Na prática, engenharia saiu do caminho crítico de cada campanha e o time de lançamento ganhou uma base que escala sem acumular legado a cada produto novo.</p>
-      </div>
-    </div>
-    <div class="ba" data-reveal="up">
-      <div class="cell">
-        <div class="st">antes</div>
-        <p>Cada página feita do zero. Asset de cada país no Photoshop. Ajuste de campanha passava por engenharia.</p>
-      </div>
-      <div class="cell after">
-        <div class="st">depois</div>
-        <p>Produto novo monta com componentes. Asset de país sai do Figma. Ajuste de conteúdo não depende mais de eng.</p>
-      </div>
-    </div>
-    <div class="metric-row" data-reveal="up">
-      <div class="metric">
-        <div class="m-val ph">[ a preencher ]</div>
-        <div class="m-desc">Redução no tempo de lançamento de LP por produto</div>
-      </div>
-      <div class="metric">
-        <div class="m-val ph">[ a preencher ]</div>
-        <div class="m-desc">Páginas migradas pro sistema de componentes</div>
-      </div>
-      <div class="metric">
-        <div class="m-val ph">[ a preencher ]</div>
-        <div class="m-desc">Componentes contribuídos de volta ao DS central</div>
+        <h2 data-reveal="up">O sistema escalou dentro do DS, não ao lado dele</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Durante o processo, mantive checkpoints frequentes com o time de UX do Design System central do Mercado Pago. Serviam pra duas coisas: garantir que meus componentes não virassem um sistema paralelo, e identificar o que o DS central ainda não cobria.</p>
+        <p class="body-text" data-reveal="up" data-d="1">Outros designers entraram pra dividir a execução usando os componentes. A documentação foi o que permitiu que usassem sem inventar variação fora do padrão.</p>
+        <div class="tldr" data-reveal="up">
+          <div class="tldr-card">
+            <span class="tldr-label">Adoção</span>
+            <div class="tldr-text">Outros designers passaram a montar páginas a partir dos componentes documentados</div>
+          </div>
+          <div class="tldr-card">
+            <span class="tldr-label">Contribuição</span>
+            <div class="tldr-text">Os componentes novos criados no caminho voltaram documentados pro DS central</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="wrap">
-  <div class="foot" data-reveal="fade">
-    // case 3 · sistema de landing pages mercado pago · 2021–2022<br>
-    // auditoria · atomic design · componentização · design system · QA
+<!-- 08 APRENDIZADO APLICADO -->
+<div class="block" id="b08" data-stage="08" data-name="Aprendizado aplicado">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage solucao">Aprendizado aplicado</span>
+        <span class="stage-num">08</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">O gargalo real não era a página, era o asset</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Na migração das páginas antigas, um gargalo paralelo ficou evidente: o asset de cada país ainda era feito um a um no Photoshop, fora do fluxo de componentes.</p>
+        <div class="keypoint" data-reveal="up">Padronizar a página não bastava se a imagem de cada mercado continuava manual.</div>
+        <p class="body-text" data-reveal="up" data-d="1">Levamos esse fluxo pro Figma com componentes de conteúdo variável. As versões de país passaram a sair de um arquivo base, sem refazer imagem do zero.</p>
+        <div class="tldr" data-reveal="up">
+          <div class="tldr-card">
+            <span class="tldr-label">Problema observado</span>
+            <div class="tldr-text">Asset por país feito à mão no Photoshop, fora do sistema de componentes</div>
+          </div>
+          <div class="tldr-card">
+            <span class="tldr-label">Decisão de design</span>
+            <div class="tldr-text">Componente com variáveis de país, gerando as versões a partir de um arquivo base</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 09 RESULTADO -->
+<div class="block" id="b09" data-stage="09" data-name="Resultado">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage solucao">Resultado</span>
+        <span class="stage-num">09</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">De página do zero a montagem por componentes</h2>
+        <p class="body-text" data-reveal="up" data-d="1">O ganho foi de velocidade e autonomia. Um lançamento que antes passava por adaptação manual e geração de asset no Photoshop passou a montar a partir de componentes prontos, com assets saindo direto do Figma. Engenharia saiu do caminho crítico de cada campanha.</p>
+        <div class="ba" data-reveal="up">
+          <div class="cell">
+            <div class="st">Antes</div>
+            <p>Cada página feita do zero, asset de país no Photoshop, ajuste de campanha dependendo de engenharia</p>
+          </div>
+          <div class="cell after">
+            <div class="st">Depois</div>
+            <p>Produto novo monta com componentes, asset de país sai do Figma, conteúdo ajustado sem engenharia</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
