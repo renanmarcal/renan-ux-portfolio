@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
 :root {
   --paper:      #f3efe7;
-  --paper-2:    #ece7dc;
   --card:       #faf7f2;
   --ink:        #1c1916;
   --ink-soft:   #5c554b;
@@ -15,6 +12,7 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 body {
   background: var(--paper);
   color: var(--ink);
@@ -39,7 +37,7 @@ body {
   display: flex; justify-content: space-between;
   align-items: center; height: 52px;
 }
-.topbar a {
+.topbar a, .topbar .crumb {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 10px; letter-spacing: .14em;
   text-transform: uppercase; color: var(--ink-faint);
@@ -125,7 +123,6 @@ h1 {
 .stage.discovery { background: var(--ink);  color: var(--paper); }
 .stage.definicao { background: transparent; color: var(--ink);    border: 1px solid var(--ink); }
 .stage.hipotese  { background: transparent; color: var(--accent); border: 1px solid var(--accent);}
-.stage.rediscovery{ background: var(--ink); color: var(--paper); }
 .stage.solucao   { background: var(--accent); color: var(--paper); }
 .stage.resultado { background: var(--accent-2); color: var(--paper); }
 .stage-num {
@@ -173,12 +170,8 @@ h2 {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 14px; margin-top: 24px;
 }
-.slot-triple {
-  display: grid; grid-template-columns: 1fr 1fr 1fr;
-  gap: 14px; margin-top: 24px;
-}
 @media (max-width: 560px) {
-  .slot-pair, .slot-triple { grid-template-columns: 1fr; }
+  .slot-pair { grid-template-columns: 1fr; }
 }
 
 .slot-corner {
@@ -267,20 +260,6 @@ h2 {
 }
 .role-note b { color: var(--ink); font-weight: 600; }
 
-/* ─── stage pill (flat layout) ─── */
-.stage-pill {
-  display: inline-flex; align-items: center;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px; letter-spacing: .1em;
-  text-transform: uppercase; font-weight: 500;
-  padding: 6px 12px; border-radius: 100px;
-  background: var(--accent); color: var(--paper);
-  white-space: nowrap; margin-bottom: 28px;
-}
-.stage-pill.solucao    { background: var(--accent);   color: var(--paper); }
-.stage-pill.resultado  { background: var(--accent-2); color: var(--paper); }
-.stage-pill.rediscovery{ background: var(--ink);       color: var(--paper); }
-
 /* ─── tldr cards ─── */
 .tldr { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 36px; }
 @media (max-width: 560px) { .tldr { grid-template-columns: 1fr; } }
@@ -295,30 +274,6 @@ h2 {
   margin-bottom: 8px; display: block;
 }
 .tldr-text { font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
-
-/* ─── quote ─── */
-.quote {
-  padding: 32px 0;
-  display: grid; grid-template-columns: 160px 1fr; gap: 40px;
-}
-@media (max-width: 720px) { .quote { grid-template-columns: 1fr; gap: 12px; } }
-.quote blockquote {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 500; font-size: 28px;
-  line-height: 1.28; letter-spacing: -.02em;
-  color: var(--ink); max-width: 26ch;
-}
-.quote .q-mark {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--ink-faint);
-}
-.quote .src {
-  display: block; margin-top: 14px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 9.5px; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--ink-faint);
-}
 
 /* ─── footer ─── */
 .foot {
