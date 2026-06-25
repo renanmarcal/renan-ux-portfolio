@@ -3,7 +3,6 @@
   --card:       #faf7f2;
   --ink:        #1c1916;
   --ink-soft:   #5c554b;
-  --ink-faint:  #9b9183;
   --line:       #d8d0c0;
   --accent:     #b8451f;
   --accent-2:   #2f5d50;
@@ -109,6 +108,7 @@ h1 {
 /* ─── blocks ─── */
 .block { padding: 120px 0; border-bottom: 1px solid var(--line); }
 .block:last-of-type { border-bottom: none; }
+@media (max-width: 720px) { .block { padding: 80px 0; } }
 .block-grid { display: grid; grid-template-columns: 160px 1fr; gap: 40px; }
 @media (max-width: 720px) { .block-grid { grid-template-columns: 1fr; gap: 20px; } }
 .block-body { max-width: 62ch; }
@@ -204,7 +204,7 @@ h2 + .sub-h { margin-top: 0; }
 .carousel-track::-webkit-scrollbar { display: none; }
 .c-card {
   flex: 0 0 auto;
-  width: 320px;
+  width: min(320px, 80vw);
   scroll-snap-align: start;
   padding: 24px;
   background: var(--card);
@@ -227,7 +227,7 @@ h2 + .sub-h { margin-top: 0; }
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 14px; margin-top: 28px;
 }
-@media (max-width: 560px) { .workshop-cards { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .workshop-cards { grid-template-columns: 1fr; } }
 .w-card {
   padding: 20px 22px; background: var(--card);
   border: 1px solid var(--line); border-radius: 6px;
@@ -252,7 +252,7 @@ h2 + .sub-h { margin-top: 0; }
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 14px; margin-top: 24px;
 }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   .slot-pair { grid-template-columns: 1fr; }
 }
 
@@ -290,10 +290,9 @@ h2 + .sub-h { margin-top: 0; }
 
 /* ─── metrics ─── */
 .metric-row {
-  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 14px; margin-top: 24px;
 }
-@media (max-width: 560px) { .metric-row { grid-template-columns: 1fr; } }
 .metric {
   padding: 24px; background: var(--card);
   border: 1px solid var(--line); border-radius: 6px;
@@ -308,10 +307,9 @@ h2 + .sub-h { margin-top: 0; }
 
 /* ─── audit grid ─── */
 .audit-grid {
-  display: grid; grid-template-columns: repeat(3,1fr);
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 14px; margin-top: 24px;
 }
-@media (max-width: 560px) { .audit-grid { grid-template-columns: 1fr; } }
 .audit-card {
   padding: 20px 22px; background: var(--card);
   border: 1px solid var(--line); border-radius: 6px;
@@ -344,7 +342,7 @@ h2 + .sub-h { margin-top: 0; }
 
 /* ─── tldr cards ─── */
 .tldr { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 36px; }
-@media (max-width: 560px) { .tldr { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .tldr { grid-template-columns: 1fr; } }
 .tldr-card {
   padding: 20px 22px; background: var(--card);
   border: 1px solid var(--line); border-radius: 6px;
