@@ -191,22 +191,13 @@ h2 + .sub-h { margin-top: 0; }
   display: block;
 }
 
-.carousel-wrap { overflow: hidden; }
-.carousel-track {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+.idea-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding-right: 4rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
 }
-.carousel-track::-webkit-scrollbar { display: none; }
+@media (max-width: 768px) { .idea-grid { grid-template-columns: 1fr; } }
 .c-card {
-  flex: 0 0 auto;
-  width: min(320px, 80vw);
-  scroll-snap-align: start;
   padding: 24px;
   background: var(--card);
   border: 1px solid var(--line);
