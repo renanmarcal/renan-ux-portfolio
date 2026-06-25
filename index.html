@@ -139,6 +139,7 @@ body {
 @media (max-width: 640px) { .case-card { grid-template-columns: 1fr; } }
 
 .case-thumb {
+  min-width: 0;
   background: var(--paper-2);
   border-right: 1px solid var(--line);
   aspect-ratio: 4/3;
@@ -197,6 +198,12 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 9.5px; letter-spacing: .08em; color: var(--ink-faint);
 }
+.footer-cta a {
+  color: inherit; text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: color .2s, border-color .2s;
+}
+.footer-cta a:hover { color: var(--accent); border-color: var(--accent); }
 
 /* ─── reveal ─── */
 [data-reveal] { will-change: opacity, transform; }
@@ -225,7 +232,7 @@ body {
 </head>
 <body>
 
-<div class="hero">
+<header class="hero">
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-left">
@@ -233,7 +240,7 @@ body {
           <span class="h1-line">Renan</span>
           <span class="h1-line">Marçal</span>
         </h1>
-        <div class="hero-role">Product Designer</div>
+        <p class="hero-role">Product Designer</p>
         <p class="hero-bio">Transformo informações financeiras e operacionais complexas em interfaces que mostram o que importa. Construí essa experiência no C6 Bank e no Mercado Pago, trabalhando com produto, engenharia e comercial em contextos de adquirência e força de vendas.</p>
         <div class="cta-list">
           <a href="mailto:renanmarccal@gmail.com">
@@ -269,9 +276,9 @@ body {
       </div>
     </div>
   </div>
-</div>
+</header>
 
-<div class="cases">
+<main class="cases">
   <div class="wrap">
     <div class="cases-header">
       <h2 data-reveal="up">Cases selecionados</h2>
@@ -313,7 +320,7 @@ body {
         <div class="case-info">
           <div>
             <h3>Portal de gestão para lojistas C6 Pay</h3>
-            <p class="case-desc">Com a expansão do C6 no mercado de adquirência, a experiência herdada da PayGo precisava evoluir para acompanhar o crescimento do produto. O desafio foi reorganizar uma plataforma usada por lojistas para acompanhar vendas, pagamentos e recebíveis, reduzindo a complexidade operacional e criando bases mais escaláveis para o futuro.</p>
+            <p class="case-desc">A experiência herdada da PayGo não acompanhava a expansão da estratégia de adquirência do C6. O desafio foi reorganizar o portal em torno do que o lojista precisava entender na operação, não do que o sistema produzia.</p>
           </div>
           <div class="case-meta">
             <span>C6 Bank · PayGo</span>
@@ -325,11 +332,11 @@ body {
 
     </div>
   </div>
-</div>
+</main>
 
 <footer class="footer" data-reveal="fade">
   <div class="wrap">
-    <p class="footer-cta">Quer conversar? renanmarccal@gmail.com</p>
+    <p class="footer-cta">Quer conversar? <a href="mailto:renanmarccal@gmail.com">renanmarccal@gmail.com</a></p>
     <div class="footer-links">
       <a href="mailto:renanmarccal@gmail.com">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>

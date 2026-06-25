@@ -6,10 +6,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<title>Portal B2B C6 Bank · Renan Marçal</title>
-<meta name="description" content="Redesign do portal B2B do C6 Bank para lojistas PJ com maquininha, desenvolvido com a PayGo. Experiência de gestão de pagamentos para merchants.">
-<meta property="og:title" content="Portal B2B C6 Bank · Renan Marçal">
-<meta property="og:description" content="Redesign do portal B2B do C6 Bank para lojistas PJ com maquininha, desenvolvido com a PayGo. Experiência de gestão de pagamentos para merchants.">
+<title>Portal de gestão para lojistas C6 Pay · Renan Marçal</title>
+<meta name="description" content="Redesenho da plataforma de gestão financeira usada por lojistas PJ no ecossistema C6 Pay. Vendas, recebimentos e antecipações organizados pela rotina do merchant.">
+<meta property="og:title" content="Portal de gestão para lojistas C6 Pay · Renan Marçal">
+<meta property="og:description" content="Redesenho da plataforma de gestão financeira usada por lojistas PJ no ecossistema C6 Pay. Vendas, recebimentos e antecipações organizados pela rotina do merchant.">
 <meta property="og:image" content="https://renanmarcal.github.io/renan-ux-portfolio/favicon.svg">
 <meta property="og:url" content="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html">
 <link rel="canonical" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html">
@@ -18,32 +18,32 @@
 </head>
 <body>
 
-<div class="topbar">
+<header class="topbar">
   <div class="wrap">
     <a href="../index.html">← Renan Marçal</a>
-    <span class="crumb">Portal C6 Bank</span>
+    <span class="crumb">Portal C6 Pay</span>
   </div>
   <div class="progress-bar" id="progress"></div>
-</div>
+</header>
 
-<div class="hero">
+<main>
+<section class="hero">
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="kicker">PayGo · C6 Bank · 2020–2021</div>
+        <p class="kicker">PayGo · C6 Bank · 2020–2021</p>
         <h1>
           <span class="h1-line">Portal de gestão</span>
           <span class="h1-line">para lojistas C6 Pay</span>
         </h1>
       </div>
       <div class="hero-right">
-        <p class="hero-summary">A PayGo já processava a operação de milhares de lojistas, mas a experiência digital não acompanhava a complexidade do negócio. Com a expansão da estratégia de adquirência do C6, o desafio era transformar um portal fragmentado em uma ferramenta capaz de explicar a operação financeira do cliente e sustentar a evolução do produto.</p>
-        <div class="spec">
-          <div><div class="s-label">Plataforma</div><div class="s-val">Web · portal B2B</div></div>
-          <div><div class="s-label">Envolvidos</div><div class="s-val">Produto · Engenharia · Comercial</div></div>
-          <div><div class="s-label">Papel</div><div class="s-val">Designer</div></div>
-        </div>
-        <!-- Conteúdo pendente: detalhar Papel (atividades reais) e confirmar todos os Envolvidos -->
+        <p class="hero-summary">O portal que os lojistas usavam carregava a identidade visual e a arquitetura da PayGo, sem traços do C6 Bank. O redesenho reposicionou a plataforma dentro do ecossistema do banco e reorganizou as informações para que o usuário conseguisse entender a própria operação financeira, superando o modelo antigo que apenas expunha dados brutos do sistema.</p>
+        <dl class="spec">
+          <div><dt class="s-label">Plataforma</dt><dd class="s-val">Web · portal B2B</dd></div>
+          <div><dt class="s-label">Envolvidos</dt><dd class="s-val">1 PO · 4 engenheiros · time central de design system C6</dd></div>
+          <div><dt class="s-label">Papel</dt><dd class="s-val">Único designer de produto alocado (pesquisa, estratégia de UX, design de interface e governança de componentes)</dd></div>
+        </dl>
         <!-- Botão "Baixar apresentação" oculto temporariamente até o PDF existir.
              Reativar removendo este wrapper quando assets/pdf/case-portal-b2b-c6-bank.pdf for adicionado.
         <a class="dl" href="../assets/pdf/case-portal-b2b-c6-bank.pdf" download target="_blank" rel="noopener" style="margin-top:28px">
@@ -54,207 +54,182 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- 01 ESTRUTURA -->
-<div class="block" id="b01" data-stage="01" data-name="Estrutura">
+<!-- 01 O CONTEXTO -->
+<section class="block" id="b01" data-stage="01" data-name="o contexto">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage problema">Estrutura</span>
+        <span class="stage problema">o contexto</span>
         <span class="stage-num">01</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Expansão da adquirência, plataforma legada e crescimento do produto</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Atuei na frente de adquirência do C6 Bank, responsável pelas soluções de pagamento utilizadas por estabelecimentos que operavam com as maquininhas da PayGo.</p>
-        <p class="body-text" data-reveal="up" data-d="1">O produto era o principal ambiente de gestão da operação financeira desses merchants, reunindo informações sobre vendas, recebimentos, transações e antecipações para acompanhamento do negócio no dia a dia.</p>
-        <p class="body-text" data-reveal="up" data-d="1">Como designer de produto, participei da evolução dessa experiência ao lado de produto, engenharia e comercial, em um momento de expansão da estratégia de adquirência do banco. O trabalho envolveu tanto a reorganização da arquitetura da informação quanto a aproximação da plataforma aos padrões visuais e de experiência do ecossistema C6, em alinhamento com o time central de Design System.</p>
-        <!-- Conteúdo pendente: descrever o recorte exato do portal (módulos cobertos) e o escopo do redesenho -->
+        <h2 data-reveal="up">Uma operação B2B complexa entre a PayGo e o C6 Bank</h2>
+        <p class="body-text" data-reveal="up" data-d="1">O produto original operava como um sistema de consulta rígido, exibindo dados brutos de backoffice formatados para engenharia e distantes da realidade financeira de quem gerencia um negócio. Como eu era o único designer alocado no produto, meu desafio foi desenhar a transição completa dessa interface para o ecossistema do C6 Bank, redesenhando a estrutura profunda do portal para aproximar a plataforma da rotina real dos nossos lojistas.</p>
+      </div>
+      <div class="slot-pair full-slot" data-reveal="fade">
+        <div class="img-slot">
+          <img src="../assets/img/resumos-legacy-01.png" alt="Tela de resumo financeiro do portal legado PayGo com visão engessada por dias da semana">
+        </div>
+        <div class="img-slot">
+          <img src="../assets/img/resumo-legacy-02.png" alt="Modal do portal legado exibindo tabela de transações com excesso de colunas técnicas">
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- 02 CONTEXTO OPERACIONAL -->
-<div class="block" id="b02" data-stage="02" data-name="Contexto operacional">
+<!-- 02 COLABORAÇÃO -->
+<section class="block" id="b02" data-stage="02" data-name="colaboração">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage problema">Contexto operacional</span>
+        <span class="stage discovery">colaboração</span>
         <span class="stage-num">02</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Um portal B2B tem uma demanda diferente do B2C</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Lojistas PJ têm uma relação com pagamentos diferente de consumidores: a operação financeira é parte do negócio, não só uma transação. O portal tinha que servir a essa rotina de gestão, não só expor extrato.</p>
-        <p class="body-text" data-reveal="up" data-d="1">A parceria com a PayGo definia parte das restrições técnicas do projeto e o escopo do que podia ser alterado na experiência.</p>
-        <!-- Conteúdo pendente: descrever a escala (volume de merchants, segmentos atendidos) e as restrições específicas da parceria com a PayGo -->
+        <h2 data-reveal="up">Alinhamento prático contra a incerteza técnica</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Para alinhar o esforço de engenharia com as reais necessidades de quem opera atrás de um balcão, estruturamos alguns workshops intra UX para materializar o conhecimento de forma coletiva. Essa atividade foi essencial para mapear as dores do comércio e direcionar as decisões de produto de forma compartilhada.</p>
+        <div class="workshop-cards" data-reveal="up" data-d="2">
+          <div class="w-card">
+            <span class="w-card-label">Mapas de Jornada</span>
+            <p>Construção visual do fluxo de tarefas do lojista mapeando cada ponto de contato com a maquininha e com o software.</p>
+          </div>
+          <div class="w-card">
+            <span class="w-card-label">Personas de Balcão</span>
+            <p>Alinhamento das dores e necessidades reais de quem opera o fechamento de caixa na correria do comércio.</p>
+          </div>
+        </div>
+        <figure class="case-figure" data-reveal="fade">
+          <img src="../assets/img/maquininha-c6-pay.jpg" alt="Maquininhas de cartão C6 Pay Essentials e Super sobre uma mesa contextualizando o hardware que gera os dados do portal">
+        </figure>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- 03 PRINCIPAL USUÁRIO -->
-<div class="block" id="b03" data-stage="03" data-name="Principal usuário">
+<!-- 03 IDEAÇÃO E LÓGICA -->
+<section class="block" id="b03" data-stage="03" data-name="ideação e lógica">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage problema">Principal usuário</span>
+        <span class="stage discovery">ideação e lógica</span>
         <span class="stage-num">03</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">O dono do negócio que precisa fechar o dia</h2>
-        <p class="body-text" data-reveal="up" data-d="1">O principal usuário era o lojista PJ: o responsável pelo negócio que usava a maquininha do C6 e acessava o portal pra entender como a operação financeira estava. O portal era onde ele checava se estava tudo certo antes de tomar qualquer decisão.</p>
-        <!-- Conteúdo pendente: descrever o perfil real do usuário, com que frequência acessava o portal e o que encontrava de dificuldade no fluxo existente -->
+        <h2 data-reveal="up">A tradução de dados de engenharia em blocos de saúde financeira</h2>
       </div>
+      <div class="carousel-wrap full-slot" data-reveal="fade">
+        <div class="carousel-track">
+          <div class="c-card">
+            <span class="c-num">01</span>
+            <h3 class="sub-h">O modelo mental de consolidação</h3>
+            <p class="body-text">Substituí a tabela engessada que exigia contas manuais por painéis horizontais rápidos inspirados em referências de mercado como Stone e Stripe. Essa abordagem transformou dados brutos em cartões macros de diagnóstico, permitindo que o comerciante bata o olho e entenda a saúde financeira do negócio instantaneamente.</p>
+          </div>
+          <div class="c-card">
+            <span class="c-num">02</span>
+            <h3 class="sub-h">A inversão da hierarquia visual</h3>
+            <p class="body-text">Organizei a interface com foco na rotina de quem opera atrás de um balcão, dividindo a tela em duas linhas paralelas. Posicionei os recebíveis na faixa superior para garantir previsibilidade sobre o dinheiro futuro e alinhei as vendas logo abaixo, trazendo os dados de fechamento diário para o primeiro plano.</p>
+          </div>
+          <div class="c-card">
+            <span class="c-num">03</span>
+            <h3 class="sub-h">Taxonomia e tradução de dados</h3>
+            <p class="body-text">Simplifiquei a linguagem técnica herdada dos sistemas de engenharia eliminando códigos confusos como NSU e PDC da tela principal. Traduzi esses dados para o vocabulário real de balcão, transformando registros complexos de sistemas em status claros de pagamento com identificação visual de bandeiras.</p>
+          </div>
+        </div>
+      </div>
+      <figure class="case-figure full-slot" data-reveal="fade">
+        <img src="../assets/img/portal-c6-resumos.png" alt="Nova interface do portal C6 Pay exibida em um notebook mostrando o painel de saúde financeira para lojistas">
+      </figure>
     </div>
   </div>
-</div>
+</section>
 
-<!-- 04 GARGALO OPERACIONAL -->
-<div class="block" id="b04" data-stage="04" data-name="Gargalo operacional">
+<!-- 04 PRIMEIRA FORÇA -->
+<section class="block" id="b04" data-stage="04" data-name="primeira força">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage problema">Gargalo operacional</span>
+        <span class="stage solucao">primeira força</span>
         <span class="stage-num">04</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Dados expostos, mas sem resposta</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Um portal construído na perspectiva do sistema expõe o que tem. O lojista chegava com perguntas concretas sobre a operação — e o portal devolvia dados brutos que exigiam interpretação antes de qualquer ação.</p>
-        <!-- Conteúdo pendente: descrever o problema central concreto que motivou o redesenho (o que o lojista não conseguia fazer, ou fazia com esforço) -->
-        <div class="keypoint" data-reveal="up">O portal precisava servir à rotina do lojista, não só expor os dados que o sistema produzia.</div>
+        <h2 data-reveal="up">A autonomia do lojista no fechamento de caixa diário</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Na aba de vendas e resumos, concentrei os esforços de interface em eliminar os modais e os cliques intermediários que fragmentavam a experiência antiga. Implementei um sistema de filtros inline posicionados diretamente acima da tabela de transações, permitindo buscas dinâmicas por períodos específicos, status de liquidação e bandeiras de cartão.</p>
+        <figure class="case-figure" data-reveal="fade">
+          <img src="../assets/img/resumo-screen.png" alt="Interface da aba de vendas do portal C6 Pay com filtros inline posicionados acima da tabela de transações">
+        </figure>
+        <p class="body-text" data-reveal="up" data-d="2">Essa reestruturação na arquitetura de dados deu ao comerciante a capacidade de realizar a conciliação diária de forma independente e sem fricção visual, transformando um processo que antes levava minutos em uma checagem rápida realizada diretamente na dobra principal da tela.</p>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- 05 ALINHANDO OBJETIVOS -->
-<div class="block" id="b05" data-stage="05" data-name="Alinhando objetivos">
+<!-- 05 SEGUNDA FORÇA -->
+<section class="block" id="b04b" data-stage="05" data-name="segunda força">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage discovery">Alinhando objetivos</span>
+        <span class="stage solucao">segunda força</span>
         <span class="stage-num">05</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Organizar a experiência pela pergunta, não pelo dado</h2>
-        <p class="body-text" data-reveal="up" data-d="1">O objetivo era reorganizar o portal em torno do que o lojista precisava responder, não do que o sistema produzia. Em vez de expor todos os dados disponíveis, entregar a informação certa no momento certo da operação.</p>
-        <!-- Conteúdo pendente: descrever os objetivos reais de negócio, como foram alinhados entre produto, engenharia e comercial, e quais eram as métricas esperadas -->
+        <h2 data-reveal="up">Previsibilidade financeira e a geração de receita institucional</h2>
+        <p class="body-text" data-reveal="up" data-d="1">A aba de recebíveis foi projetada para mudar o comportamento do portal, migrando de um modelo passivo de histórico para uma ferramenta ativa de previsão. Desenhei uma estrutura visual que projeta claramente o fluxo de caixa futuro do lojista, consolidando os valores que entrarão nos meses seguintes.</p>
+        <figure class="case-figure" data-reveal="fade">
+          <img src="../assets/img/recebiveis-screen.png" alt="Interface da aba de recebíveis do portal C6 Pay mostrando a projeção de fluxo de caixa futuro do lojista">
+        </figure>
+        <p class="body-text" data-reveal="up" data-d="2">Essa visibilidade de longo prazo não apenas organizou o controle financeiro do cliente, mas também criou o contexto perfeito de jornada para o C6 Bank oferecer serviços de antecipação de taxas e ofertas de crédito de forma integrada, unindo as dores do usuário aos objetivos de receita do negócio.</p>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- 06 A NOVA EXPERIÊNCIA -->
-<div class="block" id="b06" data-stage="06" data-name="A nova experiência">
+<!-- 06 VALIDAÇÃO -->
+<section class="block" id="b05" data-stage="06" data-name="validação">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage discovery">A nova experiência</span>
+        <span class="stage solucao">validação</span>
         <span class="stage-num">06</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">A direção do redesenho</h2>
-        <p class="body-text" data-reveal="up" data-d="1">A proposta reorganizou o portal em torno da rotina do lojista, colocando a operação de pagamentos no centro da experiência.</p>
-        <!-- Conteúdo pendente: descrever a solução concreta — estrutura de navegação, telas principais e as decisões de design que a sustentam -->
-        <div class="keypoint" data-reveal="up">A informação passou a se organizar pelo que o lojista precisava decidir.</div>
-        <!-- Conteúdo pendente: substituir por um keypoint que reflita a decisão de design central -->
-        <div class="tldr" data-reveal="up">
-          <div class="tldr-card">
-            <span class="tldr-label">A aposta</span>
-            <div class="tldr-text"><!-- Conteúdo pendente: a aposta central do redesenho em uma frase -->A definir</div>
-          </div>
-          <div class="tldr-card">
-            <span class="tldr-label">A decisão</span>
-            <div class="tldr-text"><!-- Conteúdo pendente: a principal decisão de design em uma frase -->A definir</div>
-          </div>
-        </div>
+        <h2 data-reveal="up">A segurança técnica gerada pela resposta do usuário</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Como o time de engenharia atuava de forma paralela construindo entregas incrementais, a apresentação de uma interface totalmente reformulada gerou um receio natural a respeito do esforço de desenvolvimento. Para desarmar essa resistência e validar o projeto, levei o protótipo de alta fidelidade do Figma para testes de usabilidade com os lojistas na ponta da operação. Ver a facilidade de uso e a satisfação dos comerciantes ao realizarem o fechamento de caixa de forma autônoma eliminou as desconfianças técnicas, dando ao time de desenvolvimento a clareza necessária para iniciar a construção da nova plataforma.</p>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- 07 VALIDAÇÃO -->
-<div class="block" id="b07" data-stage="07" data-name="Validação">
+<!-- 07 IMPACTO -->
+<section class="block" id="b06" data-stage="07" data-name="impacto">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage solucao">Validação</span>
+        <span class="stage resultado">impacto</span>
         <span class="stage-num">07</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Como a proposta foi testada</h2>
-        <p class="body-text" data-reveal="up" data-d="1">A direção foi checada junto das áreas envolvidas antes de avançar para construção.</p>
-        <!-- Conteúdo pendente: descrever como a solução foi validada (com usuários, com stakeholders, testes) e o que isso revelou -->
-        <div class="tldr" data-reveal="up">
-          <div class="tldr-card">
-            <span class="tldr-label">Como validei</span>
-            <div class="tldr-text"><!-- Conteúdo pendente: método de validação usado -->A definir</div>
-          </div>
-          <div class="tldr-card">
-            <span class="tldr-label">O que aprendi</span>
-            <div class="tldr-text"><!-- Conteúdo pendente: principal aprendizado da validação -->A definir</div>
-          </div>
-        </div>
+        <h2 data-reveal="up">Eficiência operacional na ponta e consistência na marca</h2>
+        <p class="body-text" data-reveal="up" data-d="1">O lançamento da nova arquitetura gerou um reflexo imediato nos indicadores de suporte da empresa, reduzindo drasticamente o volume de chamados abertos por lojistas que não conseguiam conciliar os valores do dia. Dados coletados via Google Analytics confirmaram o engajamento contínuo com os novos cartões de resumos e relatórios de vendas. Além do impacto direto no negócio, o projeto estabeleceu uma ponte de governança definitiva com o time central de design system do C6 Bank, deixando como legado uma biblioteca de componentes sob medida que garantiu consistência de marca e acelerou os desenvolvimentos futuros do portal.</p>
+      </div>
+      <div class="img-slot full-slot" data-reveal="fade">
+        <iframe
+          src="https://www.youtube.com/embed/7pvUgweK-fo?si=_x7gv4tMBHA2ReBU"
+          title="Demonstração do portal de gestão para lojistas C6 Pay"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- 08 APRENDIZADO APLICADO -->
-<div class="block" id="b08" data-stage="08" data-name="Aprendizado aplicado">
-  <div class="wrap">
-    <div class="block-grid">
-      <div data-reveal="up">
-        <span class="stage solucao">Aprendizado aplicado</span>
-        <span class="stage-num">08</span>
-      </div>
-      <div class="block-body">
-        <h2 data-reveal="up">O ajuste que a execução pediu</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Ao longo da construção, a experiência foi ajustada conforme o que aparecia na prática.</p>
-        <!-- Conteúdo pendente: descrever o aprendizado concreto da execução e o ajuste de design que ele gerou -->
-        <div class="keypoint" data-reveal="up"><!-- Conteúdo pendente: a virada de entendimento, como afirmação -->A definir</div>
-        <div class="tldr" data-reveal="up">
-          <div class="tldr-card">
-            <span class="tldr-label">Problema observado</span>
-            <div class="tldr-text"><!-- Conteúdo pendente: o que apareceu na execução -->A definir</div>
-          </div>
-          <div class="tldr-card">
-            <span class="tldr-label">Decisão de design</span>
-            <div class="tldr-text"><!-- Conteúdo pendente: o ajuste aplicado -->A definir</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 09 RESULTADO -->
-<div class="block" id="b09" data-stage="09" data-name="Resultado">
-  <div class="wrap">
-    <div class="block-grid">
-      <div data-reveal="up">
-        <span class="stage solucao">Resultado</span>
-        <span class="stage-num">09</span>
-      </div>
-      <div class="block-body">
-        <h2 data-reveal="up">O que o redesenho deixou para o lojista</h2>
-        <p class="body-text" data-reveal="up" data-d="1">A proposta buscou deixar a gestão de pagamentos mais clara e autônoma para o lojista PJ.</p>
-        <!-- Conteúdo pendente: substituir pelo resultado real do projeto (o que mudou na prática, com dados se houver) -->
-        <div class="ba" data-reveal="up">
-          <div class="cell">
-            <div class="st">Antes</div>
-            <p><!-- Conteúdo pendente: a situação anterior, concreta -->A definir</p>
-          </div>
-          <div class="cell after">
-            <div class="st">Depois</div>
-            <p><!-- Conteúdo pendente: a situação após o redesenho, concreta -->A definir</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+</main>
 
 <script>
 (function(){
