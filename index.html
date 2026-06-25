@@ -158,14 +158,17 @@ body {
 }
 
 .case-info {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 24px;
   padding: 24px 32px 32px;
-  display: flex; flex-direction: column;
+  height: 100%;
 }
 .case-info h3 {
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 600; font-size: 26px;
   line-height: 1.231; color: var(--ink);
-  letter-spacing: -.01em; margin-bottom: 8px;
+  letter-spacing: -.01em;
 }
 .case-desc {
   font-size: 15px; color: var(--ink-soft);
@@ -173,7 +176,6 @@ body {
 }
 .case-meta {
   display: flex; gap: 16px; flex-wrap: wrap;
-  margin-top: auto;
 }
 .case-meta span {
   font-family: var(--font-mono);
