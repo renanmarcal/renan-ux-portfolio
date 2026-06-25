@@ -115,6 +115,9 @@ body {
   font-weight: 600; font-size: 20px;
   color: var(--ink); line-height: 1.2;
 }
+.logo-row { display: flex; align-items: center; gap: 36px; padding: 4px 0; }
+.logo-row img { height: 28px; width: auto; }
+.logo-row img.invert { filter: brightness(0); }
 
 /* ─── cases ─── */
 .cases { padding: 96px 0; }
@@ -300,9 +303,9 @@ body {
         </div>
         <div class="stat" data-reveal="up" data-d="3">
           <div class="stat-label">empresas</div>
-          <div class="stat-val" style="display:flex; align-items:center; gap:36px; padding:4px 0;">
-            <img src="assets/img/logo-mercado-pago.svg" alt="Mercado Pago" width="104" height="28" style="height:28px; width:auto;">
-            <img src="assets/img/logo-c6-bank.svg" alt="C6 Bank" width="140" height="28" style="height:28px; width:auto; filter:brightness(0);">
+          <div class="stat-val logo-row">
+            <img src="assets/img/logo-mercado-pago.svg" alt="Mercado Pago" width="104" height="28">
+            <img src="assets/img/logo-c6-bank.svg" class="invert" alt="C6 Bank" width="140" height="28">
           </div>
         </div>
       </div>
@@ -318,7 +321,7 @@ body {
     <div class="case-grid">
 
       <a href="cases/case-priorizacao-visitas-comerciais-mercado-pago.html" class="case-card" data-reveal="up">
-        <div class="case-thumb"><img src="assets/img/sua-agenda-screen.png" alt="Tela de agenda de visitas comerciais do aplicativo Mercado Pago para representantes de campo"></div>
+        <div class="case-thumb"><img src="assets/img/sua-agenda-screen.png" width="1696" height="1492" loading="lazy" alt="Tela de agenda de visitas comerciais do aplicativo Mercado Pago para representantes de campo"></div>
         <div class="case-info">
           <h3>Priorização de visitas comerciais</h3>
           <p class="case-desc">Representantes recebiam alertas de prioridade, mas a ferramenta não ajudava a transformar isso em um plano de visitas viável. O desafio foi redesenhar esse fluxo para Brasil, México e Argentina sem fragmentar o comportamento do produto entre mercados.</p>
@@ -331,7 +334,7 @@ body {
       </a>
 
       <a href="cases/case-landing-pages-checkout-mercado-pago.html" class="case-card" data-reveal="up" data-d="1">
-        <div class="case-thumb"><img src="assets/img/landings-adquirencia.png" alt="Tela de landing page de adquirência do Mercado Pago mostrando o sistema de componentes em uso"></div>
+        <div class="case-thumb"><img src="assets/img/landings-adquirencia.png" width="1530" height="1227" loading="lazy" alt="Tela de landing page de adquirência do Mercado Pago mostrando o sistema de componentes em uso"></div>
         <div class="case-info">
           <h3>Landing pages de adquirência em escala</h3>
           <p class="case-desc">Engenharia, produto e marketing tinham necessidades que competiam entre si na criação das páginas. O trabalho foi encontrar uma estrutura que atendesse os três sem que cada lançamento virasse um projeto do zero.</p>
@@ -344,7 +347,7 @@ body {
       </a>
 
       <a href="cases/case-portal-b2b-c6-bank.html" class="case-card" data-reveal="up" data-d="2">
-        <div class="case-thumb"><img src="assets/img/portal-c6-resumos.png" alt="Nova interface do portal C6 Pay mostrando o painel de saúde financeira para lojistas"></div>
+        <div class="case-thumb"><img src="assets/img/portal-c6-resumos.png" width="2688" height="1646" loading="lazy" alt="Nova interface do portal C6 Pay mostrando o painel de saúde financeira para lojistas"></div>
         <div class="case-info">
           <h3>Portal de gestão para lojistas C6 Pay</h3>
           <p class="case-desc">A experiência herdada da PayGo não acompanhava a expansão da estratégia de adquirência do C6. O desafio foi reorganizar o portal em torno do que o lojista precisava entender na operação, não do que o sistema produzia.</p>
