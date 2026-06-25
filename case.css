@@ -184,7 +184,7 @@ h2 + .sub-h { margin-top: 0; }
 
 .full-slot { grid-column: 1 / -1; margin-top: 24px; }
 
-.case-figure { margin-top: 28px; }
+.case-figure { margin: 2.5rem 0; }
 .case-figure img {
   width: 100%; border-radius: 6px;
   border: 1px solid var(--line);
