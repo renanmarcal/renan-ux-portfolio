@@ -56,7 +56,7 @@
 </div>
 
 <!-- 01 CENÁRIO -->
-<div class="block" id="b01" data-stage="01" data-name="cenário">
+<div class="block" id="bloco-01" data-stage="01" data-name="cenário">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
@@ -64,18 +64,17 @@
         <span class="stage-num">01</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Múltiplos mercados e três forças opostas</h2>
-        <p class="body-text" data-reveal="up" data-d="1">O Mercado Pago lança produtos de adquirência para sellers o tempo todo, maquininha Point, QR Code, link de pagamento, Pix e checkout para loja virtual. Cada produto ganha uma landing page no site, e cada página ainda precisa de uma versão por país, com proposta de valor, conteúdo e imagens adaptados.</p>
-        <p class="body-text" data-reveal="up" data-d="2">Três áreas dependiam dessas páginas ao mesmo tempo, com necessidades que competiam entre si. Engenharia precisava de um código sustentável, produto cobrava velocidade de lançamento e marketing pedia flexibilidade para adaptar a campanha por país e por estação.</p>
-        <p class="body-text" data-reveal="up" data-d="2">Atuei como designer central da iniciativa, mas na ponta cada página era montada de forma isolada. A cada lançamento, o designer reconstruía do início os mesmos blocos, título, imagem e lista de benefícios, sem nada compartilhado para partir.</p>
-        <div class="keypoint" data-reveal="up">O mesmo bloco nascia de um jeito diferente em cada página, por pessoas diferentes, em momentos diferentes.</div>
+        <h2 data-reveal="up">Múltiplos mercados, três forças opostas</h2>
+        <p class="body-text" data-reveal="up" data-d="1">O Mercado Pago distribui soluções de adquirência e maquininhas para lojistas em toda a América Latina de forma contínua. Cada novo produto exige páginas de conversão específicas, multiplicadas por variações entre os países para adaptar regras de taxas e propostas de valor locais. Na prática, três áreas com objetivos diferentes disputavam o formato dessas interfaces. A engenharia precisava de código sustentável, produto exigia velocidade de lançamento e marketing necessitava de flexibilidade para testar ofertas sazonais. Sem um ponto de convergência, a pressão por velocidade fazia com que cada nova campanha começasse praticamente do zero.</p>
+        <div class="keypoint" data-reveal="up">A falta de uma base comum forçava o redesenho de estruturas idênticas a cada novo lançamento regional.</div>
       </div>
+      <div class="img-slot placeholder-slot" data-reveal="fade">infográfico do fluxo fragmentado entre times</div>
     </div>
   </div>
 </div>
 
 <!-- 02 GARGALO -->
-<div class="block" id="b02" data-stage="02" data-name="gargalo">
+<div class="block" id="bloco-02" data-stage="02" data-name="gargalo">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
@@ -83,17 +82,16 @@
         <span class="stage-num">02</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Um trimestre para lançar</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Um lançamento que cobria o Brasil e mais alguns mercados levava quase um trimestre. O tempo não vinha do processo, vinha de cada página ser construída isolada, sem base comum entre elas.</p>
-        <p class="body-text" data-reveal="up" data-d="2">O fluxo estava quebrado nas duas pontas, no código e no gráfico. Cada ajuste de página dependia de engenharia mexer no código, e cada versão de país saía como um pacote de imagens montado à mão no Photoshop, fora de qualquer sistema.</p>
-        <div class="keypoint" data-reveal="up">Corrigir um bug em uma página não corrigia nas outras. A cada produto novo, a inconsistência crescia.</div>
+        <h2 data-reveal="up">O custo de um trimestre para lançar</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Essa falta de componentes compartilhados cobrava um preço alto na operação, fazendo com que o lançamento de uma campanha regional consumisse quase um trimestre de idas e vindas. As interfaces antigas carregavam tabelas de juros e preços fixados diretamente no código HTML de cada página. Se o marketing precisasse alterar uma condição comercial para a Black Friday, um desenvolvedor tinha que abrir o arquivo e editar o texto linha por linha na marra. Para piorar, o time gráfico produzia centenas de variações de imagens de forma isolada no Photoshop por país, gerando um volume de arquivos manuais que travava a esteira antes mesmo do código ser publicado.</p>
       </div>
+      <div class="img-slot placeholder-slot" data-reveal="fade">linha do tempo do fluxo antigo de produção</div>
     </div>
   </div>
 </div>
 
 <!-- 03 ESTRATÉGIA -->
-<div class="block" id="b03" data-stage="03" data-name="estratégia">
+<div class="block" id="bloco-03" data-stage="03" data-name="estratégia">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
@@ -101,76 +99,53 @@
         <span class="stage-num">03</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Arquitetura de componentes</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Organizei o sistema de baixo para cima. Os átomos primeiro, tipografia, espaçamento, cor e ícone. Depois os blocos compostos, card de benefício, hero e seção de comparação. No topo, os templates que montavam esses blocos na sequência certa para cada tipo de produto.</p>
-        <div class="keypoint" data-reveal="up">Cada componente carregava a própria regra de uso. Montar uma página deixou de depender de alguém lembrar como fazer.</div>
-        <div class="tldr" data-reveal="up">
-          <div class="tldr-card">
-            <span class="tldr-label">a base</span>
-            <div class="tldr-text">Átomos, blocos compostos e templates documentados no Figma, com variações e slots definidos</div>
-          </div>
-          <div class="tldr-card">
-            <span class="tldr-label">a regra</span>
-            <div class="tldr-text">Cada slot com critério de uso, onde cabe texto curto e onde a imagem é obrigatória</div>
-          </div>
-        </div>
+        <h2 data-reveal="up">Organização por componentes flexíveis</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Para desarmar esse modelo rígido, a estratégia foi desenhar um ecossistema de templates baseado em blocos combináveis através do atomic design. Mapeamos as estruturas mais repetitivas das páginas e as transformamos em módulos flexíveis. O segredo desse sistema não estava na criação visual das peças isoladas, mas sim nas regras de uso embutidas nelas. Desenhamos variações de colunas e espaços predefinidos que protegiam o layout contra quebras em dispositivos móveis, garantindo que a interface se mantivesse estável e equilibrada, independentemente do tamanho do texto ou do idioma de cada região.</p>
+      </div>
+      <div class="img-grid double-slot" data-reveal="fade">
+        <div class="img-slot placeholder-slot">anatomia dos componentes no Figma</div>
+        <div class="img-slot placeholder-slot">grid responsivo flexível</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- 04 ALINHAMENTO -->
-<div class="block" id="b04" data-stage="04" data-name="alinhamento">
+<!-- 04 GOVERNANÇA -->
+<div class="block" id="bloco-04" data-stage="04" data-name="governança">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage discovery">alinhamento</span>
+        <span class="stage discovery">governança</span>
         <span class="stage-num">04</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Extensão do design system central</h2>
-        <p class="body-text" data-reveal="up" data-d="1">O sistema não era paralelo ao design system central do Mercado Pago, era uma extensão dele. Mantive checkpoints frequentes com o time do design system para garantir isso e para mapear o que o sistema global ainda não cobria.</p>
-        <p class="body-text" data-reveal="up" data-d="2">Esses encontros expunham lacunas específicas de conversão das landing pages que o sistema global não tratava. Conforme outros designers adotaram os componentes para dividir a execução, os padrões que criei voltaram como contribuição definitiva para o design system central.</p>
-        <div class="tldr" data-reveal="up">
-          <div class="tldr-card">
-            <span class="tldr-label">adoção</span>
-            <div class="tldr-text">Outros designers passaram a montar páginas a partir dos componentes documentados</div>
-          </div>
-        </div>
+        <h2 data-reveal="up">Pontes de governança com o sistema global</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Construir componentes específicos para uma área trazia o risco de criar um ecossistema isolado dentro da empresa. Para evitar essa fragmentação, mantive rituais constantes de alinhamento com a equipe do design system global do Mercado Pago, o Andes. Essa proximidade foi fundamental para cobrir lacunas em páginas de marketing e alta conversão, um território mais expressivo que as bibliotecas globais (focadas em fluxos internos e transacionais) geralmente não priorizam. Conforme a estrutura provou sua eficiência e passou a ser adotada por outros designers da vertical, esses novos padrões foram documentados e integrados de volta como contribuição oficial para o sistema core da empresa.</p>
       </div>
+      <div class="img-slot placeholder-slot" data-reveal="fade">fluxo de governança local vs design system global</div>
     </div>
   </div>
 </div>
 
-<!-- 05 VIRADA -->
-<div class="block" id="b05" data-stage="05" data-name="virada">
+<!-- 05 AUTOMAÇÃO -->
+<div class="block" id="bloco-05" data-stage="05" data-name="automação">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage solucao">virada</span>
+        <span class="stage solucao">automação</span>
         <span class="stage-num">05</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Padronizando além do código</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Com o código modularizado, o limite seguinte apareceu na produção gráfica. Cada asset de país ainda saía um a um do Photoshop, fora do fluxo de componentes, e padronizar a página não adiantava enquanto a imagem de cada mercado continuava manual.</p>
-        <p class="body-text" data-reveal="up" data-d="2">A extensão natural foi levar esse fluxo para o Figma com componentes de conteúdo variável. As versões regionais passaram a sair de um único arquivo matriz, trocando texto e imagem por mercado sem refazer nada.</p>
-        <div class="tldr" data-reveal="up">
-          <div class="tldr-card">
-            <span class="tldr-label">o limite</span>
-            <div class="tldr-text">O asset de cada país ainda saía à mão do Photoshop, fora do sistema de componentes</div>
-          </div>
-          <div class="tldr-card">
-            <span class="tldr-label">a decisão</span>
-            <div class="tldr-text">Componente de conteúdo variável no Figma, gerando as versões a partir de um arquivo matriz</div>
-          </div>
-        </div>
+        <h2 data-reveal="up">Padronizando além do código fonte</h2>
+        <p class="body-text" data-reveal="up" data-d="1">A organização dos componentes na esteira de desenvolvimento destravou a engenharia, mas logo expôs o próximo limite do fluxo. A montagem estrutural da página estava rápida, mas a produção gráfica de imagens por país continuava lenta e dependente de edições manuais. Mudamos a abordagem atacando a raiz do problema, substituindo a hiperpersonalização visual por matrizes gráficas mais inteligentes e universais no Figma. As atualizações de telas de maquininhas locais, bandeiras de cartões aceitos em cada mercado e traduções passaram a ser geradas em bloco a partir de arquivos geradores centrais, eliminando o retrabalho no Photoshop.</p>
       </div>
+      <div class="img-slot placeholder-slot full-slot" data-reveal="fade">painel de matrizes visuais automatizadas no Figma</div>
     </div>
   </div>
 </div>
 
 <!-- 06 RESULTADO -->
-<div class="block" id="b06" data-stage="06" data-name="resultado">
+<div class="block" id="bloco-06" data-stage="06" data-name="resultado">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
@@ -178,18 +153,18 @@
         <span class="stage-num">06</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Autonomia e escala</h2>
-        <p class="body-text" data-reveal="up" data-d="1">O resultado foi autonomia e escala. Um produto novo passou a montar a partir de componentes prontos, com os assets de cada país saindo direto do Figma. Engenharia saiu do caminho crítico das atualizações de rotina e marketing ganhou autonomia para ajustar conteúdo e campanha sem depender de código.</p>
-        <div class="keypoint" data-reveal="up">Os componentes criados no caminho voltaram documentados para o design system central.</div>
-        <p class="body-text" data-reveal="up" data-d="2">O que antes levava quase um trimestre, entre localização e montagem, passou a sair em poucos dias. A escala de tempo mudou de meses para dias.</p>
+        <h2 data-reveal="up">Controle operacional e tempo de resposta</h2>
+        <p class="body-text" data-reveal="up" data-d="1">O efeito combinado foi de controle e velocidade. Com os componentes na esteira de desenvolvimento e as matrizes visuais centralizadas no Figma, a engenharia saiu do caminho crítico das atualizações de rotina sem perder o controle técnico da plataforma. Marketing e os times regionais passaram a ajustar condições comerciais, traduções e ofertas sazonais sem depender de um desenvolvedor editar o código.</p>
+        <div class="keypoint" data-reveal="up">A escala de tempo caiu de meses para dias, e a consistência deixou de depender de quem montava a página.</div>
+        <p class="body-text" data-reveal="up" data-d="2">O lançamento que antes consumia quase um trimestre entre montagem e localização passou a sair em poucos dias, e os componentes criados no caminho voltaram documentados para o Andes como contribuição definitiva.</p>
         <div class="ba" data-reveal="up">
           <div class="cell">
             <div class="st">Antes</div>
-            <p>Cada página construída isolada, asset de país no Photoshop e ajuste de campanha dependendo de engenharia</p>
+            <p>Cada página construída isolada, condição comercial fixada no código e asset de país feito à mão no Photoshop</p>
           </div>
           <div class="cell after">
             <div class="st">Depois</div>
-            <p>Produto novo monta com componentes, asset de país sai do Figma e conteúdo ajustado sem engenharia</p>
+            <p>Produto novo montado com componentes, conteúdo ajustado sem engenharia e asset de país gerado a partir das matrizes no Figma</p>
           </div>
         </div>
       </div>
