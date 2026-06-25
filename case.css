@@ -1,5 +1,6 @@
 :root {
   --paper:      #f3efe7;
+  --paper-2:    #ece7dc;
   --card:       #faf7f2;
   --ink:        #1c1916;
   --ink-soft:   #5c554b;
@@ -14,7 +15,7 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-h1, h2, h3 { letter-spacing: -0.02em; }
+h1, h2, h3 { letter-spacing: -0.025em; line-height: 1.15; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 body {
   background: var(--paper);
@@ -44,7 +45,8 @@ body {
   font-family: var(--font-mono);
   font-size: 10px; letter-spacing: .14em;
   text-transform: uppercase; color: var(--ink-faint);
-  text-decoration: none; transition: color .2s;
+  text-decoration: none;
+  transition: color .5s cubic-bezier(.16,1,.3,1);
 }
 .topbar a:hover { color: var(--accent); }
 .topbar .crumb { color: var(--ink-soft); }
@@ -94,14 +96,17 @@ h1 {
 
 .spec {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 16px 24px; padding-top: 20px;
-  border-top: 1px solid var(--line);
+  gap: 12px;
+}
+.spec > div {
+  background: var(--paper-2);
+  padding: 16px; border-radius: 6px;
 }
 .spec .s-label {
   font-family: var(--font-mono);
-  font-size: 9px; letter-spacing: .12em;
-  text-transform: uppercase; color: var(--ink-faint);
-  margin-bottom: 4px;
+  font-size: 10px; letter-spacing: .06em;
+  text-transform: lowercase; color: var(--ink-faint);
+  margin-bottom: 6px;
 }
 .spec .s-val { font-size: 13px; color: var(--ink-soft); }
 
@@ -109,31 +114,26 @@ h1 {
 .block { padding: 120px 0; border-bottom: 1px solid var(--line); }
 .block:last-of-type { border-bottom: none; }
 @media (max-width: 720px) { .block { padding: 80px 0; } }
-.block-grid { display: grid; grid-template-columns: 160px 1fr; gap: 40px; }
-@media (max-width: 720px) { .block-grid { grid-template-columns: 1fr; gap: 20px; } }
+.block-grid { display: grid; grid-template-columns: 1fr; }
 .block-body { max-width: 62ch; }
 
-/* ─── stage pills ─── */
-.stage {
-  display: inline-flex; align-items: center;
-  font-family: var(--font-mono);
-  font-size: 10px; letter-spacing: .1em;
-  text-transform: uppercase; font-weight: 500;
-  padding: 6px 12px; border-radius: 100px;
-  background: var(--accent); color: var(--paper);
-  white-space: nowrap;
+/* ─── section eyebrow ─── */
+.block-grid > div:first-child {
+  display: flex; align-items: center;
+  gap: 8px; margin-bottom: 16px;
 }
-.stage.problema  { background: transparent; color: var(--ink);    border: 1px solid var(--ink); }
-.stage.sinais    { background: transparent; color: var(--ink-soft);border: 1px solid var(--line);}
-.stage.discovery { background: var(--ink);  color: var(--paper); }
-.stage.definicao { background: transparent; color: var(--ink);    border: 1px solid var(--ink); }
-.stage.hipotese  { background: transparent; color: var(--accent); border: 1px solid var(--accent);}
-.stage.solucao   { background: var(--accent); color: var(--paper); }
-.stage.resultado { background: var(--accent-2); color: var(--paper); }
 .stage-num {
+  order: 1;
   font-family: var(--font-mono);
-  font-size: 11px; color: var(--ink-faint);
-  margin-top: 14px; display: block;
+  font-size: 11px; letter-spacing: .08em;
+  color: var(--accent);
+}
+.stage-num::after { content: "──"; margin-left: 8px; color: var(--ink-faint); }
+.stage {
+  order: 2;
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--accent);
 }
 
 h2 {
@@ -363,9 +363,12 @@ h2 + .sub-h { margin-top: 0; }
   text-transform: uppercase; color: var(--ink-soft);
   text-decoration: none;
   padding: 14px 22px; border: 1px solid var(--line);
-  border-radius: 6px; transition: color .2s, border-color .2s;
+  border-radius: 6px;
+  transition: color .5s cubic-bezier(.16,1,.3,1),
+              border-color .5s cubic-bezier(.16,1,.3,1),
+              transform .5s cubic-bezier(.16,1,.3,1);
 }
-.dl:hover { color: var(--accent); border-color: var(--accent); }
+.dl:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
 .dl svg { flex-shrink: 0; }
 
 /* ─── footer ─── */
