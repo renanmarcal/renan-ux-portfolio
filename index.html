@@ -147,7 +147,9 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 10px; letter-spacing: .1em;
   text-transform: uppercase; color: var(--ink-faint);
+  overflow: hidden;
 }
+.case-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 640px) {
   .case-thumb { aspect-ratio: 16/7; border-right: none; border-bottom: 1px solid var(--line); }
 }
@@ -316,7 +318,7 @@ body {
       </a>
 
       <a href="cases/case-portal-b2b-c6-bank.html" class="case-card" data-reveal="up" data-d="2">
-        <div class="case-thumb">imagem</div>
+        <div class="case-thumb"><img src="assets/img/portal-c6-resumos.png" alt="Nova interface do portal C6 Pay mostrando o painel de saúde financeira para lojistas"></div>
         <div class="case-info">
           <div>
             <h3>Portal de gestão para lojistas C6 Pay</h3>
