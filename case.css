@@ -223,23 +223,6 @@ h2 + .sub-h { margin-top: 0; }
 .c-card .sub-h { margin-top: 12px; }
 .c-card .body-text { font-size: 14px; margin-bottom: 0; }
 
-.workshop-cards {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 14px; margin-top: 28px;
-}
-@media (max-width: 640px) { .workshop-cards { grid-template-columns: 1fr; } }
-.w-card {
-  padding: 20px 22px; background: var(--card);
-  border: 1px solid var(--line); border-radius: 6px;
-}
-.w-card-label {
-  font-family: var(--font-mono);
-  font-size: 9px; letter-spacing: .12em;
-  text-transform: uppercase; color: var(--ink-faint);
-  margin-bottom: 10px; display: block;
-}
-.w-card p { font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin: 0; }
-
 .pull-quote {
   font-family: 'Bricolage Grotesque', sans-serif;
   font-size: 20px; font-weight: 500;
