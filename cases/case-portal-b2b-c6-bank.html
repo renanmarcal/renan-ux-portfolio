@@ -117,17 +117,19 @@
         <span class="stage discovery">colaboração</span>
         <span class="stage-num">02</span>
       </div>
-      <div class="block-body">
-        <h2 data-reveal="up">Alinhamento prático contra a incerteza técnica</h2>
-        <p class="body-text" data-reveal="up" data-d="1">A proposta de transformar o antigo sistema de consulta em uma ferramenta de diagnóstico financeiro esbarrou na arquitetura do sistema legado. A engenharia demonstrava receio quanto ao esforço de desenvolvimento, já que as APIs originais de backoffice apenas entregavam dados brutos e fragmentados. Para destravar o fluxo de trabalho sem comprometer o escopo, estruturamos alguns workshops intra UX com o time técnico.</p>
-        <p class="body-text" data-reveal="up" data-d="2">A dinâmica serviu para mapear a complexidade da implementação e encontrar saídas viáveis de engenharia antes mesmo de desenhar as telas. Decidimos construir uma camada de abstração no front-end que aproveitava a estrutura de dados existente, mas permitia agrupamentos inteligentes. Esse alinhamento trouxe dois direcionamentos críticos para o produto.</p>
-        <h3 class="sub-h" data-reveal="up">O gargalo do fechamento</h3>
-        <p class="body-text" data-reveal="up" data-d="1">O mapeamento conjunto revelou que o lojista perdia até vinte minutos diários realizando somas manuais para fechar o caixa na ponta do balcão. Esse dado técnico mudou a prioridade do backlog, fazendo o time focar o esforço de design na eliminação desse passo operacional.</p>
-        <h3 class="sub-h" data-reveal="up">O contexto de balcão</h3>
-        <p class="body-text" data-reveal="up" data-d="1">Identificamos que o maior atrito do comerciante na correria do dia não era o acesso à informação, mas a ausência de um panorama financeiro imediato. Esse diagnóstico guiou a decisão de priorizar visões consolidadas por períodos sobre as ferramentas complexas de busca da engenharia.</p>
-        <figure class="case-figure" data-reveal="fade">
+      <div class="b-split">
+        <div>
+          <h2 data-reveal="up">Alinhamento prático contra a incerteza técnica</h2>
+          <p class="body-text" data-reveal="up" data-d="1">A proposta de transformar o antigo sistema de consulta em uma ferramenta de diagnóstico financeiro esbarrou na arquitetura do sistema legado. A engenharia demonstrava receio quanto ao esforço de desenvolvimento, já que as APIs originais de backoffice apenas entregavam dados brutos e fragmentados. Para destravar o fluxo de trabalho sem comprometer o escopo, estruturamos alguns workshops intra UX com o time técnico.</p>
+          <p class="body-text" data-reveal="up" data-d="2">A dinâmica serviu para mapear a complexidade da implementação e encontrar saídas viáveis de engenharia antes mesmo de desenhar as telas. Decidimos construir uma camada de abstração no front-end que aproveitava a estrutura de dados existente, mas permitia agrupamentos inteligentes. Esse alinhamento trouxe dois direcionamentos críticos para o produto.</p>
+          <h3 class="sub-h" data-reveal="up">O gargalo do fechamento</h3>
+          <p class="body-text" data-reveal="up" data-d="1">O mapeamento conjunto revelou que o lojista perdia até vinte minutos diários realizando somas manuais para fechar o caixa na ponta do balcão. Esse dado técnico mudou a prioridade do backlog, fazendo o time focar o esforço de design na eliminação desse passo operacional.</p>
+          <h3 class="sub-h" data-reveal="up">O contexto de balcão</h3>
+          <p class="body-text" data-reveal="up" data-d="1">Identificamos que o maior atrito do comerciante na correria do dia não era o acesso à informação, mas a ausência de um panorama financeiro imediato. Esse diagnóstico guiou a decisão de priorizar visões consolidadas por períodos sobre as ferramentas complexas de busca da engenharia.</p>
+        </div>
+        <div class="img-slot" data-reveal="fade">
           <img src="../assets/img/c6-pay-maquininhas-hardware.jpg" width="1024" height="638" loading="lazy" alt="Maquininhas de cartão C6 Pay Essentials e Super sobre uma mesa contextualizando o hardware que gera os dados do portal">
-        </figure>
+        </div>
       </div>
     </div>
   </div>
@@ -179,11 +181,11 @@
       <div class="block-body">
         <h2 data-reveal="up">A autonomia do lojista no fechamento de caixa diário</h2>
         <p class="body-text" data-reveal="up" data-d="1">Na aba de vendas e resumos, concentrei os esforços de interface em eliminar os modais e os cliques intermediários que fragmentavam a experiência antiga. Implementei um sistema de filtros inline posicionados diretamente acima da tabela de transações, permitindo buscas dinâmicas por períodos específicos, status de liquidação e bandeiras de cartão.</p>
-        <figure class="case-figure" data-reveal="fade">
-          <img src="../assets/img/c6-pay-portal-aba-vendas.png" width="1828" height="1234" loading="lazy" alt="Interface da aba de vendas do portal C6 Pay com filtros inline posicionados acima da tabela de transações">
-        </figure>
         <p class="body-text" data-reveal="up" data-d="2">Essa reestruturação da interface deu ao comerciante a capacidade de realizar a conciliação diária de forma independente e sem fricção visual, transformando um processo que antes levava minutos em uma checagem rápida realizada diretamente na dobra principal da tela.</p>
       </div>
+      <figure class="case-figure" data-reveal="fade">
+        <img src="../assets/img/c6-pay-portal-aba-vendas.png" width="1828" height="1234" loading="lazy" alt="Interface da aba de vendas do portal C6 Pay com filtros inline posicionados acima da tabela de transações">
+      </figure>
     </div>
   </div>
 </section>
@@ -199,11 +201,11 @@
       <div class="block-body">
         <h2 data-reveal="up">Previsibilidade financeira e a geração de receita institucional</h2>
         <p class="body-text" data-reveal="up" data-d="1">A aba de recebíveis foi projetada para mudar o comportamento do portal, migrando de um modelo passivo de histórico para uma ferramenta ativa de previsão. Desenhei uma estrutura visual que projeta claramente o fluxo de caixa futuro do lojista, consolidando os valores que entrarão nos meses seguintes.</p>
-        <figure class="case-figure" data-reveal="fade">
-          <img src="../assets/img/c6-pay-portal-aba-recebiveis.png" width="1904" height="736" loading="lazy" alt="Interface da aba de recebíveis do portal C6 Pay mostrando a projeção de fluxo de caixa futuro do lojista">
-        </figure>
         <p class="body-text" data-reveal="up" data-d="2">Essa visibilidade de longo prazo não apenas organizou o controle financeiro do cliente, mas também criou o contexto perfeito de jornada para o C6 Bank oferecer serviços de antecipação de recebíveis e ofertas de crédito de forma integrada, unindo as dores do usuário aos objetivos de receita do negócio.</p>
       </div>
+      <figure class="case-figure" data-reveal="fade">
+        <img src="../assets/img/c6-pay-portal-aba-recebiveis.png" width="1904" height="736" loading="lazy" alt="Interface da aba de recebíveis do portal C6 Pay mostrando a projeção de fluxo de caixa futuro do lojista">
+      </figure>
     </div>
   </div>
 </section>
