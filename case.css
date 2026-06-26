@@ -99,6 +99,7 @@ h1 {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+.spec-3 { grid-template-columns: repeat(3, 1fr); }
 .spec > div {
   background: var(--paper-2);
   padding: 16px; border-radius: 6px;
@@ -316,7 +317,7 @@ h2 + .sub-h { margin-top: 0; }
   .hero { padding: 56px 0 40px; }
   .block { padding: 64px 0; }
   h1 { font-size: 44px; }
-  .spec { grid-template-columns: 1fr; }
+  .spec, .spec-3 { grid-template-columns: 1fr; }
   .ba .cell:first-child { border-right: none; border-bottom: 1px solid var(--line); }
 }
 
