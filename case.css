@@ -100,6 +100,14 @@ h1 {
   gap: 12px;
 }
 .spec-3 { grid-template-columns: repeat(3, 1fr); }
+
+.b-split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: start;
+}
+.b-split .img-slot,
+.b-split .img-slot img { border-radius: 8px; }
+@media (max-width: 768px) { .b-split { grid-template-columns: 1fr; } }
 .spec > div {
   background: var(--paper-2);
   padding: 16px; border-radius: 6px;
