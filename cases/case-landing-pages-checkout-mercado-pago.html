@@ -63,90 +63,34 @@
         <p class="body-text" data-reveal="up" data-d="2">Como cada interface nascia de um modelo de desenvolvimento isolado, a esteira de lançamentos acumulava manutenções repetitivas para acompanhar o crescimento da operação.</p>
       </div>
       <style>
-        .latam-panel{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:40px 40px 28px;margin-top:24px;}
-        .latam-kicker{font-family:var(--font-mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:32px;}
-        .latam-inner{display:grid;grid-template-columns:164px 1fr;gap:48px;align-items:start;border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:20px;}
-        .latam-metric{border-right:1px solid var(--line);padding-right:40px;}
-        .latam-num{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:80px;line-height:1;letter-spacing:-.04em;color:var(--ink);}
-        .latam-sublabel{font-family:var(--font-mono);font-size:11px;color:var(--ink-soft);margin-top:12px;line-height:1.65;}
-        .latam-th{display:grid;grid-template-columns:100px 1fr 44px 120px;gap:14px;align-items:center;padding-bottom:8px;margin-bottom:6px;border-bottom:1px solid var(--line);}
-        .latam-row{display:grid;grid-template-columns:100px 1fr 44px 120px;gap:14px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);}
-        .latam-row:last-child{border-bottom:none;}
-        .latam-col-h{font-family:var(--font-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);}
-        .latam-country{font-size:13px;font-weight:500;color:var(--ink);}
-        .latam-bar-bg{height:3px;background:var(--line);border-radius:2px;overflow:hidden;}
-        .latam-bar{height:3px;border-radius:2px;}
-        .latam-pages{font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);text-align:right;}
-        .latam-hw{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);}
-        .latam-note{font-family:var(--font-mono);font-size:11px;letter-spacing:.02em;color:var(--ink-faint);line-height:1.7;}
-        @media(max-width:768px){
-          .latam-panel{padding:24px 20px 20px;}
-          .latam-inner{grid-template-columns:1fr;gap:24px;}
-          .latam-metric{border-right:none;padding-right:0;border-bottom:1px solid var(--line);padding-bottom:20px;}
-          .latam-num{font-size:64px;}
-          .latam-th,.latam-row{grid-template-columns:88px 1fr 36px;}
-          .latam-hw{display:none;}
+        .latam-panel{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:28px 32px 22px;margin-top:24px;}
+        .latam-num{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:52px;line-height:1;letter-spacing:-.04em;color:var(--ink);}
+        .latam-sublabel{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin-top:6px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--line);}
+        .latam-countries{display:flex;flex-wrap:wrap;gap:0;margin-bottom:18px;}
+        .latam-item{padding:0 20px 0 0;margin-right:20px;border-right:1px solid var(--line);}
+        .latam-item:last-child{border-right:none;padding-right:0;margin-right:0;}
+        .latam-item-name{font-size:12px;font-weight:500;color:var(--ink);display:block;margin-bottom:2px;}
+        .latam-item-n{font-family:var(--font-mono);font-size:22px;font-weight:500;color:var(--ink-soft);line-height:1;display:block;}
+        .latam-note{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);line-height:1.65;padding-top:14px;border-top:1px solid var(--line);}
+        @media(max-width:640px){
+          .latam-panel{padding:22px 20px 18px;}
+          .latam-num{font-size:40px;}
+          .latam-item{padding:0 14px 0 0;margin-right:14px;}
         }
       </style>
       <div class="full-slot latam-panel" data-reveal="fade">
-        <div class="latam-kicker">Inventário de fragmentação regional</div>
-        <div class="latam-inner">
-          <div class="latam-metric">
-            <div class="latam-num">50</div>
-            <div class="latam-sublabel">páginas ativas<br>em 7 mercados</div>
-          </div>
-          <div>
-            <div class="latam-th">
-              <span class="latam-col-h">mercado</span>
-              <span></span>
-              <span class="latam-col-h" style="text-align:right;">pág.</span>
-              <span class="latam-col-h">hardware</span>
-            </div>
-            <div class="latam-row">
-              <span class="latam-country">Brasil</span>
-              <div class="latam-bar-bg"><div class="latam-bar" style="width:100%;background:var(--accent);"></div></div>
-              <span class="latam-pages">13</span>
-              <span class="latam-hw">5 modelos</span>
-            </div>
-            <div class="latam-row">
-              <span class="latam-country">México</span>
-              <div class="latam-bar-bg"><div class="latam-bar" style="width:77%;background:var(--accent);"></div></div>
-              <span class="latam-pages">10</span>
-              <span class="latam-hw">3 modelos</span>
-            </div>
-            <div class="latam-row">
-              <span class="latam-country">Argentina</span>
-              <div class="latam-bar-bg"><div class="latam-bar" style="width:54%;background:var(--accent);"></div></div>
-              <span class="latam-pages">7</span>
-              <span class="latam-hw">1 modelo</span>
-            </div>
-            <div class="latam-row">
-              <span class="latam-country">Chile</span>
-              <div class="latam-bar-bg"><div class="latam-bar" style="width:54%;background:var(--accent);"></div></div>
-              <span class="latam-pages">7</span>
-              <span class="latam-hw">2 modelos</span>
-            </div>
-            <div class="latam-row">
-              <span class="latam-country">Uruguai</span>
-              <div class="latam-bar-bg"><div class="latam-bar" style="width:38%;background:var(--ink-faint);opacity:.55;"></div></div>
-              <span class="latam-pages">5</span>
-              <span class="latam-hw">agregador único</span>
-            </div>
-            <div class="latam-row">
-              <span class="latam-country">Peru</span>
-              <div class="latam-bar-bg"><div class="latam-bar" style="width:31%;background:var(--ink-faint);opacity:.55;"></div></div>
-              <span class="latam-pages">4</span>
-              <span class="latam-hw">op. digital</span>
-            </div>
-            <div class="latam-row">
-              <span class="latam-country">Colômbia</span>
-              <div class="latam-bar-bg"><div class="latam-bar" style="width:31%;background:var(--ink-faint);opacity:.55;"></div></div>
-              <span class="latam-pages">4</span>
-              <span class="latam-hw">op. digital</span>
-            </div>
-          </div>
+        <div class="latam-num">50</div>
+        <div class="latam-sublabel">páginas ativas · 7 mercados</div>
+        <div class="latam-countries">
+          <div class="latam-item"><span class="latam-item-name">Brasil</span><span class="latam-item-n">13</span></div>
+          <div class="latam-item"><span class="latam-item-name">México</span><span class="latam-item-n">10</span></div>
+          <div class="latam-item"><span class="latam-item-name">Argentina</span><span class="latam-item-n">7</span></div>
+          <div class="latam-item"><span class="latam-item-name">Chile</span><span class="latam-item-n">7</span></div>
+          <div class="latam-item"><span class="latam-item-name">Uruguai</span><span class="latam-item-n">5</span></div>
+          <div class="latam-item"><span class="latam-item-name">Peru</span><span class="latam-item-n">4</span></div>
+          <div class="latam-item"><span class="latam-item-name">Colômbia</span><span class="latam-item-n">4</span></div>
         </div>
-        <p class="latam-note">↳ A variação de hardware por mercado tornava cada atualização de tarifa um ciclo isolado de manutenção manual — sobrecarregando engenharia e design a cada mudança regional.</p>
+        <p class="latam-note">↳ Cada variação de tarifa exigia manutenção manual isolada — sobrecarregando engenharia e design a cada atualização regional.</p>
       </div>
     </div>
   </div>
