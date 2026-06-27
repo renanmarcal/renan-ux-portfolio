@@ -20,34 +20,16 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../case.css">
 <style>
-/* Correção de imagens achatadas – case C6
-   Raiz: width+height HTML attrs adicionados pelo QA expõem a proporção
-   intrínseca das imagens no .case-figure (sem height definido no CSS).
-   Solução: dar ao container um aspect-ratio fixo + overflow:hidden para que
-   o object-fit:cover funcione corretamente em todos os casos. */
 .case-figure {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 6px;
-  border: 1px solid var(--line);
+  position: relative; width: 100%;
+  aspect-ratio: 16 / 9; overflow: hidden;
+  border-radius: 6px; border: 1px solid var(--line);
   margin: 2.5rem 0;
 }
 .case-figure img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center top !important;
-  border: none !important;
-  border-radius: 0 !important;
-  display: block !important;
-}
-.img-slot img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  border: none; border-radius: 0; display: block;
 }
 </style>
 </head>
