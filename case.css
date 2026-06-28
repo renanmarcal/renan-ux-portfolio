@@ -79,7 +79,7 @@ body {
 }
 
 /* ─── hero ─── */
-.hero { padding: var(--s-9) 0 var(--s-8); }
+.hero { padding: var(--s-9) 0 var(--s-8); border-bottom: 1px solid var(--line); }
 .hero-grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: var(--s-6); align-items: start;
