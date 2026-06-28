@@ -251,6 +251,11 @@ h2 + .sub-h { margin-top: 0; }
   object-fit: cover; object-position: center top;
   border: none; border-radius: 0; display: block;
 }
+.fig-cap {
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: .04em;
+  color: var(--ink-faint); margin-top: var(--s-1);
+}
 
 /* ─── idea grid / cards ─── */
 .idea-grid {
