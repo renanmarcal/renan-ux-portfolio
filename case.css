@@ -115,7 +115,7 @@ h1 {
 .spec .s-label {
   font-family: var(--font-mono);
   font-size: 10px; letter-spacing: .06em;
-  text-transform: lowercase; color: var(--ink-faint);
+  text-transform: uppercase; color: var(--ink-faint);
   margin-bottom: 6px;
 }
 .spec .s-val { font-size: 13px; color: var(--ink-soft); }
