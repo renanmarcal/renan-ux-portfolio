@@ -173,14 +173,10 @@ body {
 }
 .case-card:hover .case-thumb img { transform: scale(1.03); }
 
-/* asymmetric editorial grid on desktop */
+/* dois cards em coluna única, ambos horizontais */
 @media (min-width: 900px) {
-  .case-grid { grid-template-columns: 1fr 1fr; }
-  .case-card:first-child { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; }
-  .case-card:not(:first-child) { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
-  .case-card:not(:first-child) .case-thumb {
-    aspect-ratio: 16/10; border-right: none; border-bottom: 1px solid var(--line);
-  }
+  .case-grid { grid-template-columns: 1fr; }
+  .case-card { grid-template-columns: 1fr 1fr; }
 }
 
 /* full-bleed single column on mobile */
