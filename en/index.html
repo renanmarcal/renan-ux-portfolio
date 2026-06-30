@@ -242,6 +242,49 @@ body {
 }
 .footer-cta a:hover { color: var(--accent); background-size: 100% 1px; }
 
+/* ─── pillars ─── */
+.pillars { padding: 48px 0; border-bottom: 1px solid var(--line); }
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.pillar {
+  padding: 0 32px;
+  border-right: 1px solid var(--line);
+}
+.pillar:first-child { padding-left: 0; }
+.pillar:last-child { border-right: none; padding-right: 0; }
+.pillar-num {
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: .1em;
+  color: var(--ink-faint);
+  display: block; margin-bottom: 12px;
+}
+.pillar-verb {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600; font-size: 28px;
+  color: var(--ink); letter-spacing: -.02em;
+  line-height: 1; margin-bottom: 12px;
+}
+.pillar-desc {
+  font-size: 13px; color: var(--ink-soft);
+  line-height: 1.55;
+}
+@media (max-width: 768px) {
+  .pillars { padding: 40px 0; }
+  .pillars-grid { grid-template-columns: 1fr 1fr; gap: 0; }
+  .pillar { padding: 20px 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .pillar:first-child { padding-left: 0; }
+  .pillar:nth-child(2) { border-right: none; padding-right: 0; }
+  .pillar:nth-child(3) { padding-left: 0; border-bottom: none; }
+  .pillar:nth-child(4) { border-right: none; border-bottom: none; padding-right: 0; }
+}
+@media (max-width: 430px) {
+  .pillars-grid { grid-template-columns: 1fr; }
+  .pillar { padding: 20px 0; border-right: none; border-bottom: 1px solid var(--line); }
+  .pillar:last-child { border-bottom: none; }
+}
+
 /* ─── language switcher ─── */
 .lang-switch {
   display: flex; align-items: center; gap: 6px;
@@ -329,6 +372,33 @@ body {
     </div>
   </div>
 </header>
+
+<section class="pillars">
+  <div class="wrap">
+    <div class="pillars-grid">
+      <div class="pillar" data-reveal="up">
+        <span class="pillar-num">01</span>
+        <h3 class="pillar-verb">Understand</h3>
+        <p class="pillar-desc">User research, discovery and problem mapping</p>
+      </div>
+      <div class="pillar" data-reveal="up" data-d="1">
+        <span class="pillar-num">02</span>
+        <h3 class="pillar-verb">Plan</h3>
+        <p class="pillar-desc">Information architecture, flows and product strategy</p>
+      </div>
+      <div class="pillar" data-reveal="up" data-d="2">
+        <span class="pillar-num">03</span>
+        <h3 class="pillar-verb">Build</h3>
+        <p class="pillar-desc">Interface, prototyping and design system</p>
+      </div>
+      <div class="pillar" data-reveal="up" data-d="3">
+        <span class="pillar-num">04</span>
+        <h3 class="pillar-verb">Track</h3>
+        <p class="pillar-desc">Metrics, validation and continuous product evolution</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <main class="cases">
   <div class="wrap">
