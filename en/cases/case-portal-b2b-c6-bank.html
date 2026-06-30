@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Geist+Mono:wght@400;500&display=swap">
+<title>C6 Pay management portal, product design case study · Renan Marçal</title>
+<meta name="description" content="Case study of the B2B portal redesign for merchants in the C6 Pay ecosystem. Raw engineering data transformed into operational efficiency, with support ticket reduction and components delivered to the C6 Bank design system.">
+<meta property="og:title" content="C6 Pay management portal, product design case study · Renan Marçal">
+<meta property="og:description" content="Case study of the B2B portal redesign for merchants in the C6 Pay ecosystem. Raw engineering data transformed into operational efficiency, with support ticket reduction and components delivered to the C6 Bank design system.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Renan Marçal">
+<meta property="og:image" content="https://renanmarcal.github.io/renan-ux-portfolio/assets/img/thumb-portal-b2b-c6-bank.png">
+<meta property="og:image:alt" content="New C6 Pay portal interface displayed on a laptop showing the financial health dashboard for merchants">
+<meta property="og:url" content="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-portal-b2b-c6-bank.html">
+<link rel="canonical" href="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-portal-b2b-c6-bank.html">
+<link rel="alternate" hreflang="pt" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html">
+<link rel="alternate" hreflang="en" href="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-portal-b2b-c6-bank.html">
+<link rel="alternate" hreflang="es" href="https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-portal-b2b-c6-bank.html">
+<link rel="alternate" hreflang="x-default" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../case.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="../index.html">← Renan Marçal</a>
+    <span class="crumb">C6 Pay Portal</span>
+    <nav class="lang-switch" aria-label="Language / Idioma">
+      <a href="../../cases/case-portal-b2b-c6-bank.html" hreflang="pt">PT</a>
+      <span aria-hidden="true">·</span>
+      <a href="case-portal-b2b-c6-bank.html" hreflang="en" aria-current="page">EN</a>
+      <span aria-hidden="true">·</span>
+      <a href="../../es/cases/case-portal-b2b-c6-bank.html" hreflang="es">ES</a>
+    </nav>
+  </div>
+  <div class="progress-bar" id="progress"></div>
+</header>
+
+<main>
+<section class="hero" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">PayGo · C6 Bank · 2020–2021</p>
+        <h1>
+          <span class="h1-line">Management portal</span>
+          <span class="h1-line">for C6 Pay merchants</span>
+        </h1>
+      </div>
+      <div class="hero-right">
+        <p class="hero-summary">The C6 Pay management portal still carried the structure and language of PayGo, built for a context prior to the C6 Bank integration. The redesign reorganized the navigation and information presentation to make it clearer for merchants to track their financial operation within the bank's new ecosystem.</p>
+        <div class="spec">
+          <div><div class="s-label">Platform</div><div class="s-val">B2B Portal · Web</div></div>
+          <div><div class="s-label">Role</div><div class="s-val">Product Designer</div></div>
+          <div><div class="s-label">Team</div><div class="s-val">1 Product Manager · 4 Engineers</div></div>
+          <div><div class="s-label">Scope</div><div class="s-val">Research · Information Architecture · UX/UI · Design System</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hero-img-strip">
+  <div class="wrap">
+    <img
+      src="../../assets/img/hero-c6.png"
+      loading="eager"
+      alt="New C6 Pay portal interface in perspective, displaying the financial management dashboard for merchants"
+      class="hero-mockup-full">
+  </div>
+</div>
+
+<!-- 01 THE CONTEXT -->
+<section class="block" id="b01" data-stage="01" data-name="The context">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage problema">the context</span>
+        <span class="stage-num">01</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">A B2B operation between PayGo and C6 Bank</h2>
+        <p class="body-text" data-reveal="up" data-d="1">With the integration between PayGo and C6 Bank, there was a need to align the portal experience with the bank's standards and prepare the platform for its evolution. Beyond the visual modernization, the product had accumulated usability, navigation, and communication issues that impacted merchants' essential tasks and increased support demand.</p>
+      </div>
+      <div class="img-slot full-slot" style="aspect-ratio:auto; height:auto;" data-reveal="fade">
+        <img src="../../assets/img/c6-pay-portal-legado-transacoes.png" loading="lazy" alt="Legacy portal modal showing a transaction table with an excess of technical columns" style="object-fit:contain; height:auto;">
+      </div>
+      <div class="img-slot full-slot" style="aspect-ratio:auto; height:auto;" data-reveal="fade">
+        <img src="../../assets/img/c6-pay-portal-legado-resumo.png" loading="lazy" alt="Financial summary screen of the legacy PayGo portal with a rigid weekday-based view" style="object-fit:contain; height:auto;">
+      </div>
+      <div class="idea-grid idea-grid-2 full-slot" data-reveal="fade">
+        <div class="c-card">
+          <h3 class="sub-h">User experience</h3>
+          <ul class="prob-list">
+            <li>Non-intuitive navigation</li>
+            <li>Confusing information architecture</li>
+            <li>Low priority given to financial information</li>
+            <li>Excessive cognitive load on screens</li>
+            <li>Long flows for recurring tasks</li>
+          </ul>
+        </div>
+        <div class="c-card">
+          <h3 class="sub-h">Business impact</h3>
+          <ul class="prob-list">
+            <li>High volume of operational questions</li>
+            <li>Frequent dependence on support</li>
+            <li>Low task execution efficiency</li>
+            <li>Inconsistency with C6 Bank standards</li>
+            <li>Limited foundation for product evolution</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 COLLABORATION -->
+<section class="block" id="b02" data-stage="02" data-name="Collaboration">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage discovery">collaboration</span>
+        <span class="stage-num">02</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Understanding possibilities with engineering</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Since the team was small, we had daily contact with engineering. I leveraged this proximity to understand how data reached the portal, what the legacy system's limitations were, and, together with the PM, define what really made sense to evolve in this first phase. From these conversations, we prioritized two fronts for the redesign.</p>
+      </div>
+      <div class="img-slot full-slot" data-reveal="fade">
+        <img src="../../assets/img/portal-paygo-legado.png" loading="lazy" alt="Legacy PayGo portal interface displaying data almost exactly as consumed by the back office">
+      </div>
+      <div class="idea-grid idea-grid-2 full-slot" data-reveal="fade">
+        <div class="c-card">
+          <span class="c-num">01</span>
+          <h3 class="sub-h">Helping with daily cash close</h3>
+          <p class="body-text">By analyzing support tickets, I identified that most questions arose during the cash close. Merchants had difficulty locating and interpreting financial information in the portal. This became the main problem of the project.</p>
+        </div>
+        <div class="c-card">
+          <span class="c-num">02</span>
+          <h3 class="sub-h">Prioritizing what really mattered</h3>
+          <p class="body-text">In the counter's daily routine, the user needed to quickly know their financial situation for that day. I reorganized the interface to give visibility to essential information and make this response immediate, without relying on tables and filters.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 IDEATION AND LOGIC -->
+<section class="block" id="b03" data-stage="03" data-name="Ideation and logic">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage discovery">ideation and logic</span>
+        <span class="stage-num">03</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Transforming data into a clear financial view</h2>
+        <p class="body-text" data-reveal="up" data-d="1">With priorities defined, I reorganized the interface to make it easier to read financial information day to day. The solution replaced extensive tables with a more visual structure, reducing the need to interpret technical data to track the cash close.</p>
+      </div>
+      <div class="idea-grid full-slot" data-reveal="fade">
+        <div class="c-card">
+          <span class="c-num">01</span>
+          <h3 class="sub-h">Financial summary</h3>
+          <p class="body-text">I replaced the rigid weekly calendar of the legacy system with consolidated cards showing the main financial indicators, allowing merchants to see the total balance without having to add up daily columns.</p>
+        </div>
+        <div class="c-card">
+          <span class="c-num">02</span>
+          <h3 class="sub-h">Information organization</h3>
+          <p class="body-text">I organized the interface to reflect the merchant's routine. Receivables were highlighted at the top of the screen, providing a view of incoming money, while the day's sales remained just below to support the cash close.</p>
+        </div>
+        <div class="c-card">
+          <span class="c-num">03</span>
+          <h3 class="sub-h">Operation-oriented language</h3>
+          <p class="body-text">I revised the organization of menus, filters, and messages to make navigation more intuitive. Communication was adjusted to prioritize the merchant's operational context, with clearer periods, states, and feedback throughout the experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 FINANCIAL VIEW -->
+<section class="block" id="b04" data-stage="04" data-name="Financial view">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage solucao">financial view</span>
+        <span class="stage-num">04</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">A clear view of the financial operation</h2>
+        <p class="body-text" data-reveal="up" data-d="1">The portal had two distinct financial summary areas that presented complementary information, but required navigation between screens to compose a complete picture. With support from the CX team, I mapped the most frequent merchant questions during cash close and consolidated this information into a single view, prioritizing the most relevant indicators for daily C6 terminal operation.</p>
+        <p class="body-text" data-reveal="up" data-d="2">I reorganized the interface to better use the available space, reduce repetitive elements, and highlight only the information needed for the cash close. With this, merchants were able to quickly check their financial position on the first screen, reducing the need to browse different sections of the portal.</p>
+      </div>
+      <div class="full-slot" data-reveal="fade">
+        <img src="../../assets/img/c6-pay-ideacao-estrutura-informacao.png" loading="lazy" alt="Information structure and ideation of the C6 Pay portal redesign, organizing financial data into visual blocks for merchants" style="width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--line);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 CASH CLOSE -->
+<section class="block" id="b05" data-stage="05" data-name="Cash close">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage solucao">cash close</span>
+        <span class="stage-num">05</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Streamlining the cash close</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Analysis of support tickets showed that many merchants used the sales history to review the daily operation. The challenge was to reduce the time spent on this review and make it easier to identify discrepancies between transactions.</p>
+        <p class="body-text" data-reveal="up" data-d="2">To achieve this, I reorganized the experience by prioritizing the most frequent queries, with quick filters by period and refinements by status and operation type. I also made each transaction's status more explicit and added a data last-updated timestamp, providing more confidence during cash close validation.</p>
+      </div>
+      <div class="full-slot" data-reveal="fade">
+        <img src="../../assets/img/c6-pay-portal-vendas-contexto.png" loading="lazy" alt="Merchant consulting the redesigned C6 Pay portal Sales screen, with quick filters by period, operation, and status to streamline the cash close" style="width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--line);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 FOUNDATION -->
+<section class="block" id="b06" data-stage="06" data-name="Foundation">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage discovery">foundation</span>
+        <span class="stage-num">06</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">How we grounded design decisions</h2>
+        <p class="body-text" data-reveal="up" data-d="1">The redesign was not based solely on analysis of the existing interface. Throughout the project, I gathered different perspectives to better understand the problem, validate hypotheses, and align decisions with the rest of the team.</p>
+      </div>
+      <div class="idea-grid idea-grid-2 full-slot" data-reveal="fade">
+        <div class="c-card">
+          <h3 class="sub-h">CX</h3>
+          <p class="body-text">Close work with the customer service team to understand the merchant profile, the most recurring questions, and the main reasons for contacting support.</p>
+        </div>
+        <div class="c-card">
+          <h3 class="sub-h">Engineering</h3>
+          <p class="body-text">Mapping the legacy system's operation to understand technical limitations, data availability, and what could be resolved in the interface or would require back-end changes.</p>
+        </div>
+        <div class="c-card">
+          <h3 class="sub-h">Competitor analysis</h3>
+          <p class="body-text">Analysis of products like Stone, Stripe, and PagSeguro to understand how the market organizes financial information and build a reference base for design decisions.</p>
+        </div>
+        <div class="c-card">
+          <h3 class="sub-h">User testing</h3>
+          <p class="body-text">Prototype validation with five merchants to verify that the main decisions actually facilitated their operation before development.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 IMPACT -->
+<section class="block" id="b07" data-stage="07" data-name="Impact">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage resultado">impact</span>
+        <span class="stage-num">07</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Support reduction and development autonomy</h2>
+        <p class="body-text" data-reveal="up" data-d="1">After the portal went into production, cash close questions virtually disappeared from support. To understand whether the change also showed up in user behavior, I analyzed GA with the PO. Average time on the sales screen dropped by almost half and access to reports increased. In parallel, we adapted the C6 Bank design system components to PayGo's technical limitations and built a proprietary library so the squad could evolve the product more consistently.</p>
+      </div>
+      <div class="img-slot full-slot" data-reveal="fade">
+        <iframe
+          src="https://www.youtube.com/embed/7pvUgweK-fo?si=_x7gv4tMBHA2ReBU"
+          title="C6 Pay merchant management portal demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+  }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  const bar = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>

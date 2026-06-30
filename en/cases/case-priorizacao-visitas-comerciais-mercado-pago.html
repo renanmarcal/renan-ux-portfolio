@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Geist+Mono:wght@400;500&display=swap">
+<title>Commercial visit prioritization at Mercado Pago, product design case study · Renan Marçal</title>
+<meta name="description" content="UX case study: redesign of commercial visit prioritization in Mercado Pago's internal CRM for field representatives in Brazil, Mexico, and Argentina.">
+<meta property="og:title" content="Commercial visit prioritization at Mercado Pago, product design case study · Renan Marçal">
+<meta property="og:description" content="UX case study: redesign of commercial visit prioritization in Mercado Pago's internal CRM for field representatives in Brazil, Mexico, and Argentina.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Renan Marçal">
+<meta property="og:image" content="https://renanmarcal.github.io/renan-ux-portfolio/assets/img/thumb-priorizacao-visitas-comerciais.png">
+<meta property="og:image:alt" content="Mockup of the Mercado Pago visit prioritization app showing the schedule and visit detail">
+<meta property="og:url" content="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html">
+<link rel="canonical" href="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html">
+<link rel="alternate" hreflang="pt" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-priorizacao-visitas-comerciais-mercado-pago.html">
+<link rel="alternate" hreflang="en" href="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html">
+<link rel="alternate" hreflang="es" href="https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html">
+<link rel="alternate" hreflang="x-default" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-priorizacao-visitas-comerciais-mercado-pago.html">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../case.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="../index.html">← Renan Marçal</a>
+    <span class="crumb">Visit prioritization</span>
+    <nav class="lang-switch" aria-label="Language / Idioma">
+      <a href="../../cases/case-priorizacao-visitas-comerciais-mercado-pago.html" hreflang="pt">PT</a>
+      <span aria-hidden="true">·</span>
+      <a href="case-priorizacao-visitas-comerciais-mercado-pago.html" hreflang="en" aria-current="page">EN</a>
+      <span aria-hidden="true">·</span>
+      <a href="../../es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html" hreflang="es">ES</a>
+    </nav>
+  </div>
+  <div class="progress-bar" id="progress"></div>
+</header>
+
+<main>
+<section class="hero" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">Mercado Pago · 2024–2025</p>
+        <h1>
+          <span class="h1-line">Prioritization of</span>
+          <span class="h1-line">commercial visits</span>
+        </h1>
+      </div>
+      <div class="hero-right">
+        <p class="hero-summary">Representatives received priority alerts, but the tool didn't help turn them into a viable visit plan. Redesigning this flow for Brazil, Mexico, and Argentina without fragmenting product behavior across markets.</p>
+        <div class="spec">
+          <div><div class="s-label">Platform</div><div class="s-val">Mobile</div></div>
+          <div><div class="s-label">Role</div><div class="s-val">Product Designer</div></div>
+          <div><div class="s-label">Team</div><div class="s-val">2 Product Managers · 4 Engineers</div></div>
+          <div><div class="s-label">Scope</div><div class="s-val">Discovery · User Research · Prototyping · Validation · Stakeholder Alignment</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hero-img-strip">
+  <div class="wrap">
+    <img src="../../assets/img/mockup-priorizacao-visitas-comerciais.png" loading="eager" alt="Mockup of the Mercado Pago visit prioritization app showing the schedule and visit detail" class="hero-mockup-full">
+  </div>
+</div>
+
+<!-- 01 STRUCTURE -->
+<section class="block" id="b01" data-stage="01" data-name="Structure">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage problema">structure</span>
+        <span class="stage-num">01</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">A tool at the center of field operations</h2>
+      </div>
+      <div class="idea-grid full-slot" data-reveal="fade">
+        <div class="c-card">
+          <span class="c-num">01</span>
+          <h3 class="sub-h">The product</h3>
+          <p class="body-text">I worked in the acquiring vertical of Mercado Pago, on an internal CRM used by field sales teams to manage SME portfolios.</p>
+        </div>
+        <div class="c-card">
+          <span class="c-num">02</span>
+          <h3 class="sub-h">The context</h3>
+          <p class="body-text">The product covers the entire commercial cycle, from prospecting to base maintenance, in a context with many clients per region and strong execution pressure in the field.</p>
+        </div>
+        <div class="c-card">
+          <span class="c-num">03</span>
+          <h3 class="sub-h">My focus</h3>
+          <p class="body-text">My focus was the evolution of the visit prioritization experience, a central step in the representatives' daily planning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 CONTEXT -->
+<section class="block" id="b02" data-stage="02" data-name="Context">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage problema">context</span>
+        <span class="stage-num">02</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Evolving the CRM priority experience</h2>
+        <p class="body-text" data-reveal="up" data-d="1">The initial challenge was to review the priority experience in the commercial consultants' CRM. The application already displayed portfolio alerts, but required navigating between different screens to relate them to merchants and understand which visits needed to happen that day.</p>
+      </div>
+      <div class="img-slot" data-reveal="fade">
+        <img src="../../assets/img/crm-alertas-antes-priorizacao.png" width="2880" height="1620" loading="lazy" alt="Old CRM screen showing a priority alert list without context for visit planning">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 RESEARCH -->
+<section class="block" id="b03" data-stage="03" data-name="Research">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage discovery">research</span>
+        <span class="stage-num">03</span>
+      </div>
+      <div class="b-split" style="grid-template-columns: 4fr 8fr;">
+        <div>
+          <h2 data-reveal="up">From research to product opportunity</h2>
+          <p class="body-text" data-reveal="up" data-d="1">I gathered the main Discovery learnings into a single operation map, connecting analysis of the existing product, alignment with partner teams, and recurring conversations with commercial consultants. This synthesis guided the project's priority definition and the evolution of the visit management experience.</p>
+        </div>
+        <div class="img-slot" data-reveal="fade" style="aspect-ratio: 1640 / 1299;">
+          <img src="../../assets/img/mapa-operacao-discovery.png" loading="lazy" alt="Operation map created during discovery synthesizing demand sources, application problems, and impact on commercial consultants' routines" style="object-fit: contain;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 DIRECTIONS EXPLORED -->
+<section class="block" id="b04" data-stage="04" data-name="Directions explored">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage discovery">directions explored</span>
+        <span class="stage-num">04</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Three low-fidelity proposals</h2>
+      </div>
+      <div class="idea-grid full-slot" data-reveal="up" data-d="1">
+        <div class="c-card">
+          <span class="c-num">A</span>
+          <h3 class="sub-h">Visit map</h3>
+          <ul class="prob-list">
+            <li>✓ Visualizes the portfolio geographically</li>
+            <li>✓ Spatial planning</li>
+            <li>✕ High technical complexity</li>
+          </ul>
+        </div>
+        <div class="c-card" style="border-color: var(--accent-2);">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: var(--s-2);">
+            <span class="c-num" style="margin-bottom:0;">B</span>
+            <span style="font-family:var(--font-mono);font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-2);">Chosen</span>
+          </div>
+          <h3 class="sub-h">Prioritized schedule</h3>
+          <ul class="prob-list">
+            <li>✓ Organizes the workday</li>
+            <li>✓ Leverages existing data</li>
+            <li>✓ Lower engineering effort</li>
+          </ul>
+        </div>
+        <div class="c-card">
+          <span class="c-num">C</span>
+          <h3 class="sub-h">Prioritized portfolio</h3>
+          <ul class="prob-list">
+            <li>✓ Low cost</li>
+            <li>✕ Little improvement in visit organization</li>
+          </ul>
+        </div>
+      </div>
+      <p class="keypoint" data-reveal="up" data-d="2" style="max-width: 62ch;">The chosen direction balanced consultant impact and technical feasibility within the project timeline.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 THE NEW EXPERIENCE -->
+<section class="block" id="b05" data-stage="05" data-name="The new experience">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage discovery">the new experience</span>
+        <span class="stage-num">05</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">The new experience focused on clarity</h2>
+        <p class="body-text" data-reveal="up" data-d="1">The new interface organized the representative's day through date-based navigation, bringing priority levels and visit reasons directly to the main schedule screen. This design eliminated the need to guess the next step or search through individual profiles, allowing the professional to understand the context and urgency of each merchant before even touching the screen.</p>
+      </div>
+      <div class="img-slot" data-reveal="fade">
+        <img src="../../assets/img/fluxo-agenda.png" width="2880" height="1620" loading="lazy" alt="Complete flow of the new schedule experience showing date navigation and visit listing with priority context">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 REFINEMENT -->
+<section class="block" id="b06" data-stage="06" data-name="Refinement">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage solucao">refinement</span>
+        <span class="stage-num">06</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Refining the experience for launch</h2>
+        <p class="body-text" data-reveal="up" data-d="1">I validated the prototype with commercial representatives to confirm whether the new schedule structure was understood during visit planning. Tests showed that date navigation was intuitive, but there was still a need to open each client to understand the priority reason.</p>
+        <p class="body-text" data-reveal="up" data-d="2">Before implementation, I incorporated this information directly into the listing through tags, reducing a navigation step and making the schedule more scannable for daily planning.</p>
+        <div class="spec" style="margin-top: var(--s-5);" data-reveal="up" data-d="3">
+          <div>
+            <div class="s-label">Cross-market launch</div>
+            <div class="s-val">Brazil, Argentina, and Mexico, with content and language adaptations aligned to each market.</div>
+          </div>
+          <div>
+            <div class="s-label">Scale for managers</div>
+            <div class="s-val">Desktop version with context adapted to managing representative teams.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+  }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  const bar = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>

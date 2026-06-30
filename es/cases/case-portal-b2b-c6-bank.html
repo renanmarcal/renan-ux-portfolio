@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Geist+Mono:wght@400;500&display=swap">
+<title>Portal de gestión C6 Pay, estudio de caso de diseño de producto · Renan Marçal</title>
+<meta name="description" content="Estudio de caso del rediseño del portal B2B para comerciantes en el ecosistema C6 Pay. Datos brutos de ingeniería transformados en eficiencia operacional, con reducción de tickets de soporte y componentes entregados al sistema de diseño del C6 Bank.">
+<meta property="og:title" content="Portal de gestión C6 Pay, estudio de caso de diseño de producto · Renan Marçal">
+<meta property="og:description" content="Estudio de caso del rediseño del portal B2B para comerciantes en el ecosistema C6 Pay. Datos brutos de ingeniería transformados en eficiencia operacional, con reducción de tickets de soporte y componentes entregados al sistema de diseño del C6 Bank.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Renan Marçal">
+<meta property="og:image" content="https://renanmarcal.github.io/renan-ux-portfolio/assets/img/thumb-portal-b2b-c6-bank.png">
+<meta property="og:image:alt" content="Nueva interfaz del portal C6 Pay en laptop mostrando el panel de salud financiera para comerciantes">
+<meta property="og:url" content="https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-portal-b2b-c6-bank.html">
+<link rel="canonical" href="https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-portal-b2b-c6-bank.html">
+<link rel="alternate" hreflang="pt" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html">
+<link rel="alternate" hreflang="en" href="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-portal-b2b-c6-bank.html">
+<link rel="alternate" hreflang="es" href="https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-portal-b2b-c6-bank.html">
+<link rel="alternate" hreflang="x-default" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../case.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="../index.html">← Renan Marçal</a>
+    <span class="crumb">Portal C6 Pay</span>
+    <nav class="lang-switch" aria-label="Language / Idioma">
+      <a href="../../cases/case-portal-b2b-c6-bank.html" hreflang="pt">PT</a>
+      <span aria-hidden="true">·</span>
+      <a href="../../en/cases/case-portal-b2b-c6-bank.html" hreflang="en">EN</a>
+      <span aria-hidden="true">·</span>
+      <a href="case-portal-b2b-c6-bank.html" hreflang="es" aria-current="page">ES</a>
+    </nav>
+  </div>
+  <div class="progress-bar" id="progress"></div>
+</header>
+
+<main>
+<section class="hero" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">PayGo · C6 Bank · 2020–2021</p>
+        <h1>
+          <span class="h1-line">Portal de gestión</span>
+          <span class="h1-line">para comerciantes C6 Pay</span>
+        </h1>
+      </div>
+      <div class="hero-right">
+        <p class="hero-summary">El portal de gestión de C6 Pay aún cargaba la estructura y el lenguaje de PayGo, construida para un contexto previo a la integración con C6 Bank. El rediseño reorganizó la navegación y la presentación de información para hacer más claro el seguimiento de la operación financiera por parte de los comerciantes dentro del nuevo ecosistema del banco.</p>
+        <div class="spec">
+          <div><div class="s-label">Plataforma</div><div class="s-val">Portal B2B · Web</div></div>
+          <div><div class="s-label">Rol</div><div class="s-val">Product Designer</div></div>
+          <div><div class="s-label">Equipo</div><div class="s-val">1 Product Manager · 4 Ingenieros</div></div>
+          <div><div class="s-label">Alcance</div><div class="s-val">Investigación · Arquitectura de Información · UX/UI · Sistema de Diseño</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hero-img-strip">
+  <div class="wrap">
+    <img
+      src="../../assets/img/hero-c6.png"
+      loading="eager"
+      alt="Nueva interfaz del portal C6 Pay en perspectiva, mostrando el panel de gestión financiera para comerciantes"
+      class="hero-mockup-full">
+  </div>
+</div>
+
+<!-- 01 EL CONTEXTO -->
+<section class="block" id="b01" data-stage="01" data-name="El contexto">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage problema">el contexto</span>
+        <span class="stage-num">01</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Una operación B2B entre PayGo y C6 Bank</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Con la integración entre PayGo y C6 Bank, surgió la necesidad de alinear la experiencia del portal con los estándares del banco y preparar la plataforma para su evolución. Además de la modernización visual, el producto acumulaba problemas de usabilidad, navegación y comunicación que afectaban las tareas esenciales de los comerciantes y aumentaban la demanda de soporte.</p>
+      </div>
+      <div class="img-slot full-slot" style="aspect-ratio:auto; height:auto;" data-reveal="fade">
+        <img src="../../assets/img/c6-pay-portal-legado-transacoes.png" loading="lazy" alt="Modal del portal legado mostrando una tabla de transacciones con exceso de columnas técnicas" style="object-fit:contain; height:auto;">
+      </div>
+      <div class="img-slot full-slot" style="aspect-ratio:auto; height:auto;" data-reveal="fade">
+        <img src="../../assets/img/c6-pay-portal-legado-resumo.png" loading="lazy" alt="Pantalla de resumen financiero del portal legado PayGo con una vista rígida por días de la semana" style="object-fit:contain; height:auto;">
+      </div>
+      <div class="idea-grid idea-grid-2 full-slot" data-reveal="fade">
+        <div class="c-card">
+          <h3 class="sub-h">Experiencia del usuario</h3>
+          <ul class="prob-list">
+            <li>Navegación poco intuitiva</li>
+            <li>Arquitectura de información confusa</li>
+            <li>Baja priorización de la información financiera</li>
+            <li>Exceso de carga cognitiva en las pantallas</li>
+            <li>Flujos largos para tareas recurrentes</li>
+          </ul>
+        </div>
+        <div class="c-card">
+          <h3 class="sub-h">Impacto en el negocio</h3>
+          <ul class="prob-list">
+            <li>Alto volumen de dudas operacionales</li>
+            <li>Dependencia frecuente del soporte</li>
+            <li>Baja eficiencia en la ejecución de tareas</li>
+            <li>Inconsistencia con los estándares de C6 Bank</li>
+            <li>Base limitada para la evolución del producto</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 COLABORACIÓN -->
+<section class="block" id="b02" data-stage="02" data-name="Colaboración">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage discovery">colaboración</span>
+        <span class="stage-num">02</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Entendiendo las posibilidades con ingeniería</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Como el equipo era pequeño, teníamos contacto diario con ingeniería. Aproveché esta proximidad para entender cómo llegaban los datos al portal, cuáles eran las limitaciones del sistema legado y, junto a la PM, definir qué tenía sentido evolucionar en esta primera fase. A partir de estas conversaciones, priorizamos dos frentes para el rediseño.</p>
+      </div>
+      <div class="img-slot full-slot" data-reveal="fade">
+        <img src="../../assets/img/portal-paygo-legado.png" loading="lazy" alt="Interfaz legada del portal PayGo mostrando los datos prácticamente como eran consumidos por el backoffice">
+      </div>
+      <div class="idea-grid idea-grid-2 full-slot" data-reveal="fade">
+        <div class="c-card">
+          <span class="c-num">01</span>
+          <h3 class="sub-h">Ayudar con el cierre diario</h3>
+          <p class="body-text">Al analizar los tickets de soporte, identifiqué que buena parte de las dudas surgían durante el cierre diario. Los comerciantes tenían dificultad para localizar e interpretar la información financiera en el portal. Este se convirtió en el problema principal del proyecto.</p>
+        </div>
+        <div class="c-card">
+          <span class="c-num">02</span>
+          <h3 class="sub-h">Priorizar lo que realmente importaba</h3>
+          <p class="body-text">En la rutina diaria del mostrador, el usuario necesitaba saber rápidamente su situación financiera del día. Reorganicé la interfaz para dar visibilidad a la información esencial y hacer esta respuesta inmediata, sin depender de tablas y filtros.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 IDEACIÓN Y LÓGICA -->
+<section class="block" id="b03" data-stage="03" data-name="Ideación y lógica">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage discovery">ideación y lógica</span>
+        <span class="stage-num">03</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Transformando datos en una visión financiera clara</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Con las prioridades definidas, reorganicé la interfaz para facilitar la lectura de la información financiera en el día a día. La solución sustituyó tablas extensas por una estructura más visual, reduciendo la necesidad de interpretar datos técnicos para realizar el cierre.</p>
+      </div>
+      <div class="idea-grid full-slot" data-reveal="fade">
+        <div class="c-card">
+          <span class="c-num">01</span>
+          <h3 class="sub-h">Resumen financiero</h3>
+          <p class="body-text">Reemplacé el calendario semanal rígido del sistema legado por tarjetas consolidadas con los principales indicadores financieros, permitiendo visualizar el saldo total sin necesidad de calcular columnas diarias.</p>
+        </div>
+        <div class="c-card">
+          <span class="c-num">02</span>
+          <h3 class="sub-h">Organización de la información</h3>
+          <p class="body-text">Organicé la interfaz para reflejar la rutina del comerciante. Las cuentas por cobrar quedaron destacadas en la parte superior de la pantalla, ofreciendo una visión del dinero que aún ingresaría, mientras que las ventas del día permanecieron justo debajo para apoyar el cierre.</p>
+        </div>
+        <div class="c-card">
+          <span class="c-num">03</span>
+          <h3 class="sub-h">Lenguaje orientado a la operación</h3>
+          <p class="body-text">Revisé la organización de menús, filtros y mensajes para hacer la navegación más intuitiva. La comunicación pasó a privilegiar el contexto de uso del comerciante, con períodos, estados y feedbacks más claros a lo largo de la experiencia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 VISIÓN FINANCIERA -->
+<section class="block" id="b04" data-stage="04" data-name="Visión financiera">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage solucao">visión financiera</span>
+        <span class="stage-num">04</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Una visión clara de la operación financiera</h2>
+        <p class="body-text" data-reveal="up" data-d="1">El portal tenía dos áreas distintas de resumen financiero que presentaban información complementaria, pero requerían navegar entre pantallas para componer un panorama completo. Con apoyo del equipo de CX, mapeé las dudas más frecuentes de los comerciantes durante el cierre y consolidamos esta información en una única vista, priorizando los indicadores más relevantes para la operación diaria de la terminal C6.</p>
+        <p class="body-text" data-reveal="up" data-d="2">Reorganicé la interfaz para aprovechar mejor el espacio disponible, reducir elementos repetitivos y destacar solo la información necesaria para el cierre. Con esto, el comerciante pudo consultar rápidamente su posición financiera en la primera pantalla, reduciendo la necesidad de recorrer distintas secciones del portal.</p>
+      </div>
+      <div class="full-slot" data-reveal="fade">
+        <img src="../../assets/img/c6-pay-ideacao-estrutura-informacao.png" loading="lazy" alt="Estructura de información e ideación del rediseño del portal C6 Pay, organizando datos financieros en bloques visuales para comerciantes" style="width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--line);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 CIERRE -->
+<section class="block" id="b05" data-stage="05" data-name="Cierre">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage solucao">cierre</span>
+        <span class="stage-num">05</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Facilitando el cierre diario</h2>
+        <p class="body-text" data-reveal="up" data-d="1">El análisis de los tickets de soporte mostró que muchos comerciantes usaban el historial de ventas para verificar el cierre diario de la operación. El desafío era reducir el tiempo dedicado a esta verificación y facilitar la identificación de discrepancias entre transacciones.</p>
+        <p class="body-text" data-reveal="up" data-d="2">Para ello, reorganicé la experiencia priorizando las consultas más frecuentes, con filtros rápidos por período y refinamientos por estado y operación. También hice el estado de cada transacción más explícito y agregué la información de última actualización de datos, brindando más confianza durante la validación del cierre.</p>
+      </div>
+      <div class="full-slot" data-reveal="fade">
+        <img src="../../assets/img/c6-pay-portal-vendas-contexto.png" loading="lazy" alt="Comerciante consultando la pantalla de Ventas rediseñada del portal C6 Pay, con filtros rápidos por período, operación y estado para facilitar el cierre" style="width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--line);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 FUNDAMENTACIÓN -->
+<section class="block" id="b06" data-stage="06" data-name="Fundamentación">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage discovery">fundamentación</span>
+        <span class="stage-num">06</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Cómo fundamentamos las decisiones de diseño</h2>
+        <p class="body-text" data-reveal="up" data-d="1">El rediseño no se basó únicamente en el análisis de la interfaz existente. A lo largo del proyecto, reuní distintas perspectivas para entender mejor el problema, validar hipótesis y alinear las decisiones con el resto del equipo.</p>
+      </div>
+      <div class="idea-grid idea-grid-2 full-slot" data-reveal="fade">
+        <div class="c-card">
+          <h3 class="sub-h">CX</h3>
+          <p class="body-text">Aproximación con el equipo de atención al cliente para entender el perfil de los comerciantes, las dudas más recurrentes y los principales motivos de contacto con el soporte.</p>
+        </div>
+        <div class="c-card">
+          <h3 class="sub-h">Ingeniería</h3>
+          <p class="body-text">Mapeo del funcionamiento del sistema legado para entender las limitaciones técnicas, la disponibilidad de datos y qué podía resolverse en la interfaz o requeriría cambios en el back-end.</p>
+        </div>
+        <div class="c-card">
+          <h3 class="sub-h">Análisis de competidores</h3>
+          <p class="body-text">Análisis de productos como Stone, Stripe y PagSeguro para entender cómo el mercado organiza la información financiera y construir una base de referencia para las decisiones de diseño.</p>
+        </div>
+        <div class="c-card">
+          <h3 class="sub-h">Pruebas con usuarios</h3>
+          <p class="body-text">Validación de prototipos con cinco comerciantes para verificar que las principales decisiones realmente facilitaban la operación antes del desarrollo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 IMPACTO -->
+<section class="block" id="b07" data-stage="07" data-name="Impacto">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage resultado">impacto</span>
+        <span class="stage-num">07</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Reducción de soporte y autonomía en el desarrollo</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Después de que el portal entró en producción, las dudas sobre el cierre prácticamente desaparecieron del soporte. Para entender si el cambio también se reflejaba en el comportamiento de los usuarios, analicé el GA junto con la PO. El tiempo promedio en la pantalla de ventas cayó casi a la mitad y el acceso a los reportes aumentó. En paralelo, adaptamos los componentes del sistema de diseño de C6 Bank a las limitaciones técnicas de PayGo y estructuramos una biblioteca propia para que el equipo pudiera evolucionar el producto con más consistencia.</p>
+      </div>
+      <div class="img-slot full-slot" data-reveal="fade">
+        <iframe
+          src="https://www.youtube.com/embed/7pvUgweK-fo?si=_x7gv4tMBHA2ReBU"
+          title="Demostración del portal de gestión para comerciantes C6 Pay"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+  }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  const bar = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>

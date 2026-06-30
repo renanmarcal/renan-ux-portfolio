@@ -293,6 +293,21 @@ h2 + .sub-h { margin-top: 0; }
   .spec, .spec-3 { grid-template-columns: 1fr; }
 }
 
+/* ─── language switcher ─── */
+.lang-switch {
+  display: flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.lang-switch a {
+  color: var(--ink-faint); text-decoration: none;
+  transition: color .3s;
+}
+.lang-switch a:hover { color: var(--accent); }
+.lang-switch a[aria-current="page"] { color: var(--ink); font-weight: 500; }
+.lang-switch span { color: var(--ink-faint); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .001ms !important;
