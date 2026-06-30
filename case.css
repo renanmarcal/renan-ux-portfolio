@@ -10,7 +10,7 @@
   --topbar-bg:  rgba(243,239,231,.9);
   --ink-faint:  #766b5c;
   --font-sans: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'Geist Mono', monospace;
+  --font-mono: 'Figtree', sans-serif;
   /* ── escala de espaçamento (base 8 px) ──────────────────────
      --s-1   8   micro: gaps de label, ícone+texto
      --s-2  16   compacto: spec, eyebrow gaps
