@@ -10,7 +10,11 @@
 <meta name="description" content="Portfolio de Renan Marçal, Product Designer com 6 anos em B2B e fintech. Cases no Mercado Pago e C6 Bank em discovery, sistemas de design e prototipação.">
 <meta property="og:title" content="Renan Marçal — Product Designer · Fintech e B2B">
 <meta property="og:description" content="Portfolio de Renan Marçal, Product Designer com 6 anos em B2B e fintech. Cases no Mercado Pago e C6 Bank em discovery, sistemas de design e prototipação.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Renan Marçal">
 <meta property="og:image" content="https://renanmarcal.github.io/renan-ux-portfolio/assets/img/thumb-priorizacao-visitas-comerciais.png">
+<meta property="og:image:alt" content="Portfolio de Renan Marçal, Product Designer com cases no Mercado Pago e C6 Bank">
 <meta property="og:url" content="https://renanmarcal.github.io/renan-ux-portfolio">
 <link rel="canonical" href="https://renanmarcal.github.io/renan-ux-portfolio">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -141,7 +145,7 @@ body {
 .case-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
 
 .case-card {
-  display: grid; grid-template-columns: 2fr 3fr;
+  display: grid; grid-template-columns: 1fr 1fr;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 6px;
@@ -173,25 +177,20 @@ body {
 }
 .case-card:hover .case-thumb img { transform: scale(1.03); }
 
-/* dois cards em coluna única, ambos horizontais */
-@media (min-width: 900px) {
-  .case-grid { grid-template-columns: 1fr; }
-  .case-card { grid-template-columns: 1fr 1fr; }
-}
-
 /* full-bleed single column on mobile */
 @media (max-width: 768px) {
+  .cases { padding: 64px 0; }
+  .cases-header { margin-bottom: 32px; }
   .case-card { grid-template-columns: 1fr; }
   .case-thumb { aspect-ratio: 16/10; border-right: none; border-bottom: 1px solid var(--line); }
   .case-info { padding: 24px; }
 }
 
 .case-info {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  row-gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   padding: 32px;
-  height: 100%;
 }
 .case-info h3 {
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -200,6 +199,7 @@ body {
   letter-spacing: -.025em;
 }
 .case-desc {
+  flex: 1;
   font-size: 15px; color: var(--ink-soft);
   line-height: 1.6;
 }
@@ -232,7 +232,7 @@ body {
 .footer-links a:hover { color: var(--accent); }
 .footer-copy {
   font-family: var(--font-mono);
-  font-size: 9.5px; letter-spacing: .08em; color: var(--ink-faint);
+  font-size: 10px; letter-spacing: .08em; color: var(--ink-faint);
 }
 .footer-cta a {
   color: inherit; text-decoration: none;
@@ -308,8 +308,8 @@ body {
         <div class="stat" data-reveal="up" data-d="3">
           <div class="stat-label">empresas</div>
           <div class="stat-val logo-row">
-            <img src="assets/img/logo-mercado-pago.svg" alt="Mercado Pago" width="104" height="28" loading="lazy">
-            <img src="assets/img/logo-c6-bank.svg" class="invert" alt="C6 Bank" width="140" height="28" loading="lazy">
+            <img src="assets/img/logo-mercado-pago.svg" alt="Mercado Pago" width="104" height="28" loading="eager">
+            <img src="assets/img/logo-c6-bank.svg" class="invert" alt="C6 Bank" width="140" height="28" loading="eager">
           </div>
         </div>
       </div>
