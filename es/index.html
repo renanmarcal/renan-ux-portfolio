@@ -92,15 +92,14 @@ h1 {
 .hero-bottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  column-gap: 64px;
+  row-gap: 32px;
   padding: 40px 0 72px;
-  align-items: start;
 }
-@media (max-width: 900px) { .hero-bottom { grid-template-columns: 1fr; gap: 40px; padding-bottom: 56px; } }
 
 .hero-bio {
   font-size: 17px; line-height: 1.6;
-  color: var(--ink-soft); margin-bottom: 36px;
+  color: var(--ink-soft);
   max-width: 46ch;
   opacity: 0; animation: fadeIn .8s .75s forwards;
 }
@@ -121,7 +120,7 @@ h1 {
 .cta-list a:hover { color: var(--accent); }
 
 /* ─── stats ─── */
-.hero-stats { display: flex; flex-direction: column; opacity: 0; animation: fadeIn .8s .6s forwards; }
+.hero-stats { display: flex; flex-direction: column; grid-row: 1 / span 2; opacity: 0; animation: fadeIn .8s .6s forwards; }
 .stat { padding: 16px 0; border-bottom: 1px solid var(--line); }
 .stat:last-child { border-bottom: none; }
 .stat-label {
@@ -133,6 +132,11 @@ h1 {
 .logo-row { display: flex; align-items: center; gap: 36px; padding: 4px 0; }
 .logo-row img { height: 26px; width: auto; }
 .logo-row img.invert { filter: brightness(0); }
+@media (max-width: 900px) {
+  .hero-bottom { grid-template-columns: 1fr; row-gap: 0; padding-bottom: 56px; }
+  .hero-bio { margin-bottom: 28px; }
+  .hero-stats { grid-row: auto; order: 3; margin-top: 40px; }
+}
 
 /* ─── cases ─── */
 .cases { padding: 144px 0; }
@@ -345,23 +349,7 @@ h1 {
     </div>
     <div class="hero-divider"></div>
     <div class="hero-bottom">
-      <div class="hero-bio-col">
-        <p class="hero-bio">Transformo información financiera y operativa compleja en interfaces que muestran lo que importa. Construí esta experiencia en <b>C6 Bank</b> y <b>Mercado Pago</b>, trabajando con producto, ingeniería y equipos comerciales en contextos de adquirencia y fuerza de ventas.</p>
-        <div class="cta-list">
-          <a href="mailto:renanmarccal@gmail.com">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
-            email
-          </a>
-          <a href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            linkedin
-          </a>
-          <a href="../assets/pdf/renan-marcal-cv.pdf" download target="_blank" rel="noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
-            Descargar CV
-          </a>
-        </div>
-      </div>
+      <p class="hero-bio">Transformo información financiera y operativa compleja en interfaces que muestran lo que importa. Construí esta experiencia en <b>C6 Bank</b> y <b>Mercado Pago</b>, trabajando con producto, ingeniería y equipos comerciales en contextos de adquirencia y fuerza de ventas.</p>
       <div class="hero-stats">
         <div class="stat">
           <div class="stat-label">experiencia</div>
@@ -378,6 +366,16 @@ h1 {
             <img src="../assets/img/logo-c6-bank.svg" class="invert" alt="C6 Bank" width="140" height="28" loading="eager">
           </div>
         </div>
+      </div>
+      <div class="cta-list">
+        <a href="mailto:renanmarccal@gmail.com">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+          email
+        </a>
+        <a href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          linkedin
+        </a>
       </div>
     </div>
   </div>
@@ -429,7 +427,7 @@ h1 {
         <div class="case-info">
           <p class="case-kicker">C6 Bank · PayGo · 2020–2021</p>
           <h3>Portal de gestión para comerciantes C6 Pay</h3>
-          <p class="case-desc">La experiencia heredada de PayGo no estaba a la altura de la expansión de la estrategia de adquirencia del C6. El desafío fue reorganizar el portal en torno a lo que el comerciante necesitaba entender de su operación, no lo que el sistema producía.</p>
+          <p class="case-desc">El portal aún arrastraba la estructura y el lenguaje de PayGo, construido para un contexto previo a la integración con C6 Bank. El rediseño reorganizó la navegación y la presentación de información para hacer más claro el seguimiento de la operación financiera de los comerciantes.</p>
           <div class="case-footer">
             <span class="case-tag">Web</span>
             <span class="case-arrow">Ver caso →</span>
@@ -437,7 +435,7 @@ h1 {
         </div>
       </a>
 
-      <a href="cases/case-priorizacao-visitas-comerciais-mercado-pago.html" class="case-card" data-reveal="up">
+      <a href="cases/case-priorizacao-visitas-comerciais-mercado-pago.html" class="case-card" data-reveal="up" data-d="1">
         <div class="case-thumb"><img src="../assets/img/thumb-priorizacao-visitas-comerciais.png" width="4000" height="2500" loading="lazy" alt="Pantalla de agenda de visitas comerciales de la app Mercado Pago para representantes de campo"></div>
         <div class="case-info">
           <p class="case-kicker">Mercado Pago · 2024–2025</p>
