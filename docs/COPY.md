@@ -75,15 +75,16 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 - Kicker: `Mercado Pago · 2024–2025`
 - Título: Priorização de visitas comerciais / Sales visit prioritization / Priorización de visitas comerciales
 - Descrição: Redesenhei a agenda de campo para transformar alertas de prioridade em um plano de visitas viável. / I redesigned the field schedule to turn priority alerts into a viable visit plan. / Rediseñé la agenda de campo para transformar alertas de prioridad en un plan de visitas viable.
-- Métricas: `3 países/countries` Brasil, México e Argentina · `2 plataformas/platforms` app de campo e desktop
+- Métricas: `+15%` produtividade diária/daily productivity/productividad diaria · `−5%` redução de churn/churn reduction/reducción de churn
 - Tag: Mobile
-- **Regra**: este case não tem número de resultado real — métricas são de escala (países, plataformas), não de impacto. Não inventar número de churn/conversão aqui.
+- **Regra**: este case agora tem número de resultado real (produtividade diária e churn) — não usar mais métrica de escala (países/plataformas) como destaque; a informação de alcance cross-market e versão desktop virou contexto de apoio dentro do parágrafo do bloco 07, não mais o número em destaque.
 
 ## Case Priorização — bloco de fechamento (07 · Resultado)
-- PT: "De alertas soltos a um plano de visitas único em três mercados"
-- EN: "From scattered alerts to a single visit plan across three markets"
-- ES: "De alertas dispersas a un único plan de visitas en tres mercados"
-- Spec do hero do case: `Alcance/Reach` · 3 países · app e desktop (nunca "Impacto: resolução de churn" — métrica vaga já removida)
+- PT: "Mais produtividade no dia a dia e menos rotatividade na carteira"
+- EN: "More daily productivity and less portfolio churn"
+- ES: "Más productividad diaria y menos rotación en la cartera"
+- Spec do hero do case: `Impacto/Impact` · +15% produtividade diária · −5% churn
+- Spec do bloco 07: duas células — produtividade diária (+15%) e redução de churn (−5%)
 
 ## Navegação entre cases
 - PT: Próximo case · EN: Next case · ES: Próximo caso
