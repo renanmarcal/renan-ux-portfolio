@@ -17,7 +17,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | H1 | Transformo sistemas complexos / em **eficiência** *(palavra em accent, sem ponto final)* |
 | Hero bio | 6 anos desenhando produtos financeiros B2B, do discovery ao design system. Construí essa experiência no **C6 Bank** e no **Mercado Pago**, em contextos de adquirência e força de vendas. |
 | CTA primário | Vamos conversar → *(WhatsApp)* |
-| CTA secundário | Ver cases *(âncora #cases)* |
+| CTA secundário | Ver LinkedIn *(link externo, não mais âncora — navegação para #cases já coberta pelo topbar)* |
 | Cases header | Cases selecionados |
 | Footer kicker | *(nenhum — removido para não ser redundante com o subtítulo)* |
 | Footer título | Tem um desafio de produto? |
@@ -35,7 +35,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | H1 | I turn complex systems / into **efficiency** |
 | Hero bio | 6 years designing B2B financial products, from discovery to design systems. I built this experience at **C6 Bank** and **Mercado Pago**, across card-acquiring and field sales contexts. |
 | CTA primário | Let's talk → |
-| CTA secundário | View cases |
+| CTA secundário | View LinkedIn |
 | Cases header | Selected cases |
 | Footer título | Got a product challenge? |
 | Footer subtítulo | Open to opportunities as a Product Designer, UX/UI consulting, and digital product projects. |
@@ -52,7 +52,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | H1 | Transformo sistemas complejos / en **eficiencia** |
 | Hero bio | 6 años diseñando productos financieros B2B, desde el discovery hasta el design system. Construí esta experiencia en **C6 Bank** y **Mercado Pago**, en contextos de adquirencia y fuerza de ventas. |
 | CTA primário | Conversemos → |
-| CTA secundário | Ver casos |
+| CTA secundário | Ver LinkedIn |
 | Cases header | Casos seleccionados |
 | Footer título | ¿Tienes un desafío de producto? |
 | Footer subtítulo | Abierto a oportunidades como Product Designer, consultorías en UX/UI y proyectos de producto digital. |

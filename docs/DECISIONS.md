@@ -31,3 +31,7 @@ Log curto de decisões de design/produto do portfólio. Uma entrada por decisão
 - **2026-07-09 · Sem automação de browser para validar edições locais** — Renan reloads manualmente; ver `feedback_browser_automation` na memória de longo prazo do Claude.
 
 - **2026-07-09 · Framework de governança (CLAUDE.md, docs/, subagents) proposto para reduzir custo de token** — diagnóstico: duplicação estrutural (footer repetido em 9 arquivos, CSS colado em 3 páginas) é o maior gargalo, não falta de subagents. Ordem de execução acordada: docs de governança → migração para gerador de site estático (Astro) → subagents por cima disso.
+
+- **2026-07-09 · Avatar do hero atualizado** — foto anterior (`1772931858427.png`, headshot genérico) substituída pela versão ajustada gerada em `assets/img/ChatGPT Image 9 de jul...png`, renomeada para o nome semântico já referenciado nas 3 línguas (`assets/img/renan-avatar.png`). Zero mudança de HTML necessária — o nome do arquivo é a fonte de estabilidade.
+
+- **2026-07-09 · CTA secundário do hero: "Ver cases" → "Ver LinkedIn"** — o link para o LinkedIn tinha sumido do hero inteiro durante o redesign (os 3 ícones originais viraram só o CTA do WhatsApp). Como a navegação para `#cases` já está coberta pelo menu-âncora do topbar (Sobre/Cases/Contato), o segundo botão do hero foi liberado para reassumir a função de expor o LinkedIn.
