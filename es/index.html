@@ -55,10 +55,72 @@ body {
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 48px; }
 @media (max-width: 768px) { .wrap { padding: 0 22px; } }
 
+/* ─── botones ─── */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 14px; font-weight: 600; letter-spacing: .01em;
+  padding: 14px 28px; border-radius: 8px;
+  text-decoration: none; white-space: nowrap;
+  transition: background .45s cubic-bezier(.16,1,.3,1),
+              border-color .45s cubic-bezier(.16,1,.3,1),
+              color .45s cubic-bezier(.16,1,.3,1),
+              transform .45s cubic-bezier(.16,1,.3,1);
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--accent); color: #fdfbf7; }
+.btn-primary:hover { background: #9d3b19; }
+.btn-ghost { border: 1px solid var(--line); color: var(--ink); padding: 13px 27px; }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ─── topbar ─── */
+.topbar {
+  position: sticky; top: 0; z-index: 60;
+  background: rgba(243,239,231,.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar .wrap {
+  display: flex; justify-content: space-between;
+  align-items: center; height: 56px;
+}
+.topbar-nav { display: flex; align-items: center; gap: 28px; }
+.topbar-nav a {
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 500; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-soft);
+  text-decoration: none;
+  transition: color .3s cubic-bezier(.16,1,.3,1);
+}
+.topbar-nav a:hover { color: var(--accent); }
+
 /* ─── hero ─── */
 .hero { padding: 72px 0 0; border-bottom: 1px solid var(--line); }
 
 .hero-top { padding-bottom: 48px; }
+
+.hero-top-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: stretch;
+  gap: 40px;
+}
+
+.hero-photo {
+  width: clamp(196px, 25vw, 310px);
+  aspect-ratio: 1 / 1;
+  align-self: center;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  opacity: 0; animation: fadeIn .8s .3s forwards;
+}
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 900px) {
+  .hero-top-grid { grid-template-columns: 1fr; }
+  .hero-photo { width: 135px; order: -1; margin-bottom: 20px; }
+}
 
 .hero-kicker {
   font-family: var(--font-mono);
@@ -70,10 +132,11 @@ body {
 
 h1 {
   font-family: 'Work Sans', sans-serif;
-  font-weight: 700; font-size: 60px;
-  line-height: 1; letter-spacing: -.04em;
+  font-weight: 600; font-size: 68px;
+  line-height: 1.05; letter-spacing: -.03em;
   overflow: hidden; padding-bottom: .1em;
 }
+h1 .hl { color: var(--accent); }
 @media (max-width: 900px) { h1 { font-size: 48px; } }
 @media (max-width: 430px) { h1 { font-size: 36px; } }
 
@@ -94,10 +157,11 @@ h1 {
   grid-template-columns: 1fr 1fr;
   column-gap: 64px;
   row-gap: 32px;
-  padding: 40px 0 72px;
+  padding: 48px 0 88px;
 }
 
 .hero-bio {
+  grid-column: 1;
   font-size: 17px; line-height: 1.6;
   color: var(--ink-soft);
   max-width: 46ch;
@@ -105,22 +169,14 @@ h1 {
 }
 .hero-bio b { color: var(--ink); font-weight: 500; }
 
-.cta-list {
-  display: flex; gap: 24px; flex-wrap: wrap;
+.hero-actions {
+  grid-column: 1;
+  display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
   opacity: 0; animation: fadeIn .6s 1s forwards;
 }
-.cta-list a {
-  display: flex; align-items: center; gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 11px; font-weight: 500; letter-spacing: .10em;
-  text-transform: uppercase; color: var(--ink-soft);
-  text-decoration: none;
-  transition: color .5s cubic-bezier(.16,1,.3,1);
-}
-.cta-list a:hover { color: var(--accent); }
 
 /* ─── stats ─── */
-.hero-stats { display: flex; flex-direction: column; grid-row: 1 / span 2; opacity: 0; animation: fadeIn .8s .6s forwards; }
+.hero-stats { grid-column: 2; grid-row: 1 / span 2; display: flex; flex-direction: column; opacity: 0; animation: fadeIn .8s .6s forwards; }
 .stat { padding: 16px 0; border-bottom: 1px solid var(--line); }
 .stat:last-child { border-bottom: none; }
 .stat-label {
@@ -134,6 +190,7 @@ h1 {
 .logo-row img.invert { filter: brightness(0); }
 @media (max-width: 900px) {
   .hero-bottom { grid-template-columns: 1fr; row-gap: 0; padding-bottom: 56px; }
+  .hero-bio, .hero-actions, .hero-stats { grid-column: 1; }
   .hero-bio { margin-bottom: 28px; }
   .hero-stats { grid-row: auto; order: 3; margin-top: 40px; }
 }
@@ -203,7 +260,20 @@ h1 {
   letter-spacing: -.02em;
 }
 .case-desc {
-  font-size: 14px; color: var(--ink-soft); line-height: 1.65; flex: 1;
+  font-size: 14px; color: var(--ink-soft); line-height: 1.65;
+}
+.case-metrics {
+  display: flex; gap: 24px; flex: 1; align-items: flex-end;
+}
+.case-metric-val {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600; font-size: 22px;
+  color: var(--ink); letter-spacing: -.02em; line-height: 1.1;
+}
+.case-metric-label {
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: .06em;
+  color: var(--ink-faint); margin-top: 4px; line-height: 1.3;
 }
 .case-footer {
   display: flex; align-items: center; justify-content: space-between;
@@ -223,36 +293,42 @@ h1 {
 .case-card:hover .case-arrow { color: var(--accent); transform: translateX(4px); }
 
 /* ─── footer ─── */
-.footer { min-height: 60vh; display: grid; align-content: center; padding: 64px 0; background: var(--paper-2); border-top: 1px solid var(--line); }
-.footer-cta {
+.footer {
+  min-height: 78vh;
+  padding: 48px 0 32px;
+  display: flex; flex-direction: column;
+  background: var(--paper-2); border-top: 1px solid var(--line);
+}
+.footer > .wrap { width: 100%; }
+.footer-inner { flex: 1; display: flex; align-items: center; }
+.contact-card {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 72px 64px;
+  display: flex; align-items: center; justify-content: space-between; gap: 40px;
+}
+.contact-title {
   font-family: 'Work Sans', sans-serif;
-  font-weight: 600; font-size: 36px;
-  line-height: 1.1; letter-spacing: -.02em;
-  color: var(--ink); margin-bottom: 48px; max-width: 20ch;
+  font-weight: 600; font-size: 32px;
+  line-height: 1.25; letter-spacing: -.02em;
+  color: var(--ink);
 }
-.footer-links { display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 64px; }
-.footer-links a {
-  display: flex; align-items: center; gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 12px; font-weight: 500; letter-spacing: .10em;
-  text-transform: uppercase; color: var(--ink-soft);
-  text-decoration: none;
-  transition: color .5s cubic-bezier(.16,1,.3,1);
+.contact-sub {
+  font-size: 16px; line-height: 1.6;
+  color: var(--ink-soft); max-width: 46ch;
+  margin-top: 12px;
 }
-.footer-links a:hover { color: var(--accent); }
+.contact-card .btn { flex: none; }
+@media (max-width: 768px) {
+  .contact-card { flex-direction: column; align-items: flex-start; padding: 32px 24px; gap: 24px; }
+  .contact-title { font-size: 26px; }
+}
+.footer-rule { border-top: 1px solid var(--line); margin-bottom: 24px; }
 .footer-copy {
   font-family: var(--font-mono);
   font-size: 10px; letter-spacing: .08em; color: var(--ink-faint);
 }
-.footer-cta a {
-  color: inherit; text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 50% 100%; background-repeat: no-repeat;
-  background-size: 0% 1px;
-  transition: color .5s cubic-bezier(.16,1,.3,1),
-              background-size .5s cubic-bezier(.16,1,.3,1);
-}
-.footer-cta a:hover { color: var(--accent); background-size: 100% 1px; }
 
 /* ─── pillars ─── */
 .pillars { padding: 72px 0; background: var(--paper-2); border-bottom: 1px solid var(--line); }
@@ -339,17 +415,42 @@ h1 {
 </head>
 <body>
 
-<header class="hero">
+<header class="topbar">
+  <div class="wrap">
+    <nav class="topbar-nav" aria-label="Navegación principal">
+      <a href="#top">Sobre mí</a>
+      <a href="#cases">Casos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <nav class="lang-switch" aria-label="Language / Idioma">
+      <a href="../index.html" hreflang="pt">PT</a>
+      <span aria-hidden="true">·</span>
+      <a href="../en/index.html" hreflang="en">EN</a>
+      <span aria-hidden="true">·</span>
+      <a href="index.html" hreflang="es" aria-current="page">ES</a>
+    </nav>
+  </div>
+</header>
+
+<header class="hero" id="top">
   <div class="wrap">
     <div class="hero-top">
-      <p class="hero-kicker">Product Designer · Fintech y B2B</p>
-      <h1>
-        <span class="h1-line">Renan Marçal</span>
-      </h1>
+      <div class="hero-top-grid">
+        <div>
+          <p class="hero-kicker">Product Designer · São Paulo, Brasil</p>
+          <h1>
+            <span class="h1-line">Transformo sistemas complejos</span>
+            <span class="h1-line">en <span class="hl">eficiencia</span></span>
+          </h1>
+        </div>
+        <div class="hero-photo">
+          <img src="../assets/img/renan-avatar.png" alt="Foto de Renan Marçal" loading="eager">
+        </div>
+      </div>
     </div>
     <div class="hero-divider"></div>
     <div class="hero-bottom">
-      <p class="hero-bio">Transformo información financiera y operativa compleja en interfaces que muestran lo que importa. Construí esta experiencia en <b>C6 Bank</b> y <b>Mercado Pago</b>, trabajando con producto, ingeniería y equipos comerciales en contextos de adquirencia y fuerza de ventas.</p>
+      <p class="hero-bio">6 años diseñando productos financieros B2B, desde el discovery hasta el design system. Construí esta experiencia en <b>C6 Bank</b> y <b>Mercado Pago</b>, en contextos de adquirencia y fuerza de ventas.</p>
       <div class="hero-stats">
         <div class="stat">
           <div class="stat-label">experiencia</div>
@@ -357,7 +458,7 @@ h1 {
         </div>
         <div class="stat">
           <div class="stat-label">áreas</div>
-          <div class="stat-val">Discovery · Sistemas de diseño · Prototipado · Coordinación multidisciplinar</div>
+          <div class="stat-val">Discovery · Design systems · Prototipado · Alineación multidisciplinar</div>
         </div>
         <div class="stat">
           <div class="stat-label">empresas</div>
@@ -367,19 +468,9 @@ h1 {
           </div>
         </div>
       </div>
-      <div class="cta-list">
-        <a href="mailto:renanmarccal@gmail.com">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
-          email
-        </a>
-        <a href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          linkedin
-        </a>
-        <a href="https://wa.me/5511966101996" target="_blank" rel="noopener">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2.02c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.33 4.95L2 22l5.2-1.36a9.9 9.9 0 0 0 4.84 1.23h.01c5.5 0 9.96-4.46 9.96-9.96 0-2.66-1.03-5.15-2.91-7.03a9.9 9.9 0 0 0-7.06-2.86zm0 18.24h-.01a8.3 8.3 0 0 1-4.24-1.16l-.3-.18-3.15.83.84-3.07-.2-.32a8.27 8.27 0 0 1-1.27-4.42c0-4.57 3.72-8.29 8.3-8.29 2.22 0 4.3.86 5.87 2.43a8.24 8.24 0 0 1 2.43 5.87c0 4.57-3.72 8.31-8.27 8.31zm4.54-6.21c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.76-1.85-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01a.93.93 0 0 0-.67.31c-.23.25-.87.85-.87 2.08s.9 2.42 1.02 2.58c.13.17 1.77 2.71 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
-          whatsapp
-        </a>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/5511966101996?text=Hola%20Renan%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad" target="_blank" rel="noopener">Conversemos →</a>
+        <a class="btn btn-ghost" href="#cases">Ver casos</a>
       </div>
     </div>
   </div>
@@ -391,47 +482,50 @@ h1 {
       <div class="pillar" data-reveal="up">
         <span class="pillar-num">01</span>
         <h3 class="pillar-verb">Entiendo</h3>
-        <p class="pillar-desc">Investigación con usuarios, discovery y mapeo del problema</p>
+        <p class="pillar-desc">Investigación con usuarios, discovery y definición del problema</p>
       </div>
       <div class="pillar" data-reveal="up" data-d="1">
         <span class="pillar-num">02</span>
-        <h3 class="pillar-verb">Planeo</h3>
-        <p class="pillar-desc">Arquitectura de información, flujos y estrategia de producto</p>
+        <h3 class="pillar-verb">Planifico</h3>
+        <p class="pillar-desc">Arquitectura de la información, flujos y estrategia de producto</p>
       </div>
       <div class="pillar" data-reveal="up" data-d="2">
         <span class="pillar-num">03</span>
         <h3 class="pillar-verb">Construyo</h3>
-        <p class="pillar-desc">Interfaz, prototipado y sistema de diseño</p>
+        <p class="pillar-desc">Interfaz, prototipado y design system</p>
       </div>
       <div class="pillar" data-reveal="up" data-d="3">
         <span class="pillar-num">04</span>
         <h3 class="pillar-verb">Acompaño</h3>
-        <p class="pillar-desc">Métricas, validación e iteración continua del producto</p>
+        <p class="pillar-desc">Métricas, validación y evolución continua del producto</p>
       </div>
     </div>
   </div>
 </section>
 
-<main class="cases">
+<main class="cases" id="cases">
   <div class="wrap">
     <div class="cases-header">
       <h2 data-reveal="up">Casos seleccionados</h2>
-      <nav class="lang-switch" aria-label="Language / Idioma">
-        <a href="../index.html" hreflang="pt">PT</a>
-        <span aria-hidden="true">·</span>
-        <a href="../en/index.html" hreflang="en">EN</a>
-        <span aria-hidden="true">·</span>
-        <a href="index.html" hreflang="es" aria-current="page">ES</a>
-      </nav>
     </div>
     <div class="case-grid">
 
       <a href="cases/case-portal-b2b-c6-bank.html" class="case-card" data-reveal="up">
-        <div class="case-thumb"><img src="../assets/img/portal-c6-saude-financeira.png" width="4000" height="2500" loading="lazy" alt="Nueva interfaz del portal C6 Pay mostrando el panel de salud financiera para comerciantes"></div>
+        <div class="case-thumb"><img src="../assets/img/portal-c6-saude-financeira.png" width="4000" height="2500" loading="lazy" alt="Nueva interfaz del portal C6 Pay mostrando el panel de salud financiera para comercios"></div>
         <div class="case-info">
           <p class="case-kicker">C6 Bank · PayGo · 2020–2021</p>
-          <h3>Portal de gestión para comerciantes C6 Pay</h3>
-          <p class="case-desc">El portal aún arrastraba la estructura y el lenguaje de PayGo, construido para un contexto previo a la integración con C6 Bank. El rediseño reorganizó la navegación y la presentación de información para hacer más claro el seguimiento de la operación financiera de los comerciantes.</p>
+          <h3>Portal de gestión para comercios C6 Pay</h3>
+          <p class="case-desc">Reorganicé un portal heredado para hacer clara la salud financiera del comercio en el cierre de caja.</p>
+          <div class="case-metrics">
+            <div>
+              <div class="case-metric-val">−36%</div>
+              <div class="case-metric-label">llamados de<br>soporte</div>
+            </div>
+            <div>
+              <div class="case-metric-val">−50%</div>
+              <div class="case-metric-label">tiempo en la<br>pantalla de ventas</div>
+            </div>
+          </div>
           <div class="case-footer">
             <span class="case-tag">Web</span>
             <span class="case-arrow">Ver caso →</span>
@@ -440,11 +534,21 @@ h1 {
       </a>
 
       <a href="cases/case-priorizacao-visitas-comerciais-mercado-pago.html" class="case-card" data-reveal="up" data-d="1">
-        <div class="case-thumb"><img src="../assets/img/thumb-priorizacao-visitas-comerciais.png" width="4000" height="2500" loading="lazy" alt="Pantalla de agenda de visitas comerciales de la app Mercado Pago para representantes de campo"></div>
+        <div class="case-thumb"><img src="../assets/img/thumb-priorizacao-visitas-comerciais.png" width="4000" height="2500" loading="lazy" alt="Pantalla de agenda de visitas comerciales de la app de Mercado Pago para representantes de campo"></div>
         <div class="case-info">
           <p class="case-kicker">Mercado Pago · 2024–2025</p>
           <h3>Priorización de visitas comerciales</h3>
-          <p class="case-desc">Los representantes recibían alertas de prioridad, pero la herramienta no ayudaba a transformarlas en un plan de visitas viable. El desafío fue rediseñar este flujo para Brasil, México y Argentina sin fragmentar el comportamiento del producto entre mercados.</p>
+          <p class="case-desc">Rediseñé la agenda de campo para transformar alertas de prioridad en un plan de visitas viable.</p>
+          <div class="case-metrics">
+            <div>
+              <div class="case-metric-val">3 países</div>
+              <div class="case-metric-label">Brasil, México<br>y Argentina</div>
+            </div>
+            <div>
+              <div class="case-metric-val">2 plataformas</div>
+              <div class="case-metric-label">app de campo<br>y escritorio</div>
+            </div>
+          </div>
           <div class="case-footer">
             <span class="case-tag">Mobile</span>
             <span class="case-arrow">Ver caso →</span>
@@ -456,24 +560,19 @@ h1 {
   </div>
 </main>
 
-<footer class="footer" data-reveal="fade">
-  <div class="wrap">
-    <p class="footer-cta">¿Quieres hablar? <a href="mailto:renanmarccal@gmail.com">renanmarccal@gmail.com</a></p>
-    <div class="footer-links">
-      <a href="mailto:renanmarccal@gmail.com">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
-        Email
-      </a>
-      <a href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
-      </a>
-      <a href="https://wa.me/5511966101996" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2.02c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.33 4.95L2 22l5.2-1.36a9.9 9.9 0 0 0 4.84 1.23h.01c5.5 0 9.96-4.46 9.96-9.96 0-2.66-1.03-5.15-2.91-7.03a9.9 9.9 0 0 0-7.06-2.86zm0 18.24h-.01a8.3 8.3 0 0 1-4.24-1.16l-.3-.18-3.15.83.84-3.07-.2-.32a8.27 8.27 0 0 1-1.27-4.42c0-4.57 3.72-8.29 8.3-8.29 2.22 0 4.3.86 5.87 2.43a8.24 8.24 0 0 1 2.43 5.87c0 4.57-3.72 8.31-8.27 8.31zm4.54-6.21c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.76-1.85-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01a.93.93 0 0 0-.67.31c-.23.25-.87.85-.87 2.08s.9 2.42 1.02 2.58c.13.17 1.77 2.71 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
-        WhatsApp
-      </a>
+<footer class="footer" id="contacto">
+  <div class="wrap footer-inner">
+    <div class="contact-card" data-reveal="fade">
+      <div>
+        <h2 class="contact-title">¿Tienes un desafío de producto?</h2>
+        <p class="contact-sub">Abierto a oportunidades como Product Designer, consultorías en UX/UI y proyectos de producto digital.</p>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/5511966101996?text=Hola%20Renan%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad" target="_blank" rel="noopener">Contáctame →</a>
     </div>
-    <p class="footer-copy">© 2026 Renan Marçal</p>
+  </div>
+  <div class="wrap">
+    <div class="footer-rule"></div>
+    <p class="footer-copy">© 2026 Renan Marçal · São Paulo, Brasil</p>
   </div>
 </footer>
 
