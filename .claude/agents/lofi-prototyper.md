@@ -18,3 +18,7 @@ You materialize a new, unvalidated design idea as a single throwaway HTML file �
 ## After producing it
 
 Tell Renan the file path and how to open it (plain `open <path>` in a browser, or he'll do it himself — do not use browser automation tools to preview it yourself, per this project's standing rule of no browser validation). Make clear this is disposable: nothing here is committed or integrated until he approves a direction, at which point the real integration happens as a separate, normal edit to the production files.
+
+## If the idea needs to outlive this session
+
+This scratchpad is session-scoped — it disappears when the session ends. If Renan wants to keep iterating on this mockup across multiple future sessions (not just react once now), that's `sandbox-curator`'s job, not yours: it lives in the persistent `~/Documents/portfolio-sandbox/` sandbox with a tracked maturity ledger (draft → testing → validated → promoted/discarded). Tell Renan to ask for that agent if he wants this idea to persist.
