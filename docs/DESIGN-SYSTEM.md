@@ -44,8 +44,21 @@ Toda a família de textos pequenos do site (kickers, nav, tags de case, métrica
 ```
 --s-1  8px   --s-2  16px   --s-3  24px   --s-4  32px   --s-5  40px
 --s-6  48px  --s-7  64px   --s-8  80px   --s-9  96px   --s-10 120px
+--s-11 128px  (teto — só padding-top do hero em desktop)
 ```
 Regra herdada do `case.css`: texto → imagem sempre `--s-5` (40px). `case.css` usa `var(--s-N)` em toda parte; nas home pages (`index.html`/`en`/`es`) todo valor **dentro de media query** também já usa `var(--s-N)` — só os valores de **desktop** (fora de media query) ainda são px cru equivalente, ver `docs/BACKLOG.md`.
+
+## Ritmo vertical desktop (home)
+
+As transições entre as seções principais da home (hero→pillars, pillars→cases, cases→footer) devem cair em um destes 3 valores — nunca um número solto:
+
+- **192px** (`--s-9`+`--s-9`) — hero→pillars
+- **216px** (`--s-9` do `.pillars` + 144px do `.cases`, este último ainda não tokenizado) — pillars→cases
+- **192px** — cases→footer
+
+O ritmo bloco-a-bloco das páginas de case (`.block` em `case.css`, sempre 240px = `--s-10`+`--s-10`) é o trecho mais disciplinado do site e serve de referência — a home não tinha o mesmo tratamento até 2026-07-10 (ver `docs/DECISIONS.md`).
+
+**Regra de hierarquia**: um elemento de navegação secundária (ex. `.next-title`, o link "próximo case") nunca pode ter fonte maior que um título de seção real (ex. `.cases-header h2`) — já aconteceu ao contrário e foi corrigido em 2026-07-10.
 
 ## Layout
 
@@ -110,3 +123,5 @@ Breakpoints em uso: 900px (colapso de grids para 1 coluna), 768px (`.wrap` reduz
 - Não deixar um `:nth-child`/`:first-child`/`:last-child` pensado para um breakpoint "vazar" para outro com layout diferente sem checar a especificidade.
 - Não criar um novo tamanho/letter-spacing pra família de labels — usar `--fs-label`/`--ls-label-wide`/`--ls-label-tight`. Se nenhum dos 2 serve, é sinal de que o caso de uso não é realmente um "label".
 - Não usar `--ink-faint` fora da família de labels (nunca em corpo de texto) — o token só tem contraste WCAG AA garantido no tamanho `--fs-label`.
+- Não deixar a transição entre 2 seções da home fora de 192/216px sem atualizar a tabela de "Ritmo vertical desktop".
+- Não dar a um elemento de navegação secundária (next-case, breadcrumb) uma fonte maior que um título de seção real — já aconteceu ao contrário, foi corrigido.

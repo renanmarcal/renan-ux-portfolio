@@ -33,6 +33,7 @@
   --s-8:  80px;
   --s-9:  96px;
   --s-10: 120px;
+  --s-11: 128px; /* teto da escala — só pra abertura de hero em desktop, ver index.html */
   /* ── escala de labels/kickers (todo texto micro do site) ──────
      --fs-label: tamanho único (era 9/10/11px)
      --ls-label-wide: uppercase (kicker, nav, tags, lang-switch)
@@ -173,7 +174,7 @@ h1 {
   text-transform: uppercase; color: var(--ink-faint);
   margin-bottom: var(--s-1);
 }
-.spec .s-val { font-size: 13px; color: var(--ink-soft); }
+.spec .s-val { font-size: 14px; color: var(--ink-soft); }
 
 /* ─── b-split ─── */
 .b-split {
@@ -350,7 +351,7 @@ h2 + .sub-h { margin-top: 0; }
 }
 .next-title {
   font-family: 'Work Sans', sans-serif;
-  font-weight: 600; font-size: 40px;
+  font-weight: 600; font-size: 32px;
   letter-spacing: -.02em; line-height: 1.15; color: var(--ink);
   display: flex; align-items: center; gap: 20px;
 }
