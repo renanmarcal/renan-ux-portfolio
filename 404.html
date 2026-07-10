@@ -7,13 +7,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&family=Figtree:wght@400;500;600&display=swap">
 <title>Página não encontrada · Renan Marçal</title>
+<meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M66N19ZT36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M66N19ZT36');
+</script>
+<script src="https://t.contentsquare.net/uxa/4d84643516841.js" defer></script>
 <style>
 :root {
   --paper:    #f3efe7;
   --ink:      #1c1916;
   --ink-soft: #5c554b;
-  --ink-faint:#9b9183;
+  --ink-faint:#766b5c;
   --line:     #d8d0c0;
   --accent:   #b8451f;
 }
@@ -83,7 +94,23 @@ a:hover { color: var(--accent); border-color: var(--accent); }
     <div class="code">404</div>
     <h1>Página não<br>encontrada</h1>
     <p>O endereço que você acessou não existe ou foi movido.</p>
-    <a href="index.html">← voltar pro portfólio</a>
+    <a href="index.html" data-gtag-event="404_return_click">← voltar pro portfólio</a>
   </main>
+<script>
+(function(){
+  // GA4 event tracking — ver docs/ANALYTICS.md antes de adicionar/alterar eventos
+  document.addEventListener('click', e => {
+    const el = e.target.closest('[data-gtag-event]');
+    if (!el || typeof gtag !== 'function') return;
+    const params = { page_lang: document.documentElement.lang };
+    for (const attr of el.attributes) {
+      if (attr.name.startsWith('data-gtag-') && attr.name !== 'data-gtag-event') {
+        params[attr.name.slice('data-gtag-'.length).replace(/-/g, '_')] = attr.value;
+      }
+    }
+    gtag('event', el.dataset.gtagEvent, params);
+  });
+})();
+</script>
 </body>
 </html>

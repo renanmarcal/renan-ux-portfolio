@@ -2,12 +2,12 @@
 
 Como o rastreamento de dados do portfólio funciona — o que está instalado, o que é rastreado, e como adicionar um evento novo sem redescobrir o padrão.
 
-## O que está instalado (todas as 9 páginas: 3 home + 2 cases × 3 línguas)
+## O que está instalado (todas as 10 páginas: 3 home + 2 cases × 3 línguas + `404.html`)
 
 - **Google Analytics 4** (`G-M66N19ZT36`, via `gtag.js`) — pageviews automáticos + eventos customizados (ver abaixo).
 - **Contentsquare** (`https://t.contentsquare.net/uxa/4d84643516841.js`) — gravação de sessão e heatmap, captura tudo automaticamente (cliques, scroll, rage-clicks) sem precisar de código. Cobre o lado qualitativo ("ver onde as pessoas travam") sem instrumentação nenhuma.
 
-Os dois scripts ficam no `<head>`, logo depois do favicon e antes do CSS, replicados nos 9 arquivos (sem exceção — não há injeção via JS externo nem tag manager).
+Os dois scripts ficam no `<head>`, logo depois do favicon e antes do CSS, replicados nas 10 páginas (sem exceção — não há injeção via JS externo nem tag manager). **`404.html` também está incluído** — é o caso mais valioso de "não perder detalhe": link quebrado, URL digitada errada, backlink desatualizado, tudo isso vira pageview + evento igual a qualquer outra página.
 
 ## Eventos customizados do GA4
 
@@ -47,12 +47,13 @@ document.addEventListener('click', e => {
 | `topbar_nav_click` | Menu-âncora do topbar (home) | `target` | `about`, `cases`, `contact` |
 | `lang_switch_click` | Seletor de idioma (PT · EN · ES) | `target_lang` | `pt`, `en`, `es` |
 | `next_case_click` | Link "próximo case" (dentro de um case) | `case` | slug do case de destino |
+| `404_return_click` | Link "voltar pro portfólio" na página 404 | — | — |
 
 Todo parâmetro usa valores **em inglês, consistentes entre as 3 línguas** (ex. `target="about"` mesmo na versão PT, onde o link mostra "Sobre") — de propósito, para o relatório do GA4 agregar PT/EN/ES no mesmo valor em vez de fragmentar em "Sobre"/"About"/"Sobre mí" como 3 linhas separadas.
 
 ## O que NÃO fazer
 
-- Não duplicar a lógica do listener em cada página com pequenas variações — é o mesmo bloco de JS nas 9 páginas, byte a byte (checar com diff antes de considerar uma mudança concluída, mesmo padrão usado pro CSS embutido).
+- Não duplicar a lógica do listener em cada página com pequenas variações — é o mesmo bloco de JS nas 10 páginas, byte a byte (checar com diff antes de considerar uma mudança concluída, mesmo padrão usado pro CSS embutido). Nas 9 páginas do site, o listener vive dentro da IIFE que já cuida do `IntersectionObserver`; em `404.html` (que não tem reveal animation) ele vive na sua própria IIFE — o corpo do listener em si é idêntico.
 - Não inventar um novo nome de evento para a mesma ação em lugares diferentes (ex. não criar `whatsapp_hero_click` separado de `whatsapp_click` com `location=hero`) — usar o parâmetro pra diferenciar, não o nome do evento, senão o GA4 fragmenta o relatório.
 - Não usar `onclick` inline nos elementos — o padrão é `data-gtag-*` + o listener delegado, que centraliza a lógica de captura num único lugar por página.
 - Não esquecer de propagar um evento novo pras 3 línguas — mesma regra de paridade do resto do site.
