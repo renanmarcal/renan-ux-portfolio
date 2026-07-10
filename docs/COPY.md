@@ -96,3 +96,16 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 ## Case C6 Pay — bloco 05
 - PT: Facilitando a conferência do histórico de vendas · EN: Streamlining the sales history review · ES: Facilitando la revisión del historial de ventas.
 - **Regra**: título precisa se diferenciar do bloco 04 ("Uma visão clara da operação financeira") — bloco 04 é a tela de resumo consolidado, bloco 05 é especificamente a tela de histórico de vendas usada pra conferência do fechamento de caixa. Os dois não podem ficar ancorados no mesmo termo genérico ("fechamento de caixa") sem diferenciar qual tela cada um resolve.
+
+## Case C6 Pay — bloco 06 (fundamentação), limitação técnica real
+- PT: Mapeamento do funcionamento do sistema legado para entender como os dados chegavam ao portal. Muitas métricas exigiam cálculo no front-end em vez de vir prontas do back-end, o que era aceitável em alguns casos, mas para métricas críticas eu precisava alinhar com engenharia antes de definir a prioridade.
+- EN: Mapping the legacy system's operation to understand how data reached the portal. Many metrics required front-end calculation instead of coming pre-computed from the back-end, which was fine in some cases, but for critical metrics I needed to align with engineering before deciding what to prioritize.
+- ES: Mapeo del funcionamiento del sistema legado para entender cómo llegaban los datos al portal. Muchas métricas requerían cálculo en el front-end en lugar de venir listas desde el back-end, lo que era aceptable en algunos casos, pero para métricas críticas necesitaba alinearme con ingeniería antes de definir la prioridad.
+- **Regra**: essa é a limitação técnica real do case (dado de Renan) — não usar mais "limitações técnicas" genérico em nenhum outro lugar do case sem essa concretude.
+
+## Case C6 Pay — bloco 07 (impacto), sem alegação vaga
+- Regra: cortada a frase "e o acesso aos relatórios aumentou" — não havia número real por trás. O bloco 07 fica só com os 2 números reais (−36% chamados, tempo na tela quase pela metade) + o resultado qualitativo da biblioteca de componentes.
+
+## Case Priorização — bloco 06, número real de validação
+- PT: Validei o protótipo com cinco representantes comerciais... · EN: I validated the prototype with five field representatives... · ES: Validé el prototipo con cinco representantes comerciales...
+- **Regra**: são representantes comerciais, não lojistas (dado de Renan) — não confundir com o público do case C6 (lojistas).
