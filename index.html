@@ -454,16 +454,16 @@ h1 .hl { color: var(--accent); }
 <header class="topbar">
   <div class="wrap">
     <nav class="topbar-nav" aria-label="Navegação principal">
-      <a href="#top">Sobre</a>
-      <a href="#cases">Cases</a>
-      <a href="#contato">Contato</a>
+      <a href="#top" data-gtag-event="topbar_nav_click" data-gtag-target="about">Sobre</a>
+      <a href="#cases" data-gtag-event="topbar_nav_click" data-gtag-target="cases">Cases</a>
+      <a href="#contato" data-gtag-event="topbar_nav_click" data-gtag-target="contact">Contato</a>
     </nav>
     <nav class="lang-switch" aria-label="Language / Idioma">
-      <a href="index.html" hreflang="pt" aria-current="page">PT</a>
+      <a href="index.html" hreflang="pt" aria-current="page" data-gtag-event="lang_switch_click" data-gtag-target-lang="pt">PT</a>
       <span aria-hidden="true">·</span>
-      <a href="en/index.html" hreflang="en">EN</a>
+      <a href="en/index.html" hreflang="en" data-gtag-event="lang_switch_click" data-gtag-target-lang="en">EN</a>
       <span aria-hidden="true">·</span>
-      <a href="es/index.html" hreflang="es">ES</a>
+      <a href="es/index.html" hreflang="es" data-gtag-event="lang_switch_click" data-gtag-target-lang="es">ES</a>
     </nav>
   </div>
 </header>
@@ -503,8 +503,8 @@ h1 .hl { color: var(--accent); }
         </div>
       </div>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://wa.me/5511966101996?text=Oi%20Renan%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade" target="_blank" rel="noopener">Vamos conversar →</a>
-        <a class="btn btn-ghost" href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener">Ver LinkedIn</a>
+        <a class="btn btn-primary" href="https://wa.me/5511966101996?text=Oi%20Renan%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade" target="_blank" rel="noopener" data-gtag-event="whatsapp_click" data-gtag-location="hero">Vamos conversar →</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener" data-gtag-event="linkedin_click" data-gtag-location="hero">Ver LinkedIn</a>
       </div>
     </div>
   </div>
@@ -544,7 +544,7 @@ h1 .hl { color: var(--accent); }
     </div>
     <div class="case-grid">
 
-      <a href="cases/case-portal-b2b-c6-bank.html" class="case-card" data-reveal="up">
+      <a href="cases/case-portal-b2b-c6-bank.html" class="case-card" data-reveal="up" data-gtag-event="case_card_click" data-gtag-case="portal-c6-bank">
         <div class="case-thumb"><img src="assets/img/portal-c6-saude-financeira.png" width="4000" height="2500" loading="lazy" alt="Nova interface do portal C6 Pay mostrando o painel de saúde financeira para lojistas"></div>
         <div class="case-info">
           <p class="case-kicker">C6 Bank · PayGo · 2020–2021</p>
@@ -567,7 +567,7 @@ h1 .hl { color: var(--accent); }
         </div>
       </a>
 
-      <a href="cases/case-priorizacao-visitas-comerciais-mercado-pago.html" class="case-card" data-reveal="up" data-d="1">
+      <a href="cases/case-priorizacao-visitas-comerciais-mercado-pago.html" class="case-card" data-reveal="up" data-d="1" data-gtag-event="case_card_click" data-gtag-case="priorizacao-visitas">
         <div class="case-thumb"><img src="assets/img/thumb-priorizacao-visitas-comerciais.png" width="4000" height="2500" loading="lazy" alt="Tela de agenda de visitas comerciais do aplicativo Mercado Pago para representantes de campo"></div>
         <div class="case-info">
           <p class="case-kicker">Mercado Pago · 2024–2025</p>
@@ -616,7 +616,7 @@ h1 .hl { color: var(--accent); }
         <h2 class="contact-title">Tem um desafio de produto?</h2>
         <p class="contact-sub">Aberto a oportunidades como Product Designer, consultorias em UX/UI e projetos de produto digital.</p>
       </div>
-      <a class="btn btn-primary" href="https://wa.me/5511966101996?text=Oi%20Renan%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade" target="_blank" rel="noopener">Entrar em contato →</a>
+      <a class="btn btn-primary" href="https://wa.me/5511966101996?text=Oi%20Renan%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade" target="_blank" rel="noopener" data-gtag-event="whatsapp_click" data-gtag-location="footer">Entrar em contato →</a>
     </div>
   </div>
   <div class="wrap">
@@ -645,6 +645,19 @@ h1 .hl { color: var(--accent); }
       glow.style.left = (e.clientX - r.left) + 'px';
       glow.style.top  = (e.clientY - r.top)  + 'px';
     });
+  });
+
+  // GA4 event tracking — ver docs/ANALYTICS.md antes de adicionar/alterar eventos
+  document.addEventListener('click', e => {
+    const el = e.target.closest('[data-gtag-event]');
+    if (!el || typeof gtag !== 'function') return;
+    const params = { page_lang: document.documentElement.lang };
+    for (const attr of el.attributes) {
+      if (attr.name.startsWith('data-gtag-') && attr.name !== 'data-gtag-event') {
+        params[attr.name.slice('data-gtag-'.length).replace(/-/g, '_')] = attr.value;
+      }
+    }
+    gtag('event', el.dataset.gtagEvent, params);
   });
 })();
 </script>

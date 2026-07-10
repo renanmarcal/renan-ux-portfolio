@@ -1,0 +1,58 @@
+# Analytics
+
+Como o rastreamento de dados do portfólio funciona — o que está instalado, o que é rastreado, e como adicionar um evento novo sem redescobrir o padrão.
+
+## O que está instalado (todas as 9 páginas: 3 home + 2 cases × 3 línguas)
+
+- **Google Analytics 4** (`G-M66N19ZT36`, via `gtag.js`) — pageviews automáticos + eventos customizados (ver abaixo).
+- **Contentsquare** (`https://t.contentsquare.net/uxa/4d84643516841.js`) — gravação de sessão e heatmap, captura tudo automaticamente (cliques, scroll, rage-clicks) sem precisar de código. Cobre o lado qualitativo ("ver onde as pessoas travam") sem instrumentação nenhuma.
+
+Os dois scripts ficam no `<head>`, logo depois do favicon e antes do CSS, replicados nos 9 arquivos (sem exceção — não há injeção via JS externo nem tag manager).
+
+## Eventos customizados do GA4
+
+GA4 sozinho só rastreia pageview — para saber qual botão/área específica foi clicada (não só que a página foi vista), cada elemento relevante tem `data-gtag-*` attributes e um único listener delegado no JS captura o clique e chama `gtag('event', ...)`.
+
+### O padrão (`data-gtag-event` + `data-gtag-*`)
+
+Qualquer elemento clicável que precise virar evento no GA4 recebe:
+```html
+<a ... data-gtag-event="nome_do_evento" data-gtag-algum-parametro="valor">
+```
+Um listener delegado (no bloco `<script>` do fim de cada página, dentro da mesma IIFE que já cuida do `IntersectionObserver`) escuta clique em qualquer `[data-gtag-event]`, converte automaticamente todo `data-gtag-*` (exceto o próprio `data-gtag-event`) num parâmetro do evento, e adiciona `page_lang` (lido de `document.documentElement.lang`) em todo evento — assim dá pra comparar PT/EN/ES no GA4 sem precisar olhar a URL.
+
+```js
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-gtag-event]');
+  if (!el || typeof gtag !== 'function') return;
+  const params = { page_lang: document.documentElement.lang };
+  for (const attr of el.attributes) {
+    if (attr.name.startsWith('data-gtag-') && attr.name !== 'data-gtag-event') {
+      params[attr.name.slice('data-gtag-'.length).replace(/-/g, '_')] = attr.value;
+    }
+  }
+  gtag('event', el.dataset.gtagEvent, params);
+});
+```
+
+**Para adicionar um evento novo em qualquer elemento futuro**: só adicionar os `data-gtag-*` attributes no HTML — o JS já existente captura automaticamente, não precisa tocar no script. Só editar o script se o *mecanismo* de captura mudar (ex. trocar de delegação por listeners individuais), não para adicionar um evento novo.
+
+### Eventos em uso hoje
+
+| Evento | Onde | Parâmetros | Valores possíveis |
+|---|---|---|---|
+| `whatsapp_click` | CTA primário (hero, footer, footer do case) | `location` | `hero`, `footer`, `case_footer` |
+| `linkedin_click` | CTA secundário do hero | `location` | `hero` |
+| `case_card_click` | Cards de case na home | `case` | `portal-c6-bank`, `priorizacao-visitas` |
+| `topbar_nav_click` | Menu-âncora do topbar (home) | `target` | `about`, `cases`, `contact` |
+| `lang_switch_click` | Seletor de idioma (PT · EN · ES) | `target_lang` | `pt`, `en`, `es` |
+| `next_case_click` | Link "próximo case" (dentro de um case) | `case` | slug do case de destino |
+
+Todo parâmetro usa valores **em inglês, consistentes entre as 3 línguas** (ex. `target="about"` mesmo na versão PT, onde o link mostra "Sobre") — de propósito, para o relatório do GA4 agregar PT/EN/ES no mesmo valor em vez de fragmentar em "Sobre"/"About"/"Sobre mí" como 3 linhas separadas.
+
+## O que NÃO fazer
+
+- Não duplicar a lógica do listener em cada página com pequenas variações — é o mesmo bloco de JS nas 9 páginas, byte a byte (checar com diff antes de considerar uma mudança concluída, mesmo padrão usado pro CSS embutido).
+- Não inventar um novo nome de evento para a mesma ação em lugares diferentes (ex. não criar `whatsapp_hero_click` separado de `whatsapp_click` com `location=hero`) — usar o parâmetro pra diferenciar, não o nome do evento, senão o GA4 fragmenta o relatório.
+- Não usar `onclick` inline nos elementos — o padrão é `data-gtag-*` + o listener delegado, que centraliza a lógica de captura num único lugar por página.
+- Não esquecer de propagar um evento novo pras 3 línguas — mesma regra de paridade do resto do site.

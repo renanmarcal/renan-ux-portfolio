@@ -14,6 +14,8 @@ Portfólio de produto de Renan Marçal. Público-alvo: líderes de design/produt
 
 Ler, nesta ordem: `docs/DESIGN-SYSTEM.md` (tokens e componentes já decididos), `docs/COPY.md` (copies canônicos por idioma), `docs/DECISIONS.md` (porquês, para não relitigar). Não redescobrir por releitura de CSS o que já está documentado ali.
 
+Para qualquer trabalho de rastreamento/analytics (GA4, Contentsquare, novo evento de clique): ler `docs/ANALYTICS.md` primeiro — tem o padrão de `data-gtag-event` já em uso e a lista de eventos existentes, pra não inventar um mecanismo novo nem duplicar um evento com nome diferente.
+
 ## Protocolo operacional (aprendido por correção direta do Renan)
 
 - **Nunca abrir Chrome/browser tools para validar edições locais.** Editar e parar — ele recarrega o navegador por conta própria. Exceção: só se ele pedir explicitamente uma checagem visual.

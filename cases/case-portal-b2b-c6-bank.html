@@ -297,7 +297,7 @@
 
 </main>
 
-<a class="next-case" href="case-priorizacao-visitas-comerciais-mercado-pago.html">
+<a class="next-case" href="case-priorizacao-visitas-comerciais-mercado-pago.html" data-gtag-event="next_case_click" data-gtag-case="priorizacao-visitas">
   <div class="wrap">
     <span class="next-kicker">Próximo case</span>
     <span class="next-title">Priorização de visitas comerciais <span class="arrow">→</span></span>
@@ -311,7 +311,7 @@
         <h2 class="contact-title">Tem um desafio de produto?</h2>
         <p class="contact-sub">Aberto a oportunidades como Product Designer, consultorias em UX/UI e projetos de produto digital.</p>
       </div>
-      <a class="btn btn-primary" href="https://wa.me/5511966101996?text=Oi%20Renan%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade" target="_blank" rel="noopener">Entrar em contato →</a>
+      <a class="btn btn-primary" href="https://wa.me/5511966101996?text=Oi%20Renan%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade" target="_blank" rel="noopener" data-gtag-event="whatsapp_click" data-gtag-location="case_footer">Entrar em contato →</a>
     </div>
   </div>
   <div class="wrap">
@@ -333,6 +333,19 @@
     const max = h.scrollHeight - h.clientHeight;
     bar.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
   }, { passive: true });
+
+  // GA4 event tracking — ver docs/ANALYTICS.md antes de adicionar/alterar eventos
+  document.addEventListener('click', e => {
+    const el = e.target.closest('[data-gtag-event]');
+    if (!el || typeof gtag !== 'function') return;
+    const params = { page_lang: document.documentElement.lang };
+    for (const attr of el.attributes) {
+      if (attr.name.startsWith('data-gtag-') && attr.name !== 'data-gtag-event') {
+        params[attr.name.slice('data-gtag-'.length).replace(/-/g, '_')] = attr.value;
+      }
+    }
+    gtag('event', el.dataset.gtagEvent, params);
+  });
 })();
 </script>
 </body>
