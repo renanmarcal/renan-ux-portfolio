@@ -60,6 +60,17 @@ O ritmo bloco-a-bloco das páginas de case (`.block` em `case.css`, sempre 240px
 
 **Regra de hierarquia**: um elemento de navegação secundária (ex. `.next-title`, o link "próximo case") nunca pode ter fonte maior que um título de seção real (ex. `.cases-header h2`) — já aconteceu ao contrário e foi corrigido em 2026-07-10.
 
+## Ritmo vertical mobile
+
+**Regra geral: o ritmo mobile é exatamente metade do valor desktop correspondente**, usando só `var(--s-6)` (48px) nos dois lados de cada seção principal — mais fácil de manter do que inventar uma escala mobile paralela.
+
+- Home (`index.html`/`en`/`es`, ≤768px): hero→pillars = pillars→cases = cases→footer = **96px** (48+48, metade do 192px desktop).
+- Case study (`case.css`): hero→bloco 01 = bloco→bloco = bloco→next-case = next-case→footer = **160px** a ≤768px, **128px** a ≤430px — usa `var(--s-8)`/`var(--s-7)` nos dois lados de cada transição, mesma lógica do `.block` (que já reduzia 120→80→64) agora estendida a `.hero-img-strip`, `.next-case` e ao `padding-top` do `.footer` (que antes ficavam parados no valor desktop em qualquer breakpoint).
+
+**Regra de proporção H1:corpo no menor breakpoint**: o H1 encolhe bastante de desktop pro mobile (68→36px na home, 80→44px no case), mas o texto de abertura (`.hero-bio`/`.hero-summary`) não pode ficar parado no mesmo tamanho do desktop, senão a proporção de hierarquia desaba (chegou a cair de 3.78:1 pra 2.0:1 na home). Os dois recebem `font-size: 16px` (o tamanho-base do corpo do site) só a ≤430px — não um valor proporcional exato ao encolhimento do H1, que ficaria pequeno demais pra leitura confortável em tela de celular.
+
+O padding de abertura do hero mobile não acompanha 1:1 o crescimento do desktop (que foi de 72→128px, +78%) — um aumento proporcional empurraria demais o conteúdo pra baixo numa tela pequena. Em vez disso, sobe um degrau de token por breakpoint (48→64px a 900px, 40→48px a 430px).
+
 ## Layout
 
 - `.wrap`: `max-width: 1120px; margin: 0 auto; padding: 0 48px` (`var(--s-3)`, 24px, abaixo de 768px). **Todo** bloco de largura total (hero, cases, footer) usa esta mesma classe — é o que garante alinhamento ponta a ponta entre seções.
