@@ -15,7 +15,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | Topbar nav | Sobre · Cases · Contato |
 | Hero kicker | Product Designer · São Paulo, Brasil |
 | H1 | Design para plataformas / **complexas** *(palavra em accent, sem ponto final)* |
-| Hero bio | 6 anos desenhando produtos financeiros B2B, do discovery ao design system. Construí essa experiência no **C6 Bank** e no **Mercado Pago**, em contextos de adquirência e força de vendas. |
+| Hero bio | Traduzo operações financeiras complexas em interfaces que um time consegue operar sem depender de suporte. Construí essa experiência no **C6 Bank** e no **Mercado Pago**, em contextos de adquirência e força de vendas. |
 | CTA primário | Vamos conversar → *(WhatsApp)* |
 | CTA secundário | Ver LinkedIn *(link externo, não mais âncora — navegação para #cases já coberta pelo topbar)* |
 | Cases header | Cases selecionados |
@@ -33,7 +33,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | Topbar nav | About · Cases · Contact |
 | Hero kicker | Product Designer · São Paulo, Brazil |
 | H1 | Design for / complex **platforms** |
-| Hero bio | 6 years designing B2B financial products, from discovery to design systems. I built this experience at **C6 Bank** and **Mercado Pago**, across card-acquiring and field sales contexts. |
+| Hero bio | I translate complex financial operations into interfaces a team can run without depending on support. I built this experience at **C6 Bank** and **Mercado Pago**, across card-acquiring and field sales contexts. |
 | CTA primário | Let's talk → |
 | CTA secundário | View LinkedIn |
 | Cases header | Selected cases |
@@ -50,7 +50,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | Topbar nav | Sobre mí · Casos · Contacto |
 | Hero kicker | Product Designer · São Paulo, Brasil |
 | H1 | Diseño para plataformas / **complejas** |
-| Hero bio | 6 años diseñando productos financieros B2B, desde el discovery hasta el design system. Construí esta experiencia en **C6 Bank** y **Mercado Pago**, en contextos de adquirencia y fuerza de ventas. |
+| Hero bio | Traduzco operaciones financieras complejas en interfaces que un equipo puede operar sin depender de soporte. Construí esta experiencia en **C6 Bank** y **Mercado Pago**, en contextos de adquirencia y fuerza de ventas. |
 | CTA primário | Conversemos → |
 | CTA secundário | Ver LinkedIn |
 | Cases header | Casos seleccionados |
@@ -74,7 +74,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 ### Priorização de visitas — PT / EN / ES
 - Kicker: `Mercado Pago · 2024–2025`
 - Título: Priorização de visitas comerciais / Sales visit prioritization / Priorización de visitas comerciales
-- Descrição: Redesenhei a agenda de campo para transformar alertas de prioridade em um plano de visitas viável. / I redesigned the field schedule to turn priority alerts into a viable visit plan. / Rediseñé la agenda de campo para transformar alertas de prioridad en un plan de visitas viable.
+- Descrição: Alertas de prioridade sem plano de visitas viável. Redesenhei a agenda de campo dos representantes para resolver isso. / Priority alerts with no viable visit plan. I redesigned the field representatives' schedule to fix that. / Alertas de prioridad sin plan de visitas viable. Rediseñé la agenda de campo de los representantes para resolver esto.
 - Métricas: `+15%` produtividade diária/daily productivity/productividad diaria · `−5%` redução de churn/churn reduction/reducción de churn
 - Tag: Mobile
 - **Regra**: este case agora tem número de resultado real (produtividade diária e churn) — não usar mais métrica de escala (países/plataformas) como destaque; a informação de alcance cross-market e versão desktop virou contexto de apoio dentro do parágrafo do bloco 07, não mais o número em destaque.
@@ -88,3 +88,11 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 
 ## Navegação entre cases
 - PT: Próximo case · EN: Next case · ES: Próximo caso
+
+## Pillars (home, 4 verbos do processo)
+- Pillar 04 desc — PT: Métricas e validação para confirmar se a solução resolveu o problema · EN: Metrics and validation to confirm the solution solved the problem · ES: Métricas y validación para confirmar si la solución resolvió el problema.
+- **Regra**: a descrição não pode prometer algo que os cases reais não entregam — os 2 cases publicados fecham com métricas de lançamento, não com um ciclo de iteração contínua, então o pillar não afirma "evolução contínua".
+
+## Case C6 Pay — bloco 05
+- PT: Facilitando a conferência do histórico de vendas · EN: Streamlining the sales history review · ES: Facilitando la revisión del historial de ventas.
+- **Regra**: título precisa se diferenciar do bloco 04 ("Uma visão clara da operação financeira") — bloco 04 é a tela de resumo consolidado, bloco 05 é especificamente a tela de histórico de vendas usada pra conferência do fechamento de caixa. Os dois não podem ficar ancorados no mesmo termo genérico ("fechamento de caixa") sem diferenciar qual tela cada um resolve.
