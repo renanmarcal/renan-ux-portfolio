@@ -74,6 +74,8 @@ Breakpoints em uso: 900px (colapso de grids para 1 coluna), 768px (`.wrap` reduz
 
 **Regra que evita o erro já cometido nesta sessão**: qualquer padding, `min-height`, ou tamanho calibrado para o hero/footer em desktop precisa de uma contraparte explícita em pelo menos um desses breakpoints — nunca assumir que "vai encolher sozinho". Antes de considerar uma mudança de espaçamento/altura no hero ou no footer como concluída, checar os 3 breakpoints, não só desktop.
 
+**Regra de espaçamento (todo padding/margin/gap vira token)**: todo valor de padding/margin/gap, em qualquer breakpoint, se expressa como `var(--s-N)` — nunca um número em px solto. Se um valor não cai limpo em nenhum token da escala (`--s-1` a `--s-10`), isso é sinal para reconsiderar o valor, não para criar um px avulso. Exceção deliberada: tamanhos de elemento (ex. `.hero-photo { width: 48px }`, `grid-template-columns: 48px 1fr`) não são "espaçamento" no sentido de ritmo de layout — ficam como px literal. Motivo da regra: uma auditoria encontrou 8 valores de espaçamento mobile fora da grade de 8px (22px, 36px, 56px, 28px, 20px — todos "quase" um token, nunca exatamente), todos escritos como px cru em vez de `var(--s-N)` — a causa raiz era justamente a ausência de token, que torna fácil digitar um número aproximado sem perceber o desvio. Ver `docs/DECISIONS.md` para a tabela completa da correção.
+
 ## O que NÃO fazer
 
 - Não usar preto sólido (`--ink` como background) em cards de CTA — decisão já testada e revertida.

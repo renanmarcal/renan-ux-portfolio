@@ -50,7 +50,7 @@ body {
 
 /* ─── layout ─── */
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 48px; }
-@media (max-width: 768px) { .wrap { padding: 0 22px; } }
+@media (max-width: 768px) { .wrap { padding: 0 var(--s-3); } }
 
 /* ─── botões ─── */
 .btn {
@@ -380,11 +380,11 @@ h2 + .sub-h { margin-top: 0; }
 .contact-card .btn { flex: none; }
 @media (max-width: 768px) {
   .footer { min-height: auto; }
-  .footer-inner { margin-bottom: 40px; }
-  .contact-card { flex-direction: column; align-items: flex-start; padding: 32px 24px; gap: 24px; }
+  .footer-inner { margin-bottom: var(--s-5); }
+  .contact-card { flex-direction: column; align-items: flex-start; padding: var(--s-4) var(--s-3); gap: var(--s-3); }
   .contact-title { font-size: 26px; }
 }
-.footer-rule { border-top: 1px solid var(--line); margin-bottom: 24px; }
+.footer-rule { border-top: 1px solid var(--line); margin-bottom: var(--s-3); }
 .footer-copy {
   font-family: var(--font-mono);
   font-size: 10px; letter-spacing: .08em; color: var(--ink-faint);

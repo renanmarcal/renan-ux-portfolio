@@ -6,7 +6,9 @@ Pendências conhecidas. Marcar com data quando resolvido e mover para `docs/DECI
 
 - [ ] **Migrar para gerador de site estático (Astro recomendado)** para eliminar a duplicação de CSS embutido em 3 arquivos (`index.html`, `en/index.html`, `es/index.html`) e o footer copiado em 9 arquivos. Conteúdo por idioma em `content/pt.json`/`en.json`/`es.json` (ou frontmatter), componentes reutilizáveis (`CaseCard`, `ContactCard`, `Topbar`, `NextCase`). Manter output 100% estático (zero JS de framework no HTML final) para preservar performance e SEO. Deploy passa a exigir um build step — decidir entre GitHub Action (build automático no push) ou build local + commit do `dist/`.
 - [ ] Extrair estilos inline recorrentes dos arquivos de case (`style="grid-template-columns: 4fr 8fr"`, `style="aspect-ratio:auto; height:auto"` etc.) para classes utilitárias em `case.css`.
-- [ ] Migrar a escala de espaçamento das home pages (px cru) para as mesmas variáveis `--s-1`…`--s-10` que `case.css` já usa.
+- [x] 2026-07-09 · Migrar a escala de espaçamento **dentro dos media queries mobile** das home pages (px cru) para `var(--s-1)`…`var(--s-10)` — feito, ver `docs/DECISIONS.md`. Pendente: os valores de **desktop** (fora de media query) nas home pages ainda são px cru — não migrados nesta rodada por não fazer parte da queixa mobile.
+- [ ] `.case-grid` gap (`20px`, desktop e mobile, nunca sobrescrito) está fora da grade de 8px — mais próximo de `--s-2`(16) ou `--s-3`(24). Não corrigido junto com a rodada mobile porque afeta desktop também.
+- [ ] `.btn-ghost` padding-x (`27px`) e `.btn`/`.case-info` padding-x desktop (`28px`) também fora da grade de 8px — mesmo motivo, adiado por afetar desktop.
 
 ## Conteúdo / SEO
 
