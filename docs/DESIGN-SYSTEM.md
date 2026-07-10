@@ -10,7 +10,7 @@ Tokens e componentes decididos para o portfólio. Fonte de verdade para qualquer
 --card:     #faf7f2   /* fundo de cards (case-card) */
 --ink:      #1c1916   /* texto principal */
 --ink-soft: #5c554b   /* texto secundário */
---ink-faint:#766b5c   /* labels, metadados */
+--ink-faint:#6a6052   /* labels, metadados — escurecido em 2026-07-10 pra passar WCAG AA, ver docs/DECISIONS.md */
 --line:     #d8d0c0   /* bordas e divisores — único tom de borda no site */
 --accent:   #b8451f   /* laranja queimado — CTA, destaque, hover */
 --accent-2: #2f5d50   /* verde — uso pontual (badge "Escolhida" em explorações) */
@@ -21,10 +21,23 @@ Regra: nunca introduzir uma cor fora desta paleta sem atualizar este arquivo.
 ## Tipografia
 
 - Display/headings: `'Work Sans', sans-serif` — peso **600 sempre**, nunca 700 (decisão 2026-07-09: bold 700 lido como "forte demais").
-- Corpo: `'Figtree', sans-serif`, 16px base, `line-height: 1.625`.
-- Labels/kickers/mono-style: mesma família Figtree, mas uppercase + `letter-spacing` alto (`.1em`–`.18em`) em tamanhos pequenos (9–11px) — não é uma fonte mono de verdade, é convenção visual.
-- H1 do hero: 68px desktop / 48px tablet (900px) / 36px mobile (430px), `letter-spacing: -.03em`, `line-height: 1.05`. Uma palavra-chave por H1 recebe `.hl { color: var(--accent) }`.
+- Corpo: `'Figtree', sans-serif`, 16px base, `line-height: 1.625`. Variantes de corpo em 14px (`.case-desc`, `.stat-val`, `.c-card .body-text`, `.prob-list li`) usam `line-height: 1.6` uniforme — antes tinham 4 valores diferentes (1.65/1.45/1.72/1.5) sem razão aparente.
+- Labels/kickers: mesma família Figtree (não é mono de verdade, é convenção visual) — ver escala própria abaixo (`--fs-label`/`--ls-label-*`).
+- H1 do hero (home): 68px desktop / 48px tablet (900px) / 36px mobile (430px), `letter-spacing: -.03em`, `line-height: 1.05`. Uma palavra-chave por H1 recebe `.hl { color: var(--accent) }`.
+- H1 de case study (`case.css`, diferente e **intencionalmente** maior — registro de contexto, não hero de impacto): 80px desktop / 64px (900px) / 52px (768px) / 44px (430px), `line-height: .94`.
 - Sem ponto final em H1 de hero (decisão de craft: frase de impacto não fecha com pontuação).
+
+## Escala de labels/kickers (`--fs-label`, `--ls-label-wide`, `--ls-label-tight`)
+
+```css
+--fs-label: 11px          /* tamanho único — era 9/10/11px espalhados em 19 seletores */
+--ls-label-wide:  .14em   /* labels em uppercase: kicker, nav, tags, lang-switch, breadcrumb, seta */
+--ls-label-tight: .08em   /* labels só com dígitos ou sem uppercase: num, footer-copy, stage-num */
+```
+
+Toda a família de textos pequenos do site (kickers, nav, tags de case, métricas, breadcrumb, paginação, rodapé) usa esses 2 tokens — antes eram ~7 valores de letter-spacing (.06em–.18em) e 3 tamanhos (9/10/11px) espalhados por `index.html`/`case.css`/`404.html` sob nomes diferentes, mas coincidindo em valores idênticos (ex. `.hero-kicker`, `.kicker` e `.code` já eram exatamente o mesmo estilo com 3 nomes). Consolidado em 2026-07-10 — ver `docs/DECISIONS.md`.
+
+**Regra de contraste**: `--ink-faint` só é usado nessa família (nunca em corpo de texto) — o valor do token já garante ≥4.5:1 (WCAG AA) contra os 3 fundos do site (`--paper`, `--paper-2`, `--card`). Não usar `--ink-faint` em texto menor que `--fs-label` (11px) nem introduzir um tom mais claro sem recalcular o contraste.
 
 ## Escala de espaçamento (base 8px)
 
@@ -95,3 +108,5 @@ Breakpoints em uso: 900px (colapso de grids para 1 coluna), 768px (`.wrap` reduz
 - Não dar um `min-height`/`padding` novo ao hero ou ao footer sem também definir o valor mobile na mesma tacada.
 - Não escrever um valor de padding/margin/gap em px cru dentro de um `@media` — sempre `var(--s-N)`.
 - Não deixar um `:nth-child`/`:first-child`/`:last-child` pensado para um breakpoint "vazar" para outro com layout diferente sem checar a especificidade.
+- Não criar um novo tamanho/letter-spacing pra família de labels — usar `--fs-label`/`--ls-label-wide`/`--ls-label-tight`. Se nenhum dos 2 serve, é sinal de que o caso de uso não é realmente um "label".
+- Não usar `--ink-faint` fora da família de labels (nunca em corpo de texto) — o token só tem contraste WCAG AA garantido no tamanho `--fs-label`.
