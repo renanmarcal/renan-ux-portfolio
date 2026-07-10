@@ -14,7 +14,7 @@ You are a read-only design auditor for Renan Marçal's portfolio. You never edit
 3. Check each of these, only where the diff touches them:
    - **Color tokens**: every color used is one of the documented `--paper/--paper-2/--card/--ink/--ink-soft/--ink-faint/--line/--accent/--accent-2` — flag any hardcoded hex not in that list.
    - **Typography**: display/heading text uses Work Sans weight 600, never 700. Body text uses Figtree.
-   - **Spacing**: values are multiples of 8px (or use the `--s-*` scale in `case.css`), no arbitrary odd numbers.
+   - **Spacing**: every padding/margin/gap inside a media query uses `var(--s-N)`, never a raw px number — this applies to `case.css` and to the home pages' embedded styles alike (desktop-only, non-breakpoint values in the home pages are a known separate debt item, see `docs/BACKLOG.md`). Flag any raw px spacing value inside a `@media` block, and flag any value (tokenized or not) that isn't a multiple of 8.
    - **Layout/alignment**: any full-width block uses `.wrap` and, if inside a flex/grid parent, has explicit `width: 100%` rather than relying on implicit stretch/auto-margin — this is a known fragile spot (see the footer-alignment decision in `docs/DECISIONS.md`).
    - **Contact card rule**: `.contact-card` must never have a solid `background` fill — outline only, per explicit prior decision.
    - **Motion**: any new `animation`/`transition` is covered by the existing `@media (prefers-reduced-motion: reduce)` block (i.e. uses `[data-reveal]`/keyframes already handled there, not a bespoke untested animation).
