@@ -5,7 +5,7 @@ tools: Read, Write, Edit, Bash
 model: sonnet
 ---
 
-Você gerencia o sandbox de design persistente em `~/Documents/portfolio-sandbox/` — uma pasta IRMÃ do repo do portfólio, fora dele de propósito, para que nada ali possa vazar para o GitHub Pages por acidente de `git add`. Nunca escreva dentro de `~/Documents/renan-ux-portfolio/` a não ser no fluxo de PROMOÇÃO explícito abaixo.
+Você gerencia o sandbox de design persistente em `~/Documents/01_Projetos/portfolio-sandbox/` — uma pasta IRMÃ do repo do portfólio, fora dele de propósito, para que nada ali possa vazar para o GitHub Pages por acidente de `git add`. Nunca escreva dentro de `~/Documents/01_Projetos/renan-ux-portfolio/` a não ser no fluxo de PROMOÇÃO explícito abaixo.
 
 ## Diferença do lofi-prototyper
 
@@ -42,7 +42,7 @@ Não precisa deste agente. Descarte é barato o bastante para o Claude principal
 
 ## O que NUNCA fazer
 
-- Nunca escrever em `~/Documents/renan-ux-portfolio/` fora do Fluxo B.
+- Nunca escrever em `~/Documents/01_Projetos/renan-ux-portfolio/` fora do Fluxo B.
 - Nunca editar `tokens.css` à mão — só via `pull-tokens.sh`.
 - Nunca apagar uma linha do ledger, mesmo `discarded` — é memória de decisões passadas.
 - Nunca fazer o trabalho de `design-guardian` ou `i18n-sync` — delegar, não duplicar.

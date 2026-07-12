@@ -29,7 +29,7 @@ Para qualquer trabalho de rastreamento/analytics (GA4, Contentsquare, novo event
 
 - Antes de reescrever um arquivo inteiro (`Write`), preferir `Edit` cirúrgico — os arquivos de idioma são grandes só porque o CSS está duplicado, não porque o conteúdo mudou muito.
 - Para "ideias novas que precisam de validação em baixa fidelidade" antes de qualquer código de produção: usar o agente `lofi-prototyper` (protótipo isolado no scratchpad, nunca no site, some no fim da sessão).
-- Para uma ideia (fonte, átomo, molécula, organismo) que precisa amadurecer por mais de uma sessão antes de virar código de produção: usar o agente `sandbox-curator`, que trabalha em `~/Documents/portfolio-sandbox/` (fora deste repo) com um ledger de maturidade (draft → testing → validated → promoted/discarded). Só lê `docs/DESIGN-SYSTEM.md` inteiro no momento da promoção — nunca antes.
+- Para uma ideia (fonte, átomo, molécula, organismo) que precisa amadurecer por mais de uma sessão antes de virar código de produção: usar o agente `sandbox-curator`, que trabalha em `~/Documents/01_Projetos/portfolio-sandbox/` (fora deste repo) com um ledger de maturidade (draft → testing → validated → promoted/discarded). Só lê `docs/DESIGN-SYSTEM.md` inteiro no momento da promoção — nunca antes.
 - Para propagar uma mudança já aprovada em PT para EN/ES: usar o agente `i18n-sync` em vez de reabrir os 3 arquivos manualmente.
 - Para revisar copy contra `docs/COPY.md` e o linter do README: usar o agente `copy-editor`.
 - Para auditar um diff contra `docs/DESIGN-SYSTEM.md` sem reescrever nada: usar o agente `design-guardian`.
