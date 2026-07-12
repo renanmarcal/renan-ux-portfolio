@@ -114,127 +114,112 @@ body {
 /* ─── hero ─── */
 .hero { padding: var(--s-11) 0 0; border-bottom: 1px solid var(--line); }
 
-.hero-top { padding-bottom: 48px; }
-
-.hero-top-grid {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-areas: "kicker photo" "h1 photo";
-  column-gap: var(--s-7);
-  row-gap: 0;
-  align-items: stretch;
-}
-
-.hero-photo {
-  grid-area: photo;
-  width: clamp(196px, 25vw, 310px);
-  aspect-ratio: 1 / 1;
-  align-self: center;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--paper-2);
-  opacity: 0; animation: fadeIn .8s .3s forwards;
-}
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-@media (max-width: 900px) {
-  .hero { padding: var(--s-7) 0 0; }
-  .hero-top { padding-bottom: var(--s-4); }
-  .hero-top-grid {
-    grid-template-columns: 48px 1fr;
-    grid-template-areas: "photo kicker" "h1 h1";
-    column-gap: var(--s-2);
-    row-gap: var(--s-3);
-    align-items: center;
-  }
-  .hero-photo { width: 48px; align-self: center; }
-}
-@media (max-width: 430px) {
-  .hero { padding: var(--s-6) 0 0; }
-  .hero-top { padding-bottom: var(--s-3); }
-  .hero-bio { font-size: 16px; }
-}
-
-.hero-kicker {
-  grid-area: kicker;
-  font-family: var(--font-mono);
-  font-size: var(--fs-label); letter-spacing: var(--ls-label-wide);
-  text-transform: uppercase; color: var(--accent);
-  margin-bottom: 20px;
-  opacity: 0; animation: fadeIn .6s .2s forwards;
-}
-@media (max-width: 900px) {
-  .hero-kicker { margin-bottom: 0; align-self: center; }
-}
-
-h1 {
-  grid-area: h1;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600; font-size: 68px;
-  line-height: 1.05; letter-spacing: -.03em;
-  overflow: hidden; padding-bottom: .1em;
-}
-h1 .hl { color: var(--accent); }
-@media (max-width: 900px) { h1 { font-size: 48px; } }
-@media (max-width: 430px) { h1 { font-size: 36px; } }
-
-.h1-line {
-  display: block; opacity: 0;
-  transform: translateY(105%);
-  animation: slideUp .85s cubic-bezier(.16,1,.3,1) forwards;
-}
-.h1-line:nth-child(1) { animation-delay: .3s; }
-.h1-line:nth-child(2) { animation-delay: .46s; }
-@keyframes slideUp { to { opacity: 1; transform: none; } }
 @keyframes fadeIn  { to { opacity: 1; } }
 
-.hero-divider { border-top: 1px solid var(--line); }
-
-.hero-bottom {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: var(--s-7);
-  row-gap: 32px;
-  padding: 48px 0 var(--s-9);
-}
-
 .hero-bio {
-  grid-column: 1;
   font-size: 18px; line-height: 1.6;
   color: var(--ink-soft);
   max-width: 46ch;
   opacity: 0; animation: fadeIn .8s .75s forwards;
 }
 .hero-bio b { color: var(--ink); font-weight: 500; }
+@media (max-width: 430px) {
+  .hero-bio { font-size: 16px; }
+}
 
 .hero-actions {
-  grid-column: 1;
   display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
   opacity: 0; animation: fadeIn .6s 1s forwards;
 }
 
-/* ─── stats ─── */
-.hero-stats { grid-column: 2; grid-row: 1 / span 2; display: flex; flex-direction: column; opacity: 0; animation: fadeIn .8s .6s forwards; }
-.stat { padding: 16px 0; border-bottom: 1px solid var(--line); }
-.stat:last-child { border-bottom: none; }
-.stat-label {
-  font-family: var(--font-mono);
-  font-size: var(--fs-label); letter-spacing: var(--ls-label-wide);
-  text-transform: uppercase; color: var(--ink-faint); margin-bottom: 8px;
-}
-.stat-val { font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
 .logo-row { display: flex; align-items: center; gap: 36px; padding: 4px 0; }
 .logo-row img { height: 26px; width: auto; }
 .logo-row img.invert { filter: brightness(0); }
+
+/* ─── hero: grid roto (H1 grande colisiona con la foto) ─── */
+.bold-hero { padding: var(--s-9) 0 0; overflow: visible; }
+.bold-hero .btn { will-change: transform; }
+.bold-hero .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.bold-kicker {
+  font-family: var(--font-mono); font-size: var(--fs-label);
+  letter-spacing: var(--ls-label-wide); text-transform: uppercase;
+  color: var(--accent); margin-bottom: var(--s-2);
+  opacity: 0; animation: bg-fade .6s cubic-bezier(.16,1,.3,1) .05s forwards;
+}
+@keyframes bg-fade { to { opacity: 1; } }
+
+.bold-stage { position: relative; }
+.bold-h1 {
+  font-family: 'Work Sans', sans-serif; font-weight: 600;
+  font-size: clamp(56px, 11vw, 160px);
+  line-height: .92; letter-spacing: -.05em;
+  overflow: hidden; padding-bottom: .08em;
+}
+.bold-h1 .hl { color: var(--accent); }
+.bh1-line { display: block; opacity: 0; transform: translateY(105%); animation: bg-rise .9s cubic-bezier(.16,1,.3,1) forwards; }
+.bh1-line:nth-child(1) { animation-delay: .1s; }
+.bh1-line:nth-child(2) { animation-delay: .22s; }
+.bh1-line:nth-child(3) { animation-delay: .34s; }
+@keyframes bg-rise { to { opacity: 1; transform: none; } }
+
+.bold-photo {
+  position: relative;
+  width: clamp(220px, 32vw, 380px);
+  aspect-ratio: 1 / 1;
+  margin-left: auto;
+  margin-top: calc(var(--s-9) * -1.5);
+  transform: rotate(-3deg);
+  border-radius: 24% / 24%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  box-shadow: 0 40px 72px -36px rgba(28,25,22,.45);
+  opacity: 0; animation: bg-pop .9s cubic-bezier(.16,1,.3,1) .3s forwards;
+  z-index: 2;
+}
+.bold-photo::after {
+  content: ""; position: absolute; inset: -3px; border-radius: inherit;
+  padding: 3px; pointer-events: none;
+  background: conic-gradient(from var(--spot-angle, 0deg), var(--accent), transparent 30%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity .4s cubic-bezier(.16,1,.3,1);
+}
+.bold-photo:hover::after { opacity: 1; }
+.bold-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(.25) contrast(1.02); transform: rotate(3deg) scale(1.15); }
+@keyframes bg-pop { to { opacity: 1; } }
 @media (max-width: 900px) {
-  .hero-bottom { grid-template-columns: 1fr; row-gap: 0; padding-top: var(--s-4); padding-bottom: var(--s-6); }
-  .hero-bio, .hero-actions, .hero-stats { grid-column: 1; }
-  .hero-bio { margin-bottom: var(--s-4); }
-  .hero-stats { grid-row: auto; order: 3; margin-top: var(--s-5); }
+  .bold-hero { padding: var(--s-7) 0 0; }
+  .bold-photo { width: 160px; margin-top: calc(var(--s-6) * -1); transform: rotate(-2deg); }
 }
 @media (max-width: 430px) {
-  .hero-bottom { padding: var(--s-3) 0 var(--s-6); }
+  .bold-hero { padding: var(--s-6) 0 0; }
 }
+
+.bold-lower {
+  margin-top: var(--s-6);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: var(--s-7);
+}
+.bold-hero .hero-bio { max-width: 44ch; text-wrap: pretty; }
+@media (max-width: 900px) {
+  .bold-lower { grid-template-columns: 1fr; }
+}
+
+.bold-ticker {
+  border-top: 1px solid var(--line);
+  margin-top: var(--s-6);
+  padding: var(--s-3) 0 var(--s-9);
+  display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-4);
+  font-family: var(--font-mono); font-size: 13px; letter-spacing: .01em;
+  color: var(--ink-soft);
+}
+.bold-ticker .logo-row { display: flex; align-items: center; gap: var(--s-3); }
+.bold-ticker .logo-row img { height: 20px; width: auto; }
+.bold-ticker .logo-row img.invert { filter: brightness(0); }
 
 /* ─── cases ─── */
 .cases { padding: 144px 0; }
@@ -262,6 +247,7 @@ h1 .hl { color: var(--accent); }
 }
 .case-card:hover {
   border-color: var(--accent);
+  background: var(--paper-2);
   transform: translateY(-5px);
   box-shadow: 0 28px 56px rgba(28,25,22,.07);
 }
@@ -307,34 +293,18 @@ h1 .hl { color: var(--accent); }
   margin-bottom: var(--s-3);
 }
 .case-metrics {
-  display: flex; gap: 24px; flex: 1; align-items: flex-end;
+  display: flex; flex-direction: column; gap: var(--s-1); flex: 1; align-items: stretch;
 }
-.case-metric-val {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600; font-size: 24px;
-  color: var(--ink); letter-spacing: -.02em; line-height: 1.1;
+.metric-inline { font-size: 14px; line-height: 1.6; }
+.metric-inline .m-val { font-family: 'Work Sans', sans-serif; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+.metric-inline .m-label { color: var(--ink-soft); }
+.case-invite {
+  margin-top: var(--s-3);
+  font-family: var(--font-sans); font-weight: 600; font-size: 16px; letter-spacing: -.005em;
+  color: var(--ink-soft);
+  transition: color .3s cubic-bezier(.16,1,.3,1);
 }
-.case-metric-label {
-  font-family: var(--font-mono);
-  font-size: var(--fs-label); letter-spacing: var(--ls-label-tight);
-  color: var(--ink-faint); margin-top: 4px; line-height: 1.3;
-}
-.case-footer {
-  display: flex; align-items: center; justify-content: space-between;
-  padding-top: 8px; border-top: 1px solid var(--line); margin-top: 4px;
-}
-.case-tag {
-  font-family: var(--font-mono);
-  font-size: var(--fs-label); letter-spacing: var(--ls-label-wide);
-  text-transform: uppercase; color: var(--ink-faint);
-}
-.case-arrow {
-  font-family: var(--font-mono);
-  font-size: var(--fs-label); letter-spacing: var(--ls-label-wide);
-  text-transform: uppercase; color: var(--ink-faint);
-  transition: color .3s, transform .3s;
-}
-.case-card:hover .case-arrow { color: var(--accent); transform: translateX(4px); }
+.case-card:hover .case-invite { color: var(--accent); }
 
 /* ─── footer ─── */
 .footer {
@@ -344,31 +314,28 @@ h1 .hl { color: var(--accent); }
   background: var(--paper-2); border-top: 1px solid var(--line);
 }
 .footer > .wrap { width: 100%; }
-.footer-inner { flex: 1; display: flex; align-items: center; }
-.contact-card {
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 72px 64px;
-  display: flex; align-items: center; justify-content: space-between; gap: 40px;
+.footer-inner { flex: 1; display: flex; align-items: flex-end; padding-bottom: var(--s-7); }
+.f3-grid { display: grid; grid-template-columns: 1fr auto; gap: var(--s-7); align-items: end; width: 100%; }
+.f-title {
+  font-family: 'Work Sans', sans-serif; font-weight: 600;
+  font-size: clamp(40px, 6vw, 72px); line-height: 1.02; letter-spacing: -.03em; color: var(--ink);
 }
-.contact-title {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600; font-size: 32px;
-  line-height: 1.25; letter-spacing: -.02em;
-  color: var(--ink);
+.f-title .hl { color: var(--accent); }
+.f3-cta { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-3); max-width: 30ch; }
+.f-sub { font-size: 16px; color: var(--ink-soft); line-height: 1.6; }
+.close-ticker {
+  display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-4);
+  font-family: var(--font-mono); font-size: 13px; letter-spacing: .01em; color: var(--ink-soft);
+  margin-bottom: var(--s-3);
 }
-.contact-sub {
-  font-size: 16px; line-height: 1.6;
-  color: var(--ink-soft); max-width: 46ch;
-  margin-top: 12px;
-}
-.contact-card .btn { flex: none; }
+.close-ticker a { color: inherit; text-decoration: none; transition: color .3s cubic-bezier(.16,1,.3,1); }
+.close-ticker a:hover, .close-ticker a:focus-visible { color: var(--accent); }
+.close-ticker a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 @media (max-width: 768px) {
   .footer { min-height: auto; }
-  .footer-inner { margin-bottom: var(--s-5); }
-  .contact-card { flex-direction: column; align-items: flex-start; padding: var(--s-4) var(--s-3); gap: var(--s-3); }
-  .contact-title { font-size: 26px; }
+  .footer-inner { margin-bottom: var(--s-5); align-items: flex-start; padding-bottom: var(--s-5); }
+  .f3-grid { grid-template-columns: 1fr; }
+  .f-title { font-size: 40px; }
 }
 .footer-rule { border-top: 1px solid var(--line); margin-bottom: var(--s-3); }
 .footer-copy {
@@ -383,7 +350,7 @@ h1 .hl { color: var(--accent); }
   grid-template-columns: repeat(4, 1fr);
 }
 .pillar {
-  padding: 0 32px;
+  padding: 0 var(--s-6);
   border-right: 1px solid var(--line);
 }
 .pillar:first-child { padding-left: 0; }
@@ -392,22 +359,23 @@ h1 .hl { color: var(--accent); }
   font-family: var(--font-mono);
   font-size: var(--fs-label); letter-spacing: var(--ls-label-tight);
   color: var(--ink-faint);
-  display: block; margin-bottom: 12px;
+  display: block; margin-bottom: var(--s-3);
 }
 .pillar-verb {
   font-family: 'Work Sans', sans-serif;
   font-weight: 600; font-size: 28px;
   color: var(--ink); letter-spacing: -.02em;
-  line-height: 1; margin-bottom: 12px;
+  line-height: 1; margin-bottom: var(--s-3);
 }
 .pillar-desc {
   font-size: 14px; color: var(--ink-soft);
   line-height: 1.55;
+  max-width: 26ch;
 }
 @media (max-width: 768px) {
   .pillars { padding: var(--s-6) 0; }
   .pillars-grid { grid-template-columns: 1fr; }
-  .pillar { padding: var(--s-3) 0; border-right: none; border-bottom: 1px solid var(--line); }
+  .pillar { padding: var(--s-4) 0; border-right: none; border-bottom: 1px solid var(--line); }
   .pillar:last-child { border-bottom: none; }
 }
 
@@ -447,7 +415,7 @@ h1 .hl { color: var(--accent); }
     transition-duration: .001ms !important;
     scroll-behavior: auto !important;
   }
-  [data-reveal], .h1-line { opacity: 1 !important; transform: none !important; }
+  [data-reveal], .bh1-line, .bold-photo { opacity: 1 !important; transform: none !important; }
 }
 </style>
 </head>
@@ -470,44 +438,31 @@ h1 .hl { color: var(--accent); }
   </div>
 </header>
 
-<header class="hero" id="top">
+<header class="hero bold-hero" id="top">
   <div class="wrap">
-    <div class="hero-top">
-      <div class="hero-top-grid">
-        <p class="hero-kicker">Product Designer · São Paulo, Brasil</p>
-        <h1>
-          <span class="h1-line">Diseño para plataformas</span>
-          <span class="h1-line"><span class="hl">complejas</span></span>
-        </h1>
-        <div class="hero-photo">
-          <img src="../assets/img/renan-avatar.png" alt="Foto de Renan Marçal" loading="eager">
-        </div>
+    <div class="bold-stage">
+      <p class="bold-kicker">Product Designer · UX/UI · São Paulo</p>
+      <h1 class="bold-h1">
+        <span class="bh1-line">Diseño para</span>
+        <span class="bh1-line">plataformas</span>
+        <span class="bh1-line"><span class="hl">complejas</span></span>
+      </h1>
+      <div class="bold-photo" id="bg-photo"><img src="../assets/img/renan-avatar.png" alt="Foto de Renan Marçal" loading="eager"></div>
+    </div>
+    <div class="bold-lower">
+      <p class="hero-bio">Traduzco operaciones financieras complejas en interfaces que un equipo puede operar sin depender de soporte. Construí esta experiencia en <b>C6 Bank</b> y <b>Mercado Pago</b>, en contextos de adquirencia y fuerza de ventas.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary magnet" href="https://wa.me/5511966101996?text=Hola%20Renan%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad" target="_blank" rel="noopener" data-gtag-event="whatsapp_click" data-gtag-location="hero">Conversemos →</a>
+        <a class="btn btn-ghost magnet" href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener" data-gtag-event="linkedin_click" data-gtag-location="hero">Ver LinkedIn</a>
       </div>
     </div>
-    <div class="hero-divider"></div>
-    <div class="hero-bottom">
-      <p class="hero-bio">Traduzco operaciones financieras complejas en interfaces que un equipo puede operar sin depender de soporte. Construí esta experiencia en <b>C6 Bank</b> y <b>Mercado Pago</b>, en contextos de adquirencia y fuerza de ventas.</p>
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-label">experiencia</div>
-          <div class="stat-val">6 años en productos digitales financieros</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">áreas</div>
-          <div class="stat-val">Productos B2B · Plataformas internas · Design systems · Operaciones financieras</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">empresas</div>
-          <div class="stat-val logo-row">
-            <img src="../assets/img/logo-mercado-pago.svg" alt="Mercado Pago" width="104" height="28" loading="eager">
-            <img src="../assets/img/logo-c6-bank.svg" class="invert" alt="C6 Bank" width="140" height="28" loading="eager">
-          </div>
-        </div>
-      </div>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://wa.me/5511966101996?text=Hola%20Renan%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad" target="_blank" rel="noopener" data-gtag-event="whatsapp_click" data-gtag-location="hero">Conversemos →</a>
-        <a class="btn btn-ghost" href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener" data-gtag-event="linkedin_click" data-gtag-location="hero">Ver LinkedIn</a>
-      </div>
+    <div class="bold-ticker">
+      <span class="logo-row">
+        <img src="../assets/img/logo-mercado-pago.svg" alt="Mercado Pago" width="90" height="20" loading="eager">
+        <img src="../assets/img/logo-c6-bank.svg" class="invert" alt="C6 Bank" width="110" height="20" loading="eager">
+      </span>
+      <span>6 años en productos digitales financieros</span>
+      <span>Productos B2B · Plataformas internas · Design systems · Dashboards · Landing pages · Flujos de punta a punta</span>
     </div>
   </div>
 </header>
@@ -518,22 +473,22 @@ h1 .hl { color: var(--accent); }
       <div class="pillar" data-reveal="up">
         <span class="pillar-num">01</span>
         <h3 class="pillar-verb">Entiendo</h3>
-        <p class="pillar-desc">Investigación con usuarios, discovery y definición del problema</p>
+        <p class="pillar-desc">Entiendo el problema antes de proponer cualquier solución.</p>
       </div>
       <div class="pillar" data-reveal="up" data-d="1">
         <span class="pillar-num">02</span>
-        <h3 class="pillar-verb">Planifico</h3>
-        <p class="pillar-desc">Arquitectura de la información, flujos y estrategia de producto</p>
+        <h3 class="pillar-verb">Estructuro</h3>
+        <p class="pillar-desc">Organizo información, reglas y flujos para reducir la complejidad.</p>
       </div>
       <div class="pillar" data-reveal="up" data-d="2">
         <span class="pillar-num">03</span>
         <h3 class="pillar-verb">Construyo</h3>
-        <p class="pillar-desc">Interfaz, prototipado y design system</p>
+        <p class="pillar-desc">Transformo decisiones en productos fáciles de usar y mantener.</p>
       </div>
       <div class="pillar" data-reveal="up" data-d="3">
         <span class="pillar-num">04</span>
-        <h3 class="pillar-verb">Acompaño</h3>
-        <p class="pillar-desc">Métricas y validación para confirmar si la solución resolvió el problema</p>
+        <h3 class="pillar-verb">Valido</h3>
+        <p class="pillar-desc">Uso datos y feedback para evolucionar la solución continuamente.</p>
       </div>
     </div>
   </div>
@@ -553,19 +508,10 @@ h1 .hl { color: var(--accent); }
           <h3>Portal de gestión para comercios C6 Pay</h3>
           <p class="case-desc">Reorganicé un portal heredado para hacer clara la salud financiera del comercio en el cierre de caja.</p>
           <div class="case-metrics">
-            <div>
-              <div class="case-metric-val">−36%</div>
-              <div class="case-metric-label">llamados de<br>soporte</div>
-            </div>
-            <div>
-              <div class="case-metric-val">−50%</div>
-              <div class="case-metric-label">tiempo en la<br>pantalla de ventas</div>
-            </div>
+            <div class="metric-inline"><span class="m-val">−36%</span> <span class="m-label">llamados de soporte</span></div>
+            <div class="metric-inline"><span class="m-val">−50%</span> <span class="m-label">tiempo en la pantalla de ventas</span></div>
           </div>
-          <div class="case-footer">
-            <span class="case-tag">Web</span>
-            <span class="case-arrow">Ver caso →</span>
-          </div>
+          <p class="case-invite">Ver caso</p>
         </div>
       </a>
 
@@ -576,19 +522,10 @@ h1 .hl { color: var(--accent); }
           <h3>Priorización de visitas comerciales</h3>
           <p class="case-desc">Alertas de prioridad sin plan de visitas viable. Rediseñé la agenda de campo de los representantes para resolver esto.</p>
           <div class="case-metrics">
-            <div>
-              <div class="case-metric-val">+15%</div>
-              <div class="case-metric-label">productividad<br>diaria</div>
-            </div>
-            <div>
-              <div class="case-metric-val">−5%</div>
-              <div class="case-metric-label">reducción de<br>churn</div>
-            </div>
+            <div class="metric-inline"><span class="m-val">+15%</span> <span class="m-label">productividad diaria</span></div>
+            <div class="metric-inline"><span class="m-val">−5%</span> <span class="m-label">reducción de churn</span></div>
           </div>
-          <div class="case-footer">
-            <span class="case-tag">Mobile</span>
-            <span class="case-arrow">Ver caso →</span>
-          </div>
+          <p class="case-invite">Ver caso</p>
         </div>
       </a>
 
@@ -598,15 +535,19 @@ h1 .hl { color: var(--accent); }
 
 <footer class="footer" id="contacto">
   <div class="wrap footer-inner">
-    <div class="contact-card" data-reveal="fade">
-      <div>
-        <h2 class="contact-title">¿Tienes un desafío de producto?</h2>
-        <p class="contact-sub">Abierto a oportunidades como Product Designer, consultorías en UX/UI y proyectos de producto digital.</p>
+    <div class="f3-grid">
+      <h2 class="f-title">¿Tienes un <span class="hl">desafío</span><br>de producto?</h2>
+      <div class="f3-cta">
+        <p class="f-sub">Abierto a oportunidades como Product Designer, consultorías en UX/UI y proyectos de alto impacto.</p>
+        <a class="btn btn-primary magnet" href="https://wa.me/5511966101996?text=Hola%20Renan%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad" target="_blank" rel="noopener" data-gtag-event="whatsapp_click" data-gtag-location="footer">Contáctame →</a>
       </div>
-      <a class="btn btn-primary" href="https://wa.me/5511966101996?text=Hola%20Renan%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad" target="_blank" rel="noopener" data-gtag-event="whatsapp_click" data-gtag-location="footer">Contáctame →</a>
     </div>
   </div>
   <div class="wrap">
+    <div class="close-ticker">
+      <span>São Paulo, Brasil</span>
+      <a href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener" data-gtag-event="linkedin_click" data-gtag-location="footer">linkedin.com/in/rnmrc90</a>
+    </div>
     <div class="footer-rule"></div>
     <p class="footer-copy">© 2026 Renan Marçal · São Paulo, Brasil</p>
   </div>
@@ -645,6 +586,49 @@ h1 .hl { color: var(--accent); }
       }
     }
     gtag('event', el.dataset.gtagEvent, params);
+  });
+})();
+</script>
+<script>
+(function () {
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduced.matches) return;
+
+  var photo = document.getElementById('bg-photo');
+  photo.addEventListener('pointermove', function (e) {
+    var r = photo.getBoundingClientRect();
+    var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    var angle = Math.atan2(e.clientY - cy, e.clientX - cx) * 180 / Math.PI + 90;
+    photo.style.setProperty('--spot-angle', angle + 'deg');
+  });
+
+  document.querySelectorAll('.magnet').forEach(function (btn) {
+    var x = 0, y = 0, vx = 0, vy = 0, dx = 0, dy = 0, raf = null;
+    var stiffness = 170, damping = 26;
+    var last = null;
+    btn.addEventListener('pointermove', function (e) {
+      var r = btn.getBoundingClientRect();
+      dx = (e.clientX - (r.left + r.width / 2)) * .18;
+      dy = (e.clientY - (r.top + r.height / 2)) * .3;
+      start();
+    });
+    btn.addEventListener('pointerleave', function () { dx = 0; dy = 0; start(); });
+    function start() { if (!raf) { last = performance.now(); raf = requestAnimationFrame(step); } }
+    function step(now) {
+      var dt = Math.min((now - last) / 1000, .032); last = now;
+      var ax = stiffness * (dx - x) - damping * vx;
+      var ay = stiffness * (dy - y) - damping * vy;
+      vx += ax * dt; vy += ay * dt;
+      x += vx * dt; y += vy * dt;
+      btn.style.transform = 'translate(' + x.toFixed(2) + 'px,' + y.toFixed(2) + 'px)';
+      if (Math.abs(dx - x) > .05 || Math.abs(dy - y) > .05 || Math.abs(vx) > .05 || Math.abs(vy) > .05) {
+        raf = requestAnimationFrame(step);
+      } else {
+        x = dx; y = dy; vx = 0; vy = 0;
+        btn.style.transform = dx === 0 && dy === 0 ? '' : 'translate(' + dx + 'px,' + dy + 'px)';
+        raf = null;
+      }
+    }
   });
 })();
 </script>

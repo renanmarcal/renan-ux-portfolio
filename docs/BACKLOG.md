@@ -27,4 +27,4 @@ Pendências conhecidas. Marcar com data quando resolvido e mover para `docs/DECI
 - [x] 2026-07-09 · `docs/DESIGN-SYSTEM.md`, `docs/COPY.md`, `docs/DECISIONS.md`, `docs/BACKLOG.md` criados.
 - [x] 2026-07-09 · Subagents em `.claude/agents/` (`copy-editor`, `i18n-sync`, `design-guardian`, `case-writer`, `lofi-prototyper`).
 - [x] 2026-07-09 · Sandbox persistente de experimentação (`~/Documents/01_Projetos/portfolio-sandbox/`, fora do repo) + agente `sandbox-curator`. Independente da migração Astro abaixo — não depende dela nem a antecipa.
-- [ ] Migração Astro (depende de decisão de escopo — ver item estrutural acima).
+- [ ] Migração Astro (depende de decisão de escopo — ver item estrutural acima). **2026-07-12**: redesign completo da home (hero/pillars/cases/footer, ver `docs/DECISIONS.md`) promovido sem emendar esta migração — decisão consciente de não misturar as duas mudanças na mesma leva, não esquecimento. Segue como próximo passo depois do redesign estabilizado em produção.

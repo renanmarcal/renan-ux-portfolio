@@ -13,15 +13,17 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | Elemento | Texto |
 |---|---|
 | Topbar nav | Sobre · Cases · Contato |
-| Hero kicker | Product Designer · São Paulo, Brasil |
+| Hero kicker | Product Designer · UX/UI · São Paulo *(atualizado 2026-07-12, era "Product Designer · São Paulo, Brasil")* |
 | H1 | Design para plataformas / **complexas** *(palavra em accent, sem ponto final)* |
 | Hero bio | Traduzo operações financeiras complexas em interfaces que um time consegue operar sem depender de suporte. Construí essa experiência no **C6 Bank** e no **Mercado Pago**, em contextos de adquirência e força de vendas. |
+| Hero ticker · senioridade | 6 anos em produtos digitais financeiros |
+| Hero ticker · áreas | Produtos B2B · Plataformas internas · Design systems · Dashboards · Landing pages · Fluxos ponta a ponta *(atualizado 2026-07-12, era "Produtos B2B · Plataformas internas · Design systems · Operações financeiras")* |
 | CTA primário | Vamos conversar → *(WhatsApp)* |
 | CTA secundário | Ver LinkedIn *(link externo, não mais âncora — navegação para #cases já coberta pelo topbar)* |
 | Cases header | Cases selecionados |
 | Footer kicker | *(nenhum — removido para não ser redundante com o subtítulo)* |
-| Footer título | Tem um desafio de produto? |
-| Footer subtítulo | Aberto a oportunidades como Product Designer, consultorias em UX/UI e projetos de produto digital. |
+| Footer título | Tem um **desafio** de produto? *(texto igual, mas a partir de 2026-07-12 quebra em 2 linhas e destaca "desafio" em accent — antes era plain text, sem palavra em destaque)* |
+| Footer subtítulo | Aberto a oportunidades como Product Designer, consultorias em UX/UI e projetos alto impacto. *(atualizado 2026-07-12, era "...e projetos de produto digital.")* |
 | Footer CTA | Entrar em contato → |
 | Copyright | © 2026 Renan Marçal · São Paulo, Brasil |
 | Mensagem WhatsApp | Oi Renan, vi seu portfólio e gostaria de conversar sobre uma oportunidade |
@@ -31,14 +33,16 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | Elemento | Texto |
 |---|---|
 | Topbar nav | About · Cases · Contact |
-| Hero kicker | Product Designer · São Paulo, Brazil |
+| Hero kicker | Product Designer · UX/UI · São Paulo *(atualizado 2026-07-12, era "Product Designer · São Paulo, Brazil")* |
 | H1 | Design for / complex **platforms** |
 | Hero bio | I translate complex financial operations into interfaces a team can run without depending on support. I built this experience at **C6 Bank** and **Mercado Pago**, across card-acquiring and field sales contexts. |
+| Hero ticker · senioridade | 6 years in digital financial products |
+| Hero ticker · áreas | B2B Products · Internal platforms · Design systems · Dashboards · Landing pages · End-to-end flows *(atualizado 2026-07-12, era "B2B Products · Internal platforms · Design systems · Financial operations")* |
 | CTA primário | Let's talk → |
 | CTA secundário | View LinkedIn |
 | Cases header | Selected cases |
-| Footer título | Got a product challenge? |
-| Footer subtítulo | Open to opportunities as a Product Designer, UX/UI consulting, and digital product projects. |
+| Footer título | Got a **challenge** with your product? *(atualizado 2026-07-12, quebra em 2 linhas com "challenge" em destaque — era "Got a product challenge?" plain text)* |
+| Footer subtítulo | Open to opportunities as a Product Designer, UX/UI consulting, and high-impact projects. *(atualizado 2026-07-12, era "...and digital product projects.")* |
 | Footer CTA | Get in touch → |
 | Copyright | © 2026 Renan Marçal · São Paulo, Brazil |
 | Mensagem WhatsApp | Hi Renan, I saw your portfolio and would like to talk about an opportunity |
@@ -48,14 +52,16 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | Elemento | Texto |
 |---|---|
 | Topbar nav | Sobre mí · Casos · Contacto |
-| Hero kicker | Product Designer · São Paulo, Brasil |
+| Hero kicker | Product Designer · UX/UI · São Paulo *(atualizado 2026-07-12, era "Product Designer · São Paulo, Brasil")* |
 | H1 | Diseño para plataformas / **complejas** |
 | Hero bio | Traduzco operaciones financieras complejas en interfaces que un equipo puede operar sin depender de soporte. Construí esta experiencia en **C6 Bank** y **Mercado Pago**, en contextos de adquirencia y fuerza de ventas. |
+| Hero ticker · senioridade | 6 años en productos digitales financieros |
+| Hero ticker · áreas | Productos B2B · Plataformas internas · Design systems · Dashboards · Landing pages · Flujos de punta a punta *(atualizado 2026-07-12, era "Productos B2B · Plataformas internas · Design systems · Operaciones financieras")* |
 | CTA primário | Conversemos → |
 | CTA secundário | Ver LinkedIn |
 | Cases header | Casos seleccionados |
-| Footer título | ¿Tienes un desafío de producto? |
-| Footer subtítulo | Abierto a oportunidades como Product Designer, consultorías en UX/UI y proyectos de producto digital. |
+| Footer título | ¿Tienes un **desafío** de producto? *(atualizado 2026-07-12, quebra em 2 linhas com "desafío" em destaque — antes era plain text)* |
+| Footer subtítulo | Abierto a oportunidades como Product Designer, consultorías en UX/UI y proyectos de alto impacto. *(atualizado 2026-07-12, era "...y proyectos de producto digital.")* |
 | Footer CTA | Contáctame → |
 | Copyright | © 2026 Renan Marçal · São Paulo, Brasil |
 | Mensagem WhatsApp | Hola Renan, vi tu portafolio y me gustaría conversar sobre una oportunidad |
@@ -90,8 +96,28 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 - PT: Próximo case · EN: Next case · ES: Próximo caso
 
 ## Pillars (home, 4 verbos do processo)
+
+**Copy atual (desde 2026-07-12)** — PT:
+1. Compreendo — Entendo o problema antes de propor qualquer solução.
+2. Estruturo — Organizo informações, regras e fluxos para reduzir a complexidade.
+3. Construo — Transformo decisões em produtos fáceis de usar e manter.
+4. Valido — Uso dados e feedback para evoluir a solução continuamente.
+
+**EN** (2026-07-12):
+1. Understand — I understand the problem before proposing any solution.
+2. Structure — I organize information, rules and flows to reduce complexity.
+3. Build — I turn decisions into products that are easy to use and maintain.
+4. Validate — I use data and feedback to continuously evolve the solution.
+
+**ES** (2026-07-12):
+1. Entiendo — Entiendo el problema antes de proponer cualquier solución.
+2. Estructuro — Organizo información, reglas y flujos para reducir la complejidad.
+3. Construyo — Transformo decisiones en productos fáciles de usar y mantener.
+4. Valido — Uso datos y feedback para evolucionar la solución continuamente.
+
+**Copy anterior (histórico, até 2026-07-11)** — verbos Entendo/Planejo/Construo/Acompanho:
 - Pillar 04 desc — PT: Métricas e validação para confirmar se a solução resolveu o problema · EN: Metrics and validation to confirm the solution solved the problem · ES: Métricas y validación para confirmar si la solución resolvió el problema.
-- **Regra**: a descrição não pode prometer algo que os cases reais não entregam — os 2 cases publicados fecham com métricas de lançamento, não com um ciclo de iteração contínua, então o pillar não afirma "evolução contínua".
+- **Regra que motivou a troca de "Acompanho" por "Valido"**: a descrição antiga não podia prometer algo que os cases reais não entregam — os 2 cases publicados fecham com métricas de lançamento, não com um ciclo de iteração contínua. O novo pillar 04 ("Valido"/"Uso dados e feedback para evoluir a solução continuamente") mantém esse cuidado — não afirma "evolução contínua do produto" como processo institucionalizado, fala do comportamento do Renan.
 
 ## Case C6 Pay — bloco 05
 - PT: Facilitando a conferência do histórico de vendas · EN: Streamlining the sales history review · ES: Facilitando la revisión del historial de ventas.
