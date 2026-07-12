@@ -6,16 +6,16 @@ Portfolio available in Portuguese (default), English, and Spanish.
 
 ## Profile
 
-- [Home (PT)](https://renanmarcal.github.io/renan-ux-portfolio/): Overview, background, and case studies.
-- [Home (EN)](https://renanmarcal.github.io/renan-ux-portfolio/en/): English version.
-- [Home (ES)](https://renanmarcal.github.io/renan-ux-portfolio/es/): Spanish version.
+- [Home (PT)](https://renanmarcal.com/): Overview, background, and case studies.
+- [Home (EN)](https://renanmarcal.com/en/): English version.
+- [Home (ES)](https://renanmarcal.com/es/): Spanish version.
 - [LinkedIn](https://linkedin.com/in/rnmrc90): Professional profile and work history.
 
 ## Case studies
 
-- [C6 Pay merchant portal](https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html): Redesign of the B2B management portal for merchants in the C6 Pay ecosystem at C6 Bank. Also available in [EN](https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-portal-b2b-c6-bank.html) and [ES](https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-portal-b2b-c6-bank.html).
-- [Sales visit prioritization](https://renanmarcal.github.io/renan-ux-portfolio/cases/case-priorizacao-visitas-comerciais-mercado-pago.html): Redesign of the field sales visit prioritization flow for Mercado Pago's internal CRM, covering Brazil, Mexico, and Argentina. Also available in [EN](https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html) and [ES](https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html).
-- [Landing pages at scale](https://renanmarcal.github.io/renan-ux-portfolio/cases/case-landing-pages-checkout-mercado-pago.html): Component system and creative automation for Mercado Pago's landing pages across seven Latin American markets. Portuguese only.
+- [C6 Pay merchant portal](https://renanmarcal.com/cases/case-portal-b2b-c6-bank.html): Redesign of the B2B management portal for merchants in the C6 Pay ecosystem at C6 Bank. Also available in [EN](https://renanmarcal.com/en/cases/case-portal-b2b-c6-bank.html) and [ES](https://renanmarcal.com/es/cases/case-portal-b2b-c6-bank.html).
+- [Sales visit prioritization](https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html): Redesign of the field sales visit prioritization flow for Mercado Pago's internal CRM, covering Brazil, Mexico, and Argentina. Also available in [EN](https://renanmarcal.com/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html) and [ES](https://renanmarcal.com/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html).
+- [Landing pages at scale](https://renanmarcal.com/cases/case-landing-pages-checkout-mercado-pago.html): Component system and creative automation for Mercado Pago's landing pages across seven Latin American markets. Portuguese only.
 
 ## Notes
 

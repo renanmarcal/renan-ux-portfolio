@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://renanmarcal.github.io/renan-ux-portfolio/sitemap.xml
+Sitemap: https://renanmarcal.com/sitemap.xml
