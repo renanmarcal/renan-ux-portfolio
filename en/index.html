@@ -101,7 +101,7 @@ body {
   color: var(--ink);
   font-family: var(--font-sans);
   font-size: 16px;
-  line-height: 1.625;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -156,7 +156,7 @@ body {
 @keyframes fadeIn  { to { opacity: 1; } }
 
 .hero-bio {
-  font-size: 18px; line-height: 1.6;
+  font-size: 18px; line-height: 1.45;
   color: var(--ink-soft);
   max-width: 46ch;
   opacity: 0; animation: fadeIn .8s .75s forwards;
@@ -251,14 +251,26 @@ body {
 .bold-ticker {
   border-top: 1px solid var(--line);
   margin-top: var(--s-6);
-  padding: var(--s-3) 0 var(--s-9);
-  display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-2);
+  padding: var(--s-5) 0 var(--s-9);
+  display: grid;
+  grid-template-columns: auto 1fr 2fr;
+  align-items: center;
+  gap: var(--s-6);
+}
+.bold-ticker .t-group { padding-left: var(--s-5); border-left: 1px solid var(--line); }
+.bold-ticker .t-group:first-child { padding-left: 0; border-left: none; }
+.bold-ticker .t-value {
   font-family: var(--font-mono); font-size: 13px; letter-spacing: .01em;
-  color: var(--ink-soft);
+  color: var(--ink-soft); line-height: 1.5;
 }
 .bold-ticker .logo-row { display: flex; align-items: center; gap: var(--s-3); }
 .bold-ticker .logo-row img { height: 20px; width: auto; }
 .bold-ticker .logo-row img.invert { filter: brightness(0); }
+@media (max-width: 768px) {
+  .bold-ticker { grid-template-columns: 1fr; gap: var(--s-4); }
+  .bold-ticker .t-group { padding-left: 0; border-left: none; padding-top: var(--s-4); border-top: 1px solid var(--line); }
+  .bold-ticker .t-group:first-child { padding-top: 0; border-top: none; }
+}
 
 /* ─── cases ─── */
 .cases { padding: 144px 0; }
@@ -328,13 +340,13 @@ body {
   margin-bottom: var(--s-2);
 }
 .case-desc {
-  font-size: 14px; color: var(--ink-soft); line-height: 1.6;
+  font-size: 14px; color: var(--ink-soft); line-height: 1.5;
   margin-bottom: var(--s-3);
 }
 .case-metrics {
   display: flex; flex-direction: column; gap: var(--s-1); flex: 1; align-items: stretch;
 }
-.metric-inline { font-size: 14px; line-height: 1.6; }
+.metric-inline { font-size: 14px; line-height: 1.5; }
 .metric-inline .m-val { font-family: 'Work Sans', sans-serif; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
 .metric-inline .m-label { color: var(--ink-soft); }
 .case-invite {
@@ -361,7 +373,7 @@ body {
 }
 .f-title .hl { color: var(--accent); }
 .f3-cta { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-3); max-width: 30ch; }
-.f-sub { font-size: 16px; color: var(--ink-soft); line-height: 1.6; }
+.f-sub { font-size: 16px; color: var(--ink-soft); line-height: 1.5; }
 .close-ticker {
   display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-4);
   font-family: var(--font-mono); font-size: 13px; letter-spacing: .01em; color: var(--ink-soft);
@@ -408,7 +420,7 @@ body {
 }
 .pillar-desc {
   font-size: 14px; color: var(--ink-soft);
-  line-height: 1.55;
+  line-height: 1.5;
   max-width: 26ch;
 }
 @media (max-width: 768px) {
@@ -496,12 +508,18 @@ body {
       </div>
     </div>
     <div class="bold-ticker">
-      <span class="logo-row">
-        <img src="../assets/img/logo-mercado-pago.svg" alt="Mercado Pago" width="90" height="20" loading="eager">
-        <img src="../assets/img/logo-c6-bank.svg" class="invert" alt="C6 Bank" width="110" height="20" loading="eager">
-      </span>
-      <span>6 years building digital financial products</span>
-      <span>B2B Products · Internal platforms · Design systems · Dashboards · CRM · Sales platforms · End-to-end flows</span>
+      <div class="t-group">
+        <span class="logo-row">
+          <img src="../assets/img/logo-mercado-pago.svg" alt="Mercado Pago" width="90" height="20" loading="eager">
+          <img src="../assets/img/logo-c6-bank.svg" class="invert" alt="C6 Bank" width="110" height="20" loading="eager">
+        </span>
+      </div>
+      <div class="t-group">
+        <span class="t-value">6 years building digital financial products</span>
+      </div>
+      <div class="t-group">
+        <span class="t-value">B2B Products · Internal platforms · Design systems · Dashboards · CRM · Sales platforms · End-to-end flows</span>
+      </div>
     </div>
   </div>
 </header>
