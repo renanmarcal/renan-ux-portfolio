@@ -122,3 +122,5 @@ Log curto de decisões de design/produto do portfólio. Uma entrada por decisão
   - **Correção da própria documentação**: a entrada de 2026-07-12 acima registrava `.contact-card` como "exclusivo das páginas de case" — ficou desatualizada em menos de 24h. `docs/DESIGN-SYSTEM.md` foi corrigido pra marcar `.contact-card` como depreciado em todo o site (não mais em uso em lugar nenhum), com `.f3-grid` como o único padrão de pré-footer atual.
 
 - **2026-07-12 · Hero ticker: "Landing pages" → "Plataformas de venda"/"Sales platforms"** — Renan achou que "landing pages" no ticker de áreas do hero puxava o posicionamento pra baixo (soa tático/júnior, é o veículo, não o resultado de negócio). Trocado nas 3 línguas: PT "Plataformas de venda", EN "Sales platforms", ES "Plataformas de venta" — termo mais abrangente (cobre landing page, checkout, funil) e mais alinhado ao nível de senioridade que o resto do hero já comunica.
+
+- **2026-07-12 · Hero ticker ganha "CRM" entre "Dashboards" e "Plataformas de venda"** — Renan pediu a adição do item logo depois da troca acima. Sigla igual nas 3 línguas, sem tradução necessária.
