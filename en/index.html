@@ -652,12 +652,14 @@ body {
   if (reduced.matches) return;
 
   var photo = document.getElementById('bg-photo');
-  photo.addEventListener('pointermove', function (e) {
-    var r = photo.getBoundingClientRect();
-    var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-    var angle = Math.atan2(e.clientY - cy, e.clientX - cx) * 180 / Math.PI + 90;
-    photo.style.setProperty('--spot-angle', angle + 'deg');
-  });
+  if (photo) {
+    photo.addEventListener('pointermove', function (e) {
+      var r = photo.getBoundingClientRect();
+      var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      var angle = Math.atan2(e.clientY - cy, e.clientX - cx) * 180 / Math.PI + 90;
+      photo.style.setProperty('--spot-angle', angle + 'deg');
+    });
+  }
 
   document.querySelectorAll('.magnet').forEach(function (btn) {
     var x = 0, y = 0, vx = 0, vy = 0, dx = 0, dy = 0, raf = null;

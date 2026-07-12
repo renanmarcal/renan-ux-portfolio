@@ -340,11 +340,13 @@
   document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
 
   const bar = document.getElementById('progress');
-  window.addEventListener('scroll', () => {
-    const h = document.documentElement;
-    const max = h.scrollHeight - h.clientHeight;
-    bar.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
-  }, { passive: true });
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      bar.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
+    }, { passive: true });
+  }
 
   // GA4 event tracking — ver docs/ANALYTICS.md antes de adicionar/alterar eventos
   document.addEventListener('click', e => {
