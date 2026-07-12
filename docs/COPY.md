@@ -23,7 +23,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | Cases header | Cases selecionados |
 | Footer kicker | *(nenhum — removido para não ser redundante com o subtítulo)* |
 | Footer título | Tem um **desafio** de produto? *(texto igual, mas a partir de 2026-07-12 quebra em 2 linhas e destaca "desafio" em accent — antes era plain text, sem palavra em destaque)* |
-| Footer subtítulo | Aberto a oportunidades como Product Designer, consultorias em UX/UI e projetos alto impacto. *(atualizado 2026-07-12, era "...e projetos de produto digital.")* |
+| Footer subtítulo | Aberto a oportunidades como Product Designer, consultorias em UX/UI e projetos de alto impacto. *(atualizado 2026-07-13: corrigido typo "projetos alto impacto" → "projetos **de** alto impacto"; era "...e projetos de produto digital." antes de 2026-07-12)* |
 | Footer CTA | Entrar em contato → |
 | Copyright | © 2026 Renan Marçal · São Paulo, Brasil |
 | Mensagem WhatsApp | Oi Renan, vi seu portfólio e gostaria de conversar sobre uma oportunidade |
@@ -35,14 +35,14 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | Topbar nav | About · Cases · Contact |
 | Hero kicker | Product Designer · UX/UI · São Paulo *(atualizado 2026-07-12, era "Product Designer · São Paulo, Brazil")* |
 | H1 | Design for / complex **platforms** |
-| Hero bio | I translate complex financial operations into interfaces a team can run without depending on support. I built this experience at **C6 Bank** and **Mercado Pago**, across card-acquiring and field sales contexts. |
-| Hero ticker · senioridade | 6 years in digital financial products |
+| Hero bio | I translate complex financial operations into interfaces a team can run without relying on a support team. I built this experience at **C6 Bank** and **Mercado Pago**, across card-acquiring and field sales contexts. *(atualizado 2026-07-13: "without depending on support" → "without relying on a support team" — a versão anterior era um calco literal do PT e soava incompleta em inglês nativo)* |
+| Hero ticker · senioridade | 6 years building digital financial products *(atualizado 2026-07-13, era "6 years in digital financial products" — fraseado mais natural em inglês)* |
 | Hero ticker · áreas | B2B Products · Internal platforms · Design systems · Dashboards · Landing pages · End-to-end flows *(atualizado 2026-07-12, era "B2B Products · Internal platforms · Design systems · Financial operations")* |
 | CTA primário | Let's talk → |
 | CTA secundário | View LinkedIn |
 | Cases header | Selected cases |
 | Footer título | Got a **challenge** with your product? *(atualizado 2026-07-12, quebra em 2 linhas com "challenge" em destaque — era "Got a product challenge?" plain text)* |
-| Footer subtítulo | Open to opportunities as a Product Designer, UX/UI consulting, and high-impact projects. *(atualizado 2026-07-12, era "...and digital product projects.")* |
+| Footer subtítulo | Open to Product Designer roles, UX/UI consulting, and high-impact projects. *(atualizado 2026-07-13: corrigida quebra de paralelismo — "opportunities as a Product Designer, UX/UI consulting, and..." misturava um cargo com tipos de engajamento sob o mesmo "as"; era "...and digital product projects." antes de 2026-07-12)* |
 | Footer CTA | Get in touch → |
 | Copyright | © 2026 Renan Marçal · São Paulo, Brazil |
 | Mensagem WhatsApp | Hi Renan, I saw your portfolio and would like to talk about an opportunity |
@@ -54,14 +54,14 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | Topbar nav | Sobre mí · Casos · Contacto |
 | Hero kicker | Product Designer · UX/UI · São Paulo *(atualizado 2026-07-12, era "Product Designer · São Paulo, Brasil")* |
 | H1 | Diseño para plataformas / **complejas** |
-| Hero bio | Traduzco operaciones financieras complejas en interfaces que un equipo puede operar sin depender de soporte. Construí esta experiencia en **C6 Bank** y **Mercado Pago**, en contextos de adquirencia y fuerza de ventas. |
+| Hero bio | Traduzco operaciones financieras complejas en interfaces que un equipo puede operar sin depender de un equipo de soporte. Construí esta experiencia en **C6 Bank** y **Mercado Pago**, en contextos de adquirencia y fuerza de ventas. *(atualizado 2026-07-13: "sin depender de soporte" → "sin depender de un equipo de soporte" — a versão anterior era um calco do inglês/PT, sem artigo, e soava truncada em espanhol nativo)* |
 | Hero ticker · senioridade | 6 años en productos digitales financieros |
 | Hero ticker · áreas | Productos B2B · Plataformas internas · Design systems · Dashboards · Landing pages · Flujos de punta a punta *(atualizado 2026-07-12, era "Productos B2B · Plataformas internas · Design systems · Operaciones financieras")* |
 | CTA primário | Conversemos → |
 | CTA secundário | Ver LinkedIn |
 | Cases header | Casos seleccionados |
 | Footer título | ¿Tienes un **desafío** de producto? *(atualizado 2026-07-12, quebra em 2 linhas com "desafío" em destaque — antes era plain text)* |
-| Footer subtítulo | Abierto a oportunidades como Product Designer, consultorías en UX/UI y proyectos de alto impacto. *(atualizado 2026-07-12, era "...y proyectos de producto digital.")* |
+| Footer subtítulo | Abierto a roles de Product Designer, consultorías de UX/UI y proyectos de alto impacto. *(atualizado 2026-07-13: corrigida quebra de paralelismo, mesmo ajuste do EN; era "Abierto a oportunidades como Product Designer, consultorías en UX/UI y..." e antes disso "...y proyectos de producto digital." em 2026-07-12)* |
 | Footer CTA | Contáctame → |
 | Copyright | © 2026 Renan Marçal · São Paulo, Brasil |
 | Mensagem WhatsApp | Hola Renan, vi tu portafolio y me gustaría conversar sobre una oportunidad |
