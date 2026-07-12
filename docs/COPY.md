@@ -17,7 +17,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | H1 | Design para plataformas / **complexas** *(palavra em accent, sem ponto final)* |
 | Hero bio | Traduzo operações financeiras complexas em interfaces que um time consegue operar sem depender de suporte. Construí essa experiência no **C6 Bank** e no **Mercado Pago**, em contextos de adquirência e força de vendas. |
 | Hero ticker · senioridade | 6 anos em produtos digitais financeiros |
-| Hero ticker · áreas | Produtos B2B · Plataformas internas · Design systems · Dashboards · Landing pages · Fluxos ponta a ponta *(atualizado 2026-07-12, era "Produtos B2B · Plataformas internas · Design systems · Operações financeiras")* |
+| Hero ticker · áreas | Produtos B2B · Plataformas internas · Design systems · Dashboards · Plataformas de venda · Fluxos ponta a ponta *(atualizado 2026-07-12, era "Produtos B2B · Plataformas internas · Design systems · Dashboards · Landing pages · Fluxos ponta a ponta")* |
 | CTA primário | Vamos conversar → *(WhatsApp)* |
 | CTA secundário | Ver LinkedIn *(link externo, não mais âncora — navegação para #cases já coberta pelo topbar)* |
 | Cases header | Cases selecionados |
@@ -37,7 +37,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | H1 | Design for / complex **platforms** |
 | Hero bio | I translate complex financial operations into interfaces a team can run without relying on a support team. I built this experience at **C6 Bank** and **Mercado Pago**, across merchant acquiring and field sales contexts. *(atualizado 2026-07-13: "without depending on support" → "without relying on a support team" — calco literal do PT, soava incompleto em inglês nativo. "card-acquiring" → "merchant acquiring" — termo mais usado no setor em inglês e nomeia o lado do vendedor/lojista, que "card-acquiring" carregava mais fraco que "adquirência"/"adquirencia" em PT/ES)* |
 | Hero ticker · senioridade | 6 years building digital financial products *(atualizado 2026-07-13, era "6 years in digital financial products" — fraseado mais natural em inglês)* |
-| Hero ticker · áreas | B2B Products · Internal platforms · Design systems · Dashboards · Landing pages · End-to-end flows *(atualizado 2026-07-12, era "B2B Products · Internal platforms · Design systems · Financial operations")* |
+| Hero ticker · áreas | B2B Products · Internal platforms · Design systems · Dashboards · Sales platforms · End-to-end flows *(atualizado 2026-07-12, era "B2B Products · Internal platforms · Design systems · Dashboards · Landing pages · End-to-end flows")* |
 | CTA primário | Let's talk → |
 | CTA secundário | View LinkedIn |
 | Cases header | Selected cases |
@@ -56,7 +56,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | H1 | Diseño para plataformas / **complejas** |
 | Hero bio | Traduzco operaciones financieras complejas en interfaces que un equipo puede operar sin depender de un equipo de soporte. Construí esta experiencia en **C6 Bank** y **Mercado Pago**, en contextos de adquirencia y fuerza de ventas. *(atualizado 2026-07-13: "sin depender de soporte" → "sin depender de un equipo de soporte" — a versão anterior era um calco do inglês/PT, sem artigo, e soava truncada em espanhol nativo)* |
 | Hero ticker · senioridade | 6 años en productos digitales financieros |
-| Hero ticker · áreas | Productos B2B · Plataformas internas · Design systems · Dashboards · Landing pages · Flujos de punta a punta *(atualizado 2026-07-12, era "Productos B2B · Plataformas internas · Design systems · Operaciones financieras")* |
+| Hero ticker · áreas | Productos B2B · Plataformas internas · Design systems · Dashboards · Plataformas de venta · Flujos de punta a punta *(atualizado 2026-07-12, era "Productos B2B · Plataformas internas · Design systems · Dashboards · Landing pages · Flujos de punta a punta")* |
 | CTA primário | Conversemos → |
 | CTA secundário | Ver LinkedIn |
 | Cases header | Casos seleccionados |
