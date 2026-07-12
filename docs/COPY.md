@@ -35,7 +35,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 | Topbar nav | About · Cases · Contact |
 | Hero kicker | Product Designer · UX/UI · São Paulo *(atualizado 2026-07-12, era "Product Designer · São Paulo, Brazil")* |
 | H1 | Design for / complex **platforms** |
-| Hero bio | I translate complex financial operations into interfaces a team can run without relying on a support team. I built this experience at **C6 Bank** and **Mercado Pago**, across card-acquiring and field sales contexts. *(atualizado 2026-07-13: "without depending on support" → "without relying on a support team" — a versão anterior era um calco literal do PT e soava incompleta em inglês nativo)* |
+| Hero bio | I translate complex financial operations into interfaces a team can run without relying on a support team. I built this experience at **C6 Bank** and **Mercado Pago**, across merchant acquiring and field sales contexts. *(atualizado 2026-07-13: "without depending on support" → "without relying on a support team" — calco literal do PT, soava incompleto em inglês nativo. "card-acquiring" → "merchant acquiring" — termo mais usado no setor em inglês e nomeia o lado do vendedor/lojista, que "card-acquiring" carregava mais fraco que "adquirência"/"adquirencia" em PT/ES)* |
 | Hero ticker · senioridade | 6 years building digital financial products *(atualizado 2026-07-13, era "6 years in digital financial products" — fraseado mais natural em inglês)* |
 | Hero ticker · áreas | B2B Products · Internal platforms · Design systems · Dashboards · Landing pages · End-to-end flows *(atualizado 2026-07-12, era "B2B Products · Internal platforms · Design systems · Financial operations")* |
 | CTA primário | Let's talk → |
