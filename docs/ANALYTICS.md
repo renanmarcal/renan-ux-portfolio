@@ -6,8 +6,9 @@ Como o rastreamento de dados do portfólio funciona — o que está instalado, o
 
 - **Google Analytics 4** (`G-M66N19ZT36`, via `gtag.js`) — pageviews automáticos + eventos customizados (ver abaixo).
 - **Contentsquare** (`https://t.contentsquare.net/uxa/4d84643516841.js`) — gravação de sessão e heatmap, captura tudo automaticamente (cliques, scroll, rage-clicks) sem precisar de código. Cobre o lado qualitativo ("ver onde as pessoas travam") sem instrumentação nenhuma.
+- **Microsoft Clarity** (`xl7ajvipib`, via `clarity.ms/tag`) — segundo gravador de sessão/heatmap, adicionado 2026-07-12. Redundante com o Contentsquare em propósito (os dois capturam sessão/heatmap automaticamente), mantido porque o Clarity tem visão própria do tráfego vindo do Bing (Webmaster Tools/Bing Ads), que o Contentsquare não segmenta da mesma forma.
 
-Os dois scripts ficam no `<head>`, logo depois do favicon e antes do CSS, replicados nas 10 páginas (sem exceção — não há injeção via JS externo nem tag manager). **`404.html` também está incluído** — é o caso mais valioso de "não perder detalhe": link quebrado, URL digitada errada, backlink desatualizado, tudo isso vira pageview + evento igual a qualquer outra página.
+Os três scripts ficam no `<head>`, logo depois do favicon e antes do CSS, replicados nas 10 páginas (sem exceção — não há injeção via JS externo nem tag manager). **`404.html` também está incluído** — é o caso mais valioso de "não perder detalhe": link quebrado, URL digitada errada, backlink desatualizado, tudo isso vira pageview + evento igual a qualquer outra página.
 
 ## Eventos customizados do GA4
 
