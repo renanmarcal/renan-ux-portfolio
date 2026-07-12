@@ -42,7 +42,7 @@ document.addEventListener('click', e => {
 | Evento | Onde | Parâmetros | Valores possíveis |
 |---|---|---|---|
 | `whatsapp_click` | CTA primário (hero, footer, footer do case) | `location` | `hero`, `footer`, `case_footer` |
-| `linkedin_click` | CTA secundário do hero | `location` | `hero` |
+| `linkedin_click` | CTA secundário do hero + link no ticker de fechamento (footer da home e do case) | `location` | `hero`, `footer`, `case_footer` |
 | `case_card_click` | Cards de case na home | `case` | `portal-c6-bank`, `priorizacao-visitas` |
 | `topbar_nav_click` | Menu-âncora do topbar (home) | `target` | `about`, `cases`, `contact` |
 | `lang_switch_click` | Seletor de idioma (PT · EN · ES) | `target_lang` | `pt`, `en`, `es` |

@@ -19,85 +19,46 @@
   gtag('config', 'G-M66N19ZT36');
 </script>
 <script src="https://t.contentsquare.net/uxa/4d84643516841.js" defer></script>
+<link rel="stylesheet" href="case.css">
 <style>
-:root {
-  --paper:    #f3efe7;
-  --ink:      #1c1916;
-  --ink-soft: #5c554b;
-  --ink-faint:#6a6052;
-  --line:     #d8d0c0;
-  --accent:   #b8451f;
-  --fs-label: 11px;
-  --ls-label-wide: .14em;
-}
-
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  line-height: 1.625;
-  -webkit-font-smoothing: antialiased;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 24px;
+.not-found-main {
+  min-height: calc(100dvh - 52px);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: var(--s-6) var(--s-3);
   text-align: center;
 }
-
-.code {
-  font-family: 'Figtree', sans-serif;
-  font-size: var(--fs-label);
-  letter-spacing: var(--ls-label-wide);
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 24px;
+.not-found-main h1 { font-size: 72px; margin-bottom: var(--s-3); }
+@media (max-width: 430px) { .not-found-main h1 { font-size: 52px; } }
+.not-found-main .lead {
+  font-size: 16px; color: var(--ink-soft);
+  max-width: 38ch; margin: 0 auto var(--s-5);
 }
-
-h1 {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600;
-  font-size: 72px;
-  line-height: .94;
-  letter-spacing: -.03em;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 430px) { h1 { font-size: 52px; } }
-
-p {
-  font-size: 16px;
-  color: var(--ink-soft);
-  max-width: 38ch;
-  margin-bottom: 40px;
-}
-
-a {
-  font-family: 'Figtree', sans-serif;
-  font-size: var(--fs-label);
-  letter-spacing: var(--ls-label-wide);
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  text-decoration: none;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 2px;
+.not-found-main .back-link {
+  font-family: var(--font-mono); font-size: var(--fs-label); letter-spacing: var(--ls-label-wide);
+  text-transform: uppercase; color: var(--ink-faint); text-decoration: none;
+  border-bottom: 1px solid var(--line); padding-bottom: 2px;
   transition: color .2s, border-color .2s;
 }
-
-a:hover { color: var(--accent); border-color: var(--accent); }
+.not-found-main .back-link:hover { color: var(--accent); border-color: var(--accent); }
 </style>
 </head>
 <body>
-  <main>
-    <div class="code">404</div>
-    <h1>Página não<br>encontrada</h1>
-    <p>O endereço que você acessou não existe ou foi movido.</p>
-    <a href="index.html" data-gtag-event="404_return_click">← voltar pro portfólio</a>
-  </main>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html">← Renan Marçal</a>
+    <span class="crumb">Página não encontrada</span>
+  </div>
+</header>
+
+<main class="not-found-main">
+  <p class="kicker">404</p>
+  <h1>Página não<br>encontrada</h1>
+  <p class="lead">O endereço que você acessou não existe ou foi movido.</p>
+  <a class="back-link" href="index.html" data-gtag-event="404_return_click">← voltar pro portfólio</a>
+</main>
+
 <script>
 (function(){
   // GA4 event tracking — ver docs/ANALYTICS.md antes de adicionar/alterar eventos
