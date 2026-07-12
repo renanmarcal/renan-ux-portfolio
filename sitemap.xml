@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://renanmarcal.github.io/renan-ux-portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://renanmarcal.github.io/renan-ux-portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://renanmarcal.github.io/renan-ux-portfolio/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://renanmarcal.github.io/renan-ux-portfolio/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://renanmarcal.github.io/renan-ux-portfolio/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://renanmarcal.github.io/renan-ux-portfolio/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://renanmarcal.github.io/renan-ux-portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://renanmarcal.github.io/renan-ux-portfolio/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://renanmarcal.github.io/renan-ux-portfolio/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://renanmarcal.github.io/renan-ux-portfolio/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://renanmarcal.github.io/renan-ux-portfolio/es/</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://renanmarcal.github.io/renan-ux-portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://renanmarcal.github.io/renan-ux-portfolio/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://renanmarcal.github.io/renan-ux-portfolio/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://renanmarcal.github.io/renan-ux-portfolio/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-portal-b2b-c6-bank.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-portal-b2b-c6-bank.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-portal-b2b-c6-bank.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-portal-b2b-c6-bank.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-portal-b2b-c6-bank.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-portal-b2b-c6-bank.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-portal-b2b-c6-bank.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-portal-b2b-c6-bank.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-portal-b2b-c6-bank.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://renanmarcal.github.io/renan-ux-portfolio/cases/case-priorizacao-visitas-comerciais-mercado-pago.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://renanmarcal.github.io/renan-ux-portfolio/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://renanmarcal.github.io/renan-ux-portfolio/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://renanmarcal.github.io/renan-ux-portfolio/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://renanmarcal.github.io/renan-ux-portfolio/cases/case-landing-pages-checkout-mercado-pago.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
