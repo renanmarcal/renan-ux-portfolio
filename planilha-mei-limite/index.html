@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<title>Planilha MEI — Alerta de Limite R$ 81.000</title>
+<meta name="description" content="Planilha que avisa antes de você ultrapassar o limite de faturamento do MEI. Semáforo automático, projeção de quando o limite estoura, pagamento único de R$ 37.">
+<meta property="og:title" content="Planilha MEI — Alerta de Limite R$ 81.000">
+<meta property="og:description" content="Em 2024, mais de 570 mil MEIs foram desenquadrados por passar do limite sem saber. Esta planilha avisa você antes de acontecer.">
+<meta property="og:url" content="https://renanmarcal.com/planilha-mei-limite">
+<link rel="canonical" href="https://renanmarcal.com/planilha-mei-limite">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #0f1a3d;
+    --bg-2: #0a1128;
+    --paper: #f3efe7;
+    --card: #ffffff;
+    --ink: #1c1916;
+    --ink-soft: #5c554b;
+    --red: #d92d20;
+    --amber: #f5a623;
+    --green: #16a34a;
+    --accent: #d92d20;
+    --line: #e4ded1;
+    --font: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  a { color: inherit; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(180deg, var(--bg-2), var(--bg));
+    color: #fff;
+    padding: 56px 0 48px;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(217,45,32,.18);
+    border: 1px solid rgba(217,45,32,.5);
+    color: #ffb4a8;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 17px;
+    color: #d8dcf0;
+    max-width: 56ch;
+  }
+  .hero strong { color: #fff; }
+
+  /* CTA button */
+  .cta {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 16px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(217,45,32,.35);
+    transition: transform .15s ease;
+  }
+  .cta:hover { transform: translateY(-1px); }
+  .cta-wrap { margin-top: 28px; }
+  .cta-sub { font-size: 13px; color: #a8adc9; margin-top: 10px; }
+
+  /* SECTIONS */
+  section { padding: 48px 0; }
+  section.alt { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  h2 {
+    font-size: clamp(22px, 4vw, 28px);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+  }
+
+  /* semáforo */
+  .semaforo { display: grid; gap: 14px; margin: 28px 0; }
+  .sem-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .dot { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; }
+  .dot.green { background: var(--green); }
+  .dot.amber { background: var(--amber); }
+  .dot.red { background: var(--red); }
+  .sem-item b { display: block; font-size: 15px; }
+  .sem-item span { font-size: 14px; color: var(--ink-soft); }
+
+  /* lista de benefícios */
+  .list { display: grid; gap: 16px; margin: 24px 0; }
+  .list-item { display: flex; gap: 12px; align-items: flex-start; }
+  .list-item .check {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+  }
+
+  /* o que não faz */
+  .naofaz { background: #fff8e6; border: 1px solid #f0d99a; border-radius: 12px; padding: 24px; margin-top: 24px; }
+  .naofaz h3 { font-size: 16px; margin-bottom: 12px; }
+  .naofaz ul { padding-left: 20px; }
+  .naofaz li { margin-bottom: 8px; font-size: 15px; color: var(--ink-soft); }
+
+  /* preço */
+  .preco-box {
+    background: var(--bg-2);
+    color: #fff;
+    border-radius: 16px;
+    padding: 36px 28px;
+    text-align: center;
+    margin: 32px 0;
+  }
+  .preco-comp { font-size: 14px; color: #a8adc9; text-decoration: line-through; margin-bottom: 4px; }
+  .preco-val { font-size: 44px; font-weight: 800; margin-bottom: 4px; }
+  .preco-nota { font-size: 14px; color: #d8dcf0; margin-bottom: 24px; }
+
+  footer { padding: 32px 0 56px; }
+  .footnote { font-size: 13px; color: var(--ink-soft); text-align: center; max-width: 56ch; margin: 0 auto; }
+
+  @media (max-width: 480px) {
+    .hero { padding: 40px 0 36px; }
+    section { padding: 36px 0; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="badge">Alerta MEI · Limite R$ 81.000</span>
+    <h1>Nunca ultrapasse o limite do MEI sem perceber</h1>
+    <p>Em 2024, mais de <strong>570 mil MEIs foram desenquadrados</strong> por passar do limite de faturamento sem saber — 30x mais que em 2023. Esta planilha avisa você antes de acontecer, com semanas de antecedência.</p>
+    <div class="cta-wrap">
+      <a class="cta" href="https://pay.kiwify.com.br/dnB5hgp">Quero parar de correr risco às cegas — R$ 37</a>
+      <div class="cta-sub">Pagamento único · Pix, cartão ou boleto · Entrega imediata</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <p style="color:var(--ink-soft); max-width:56ch;">Você lança suas vendas (data + valor) numa aba simples. O painel calcula tudo sozinho: quanto já faturou, quanto falta pro limite, e se o ritmo atual é seguro — sem fórmula nenhuma pra você entender.</p>
+    <div class="semaforo">
+      <div class="sem-item">
+        <span class="dot green"></span>
+        <div><b>Verde</b><span>Situação tranquila, dentro do esperado pro período.</span></div>
+      </div>
+      <div class="sem-item">
+        <span class="dot amber"></span>
+        <div><b>Amarelo</b><span>Atenção — vale acompanhar o ritmo mais de perto.</span></div>
+      </div>
+      <div class="sem-item">
+        <span class="dot red"></span>
+        <div><b>Vermelho</b><span>Risco real de estourar o limite este ano.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>O que você recebe</h2>
+    <div class="list">
+      <div class="list-item"><span class="check">✓</span><span>Planilha em Excel/Google Sheets — só lançar as vendas, o resto é automático.</span></div>
+      <div class="list-item"><span class="check">✓</span><span>Alerta em 3 cores, sem precisar entender fórmula nenhuma.</span></div>
+      <div class="list-item"><span class="check">✓</span><span>Projeção automática: no ritmo atual, quando o limite estoura.</span></div>
+      <div class="list-item"><span class="check">✓</span><span>Funciona mesmo se você abriu o MEI no meio do ano — limite proporcional calculado sozinho.</span></div>
+      <div class="list-item"><span class="check">✓</span><span>Pagamento único, sem mensalidade. Use o ano inteiro, todo ano.</span></div>
+    </div>
+
+    <div class="naofaz">
+      <h3>O que esta planilha NÃO faz (leia antes de comprar)</h3>
+      <ul>
+        <li><strong>Não conecta automaticamente com seu banco ou marketplace</strong> — você lança as vendas manualmente.</li>
+        <li><strong>Não substitui um contador</strong> — avisa sobre o risco, mas quem decide seu enquadramento fiscal é um profissional.</li>
+        <li><strong>Não é um app ou sistema online</strong> — é um arquivo de planilha que você baixa e usa do seu jeito.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="preco-box">
+      <div class="preco-comp">Apps de assinatura cobram R$ 228 a R$ 468 por ano</div>
+      <div class="preco-val">R$ 37</div>
+      <div class="preco-nota">Pagamento único · funciona o ano inteiro</div>
+      <a class="cta" href="https://pay.kiwify.com.br/dnB5hgp">Quero minha planilha agora</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="footnote">Esta planilha é uma ferramenta de acompanhamento e alerta, não substitui orientação de um contador. Em caso de dúvida sobre seu enquadramento fiscal, consulte um profissional de contabilidade.</p>
+  </div>
+</footer>
+
+</body>
+</html>
