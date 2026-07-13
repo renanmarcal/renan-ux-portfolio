@@ -2,7 +2,7 @@
 
 Como o rastreamento de dados do portfólio funciona — o que está instalado, o que é rastreado, e como adicionar um evento novo sem redescobrir o padrão.
 
-## O que está instalado (todas as 10 páginas: 3 home + 2 cases × 3 línguas + `404.html`)
+## O que está instalado (todas as 10 páginas do portfólio: 3 home + 2 cases × 3 línguas + `404.html`; também replicado em `planilha-mei-limite/index.html`, que é uma landing page de produto fora do portfólio, só PT)
 
 - **Google Analytics 4** (`G-M66N19ZT36`, via `gtag.js`) — pageviews automáticos + eventos customizados (ver abaixo).
 - **Contentsquare** (`https://t.contentsquare.net/uxa/4d84643516841.js`) — gravação de sessão e heatmap, captura tudo automaticamente (cliques, scroll, rage-clicks) sem precisar de código. Cobre o lado qualitativo ("ver onde as pessoas travam") sem instrumentação nenhuma.
@@ -49,6 +49,7 @@ document.addEventListener('click', e => {
 | `lang_switch_click` | Seletor de idioma (PT · EN · ES) | `target_lang` | `pt`, `en`, `es` |
 | `next_case_click` | Link "próximo case" (dentro de um case) | `case` | slug do case de destino |
 | `404_return_click` | Link "voltar pro portfólio" na página 404 | — | — |
+| `checkout_click` | CTA de compra na landing page `planilha-mei-limite/` (hero + bloco de preço) | `location` | `hero`, `preco` |
 
 Todo parâmetro usa valores **em inglês, consistentes entre as 3 línguas** (ex. `target="about"` mesmo na versão PT, onde o link mostra "Sobre") — de propósito, para o relatório do GA4 agregar PT/EN/ES no mesmo valor em vez de fragmentar em "Sobre"/"About"/"Sobre mí" como 3 linhas separadas.
 

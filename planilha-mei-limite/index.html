@@ -5,160 +5,585 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
-<title>Planilha MEI — Alerta de Limite R$ 81.000</title>
-<meta name="description" content="Planilha que avisa antes de você ultrapassar o limite de faturamento do MEI. Semáforo automático, projeção de quando o limite estoura, pagamento único de R$ 37.">
-<meta property="og:title" content="Planilha MEI — Alerta de Limite R$ 81.000">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap">
+<title>Planilha MEI — Alerta de Limite de Faturamento R$ 81.000 (2026)</title>
+<meta name="description" content="Planilha de controle MEI que avisa antes de você ultrapassar o limite de faturamento de R$ 81.000/ano e evita o desenquadramento. Fórmulas prontas, você só preenche. Semáforo automático, projeção de fim de ano, pagamento único de R$ 37.">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="planilha mei, limite mei, limite de faturamento mei, desenquadramento mei, mei 81000, controle de faturamento mei, planilha controle mei, alerta limite mei, excesso de receita mei, mei 2026">
+<meta name="author" content="Renan Marçal">
+<link rel="canonical" href="https://renanmarcal.com/planilha-mei-limite">
+
+<meta property="og:type" content="product">
+<meta property="og:title" content="Planilha MEI — Alerta de Limite de Faturamento R$ 81.000">
 <meta property="og:description" content="Em 2024, mais de 570 mil MEIs foram desenquadrados por passar do limite sem saber. Esta planilha avisa você antes de acontecer.">
 <meta property="og:url" content="https://renanmarcal.com/planilha-mei-limite">
-<link rel="canonical" href="https://renanmarcal.com/planilha-mei-limite">
+<meta property="og:image" content="https://renanmarcal.com/planilha-mei-limite/og-image.png">
+<meta property="og:image:width" content="1492">
+<meta property="og:image:height" content="782">
+<meta property="og:locale" content="pt_BR">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Planilha MEI — Alerta de Limite de Faturamento R$ 81.000">
+<meta name="twitter:description" content="Fórmulas prontas avisam antes de você ultrapassar o limite do MEI. Pagamento único de R$ 37.">
+<meta name="twitter:image" content="https://renanmarcal.com/planilha-mei-limite/og-image.png">
+
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M66N19ZT36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M66N19ZT36');
+</script>
+<script src="https://t.contentsquare.net/uxa/4d84643516841.js" defer></script>
+<!-- Clarity tracking code for https://renanmarcal.com/ -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xl7ajvipib");
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Planilha MEI — Alerta de Limite de Faturamento R$ 81.000",
+  "description": "Planilha que calcula automaticamente o limite proporcional de faturamento do MEI, mostra semáforo de risco (verde, amarelo, vermelho) e projeta se você vai ultrapassar R$ 81.000 no ano.",
+  "brand": { "@type": "Brand", "name": "Renan Marçal" },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://renanmarcal.com/planilha-mei-limite",
+    "priceCurrency": "BRL",
+    "price": "37.00",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qual é o limite de faturamento do MEI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "O limite anual de faturamento do MEI é de R$ 81.000. Quem abre o MEI no meio do ano tem um limite proporcional aos meses ativos." }
+    },
+    {
+      "@type": "Question",
+      "name": "O que acontece se o MEI ultrapassar o limite de faturamento?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ultrapassar o limite pode gerar desenquadramento do MEI, mudança obrigatória de regime tributário e cobrança de impostos retroativos, dependendo do quanto o limite foi excedido." }
+    },
+    {
+      "@type": "Question",
+      "name": "Como saber se estou perto de estourar o limite do MEI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "É preciso somar manualmente todo o faturamento do ano e comparar com o limite proporcional aos meses de atividade — por isso a maioria só percebe o problema tarde. Uma planilha com fórmulas automáticas resolve isso lançando apenas data e valor de cada venda." }
+    }
+  ]
+}
+</script>
 <style>
   :root {
-    --bg: #0f1a3d;
-    --bg-2: #0a1128;
-    --paper: #f3efe7;
-    --card: #ffffff;
-    --ink: #1c1916;
-    --ink-soft: #5c554b;
-    --red: #d92d20;
+    --bg-0: #060a1a;
+    --bg-1: #0a1128;
+    --bg-2: #0f1a3d;
+    --bg-3: #142352;
+    --ink: #e8eaf6;
+    --ink-soft: #a8adc9;
+    --ink-dim: #6b7299;
+    --red: #ef4444;
+    --red-glow: rgba(239,68,68,.35);
     --amber: #f5a623;
-    --green: #16a34a;
-    --accent: #d92d20;
-    --line: #e4ded1;
+    --green: #22c55e;
+    --green-glow: rgba(34,197,94,.35);
+    --line: rgba(168,173,201,.14);
+    --line-strong: rgba(168,173,201,.24);
+    --font-display: 'Outfit', -apple-system, sans-serif;
     --font: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     font-family: var(--font);
-    background: var(--paper);
+    background: var(--bg-1);
+    background-image:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(239,68,68,.10), transparent),
+      radial-gradient(ellipse 700px 600px at 100% 20%, rgba(37,99,235,.10), transparent);
     color: var(--ink);
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
+    position: relative;
   }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: .035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+  .wrap-text { max-width: 62ch; }
   a { color: inherit; }
+  h1, h2, .step b, .mp-title, .compare-val, .preco-val { font-family: var(--font-display); }
+  h1, h2 { text-wrap: balance; }
+
+  /* reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
 
   /* HERO */
   .hero {
-    background: linear-gradient(180deg, var(--bg-2), var(--bg));
-    color: #fff;
-    padding: 56px 0 48px;
+    padding: 56px 0 36px;
+    position: relative;
   }
   .badge {
-    display: inline-block;
-    background: rgba(217,45,32,.18);
-    border: 1px solid rgba(217,45,32,.5);
-    color: #ffb4a8;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(239,68,68,.14);
+    border: 1px solid rgba(239,68,68,.4);
+    color: #ff9a8d;
     font-size: 13px;
     font-weight: 600;
-    letter-spacing: .04em;
+    letter-spacing: .03em;
     text-transform: uppercase;
-    padding: 6px 12px;
+    padding: 7px 14px;
     border-radius: 999px;
     margin-bottom: 20px;
   }
+  .badge .pulse {
+    width: 7px; height: 7px; border-radius: 50%; background: var(--red);
+    box-shadow: 0 0 0 0 var(--red-glow);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(239,68,68,.55); }
+    70% { box-shadow: 0 0 0 8px rgba(239,68,68,0); }
+    100% { box-shadow: 0 0 0 0 rgba(239,68,68,0); }
+  }
   h1 {
-    font-size: clamp(28px, 5vw, 40px);
+    font-size: clamp(28px, 6.4vw, 44px);
     font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
     margin-bottom: 16px;
   }
-  .hero p {
+  h1 .accent { color: #ff9a8d; }
+  .hero-lead {
     font-size: 17px;
-    color: #d8dcf0;
-    max-width: 56ch;
+    color: var(--ink-soft);
+    max-width: 58ch;
+    margin-bottom: 8px;
   }
-  .hero strong { color: #fff; }
+  .hero-lead strong { color: var(--ink); font-weight: 700; }
+  .hero-turn {
+    font-size: 15px;
+    color: #7dd3a8;
+    font-weight: 600;
+    margin-top: 14px;
+  }
 
   /* CTA button */
   .cta {
-    display: inline-block;
-    background: var(--red);
-    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(180deg, #2fdb84, var(--green));
+    color: #06210f;
     font-weight: 700;
     font-size: 17px;
-    padding: 16px 28px;
-    border-radius: 10px;
+    padding: 17px 24px;
+    border-radius: 12px;
     text-decoration: none;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(217,45,32,.35);
-    transition: transform .15s ease;
+    box-shadow: 0 10px 30px -6px var(--green-glow), inset 0 1px 0 rgba(255,255,255,.3);
+    transition: transform .18s cubic-bezier(.16,1,.3,1), box-shadow .18s ease;
+    border: none;
+    cursor: pointer;
   }
-  .cta:hover { transform: translateY(-1px); }
-  .cta-wrap { margin-top: 28px; }
-  .cta-sub { font-size: 13px; color: #a8adc9; margin-top: 10px; }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 14px 36px -6px var(--green-glow), inset 0 1px 0 rgba(255,255,255,.35); }
+  .cta:hover .cta-icon { transform: translateX(3px); }
+  .cta:active { transform: translateY(0) scale(.98); }
+  .cta:focus-visible { outline: 2px solid #7dd3a8; outline-offset: 3px; }
+  .cta-icon { flex-shrink: 0; transition: transform .18s cubic-bezier(.16,1,.3,1); }
+  .cta-wrap { margin-top: 26px; }
+  .cta-sub { font-size: 13px; color: var(--ink-dim); margin-top: 12px; text-align: center; }
+
+  /* MARQUEE */
+  .marquee-band {
+    background: var(--bg-0);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 13px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  .marquee-track {
+    display: inline-flex;
+    animation: scroll-left 32s linear infinite;
+  }
+  .marquee-track span {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .02em;
+    color: var(--ink-soft);
+    padding: 0 28px;
+  }
+  .marquee-track span::after {
+    content: '◆';
+    color: var(--red);
+    font-size: 8px;
+    margin-left: 28px;
+  }
+  @keyframes scroll-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
 
   /* SECTIONS */
-  section { padding: 48px 0; }
-  section.alt { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  section { padding: 52px 0; position: relative; }
+  section.divider { border-top: 1px solid var(--line); }
   h2 {
-    font-size: clamp(22px, 4vw, 28px);
+    font-size: clamp(23px, 5vw, 29px);
     font-weight: 800;
-    letter-spacing: -0.01em;
-    margin-bottom: 24px;
+    letter-spacing: -0.015em;
+    margin-bottom: 10px;
   }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #ff9a8d;
+    margin-bottom: 10px;
+  }
+  .section-lead { color: var(--ink-soft); max-width: 58ch; margin-bottom: 28px; }
 
-  /* semáforo */
-  .semaforo { display: grid; gap: 14px; margin: 28px 0; }
-  .sem-item {
+  /* URGENCY COUNTER */
+  .urgency {
+    background: linear-gradient(135deg, rgba(239,68,68,.12), rgba(239,68,68,.04));
+    border: 1px solid rgba(239,68,68,.28);
+    border-radius: 14px;
+    padding: 16px 18px;
     display: flex;
     align-items: center;
     gap: 14px;
-    background: var(--card);
+    margin-top: 22px;
+  }
+  .urgency-num {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 800;
+    color: #ff9a8d;
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+    min-width: 52px;
+  }
+  .urgency-text { font-size: 13.5px; color: var(--ink-soft); line-height: 1.4; }
+  .urgency-text b { color: var(--ink); }
+
+  /* MOCKUP — planilha real, não dashboard */
+  .mockup {
+    background: #1e1e1e;
+    border-radius: 10px;
+    border: 1px solid rgba(168,173,201,.18);
+    box-shadow: 0 24px 60px -12px rgba(0,0,0,.5), 0 0 0 1px rgba(0,0,0,.3);
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .mockup-bar {
+    background: #2d2d2d;
+    border-bottom: 1px solid #3d3d3d;
+    padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .mockup-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .mockup-dot.r { background: #ff5f57; }
+  .mockup-dot.y { background: #febc2e; }
+  .mockup-dot.g { background: #28c840; }
+  .mockup-filename {
+    margin-left: 6px;
+    font-size: 12px;
+    color: #9a9a9a;
+    font-family: var(--font);
+  }
+  .mockup-tabs {
+    display: flex;
+    background: #f3f3f3;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .mockup-tabs span {
+    font-size: 11.5px;
+    color: #5f6368;
+    padding: 7px 14px;
+    border-right: 1px solid #d4d4d4;
+    font-family: var(--font);
+  }
+  .mockup-tabs span.active {
+    background: #fff;
+    color: #1a1a1a;
+    font-weight: 700;
+    box-shadow: inset 0 2px 0 var(--red);
+  }
+  .mockup-sheet {
+    background: #fff;
+    font-family: var(--font);
+    overflow-x: auto;
+  }
+  .sheet-colheader {
+    display: grid;
+    grid-template-columns: 34px repeat(2, 1fr);
+    background: #f8f9fa;
+    border-bottom: 1px solid #dadce0;
+  }
+  .sheet-colheader div {
+    font-size: 11px;
+    color: #70757a;
+    text-align: center;
+    padding: 4px 0;
+    border-right: 1px solid #dadce0;
+    font-weight: 500;
+  }
+  .sheet-row {
+    display: grid;
+    grid-template-columns: 34px repeat(2, 1fr);
+    border-bottom: 1px solid #e8eaed;
+  }
+  .sheet-row .rownum {
+    font-size: 11px;
+    color: #70757a;
+    text-align: center;
+    padding: 6px 0;
+    background: #f8f9fa;
+    border-right: 1px solid #dadce0;
+  }
+  .sheet-row .cell {
+    font-size: 12.5px;
+    color: #1a1a1a;
+    padding: 6px 10px;
+    border-right: 1px solid #e8eaed;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sheet-row .cell.label { color: #3c4043; }
+  .sheet-row .cell.val { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+  .sheet-row .cell.val.red { color: var(--red); }
+  .sheet-row.status-row .cell {
+    background: #fdecea;
+    font-weight: 800;
+    color: var(--red);
+  }
+  .sheet-row.status-row .rownum { background: #fdecea; }
+  .mockup-formulabar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8f9fa;
+    border-top: 1px solid #dadce0;
+    padding: 5px 10px;
+    font-size: 11.5px;
+    color: #70757a;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .mockup-caption {
+    font-size: 13px;
+    color: var(--ink-dim);
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  /* passos automação — zig-zag */
+  .steps { display: grid; gap: 14px; margin-top: 28px; }
+  .step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--bg-2);
     border: 1px solid var(--line);
-    border-radius: 12px;
+    border-radius: 14px;
+    padding: 18px 20px;
+    transition: border-color .2s ease, transform .2s ease;
+  }
+  .step:nth-child(2) { margin-left: 20px; }
+  .step:nth-child(3) { margin-left: 40px; }
+  .step:hover { border-color: var(--line-strong); transform: translateX(2px); }
+  .step-num {
+    flex-shrink: 0;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, var(--bg-3), var(--bg-2));
+    border: 1px solid var(--line-strong);
+    color: #ff9a8d;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: var(--font-display);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step b { display: block; font-size: 15.5px; margin-bottom: 3px; font-weight: 700; }
+  .step span { font-size: 14px; color: var(--ink-soft); }
+  .steps-note {
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 22px;
+    color: #7dd3a8;
+  }
+
+  @media (max-width: 480px) {
+    .step:nth-child(2), .step:nth-child(3) { margin-left: 0; }
+  }
+
+  /* semáforo */
+  .semaforo { display: grid; gap: 12px; margin-top: 28px; }
+  .sem-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
     padding: 16px 18px;
   }
-  .dot { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; }
-  .dot.green { background: var(--green); }
-  .dot.amber { background: var(--amber); }
-  .dot.red { background: var(--red); }
-  .sem-item b { display: block; font-size: 15px; }
+  .dot { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; box-shadow: 0 0 12px currentColor; }
+  .dot.green { background: var(--green); color: rgba(34,197,94,.5); }
+  .dot.amber { background: var(--amber); color: rgba(245,166,35,.5); }
+  .dot.red { background: var(--red); color: rgba(239,68,68,.5); }
+  .sem-item b { display: block; font-size: 15.5px; font-weight: 700; }
   .sem-item span { font-size: 14px; color: var(--ink-soft); }
 
   /* lista de benefícios */
-  .list { display: grid; gap: 16px; margin: 24px 0; }
-  .list-item { display: flex; gap: 12px; align-items: flex-start; }
+  .list { display: grid; gap: 16px; margin-top: 24px; }
+  .list-item { display: flex; gap: 13px; align-items: flex-start; }
   .list-item .check {
     flex-shrink: 0;
-    width: 22px; height: 22px;
+    width: 24px; height: 24px;
     border-radius: 50%;
-    background: var(--green);
-    color: #fff;
+    background: rgba(34,197,94,.15);
+    border: 1px solid rgba(34,197,94,.4);
+    color: #7dd3a8;
     font-size: 13px;
     font-weight: 700;
     display: flex; align-items: center; justify-content: center;
-    margin-top: 2px;
+    margin-top: 1px;
   }
+  .list-item span.txt { font-size: 15px; color: var(--ink-soft); }
+  .list-item span.txt strong { color: var(--ink); }
 
   /* o que não faz */
-  .naofaz { background: #fff8e6; border: 1px solid #f0d99a; border-radius: 12px; padding: 24px; margin-top: 24px; }
-  .naofaz h3 { font-size: 16px; margin-bottom: 12px; }
-  .naofaz ul { padding-left: 20px; }
-  .naofaz li { margin-bottom: 8px; font-size: 15px; color: var(--ink-soft); }
-
-  /* preço */
-  .preco-box {
-    background: var(--bg-2);
-    color: #fff;
-    border-radius: 16px;
-    padding: 36px 28px;
-    text-align: center;
-    margin: 32px 0;
+  .naofaz {
+    background: rgba(245,166,35,.07);
+    border: 1px solid rgba(245,166,35,.28);
+    border-radius: 14px;
+    padding: 24px;
+    margin-top: 28px;
   }
-  .preco-comp { font-size: 14px; color: #a8adc9; text-decoration: line-through; margin-bottom: 4px; }
-  .preco-val { font-size: 44px; font-weight: 800; margin-bottom: 4px; }
-  .preco-nota { font-size: 14px; color: #d8dcf0; margin-bottom: 24px; }
+  .naofaz h3 { font-size: 16px; margin-bottom: 14px; font-weight: 700; }
+  .naofaz ul { list-style: none; display: grid; gap: 10px; }
+  .naofaz li { font-size: 14.5px; color: var(--ink-soft); padding-left: 20px; position: relative; }
+  .naofaz li::before { content: '×'; position: absolute; left: 0; color: var(--amber); font-weight: 800; }
+  .naofaz li strong { color: var(--ink); }
 
-  footer { padding: 32px 0 56px; }
-  .footnote { font-size: 13px; color: var(--ink-soft); text-align: center; max-width: 56ch; margin: 0 auto; }
+  /* comparação de preço */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 14px;
+    align-items: center;
+    margin: 28px 0;
+  }
+  .compare-card {
+    border-radius: 14px;
+    padding: 22px 18px;
+    text-align: center;
+  }
+  .compare-card.bad { background: var(--bg-2); border: 1px solid var(--line); }
+  .compare-card.good {
+    background: linear-gradient(155deg, var(--bg-3), var(--bg-2));
+    border: 1px solid rgba(125,211,168,.3);
+    box-shadow: 0 0 0 1px rgba(125,211,168,.08), 0 16px 40px -12px rgba(34,197,94,.2);
+  }
+  .compare-label { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 10px; color: var(--ink-dim); }
+  .compare-val { font-size: 24px; font-weight: 800; margin-bottom: 4px; font-variant-numeric: tabular-nums; }
+  .compare-card.good .compare-val { color: #7dd3a8; }
+  .compare-note { font-size: 12px; color: var(--ink-dim); }
+  .vs {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--ink-dim);
+    background: var(--bg-1);
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--line-strong);
+  }
 
+  .preco-box {
+    position: relative;
+    background: linear-gradient(160deg, var(--bg-3), var(--bg-0));
+    border-radius: 20px;
+    padding: 40px 28px;
+    text-align: center;
+    margin-top: 28px;
+    border: 1px solid rgba(125,211,168,.25);
+    overflow: hidden;
+  }
+  .preco-val { font-size: 48px; font-weight: 800; margin-bottom: 6px; letter-spacing: -.02em; }
+  .preco-nota { font-size: 14px; color: var(--ink-soft); margin-bottom: 26px; }
+
+  /* garantia */
+  .garantia {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: rgba(34,197,94,.08);
+    border: 1px solid rgba(34,197,94,.28);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-top: 24px;
+  }
+  .garantia svg { flex-shrink: 0; margin-top: 2px; }
+  .garantia b { display: block; font-size: 15px; margin-bottom: 4px; color: #7dd3a8; font-weight: 700; }
+  .garantia span { font-size: 14px; color: var(--ink-soft); }
+
+  /* FAQ */
+  .faq { display: grid; gap: 4px; margin-top: 28px; }
+  .faq-item { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  .faq-item h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; font-family: var(--font); }
+  .faq-item p { font-size: 14.5px; color: var(--ink-soft); }
+
+  footer { padding: 32px 0 56px; border-top: 1px solid var(--line); }
+  .footnote { font-size: 13px; color: var(--ink-dim); text-align: center; max-width: 58ch; margin: 0 auto; }
+
+  @media (max-width: 560px) {
+    .compare { grid-template-columns: 1fr; }
+    .vs { justify-self: center; transform: rotate(90deg); }
+    .mockup-sheet { font-size: 11px; }
+  }
   @media (max-width: 480px) {
-    .hero { padding: 40px 0 36px; }
-    section { padding: 36px 0; }
+    .hero { padding: 40px 0 28px; }
+    section { padding: 40px 0; }
+    .urgency { flex-direction: column; align-items: flex-start; gap: 8px; }
   }
 </style>
 </head>
@@ -166,20 +591,107 @@
 
 <section class="hero">
   <div class="wrap">
-    <span class="badge">Alerta MEI · Limite R$ 81.000</span>
-    <h1>Nunca ultrapasse o limite do MEI sem perceber</h1>
-    <p>Em 2024, mais de <strong>570 mil MEIs foram desenquadrados</strong> por passar do limite de faturamento sem saber — 30x mais que em 2023. Esta planilha avisa você antes de acontecer, com semanas de antecedência.</p>
+    <span class="badge"><span class="pulse"></span>Alerta MEI · Limite R$ 81.000</span>
+    <h1>Você sabe exatamente quanto falta pra estourar o limite do MEI? <span class="accent">A maioria descobre tarde demais.</span></h1>
+    <p class="hero-lead">Em 2024, mais de <strong>570 mil MEIs foram desenquadrados</strong> por passar do limite sem perceber — 30x mais que em 2023. Ninguém avisa antes. O extrato não soma pra você, o app do banco não sabe qual é seu limite anual.</p>
+    <p class="hero-turn">Uma planilha resolve isso em menos de 2 minutos por mês.</p>
     <div class="cta-wrap">
-      <a class="cta" href="https://pay.kiwify.com.br/dnB5hgp">Quero parar de correr risco às cegas — R$ 37</a>
+      <a class="cta" href="https://pay.kiwify.com.br/dnB5hgp" rel="noopener" data-gtag-event="checkout_click" data-gtag-location="hero">
+        <svg class="cta-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14" stroke="#06210f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Baixar minha planilha — R$ 37
+      </a>
       <div class="cta-sub">Pagamento único · Pix, cartão ou boleto · Entrega imediata</div>
     </div>
   </div>
 </section>
 
-<section class="alt">
-  <div class="wrap">
-    <h2>Como funciona</h2>
-    <p style="color:var(--ink-soft); max-width:56ch;">Você lança suas vendas (data + valor) numa aba simples. O painel calcula tudo sozinho: quanto já faturou, quanto falta pro limite, e se o ritmo atual é seguro — sem fórmula nenhuma pra você entender.</p>
+<div class="marquee-band">
+  <div class="marquee-track">
+    <span>Fórmulas prontas, você só preenche</span>
+    <span>Semáforo automático (verde · amarelo · vermelho)</span>
+    <span>Projeção de fim de ano em tempo real</span>
+    <span>Pagamento único, sem mensalidade</span>
+    <span>Funciona mesmo se você abriu o MEI no meio do ano</span>
+    <span>Garantia de 7 dias</span>
+    <span>Fórmulas prontas, você só preenche</span>
+    <span>Semáforo automático (verde · amarelo · vermelho)</span>
+    <span>Projeção de fim de ano em tempo real</span>
+    <span>Pagamento único, sem mensalidade</span>
+    <span>Funciona mesmo se você abriu o MEI no meio do ano</span>
+    <span>Garantia de 7 dias</span>
+  </div>
+</div>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">A planilha em ação</div>
+    <h2>Estes são números reais, não ilustração</h2>
+    <p class="section-lead wrap-text">Exemplo incluso na planilha: alguém faturando cerca de R$ 9 mil por mês, sem perceber que está a caminho do vermelho. Veja como o painel mostra isso automaticamente.</p>
+
+    <div class="mockup">
+      <div class="mockup-bar">
+        <span class="mockup-dot r"></span>
+        <span class="mockup-dot y"></span>
+        <span class="mockup-dot g"></span>
+        <span class="mockup-filename">Planilha MEI - Alerta de Limite R$81mil.xlsx</span>
+      </div>
+      <div class="mockup-tabs">
+        <span>Comece aqui</span>
+        <span>Lançamentos</span>
+        <span class="active">Painel</span>
+        <span>Mensal</span>
+      </div>
+      <div class="mockup-sheet">
+        <div class="sheet-colheader">
+          <div>&nbsp;</div><div>A</div><div>B</div>
+        </div>
+        <div class="sheet-row"><div class="rownum">9</div><div class="cell label">Meses ativos no ano</div><div class="cell val">12</div></div>
+        <div class="sheet-row"><div class="rownum">10</div><div class="cell label">Limite proporcional</div><div class="cell val">R$ 81.000,00</div></div>
+        <div class="sheet-row"><div class="rownum">12</div><div class="cell label">Faturamento acumulado</div><div class="cell val">R$ 55.000,00</div></div>
+        <div class="sheet-row"><div class="rownum">13</div><div class="cell label">Saldo restante</div><div class="cell val">R$ 26.000,00</div></div>
+        <div class="sheet-row"><div class="rownum">17</div><div class="cell label">% do ano decorrido</div><div class="cell val">50,0%</div></div>
+        <div class="sheet-row"><div class="rownum">20</div><div class="cell label">Projeção fim de ano</div><div class="cell val red">R$ 110.000,00</div></div>
+        <div class="sheet-row"><div class="rownum">21</div><div class="cell label">Projeção % do limite</div><div class="cell val red">135,8%</div></div>
+        <div class="sheet-row status-row"><div class="rownum">23</div><div class="cell label">STATUS</div><div class="cell val">VERMELHO</div></div>
+      </div>
+      <div class="mockup-formulabar">fx&nbsp; =IF(OR(B14&gt;B17+0.15,B21&gt;1.05),"VERMELHO",IF(OR(B14&gt;B17+0.05,B21&gt;=0.9),"AMARELO","VERDE"))</div>
+    </div>
+    <p class="mockup-caption">É uma planilha de verdade — abre no Excel, Google Sheets ou LibreOffice. Sem app, sem login, sem sincronização.</p>
+  </div>
+</section>
+
+<section class="divider">
+  <div class="wrap reveal">
+    <div class="eyebrow">Por dentro</div>
+    <h2>Parece uma planilha comum. Não é.</h2>
+    <p class="section-lead wrap-text">Por trás dela existe um motor de fórmulas já pronto. Você não escreve nenhuma fórmula — só preenche o que já sabe.</p>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <div><b>Você lança a venda</b><span>Data e valor, numa lista simples. Nada além disso.</span></div>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <div><b>As fórmulas prontas calculam tudo</b><span>Limite proporcional, ritmo, projeção de fim de ano — automático, sem você tocar em uma fórmula.</span></div>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <div><b>Seu painel do ano inteiro atualiza na hora</b><span>Semáforo, números e alerta prontos toda vez que você abre a planilha.</span></div>
+      </div>
+    </div>
+    <p class="steps-note">Zero fórmula para entender. Zero cálculo manual.</p>
+
+    <div class="urgency">
+      <div class="urgency-num" id="diasRestantes">—</div>
+      <div class="urgency-text"><b>dias restantes no ano fiscal.</b> É o tempo que resta pra você descobrir se vai estourar o limite antes que seja tarde pra reagir — não depois, quando o desenquadramento já chegou.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <h2>O que cada cor significa</h2>
+    <p class="section-lead wrap-text">Você abre a planilha e já sabe onde está — sem precisar interpretar número nenhum.</p>
     <div class="semaforo">
       <div class="sem-item">
         <span class="dot green"></span>
@@ -197,35 +709,83 @@
   </div>
 </section>
 
-<section>
-  <div class="wrap">
+<section class="divider">
+  <div class="wrap reveal">
     <h2>O que você recebe</h2>
     <div class="list">
-      <div class="list-item"><span class="check">✓</span><span>Planilha em Excel/Google Sheets — só lançar as vendas, o resto é automático.</span></div>
-      <div class="list-item"><span class="check">✓</span><span>Alerta em 3 cores, sem precisar entender fórmula nenhuma.</span></div>
-      <div class="list-item"><span class="check">✓</span><span>Projeção automática: no ritmo atual, quando o limite estoura.</span></div>
-      <div class="list-item"><span class="check">✓</span><span>Funciona mesmo se você abriu o MEI no meio do ano — limite proporcional calculado sozinho.</span></div>
-      <div class="list-item"><span class="check">✓</span><span>Pagamento único, sem mensalidade. Use o ano inteiro, todo ano.</span></div>
+      <div class="list-item"><span class="check">✓</span><span class="txt"><strong>Fórmulas prontas</strong> — você só lança a venda, o resto é automático.</span></div>
+      <div class="list-item"><span class="check">✓</span><span class="txt">Alerta em <strong>3 cores</strong>, sem entender fórmula nenhuma.</span></div>
+      <div class="list-item"><span class="check">✓</span><span class="txt"><strong>Projeção automática:</strong> no ritmo atual, quando o limite estoura.</span></div>
+      <div class="list-item"><span class="check">✓</span><span class="txt">Funciona se você abriu o MEI no meio do ano — <strong>limite proporcional</strong> calculado sozinho.</span></div>
+      <div class="list-item"><span class="check">✓</span><span class="txt"><strong>Pagamento único</strong>, sem mensalidade. Use o ano inteiro, todo ano.</span></div>
     </div>
 
     <div class="naofaz">
       <h3>O que esta planilha NÃO faz (leia antes de comprar)</h3>
       <ul>
-        <li><strong>Não conecta automaticamente com seu banco ou marketplace</strong> — você lança as vendas manualmente.</li>
-        <li><strong>Não substitui um contador</strong> — avisa sobre o risco, mas quem decide seu enquadramento fiscal é um profissional.</li>
-        <li><strong>Não é um app ou sistema online</strong> — é um arquivo de planilha que você baixa e usa do seu jeito.</li>
+        <li><strong>Não conecta automaticamente</strong> com seu banco ou marketplace. Você lança as vendas manualmente.</li>
+        <li><strong>Não substitui um contador.</strong> Avisa sobre o risco, mas quem decide seu enquadramento fiscal é um profissional.</li>
+        <li><strong>Não é um app ou sistema online.</strong> É um arquivo de planilha que você baixa e usa do seu jeito.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="alt">
-  <div class="wrap">
+<section>
+  <div class="wrap reveal">
+    <h2>Por que vale o preço</h2>
+    <p class="section-lead wrap-text">Apps de assinatura para controle de limite MEI cobram mensalidade. Esta planilha é paga uma vez e funciona o ano inteiro, todo ano.</p>
+    <div class="compare">
+      <div class="compare-card bad">
+        <div class="compare-label">App de assinatura</div>
+        <div class="compare-val">R$ 228–468</div>
+        <div class="compare-note">por ano (R$19 a R$39/mês)</div>
+      </div>
+      <span class="vs">vs</span>
+      <div class="compare-card good">
+        <div class="compare-label">Esta planilha</div>
+        <div class="compare-val">R$ 37</div>
+        <div class="compare-note">uma vez, para sempre</div>
+      </div>
+    </div>
     <div class="preco-box">
-      <div class="preco-comp">Apps de assinatura cobram R$ 228 a R$ 468 por ano</div>
       <div class="preco-val">R$ 37</div>
       <div class="preco-nota">Pagamento único · funciona o ano inteiro</div>
-      <a class="cta" href="https://pay.kiwify.com.br/dnB5hgp">Quero minha planilha agora</a>
+      <a class="cta" href="https://pay.kiwify.com.br/dnB5hgp" rel="noopener" data-gtag-event="checkout_click" data-gtag-location="preco">
+        <svg class="cta-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14" stroke="#06210f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Baixar minha planilha agora
+      </a>
+    </div>
+    <div class="garantia">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L4 5v6c0 5.25 3.4 9.74 8 11 4.6-1.26 8-5.75 8-11V5l-8-3z" stroke="#22c55e" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M9 12.5l2 2 4-4.5" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div><b>Garantia de 7 dias</b><span>Se não for pra você, é reembolso total — direito garantido por lei em toda compra digital, sem burocracia.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="divider">
+  <div class="wrap reveal">
+    <h2>Perguntas frequentes sobre o limite do MEI</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h3>Qual é o limite de faturamento do MEI?</h3>
+        <p>O limite anual é de R$ 81.000. Quem abre o MEI no meio do ano tem um limite proporcional aos meses ativos — não é R$ 81.000 completo, é calculado mês a mês.</p>
+      </div>
+      <div class="faq-item">
+        <h3>O que acontece se o MEI ultrapassar o limite de faturamento?</h3>
+        <p>Ultrapassar o limite pode gerar desenquadramento do MEI, mudança obrigatória de regime tributário e cobrança de impostos retroativos, dependendo de quanto o limite foi excedido.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Como saber se estou perto de estourar o limite do MEI?</h3>
+        <p>Sem ferramenta, é preciso somar manualmente todo o faturamento do ano e comparar com o limite proporcional aos meses de atividade — por isso a maioria só percebe tarde. Esta planilha faz essa conta sozinha: você só lança data e valor de cada venda.</p>
+      </div>
+      <div class="faq-item">
+        <h3>A planilha funciona no Google Sheets, não só no Excel?</h3>
+        <p>Sim. É um arquivo .xlsx padrão — abre no Excel, Google Sheets e LibreOffice, em qualquer sistema.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -235,6 +795,50 @@
     <p class="footnote">Esta planilha é uma ferramenta de acompanhamento e alerta, não substitui orientação de um contador. Em caso de dúvida sobre seu enquadramento fiscal, consulte um profissional de contabilidade.</p>
   </div>
 </footer>
+
+<script>
+  // Contador honesto: dias restantes até 31/12 do ano corrente, calculado no cliente (nunca fixo/fake).
+  (function () {
+    var el = document.getElementById('diasRestantes');
+    var now = new Date();
+    var endOfYear = new Date(now.getFullYear(), 11, 31);
+    var msPerDay = 1000 * 60 * 60 * 24;
+    var diff = Math.ceil((endOfYear - now) / msPerDay);
+    el.textContent = diff;
+  })();
+
+  // Reveal on scroll
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+
+  // GA4: eventos customizados via data-gtag-event (mesmo padrão do resto do site)
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-gtag-event]');
+    if (!el || typeof gtag !== 'function') return;
+    var params = { page_lang: document.documentElement.lang };
+    for (var i = 0; i < el.attributes.length; i++) {
+      var attr = el.attributes[i];
+      if (attr.name.indexOf('data-gtag-') === 0 && attr.name !== 'data-gtag-event') {
+        params[attr.name.slice('data-gtag-'.length).replace(/-/g, '_')] = attr.value;
+      }
+    }
+    gtag('event', el.dataset.gtagEvent, params);
+  });
+</script>
 
 </body>
 </html>
