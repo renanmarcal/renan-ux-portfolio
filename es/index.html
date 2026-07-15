@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&family=Figtree:wght@400;500;600&display=swap">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&family=Figtree:wght@400;500;600&display=swap" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&family=Figtree:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&family=Figtree:wght@400;500;600&display=swap"></noscript>
 <title>Renan Marçal — Product Designer · Fintech y B2B</title>
 <meta name="description" content="Portfolio de Renan Marçal, Product Designer con 6 años en fintech y sistemas de diseño B2B. Casos en C6 Bank y Mercado Pago.">
 <meta property="og:title" content="Renan Marçal — Product Designer · Fintech y B2B">
@@ -24,6 +26,7 @@
 <link rel="alternate" hreflang="es" href="https://renanmarcal.com/es/">
 <link rel="alternate" hreflang="x-default" href="https://renanmarcal.com/">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/img/renan-avatar.webp" as="image" fetchpriority="high" type="image/webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -498,7 +501,10 @@ body {
         <span class="bh1-line">plataformas</span>
         <span class="bh1-line"><span class="hl">complejas</span></span>
       </h1>
-      <div class="bold-photo" id="bg-photo"><img src="../assets/img/renan-avatar.jpg" alt="Renan Marçal, Product Designer especializado en fintech y sistemas de diseño B2B" width="760" height="760" loading="eager"></div>
+      <div class="bold-photo" id="bg-photo"><picture>
+        <source srcset="../assets/img/renan-avatar.webp" type="image/webp">
+        <img src="../assets/img/renan-avatar.jpg" alt="Renan Marçal, Product Designer especializado en fintech y sistemas de diseño B2B" width="760" height="760" loading="eager" fetchpriority="high">
+      </picture></div>
     </div>
     <div class="bold-lower">
       <p class="hero-bio">Traduzco operaciones financieras complejas en interfaces que un equipo puede operar sin depender de un equipo de soporte. Construí esta experiencia en <b>C6 Bank</b> y <b>Mercado Pago</b>, en contextos de adquirencia y fuerza de ventas.</p>
@@ -559,7 +565,10 @@ body {
     <div class="case-grid">
 
       <a href="cases/case-portal-b2b-c6-bank.html" class="case-card" data-reveal="up" data-gtag-event="case_card_click" data-gtag-case="portal-c6-bank">
-        <div class="case-thumb"><img src="../assets/img/portal-c6-saude-financeira.png" width="4000" height="2500" loading="lazy" alt="Nueva interfaz del portal C6 Pay mostrando el panel de salud financiera para comercios"></div>
+        <div class="case-thumb"><picture>
+          <source srcset="../assets/img/portal-c6-saude-financeira.webp" type="image/webp">
+          <img src="../assets/img/portal-c6-saude-financeira.jpg" width="2240" height="1400" loading="lazy" alt="Nueva interfaz del portal C6 Pay mostrando el panel de salud financiera para comercios">
+        </picture></div>
         <div class="case-info">
           <p class="case-kicker">C6 Bank · PayGo · 2020–2021</p>
           <h3>Portal de gestión para comercios C6 Pay</h3>
@@ -573,7 +582,10 @@ body {
       </a>
 
       <a href="cases/case-priorizacao-visitas-comerciais-mercado-pago.html" class="case-card" data-reveal="up" data-d="1" data-gtag-event="case_card_click" data-gtag-case="priorizacao-visitas">
-        <div class="case-thumb"><img src="../assets/img/thumb-priorizacao-visitas-comerciais.png" width="4000" height="2500" loading="lazy" alt="Pantalla de agenda de visitas comerciales de la app de Mercado Pago para representantes de campo"></div>
+        <div class="case-thumb"><picture>
+          <source srcset="../assets/img/thumb-priorizacao-visitas-comerciais.webp" type="image/webp">
+          <img src="../assets/img/thumb-priorizacao-visitas-comerciais.jpg" width="2240" height="1400" loading="lazy" alt="Pantalla de agenda de visitas comerciales de la app de Mercado Pago para representantes de campo">
+        </picture></div>
         <div class="case-info">
           <p class="case-kicker">Mercado Pago · 2024–2025</p>
           <h3>Priorización de visitas comerciales</h3>
