@@ -46,10 +46,15 @@ document.addEventListener('click', e => {
 | `linkedin_click` | CTA secundário do hero + link no ticker de fechamento (footer da home e do case) | `location` | `hero`, `footer`, `case_footer` |
 | `case_card_click` | Cards de case na home | `case` | `portal-c6-bank`, `priorizacao-visitas` |
 | `topbar_nav_click` | Menu-âncora do topbar (home) | `target` | `about`, `cases`, `contact` |
-| `lang_switch_click` | Seletor de idioma (PT · EN · ES) | `target_lang` | `pt`, `en`, `es` |
+| `lang_switch_click` | Seletor de idioma (PT · EN · ES), na home e dentro de cada case | `target_lang` | `pt`, `en`, `es` |
+| `logo_home_click` | Link "← Renan Marçal" que volta pra home, no topo de cada case e do 404 | `location` | `case`, `404` |
 | `next_case_click` | Link "próximo case" (dentro de um case) | `case` | slug do case de destino |
 | `404_return_click` | Link "voltar pro portfólio" na página 404 | — | — |
 | `checkout_click` | CTA de compra na landing page `planilha-mei-limite/` (hero + pós-demo + bloco de preço + barra fixa) | `location` | `hero`, `demo`, `preco`, `sticky_bar` |
+
+## Pendência conhecida
+
+`cases/case-landing-pages-checkout-mercado-pago.html` não tem nenhum analytics instalado (sem GA4, sem Clarity, sem eventos) e só existe em PT. O card que leva a ele na home está comentado (`<!-- case landing pages: temporariamente oculto -->`, index.html ~610-623) — página inativa, por isso ficou fora da instrumentação de 2026-07-15. Se o card for reativado, replicar a infra completa (scripts do head + listener + `data-gtag-event` nos links + versões EN/ES) antes.
 
 Todo parâmetro usa valores **em inglês, consistentes entre as 3 línguas** (ex. `target="about"` mesmo na versão PT, onde o link mostra "Sobre") — de propósito, para o relatório do GA4 agregar PT/EN/ES no mesmo valor em vez de fragmentar em "Sobre"/"About"/"Sobre mí" como 3 linhas separadas.
 
