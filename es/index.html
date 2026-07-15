@@ -210,7 +210,11 @@ body {
   aspect-ratio: 1 / 1;
   margin-left: auto;
   margin-top: calc(var(--s-9) * -1.5);
-  transform: rotate(-3deg);
+  /* Medido: acima de 1454px a foto cobre 113% do "s" de "complejas" (77px de largura).
+     Empurrar 48px para fora deixa metade do "s" exposta. O valor é menor que o do PT
+     porque "complejas" é mais curta que "complexas" — cada idioma tem seu próprio recuo.
+     O teto é o gutter real (menos 8px), senão o deslocamento vira scroll horizontal. */
+  transform: translateX(max(0px, min(48px, calc((100vw - 1120px) / 2 - 8px)))) rotate(-3deg);
   border-radius: 24% / 24%;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -232,7 +236,12 @@ body {
 @keyframes bg-pop { to { opacity: 1; } }
 @media (max-width: 900px) {
   .bold-hero { padding: var(--s-7) 0 0; }
-  .bold-photo { width: 160px; margin-top: calc(var(--s-6) * -1); transform: rotate(-2deg); }
+  /* Abaixo de ~509px o H1 trava no piso de 56px e "complejas" para de encolher, mas a foto
+     segue colada à direita e marcha por cima — cobertura do "s" caótica entre larguras
+     (ver docs/DECISIONS.md 2026-07-15). A largura da foto é calibrada em runtime por
+     calibrateBoldPhoto() via custom property --bp-w; este valor é só o fallback no-JS. */
+  .bold-h1 { font-size: clamp(30px, 11vw, 160px); }
+  .bold-photo { width: var(--bp-w, clamp(88px, 35vw, 160px)); margin-top: calc(var(--s-6) * -1); transform: rotate(-2deg); }
 }
 @media (max-width: 430px) {
   .bold-hero { padding: var(--s-6) 0 0; }
@@ -655,6 +664,51 @@ body {
     }
     gtag('event', el.dataset.gtagEvent, params);
   });
+
+  // Calibrador foto x "s" final do H1 (mobile) — ver docs/DECISIONS.md 2026-07-15.
+  // Mede o último glifo do H1 via Range e dimensiona a foto para cobrir ~metade dele;
+  // auto-adapta a troca de copy/idioma, então nunca substituir por constante fixa.
+  function calibrateBoldPhoto() {
+    var photo = document.getElementById('bg-photo');
+    var hl = document.querySelector('.bold-h1 .hl');
+    if (!photo || !hl) return;
+    if (window.innerWidth > 900) { photo.style.removeProperty('--bp-w'); return; }
+    var txt = hl.firstChild;
+    if (!txt || txt.nodeType !== 3 || !txt.data.length) return;
+    var range = document.createRange();
+    range.setStart(txt, txt.data.length - 1);
+    range.setEnd(txt, txt.data.length);
+    var s = range.getBoundingClientRect();
+    // Borda direita da foto = borda direita do stage (margin-left:auto, sem transform aqui).
+    // Nunca usar photo.getBoundingClientRect() para largura: a rotação infla o box.
+    var photoRight = photo.parentElement.getBoundingClientRect().right;
+    var desired = photoRight - (s.right - s.width * 0.5);
+    var vw = window.innerWidth;
+    // Teto: o mesmo clamp(220px, 32vw, 380px) do desktop, avaliado na largura atual — faz
+    // a junção com 901px ser contínua (o desktop assume exatamente onde este teto já estava).
+    var maxW = Math.min(380, Math.max(220, 0.32 * vw));
+    var w;
+    if (desired <= maxW) {
+      // A foto ainda alcança o "s" sem estourar o teto — mira nele normalmente.
+      w = Math.max(96, desired);
+    } else {
+      // Acima de ~530-570px a foto não alcança mais o "s" sem estourar o teto (a palavra já
+      // ficou pra trás). Em vez de cair no teto e ficar presa lá (o que criava um vale — a
+      // foto ficando menor no meio da tela que nas duas pontas), interpola do último valor
+      // que a mira no "s" alcançou até esse mesmo teto do desktop — uma única curva sem
+      // degrau em nenhuma das duas junções (docs/DECISIONS.md 2026-07-15).
+      var fromVw = 530, fromW = 200, toVw = 900, toW = maxW;
+      var t = Math.min(1, Math.max(0, (vw - fromVw) / (toVw - fromVw)));
+      w = fromW + (toW - fromW) * t;
+    }
+    photo.style.setProperty('--bp-w', Math.min(w, maxW).toFixed(1) + 'px');
+  }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(calibrateBoldPhoto);
+    var bpT;
+    window.addEventListener('resize', function () { clearTimeout(bpT); bpT = setTimeout(calibrateBoldPhoto, 120); });
+    window.addEventListener('orientationchange', calibrateBoldPhoto);
+  }
 })();
 </script>
 <script>
