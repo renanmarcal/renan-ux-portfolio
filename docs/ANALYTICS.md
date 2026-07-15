@@ -5,10 +5,10 @@ Como o rastreamento de dados do portfólio funciona — o que está instalado, o
 ## O que está instalado (todas as 10 páginas do portfólio: 3 home + 2 cases × 3 línguas + `404.html`; também replicado em `planilha-mei-limite/index.html`, que é uma landing page de produto fora do portfólio, só PT)
 
 - **Google Analytics 4** (`G-M66N19ZT36`, via `gtag.js`) — pageviews automáticos + eventos customizados (ver abaixo).
-- **Contentsquare** (`https://t.contentsquare.net/uxa/4d84643516841.js`) — gravação de sessão e heatmap, captura tudo automaticamente (cliques, scroll, rage-clicks) sem precisar de código. Cobre o lado qualitativo ("ver onde as pessoas travam") sem instrumentação nenhuma.
-- **Microsoft Clarity** (`xl7ajvipib`, via `clarity.ms/tag`) — segundo gravador de sessão/heatmap, adicionado 2026-07-12. Redundante com o Contentsquare em propósito (os dois capturam sessão/heatmap automaticamente), mantido porque o Clarity tem visão própria do tráfego vindo do Bing (Webmaster Tools/Bing Ads), que o Contentsquare não segmenta da mesma forma.
+- **Microsoft Clarity** (`xl7ajvipib`, via `clarity.ms/tag`) — gravador de sessão/heatmap, captura cliques/scroll/rage-clicks automaticamente sem instrumentação, mais visão própria do tráfego vindo do Bing (Webmaster Tools/Bing Ads).
+- ~~**Contentsquare**~~ — removido em 2026-07-15 (auditoria de Core Web Vitals): baixava 583 KB e ~2s no `<head>`, era o maior contribuinte pro LCP/TBT ruins no mobile (score 83, LCP 3.7s). Era redundante em propósito com o Clarity (os dois cobrem sessão/heatmap); a única cobertura exclusiva do Contentsquare não compensava o custo de performance.
 
-Os três scripts ficam no `<head>`, logo depois do favicon e antes do CSS, replicados nas 10 páginas (sem exceção — não há injeção via JS externo nem tag manager). **`404.html` também está incluído** — é o caso mais valioso de "não perder detalhe": link quebrado, URL digitada errada, backlink desatualizado, tudo isso vira pageview + evento igual a qualquer outra página.
+Os dois scripts ficam no `<head>`, logo depois do favicon e antes do CSS, replicados nas 10 páginas (sem exceção — não há injeção via JS externo nem tag manager). **`404.html` também está incluído** — é o caso mais valioso de "não perder detalhe": link quebrado, URL digitada errada, backlink desatualizado, tudo isso vira pageview + evento igual a qualquer outra página.
 
 ## Eventos customizados do GA4
 
@@ -49,7 +49,7 @@ document.addEventListener('click', e => {
 | `lang_switch_click` | Seletor de idioma (PT · EN · ES) | `target_lang` | `pt`, `en`, `es` |
 | `next_case_click` | Link "próximo case" (dentro de um case) | `case` | slug do case de destino |
 | `404_return_click` | Link "voltar pro portfólio" na página 404 | — | — |
-| `checkout_click` | CTA de compra na landing page `planilha-mei-limite/` (hero + bloco de preço) | `location` | `hero`, `preco` |
+| `checkout_click` | CTA de compra na landing page `planilha-mei-limite/` (hero + pós-demo + bloco de preço + barra fixa) | `location` | `hero`, `demo`, `preco`, `sticky_bar` |
 
 Todo parâmetro usa valores **em inglês, consistentes entre as 3 línguas** (ex. `target="about"` mesmo na versão PT, onde o link mostra "Sobre") — de propósito, para o relatório do GA4 agregar PT/EN/ES no mesmo valor em vez de fragmentar em "Sobre"/"About"/"Sobre mí" como 3 linhas separadas.
 
