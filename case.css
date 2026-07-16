@@ -278,6 +278,12 @@ h2 + .sub-h { margin-top: 0; }
 /* texto → imagem: sempre var(--s-5) = 40px */
 .full-slot { grid-column: 1 / -1; margin-top: var(--s-5); }
 
+.flow-title {
+  font-family: var(--font-mono); font-size: var(--fs-label);
+  letter-spacing: var(--ls-label-wide); text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
 
 /* ─── idea grid / cards ─── */
 .idea-grid {
