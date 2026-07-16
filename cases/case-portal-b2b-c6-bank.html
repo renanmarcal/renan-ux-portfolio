@@ -70,10 +70,10 @@
         </h1>
       </div>
       <div class="hero-right">
-        <p class="hero-summary">O portal de gestão do C6 Pay ainda carregava a estrutura e a linguagem da PayGo, construída para um contexto anterior à integração com o C6 Bank. O redesenho reorganizou a navegação e a apresentação das informações para tornar mais claro o acompanhamento da operação financeira pelos lojistas dentro do novo ecossistema do banco.</p>
+        <p class="hero-summary">O portal ainda falava a língua da PayGo, herdada de antes da integração com o C6 Bank. Cada dúvida no fechamento de caixa virava um chamado de suporte. O desafio era decidir o que reorganizar sem estourar o escopo técnico de uma plataforma legada.</p>
         <div class="spec">
           <div><div class="s-label">Papel</div><div class="s-val">Product Designer · UX Research</div></div>
-          <div><div class="s-label">Impacto</div><div class="s-val">−36% em chamados de suporte</div></div>
+          <div><div class="s-label">Impacto</div><div class="s-val">−36% em chamados de suporte · −28% tempo em tela</div></div>
           <div><div class="s-label">Equipe</div><div class="s-val">1 PM · 4 Devs</div></div>
           <div><div class="s-label">Duração</div><div class="s-val">6 meses</div></div>
         </div>
@@ -104,8 +104,8 @@
         <span class="stage-num">01</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Uma operação B2B entre a PayGo e o C6 Bank</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Com a integração entre PayGo e C6 Bank, surgiu a necessidade de alinhar a experiência do portal aos padrões do banco e preparar a plataforma para sua evolução. Além da modernização visual, o produto acumulava problemas de usabilidade, navegação e comunicação que impactavam tarefas essenciais dos lojistas e aumentavam a demanda por suporte.</p>
+        <h2 data-reveal="up">Uma plataforma que precisava acompanhar um novo momento do produto</h2>
+        <p class="body-text" data-reveal="up" data-d="1">A integração entre PayGo e C6 Bank mudou o papel do portal. O que atendia uma operação menor passou a sustentar a rotina financeira diária de lojistas dentro do ecossistema do banco. A interface, porém, ainda carregava a estrutura do sistema legado, informação espalhada entre telas, respostas simples exigindo vários cliques.</p>
       </div>
       <div class="img-slot full-slot" style="aspect-ratio:auto; height:auto;" data-reveal="fade">
         <picture>
@@ -123,21 +123,21 @@
         <div class="c-card">
           <h3 class="sub-h">Experiência do usuário</h3>
           <ul class="prob-list">
-            <li>Navegação pouco intuitiva</li>
-            <li>Arquitetura da informação confusa</li>
-            <li>Baixa priorização das informações financeiras</li>
-            <li>Excesso de carga cognitiva nas telas</li>
-            <li>Fluxos longos para tarefas recorrentes</li>
+            <li>Informações financeiras distribuídas entre diferentes telas</li>
+            <li>Fechamento de caixa exigia cruzar múltiplas consultas</li>
+            <li>Recebíveis e vendas competiam pela atenção</li>
+            <li>Estados e períodos dificultavam a interpretação dos valores</li>
+            <li>Tarefas frequentes dependiam de muitos cliques</li>
           </ul>
         </div>
         <div class="c-card">
           <h3 class="sub-h">Impacto no negócio</h3>
           <ul class="prob-list">
-            <li>Alto volume de dúvidas operacionais</li>
-            <li>Dependência frequente do suporte</li>
-            <li>Baixa eficiência na execução de tarefas</li>
-            <li>Inconsistência com os padrões do C6 Bank</li>
-            <li>Base limitada para evolução do produto</li>
+            <li>Dúvidas recorrentes durante o fechamento de caixa</li>
+            <li>Maior dependência do suporte para validar informações</li>
+            <li>Mais tempo para concluir tarefas operacionais</li>
+            <li>Experiência desalinhada ao ecossistema do C6 Bank</li>
+            <li>Estrutura pouco preparada para evoluções futuras</li>
           </ul>
         </div>
       </div>
@@ -150,12 +150,13 @@
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
-        <span class="stage discovery">colaboração</span>
+        <span class="stage discovery">descoberta</span>
         <span class="stage-num">02</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Entendendo as possibilidades com engenharia</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Como o time era pequeno, tínhamos contato diário com a engenharia. Aproveitei essa proximidade para entender como os dados chegavam ao portal, quais eram as limitações do sistema legado e, junto da PM, definir o que realmente fazia sentido evoluir nessa primeira fase. A partir dessas conversas, priorizamos duas frentes para o redesenho.</p>
+        <h2 data-reveal="up">Entendendo o problema antes de desenhar</h2>
+        <p class="body-text" data-reveal="up" data-d="1">O portal era resultado de anos de evolução incremental, organizado pela lógica do sistema, não pela rotina do lojista. Mapear como a engenharia estruturava os dados, e separar problemas de interface dos problemas técnicos junto de PM e CX, revelou que a dificuldade não vinha da falta de informação.</p>
+        <p class="body-text" data-reveal="up" data-d="2">Vinha do esforço para transformar dados espalhados numa resposta simples, "quanto vou receber", "meu caixa fecha com esse valor". Isso mudou a direção do projeto. Em vez de somar funcionalidades, o objetivo virou reorganizar a experiência em torno das decisões diárias do lojista.</p>
       </div>
       <div class="img-slot full-slot" data-reveal="fade">
         <picture>
@@ -167,12 +168,12 @@
         <div class="c-card">
           <span class="c-num">01</span>
           <h3 class="sub-h">Ajudar no fechamento de caixa</h3>
-          <p class="body-text">Ao analisar os chamados de suporte, identifiquei que boa parte das dúvidas surgia durante o fechamento de caixa. Os lojistas tinham dificuldade para localizar e interpretar as informações financeiras no portal. Esse passou a ser o principal problema do projeto.</p>
+          <p class="body-text">Boa parte dos chamados de suporte nascia no fechamento de caixa. Os lojistas achavam a informação financeira, mas não conseguiam interpretá-la a tempo. Essa dor virou o problema central do projeto.</p>
         </div>
         <div class="c-card">
           <span class="c-num">02</span>
           <h3 class="sub-h">Priorizar o que realmente importava</h3>
-          <p class="body-text">Na rotina do balcão, o usuário precisava saber rapidamente como estava sua situação financeira naquele dia. Reorganizei a interface para dar visibilidade às informações essenciais e tornar essa resposta imediata, sem depender de tabelas e filtros.</p>
+          <p class="body-text">No balcão, a pergunta era sempre a mesma, "como está meu caixa hoje". Isso definiu o critério de priorização, informação essencial primeiro, tabelas e filtros depois.</p>
         </div>
       </div>
     </div>
@@ -189,23 +190,24 @@
       </div>
       <div class="block-body">
         <h2 data-reveal="up">Transformando dados em uma visão financeira clara</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Com as prioridades definidas, reorganizei a interface para facilitar a leitura das informações financeiras no dia a dia. A solução substituiu tabelas extensas por uma estrutura mais visual, reduzindo a necessidade de interpretar dados técnicos para acompanhar o fechamento de caixa.</p>
+        <p class="body-text" data-reveal="up" data-d="1">O portal organizava as informações pela estrutura do sistema, não pela pergunta do lojista. O resumo financeiro vivia numa grade semanal fixa, enquanto vendas, recebíveis e histórico ficavam em telas separadas, para saber "quanto vou receber" era preciso navegar entre elas e somar mentalmente.</p>
+        <p class="body-text" data-reveal="up" data-d="2">A virada foi inverter essa lógica. Em vez de manter a estrutura do legado, a experiência passou a seguir as decisões que o lojista toma todo dia. O calendário semanal deu lugar a indicadores consolidados para hoje, próximos 7 dias e próximos 30 dias, recebíveis passaram a abrir a tela, o histórico de vendas ficou logo abaixo, como apoio para conferência.</p>
       </div>
       <div class="idea-grid full-slot" data-reveal="fade">
         <div class="c-card">
           <span class="c-num">01</span>
-          <h3 class="sub-h">Resumo financeiro</h3>
-          <p class="body-text">Substituí o calendário semanal engessado do sistema legado por cartões consolidados com os principais indicadores financeiros, permitindo visualizar o saldo total sem precisar calcular colunas diárias.</p>
+          <h3 class="sub-h">Uma visão consolidada da operação</h3>
+          <p class="body-text">A grade fixa por dias da semana obrigava o lojista a calcular sua posição financeira olhando coluna por coluna. Os indicadores hoje / 7 dias / 30 dias respondem essa conta antes de qualquer clique.</p>
         </div>
         <div class="c-card">
           <span class="c-num">02</span>
-          <h3 class="sub-h">Organização da informação</h3>
-          <p class="body-text">Organizei a interface para refletir a rotina do lojista. Os recebíveis ficaram em destaque na parte superior da tela, oferecendo uma visão do dinheiro que ainda entraria, enquanto as vendas do dia permaneceram logo abaixo para apoiar o fechamento de caixa.</p>
+          <h3 class="sub-h">A informação passou a seguir a rotina do lojista</h3>
+          <p class="body-text">Vendas, recebíveis e histórico viviam em áreas diferentes do portal. Uma única sequência de leitura, posição financeira, evolução dos valores, histórico, elimina a montagem manual do cenário.</p>
         </div>
         <div class="c-card">
           <span class="c-num">03</span>
-          <h3 class="sub-h">Linguagem orientada à operação</h3>
-          <p class="body-text">Revisei a organização dos menus, filtros e mensagens para tornar a navegação mais intuitiva. A comunicação passou a privilegiar o contexto de uso do lojista, com períodos, estados e feedbacks mais claros ao longo da experiência.</p>
+          <h3 class="sub-h">Menos interpretação, mais tomada de decisão</h3>
+          <p class="body-text">Períodos, estados e filtros foram revisados para reduzir esforço de leitura no fechamento de caixa. As principais respostas aparecem na primeira tela, sem depender de múltiplas consultas.</p>
         </div>
       </div>
     </div>
@@ -221,14 +223,13 @@
         <span class="stage-num">04</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Uma visão clara da operação financeira</h2>
-        <p class="body-text" data-reveal="up" data-d="1">O portal possuía duas áreas distintas de resumo financeiro que apresentavam informações complementares, mas exigiam navegação entre telas para compor um cenário completo. Com apoio do time de CX, mapeei as dúvidas mais frequentes dos lojistas durante o fechamento de caixa e consolidamos essas informações em uma única visão, priorizando os indicadores mais relevantes para a operação diária da maquininha C6.</p>
-        <p class="body-text" data-reveal="up" data-d="2">Reorganizei a interface para aproveitar melhor o espaço disponível, reduzir elementos repetitivos e destacar apenas as informações necessárias para o fechamento de caixa. Com isso, o comerciante passou a consultar rapidamente sua posição financeira logo na primeira tela, diminuindo a necessidade de percorrer diferentes seções do portal.</p>
+        <h2 data-reveal="up">Uma decisão, revisada com quem confirma se ela funciona</h2>
+        <p class="body-text" data-reveal="up" data-d="1">O CX confirmou o padrão. No fechamento de caixa, o lojista não queria consultar vendas e recebíveis separadamente, queria confirmar se a posição do dia fazia sentido. A estrutura abaixo é o resultado dessa decisão aplicada à tela real.</p>
       </div>
       <div class="full-slot" data-reveal="fade">
         <picture>
           <source srcset="../assets/img/c6-pay-ideacao-estrutura-informacao.webp" type="image/webp">
-          <img src="../assets/img/c6-pay-ideacao-estrutura-informacao.jpg" loading="lazy" alt="Estrutura de informação e ideação do redesenho do portal C6 Pay, organizando dados financeiros em blocos visuais para lojistas" style="width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--line);">
+          <img src="../assets/img/c6-pay-ideacao-estrutura-informacao.jpg" loading="lazy" alt="Estrutura de informação do portal C6 Pay redesenhado, organizando dados financeiros em blocos visuais para lojistas" style="width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--line);">
         </picture>
       </div>
     </div>
@@ -245,8 +246,9 @@
       </div>
       <div class="block-body">
         <h2 data-reveal="up">Facilitando a conferência do histórico de vendas</h2>
-        <p class="body-text" data-reveal="up" data-d="1">A análise dos chamados de suporte mostrou que boa parte dos lojistas utilizava o histórico de vendas para conferir o fechamento diário da operação. O desafio era reduzir o tempo gasto nessa conferência e tornar mais fácil identificar divergências entre as transações.</p>
-        <p class="body-text" data-reveal="up" data-d="2">Para isso, reorganizei a experiência priorizando as consultas mais frequentes, com filtros rápidos por período e refinamentos por status e operação. Também deixei o estado de cada transação mais explícito e adicionei a informação de última atualização dos dados, oferecendo mais confiança durante a validação do caixa.</p>
+        <p class="body-text" data-reveal="up" data-d="1">Depois de entender a posição financeira, o próximo passo da rotina era conferir se cada venda havia sido processada corretamente. Quando existia alguma diferença no fechamento de caixa, encontrar a transação responsável ainda exigia muitas consultas e refinamentos.</p>
+        <p class="body-text" data-reveal="up" data-d="2">A experiência passou a privilegiar esse fluxo de investigação. Os filtros mais utilizados ficaram disponíveis logo acima da listagem, permitindo alternar rapidamente entre hoje, ontem, últimos 7 dias e últimos 30 dias. Também reorganizei os filtros por operação e status e deixei essas informações visíveis na própria tabela para reduzir o tempo gasto identificando inconsistências.</p>
+        <p class="body-text" data-reveal="up" data-d="3">A última atualização dos dados passou a aparecer no topo da tela para deixar claro quando aquelas informações haviam sido sincronizadas, reduzindo dúvidas durante a conferência.</p>
       </div>
       <div class="full-slot" data-reveal="fade">
         <picture>
@@ -267,25 +269,29 @@
         <span class="stage-num">06</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Como fundamentamos as decisões de design</h2>
-        <p class="body-text" data-reveal="up" data-d="1">O redesenho não foi baseado apenas na análise da interface existente. Ao longo do projeto, reuni diferentes perspectivas para entender melhor o problema, validar hipóteses e alinhar as decisões com o restante do time.</p>
+        <h2 data-reveal="up">Validando decisões ao longo do projeto</h2>
+        <p class="body-text" data-reveal="up" data-d="1">O redesenho partiu da leitura da interface existente, mas cada decisão carregava risco, de estar otimizando pro problema errado, ou de esbarrar numa limitação técnica que só a engenharia enxergava. As 5 frentes abaixo foram onde esse risco foi testado.</p>
       </div>
       <div class="idea-grid idea-grid-2 full-slot" data-reveal="fade">
         <div class="c-card">
           <h3 class="sub-h">CX</h3>
-          <p class="body-text">Aproximação com o time de atendimento para entender o perfil dos lojistas, as dúvidas mais recorrentes e os principais motivos de contato com o suporte.</p>
+          <p class="body-text">As conversas com o time de atendimento mostraram que a maior parte das dúvidas acontecia durante o fechamento de caixa. Esse padrão ajudou a priorizar a consolidação da visão financeira antes de outras melhorias do portal.</p>
         </div>
         <div class="c-card">
           <h3 class="sub-h">Engenharia</h3>
-          <p class="body-text">Mapeamento do funcionamento do sistema legado para entender como os dados chegavam ao portal. Muitas métricas exigiam cálculo no front-end em vez de vir prontas do back-end, o que era aceitável em alguns casos, mas para métricas críticas eu precisava alinhar com engenharia antes de definir a prioridade.</p>
+          <p class="body-text">O mapeamento do sistema legado mostrou quais mudanças poderiam ser resolvidas apenas reorganizando a experiência e quais exigiriam alterações estruturais. Essa leitura ajudou a definir o escopo da primeira entrega.</p>
         </div>
         <div class="c-card">
-          <h3 class="sub-h">Análise de outros players</h3>
-          <p class="body-text">Análise de produtos como Stone, Stripe e PagSeguro para entender como o mercado organiza informações financeiras e construir uma base de referência para as decisões de design.</p>
+          <h3 class="sub-h">Design Critiques</h3>
+          <p class="body-text">Conduzi sessões de crítica com designers da PayGo e do C6 Bank para desafiar as propostas de navegação, hierarquia da informação e organização das telas. Esse processo ajudou a simplificar algumas soluções antes da implementação e garantir maior consistência com o ecossistema do banco.</p>
+        </div>
+        <div class="c-card">
+          <h3 class="sub-h">Benchmark</h3>
+          <p class="body-text">Analisei produtos como Stone, Stripe e PagSeguro para entender diferentes formas de apresentar recebíveis, vendas e informações financeiras. O objetivo era ampliar o repertório de soluções, não reproduzir padrões existentes.</p>
         </div>
         <div class="c-card">
           <h3 class="sub-h">Testes com usuários</h3>
-          <p class="body-text">Validação dos protótipos com cinco lojistas para verificar se as principais decisões realmente facilitavam a operação antes do desenvolvimento.</p>
+          <p class="body-text">Validei os protótipos com cinco lojistas antes do desenvolvimento. Os testes confirmaram que a nova organização das informações tornava o fechamento de caixa mais rápido e intuitivo.</p>
         </div>
       </div>
     </div>
@@ -301,8 +307,11 @@
         <span class="stage-num">07</span>
       </div>
       <div class="block-body">
-        <h2 data-reveal="up">Redução de suporte e autonomia no desenvolvimento</h2>
-        <p class="body-text" data-reveal="up" data-d="1">Depois que o portal entrou em produção, as dúvidas sobre fechamento de caixa praticamente desapareceram do suporte. Para entender se a mudança também aparecia no comportamento dos usuários, analisei o GA junto com a PO. O tempo médio na tela de vendas caiu quase pela metade. Em paralelo, adaptamos os componentes do design system do C6 às limitações técnicas da PayGo e estruturamos uma biblioteca própria para que a squad pudesse evoluir o produto com mais consistência.</p>
+        <h2 data-reveal="up">Mais autonomia para os lojistas e menos demanda para o suporte</h2>
+        <p class="body-text" data-reveal="up" data-d="1">A implantação aconteceu de forma gradual, permitindo acompanhar a evolução dos indicadores ao longo dos três meses seguintes.</p>
+        <p class="body-text" data-reveal="up" data-d="2">Como o projeto atacava principalmente dúvidas relacionadas ao fechamento de caixa e à interpretação de informações que já existiam no portal, acompanhamos esse recorte junto ao time de CX. Nesse período, os chamados relacionados a esse fluxo diminuíram 36%, indicando que os lojistas passaram a resolver essas tarefas com mais autonomia.</p>
+        <p class="body-text" data-reveal="up" data-d="3">Em paralelo, analisei o Google Analytics junto da PO para entender se essa mudança também aparecia no comportamento dentro do produto. O tempo médio na tela de vendas caiu 28%, sugerindo que os usuários conseguiam localizar e validar as informações com menos esforço.</p>
+        <p class="body-text" data-reveal="up" data-d="4">Além da evolução da experiência, adaptamos componentes do design system do C6 às limitações técnicas da plataforma da PayGo e estruturamos uma biblioteca própria para que a squad pudesse evoluir o produto com mais consistência nas entregas seguintes.</p>
       </div>
       <div class="img-slot full-slot" data-reveal="fade">
         <iframe

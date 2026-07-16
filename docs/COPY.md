@@ -74,7 +74,7 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 - Kicker: `C6 Bank · PayGo · 2020–2021` (igual nas 3 línguas)
 - Título: Portal de gestão para lojistas C6 Pay / Management portal for C6 Pay merchants / Portal de gestión para comercios C6 Pay
 - Descrição: Reorganizei um portal legado para tornar clara a saúde financeira do lojista no fechamento de caixa. / I reorganized a legacy portal to make merchants' financial health clear at day-end close. / Reorganicé un portal heredado para hacer clara la salud financiera del comercio en el cierre de caja.
-- Métricas: `−36%` chamados de suporte / support tickets / llamados de soporte · `−50%` tempo na tela de vendas / time on the sales screen / tiempo en la pantalla de ventas
+- Métricas: `−36%` chamados de suporte / support tickets / llamados de soporte · `−28%` tempo na tela de vendas / time on the sales screen / tiempo en la pantalla de ventas *(corrigido de −50% em 2026-07-15, ver docs/DECISIONS.md — PT já estava certo, só o registro em COPY.md e os cards EN/ES estavam desatualizados)*
 - Tag: Web
 
 ### Priorização de visitas — PT / EN / ES
