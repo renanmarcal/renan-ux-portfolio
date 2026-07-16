@@ -73,8 +73,23 @@ O padding de abertura do hero mobile não acompanha 1:1 o crescimento do desktop
 
 ## Layout
 
-- `.wrap`: `max-width: 1120px; margin: 0 auto; padding: 0 48px` (`var(--s-3)`, 24px, abaixo de 768px). **Todo** bloco de largura total (hero, cases, footer) usa esta mesma classe — é o que garante alinhamento ponta a ponta entre seções.
+- `.wrap`: `max-width: 1440px; margin: 0 auto; padding: 0 48px` (`var(--s-3)`, 24px, abaixo de 768px) — **aumentado de 1120px em 2026-07-16**, alinhado ao padrão de containers largos de referências modernas (Strider ~1440px de conteúdo útil, Square ~1560px), ver `docs/DECISIONS.md`. **Todo** bloco de largura total (hero, cases, footer) usa esta mesma classe — é o que garante alinhamento ponta a ponta entre seções.
 - Regra rígida: qualquer container de largura total dentro de um contexto flex/grid precisa de `width: 100%` explícito além de `.wrap` — não confiar em stretch/auto-margin implícitos (ver `.footer > .wrap` em `case.css`).
+- O `translateX` calibrado do `.bold-photo` (ver "Hero photo — broken-grid" abaixo) usa `1440px` na fórmula do gutter, não mais `1120px` — qualquer futura mudança de `.wrap` na home precisa atualizar essa fórmula também, ela não deriva de `var()`.
+
+### Blocos de case study (`.block-grid`) em containers largos — não existe fórmula única
+
+**Decisão 2026-07-16, depois de 2 tentativas rejeitadas** (ver `docs/DECISIONS.md` para o histórico completo): com `.wrap` em 1440px, um `.block-grid` de 1 coluna só com `.block-body { max-width: 62ch }` deixa uma faixa vazia enorme à direita do texto em blocos só-texto. A tentação é resolver isso com uma regra CSS genérica aplicada a todo `.block-grid` — **foi tentado duas vezes e rejeitado nas duas**: uma coluna sticky pro eyebrow só empurrou o peso pra esquerda; um split h2/corpo aplicado a tudo quebrou seções que tinham imagem de suporte ou grid de cards logo após o texto.
+
+**Regra: a composição de cada bloco depende da forma do conteúdo dele, decidida bloco a bloco — nunca por um seletor genérico em `.block-grid` inteiro.** Três formas identificadas até agora, cada uma com sua ferramenta:
+
+1. **Texto + 1 imagem de suporte lado a lado** → `.b-split` explícito no HTML, com `style="grid-template-columns: <a>fr <b>fr"` escolhido por bloco (não um valor fixo — depende de quão dominante a imagem deve ser). Ex.: `5fr 7fr` (texto/imagem) quando o parágrafo é curto e a imagem deve pesar mais.
+2. **Texto longo + imagem que deve ocupar a largura toda, abaixo (não ao lado)** → classe `.block-body--split` no `.block-body` (h2 numa coluna, parágrafos na coluna de leitura ao lado — só ativa via `@media (min-width:1024px)` e seletor `:has()`, nunca em `.block-body` genérico) **seguido** de um `.img-slot.full-slot` separado, fora do split, full-bleed.
+3. **Texto curto + grid de cards (ou só título + cards, sem parágrafo)** → fica 100% empilhado, sem nenhuma regra de coluna. É a forma mais comum (intros de bloco antes de um `.idea-grid`) e não precisa de tratamento especial — o `.wrap` maior já dá respiro suficiente ao grid de cards por si só.
+
+**Antes de aplicar qualquer uma das 3 formas a um bloco novo, ler o conteúdo real dele** (parágrafo curto ou longo? tem imagem de suporte 1:1 com o texto, ou os elementos visuais são cards/full-width?) — a forma errada aplicada "de qualquer jeito" já produziu 2 resultados rejeitados nesta mesma decisão.
+
+`.idea-grid-2` (grids de cards em 2 colunas) ganhou `grid-template-columns: repeat(auto-fit, minmax(360px,1fr))` em `≥1024px` — evita 1 card órfão esticado quando o grid tem número ímpar de itens (ex. 5 cards). Vídeos embedados (`.img-slot:has(iframe)`) ganharam teto `max-width: 1120px` no mesmo breakpoint — sem isso, um iframe 16:9 full-width em 1440px de conteúdo fica com ~756px de altura, grande demais.
 
 ## Componentes
 

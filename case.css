@@ -58,7 +58,7 @@ body {
 }
 
 /* ─── layout ─── */
-.wrap { max-width: 1120px; margin: 0 auto; padding: 0 48px; }
+.wrap { max-width: 1440px; margin: 0 auto; padding: 0 48px; }
 @media (max-width: 768px) { .wrap { padding: 0 var(--s-3); } }
 
 /* ─── botões ─── */
@@ -199,6 +199,24 @@ h1 {
   display: flex; align-items: center;
   gap: var(--s-1); margin-bottom: var(--s-2);
 }
+
+/* ─── ajustes de largura (>=1024px) ─── */
+@media (min-width: 1024px) {
+  .idea-grid-2 { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
+  .img-slot:has(iframe) { max-width: 1120px; justify-self: center; }
+
+  /* split editorial: só em blocos marcados explicitamente — h2 à esquerda, corpo à direita */
+  .block-grid:has(> .block-body--split) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 62ch);
+    column-gap: var(--s-7);
+  }
+  .block-grid:has(> .block-body--split) > div:first-child { grid-column: 1 / -1; }
+  .block-body--split { display: contents; }
+  .block-body--split > * { grid-column: 2; }
+  .block-body--split > h2 { grid-column: 1; margin-bottom: 0; align-self: start; }
+  .block-grid:has(> .block-body--split) h2 { font-size: 36px; }
+}
+
 .stage-num {
   order: 1;
   font-family: var(--font-mono);
