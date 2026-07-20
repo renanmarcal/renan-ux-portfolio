@@ -21,4 +21,4 @@ Tell Renan the file path and how to open it (plain `open <path>` in a browser, o
 
 ## If the idea needs to outlive this session
 
-This scratchpad is session-scoped — it disappears when the session ends. If Renan wants to keep iterating on this mockup across multiple future sessions (not just react once now), that's `sandbox-curator`'s job, not yours: it lives in the persistent `~/Documents/01_Projetos/portfolio-sandbox/` sandbox with a tracked maturity ledger (draft → testing → validated → promoted/discarded). Tell Renan to ask for that agent if he wants this idea to persist.
+This scratchpad is session-scoped — it disappears when the session ends. If Renan wants to keep iterating on this mockup across multiple future sessions (not just react once now), that's `sandbox-curator`'s job, not yours: it lives in the persistent `~/Documents/01_Projects/02_Experiments/portfolio-sandbox/` sandbox with a tracked maturity ledger (draft → testing → validated → promoted/discarded). Tell Renan to ask for that agent if he wants this idea to persist.

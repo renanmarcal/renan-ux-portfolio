@@ -2,7 +2,7 @@
 
 Textos aprovados por idioma. Qualquer alteração de copy vira uma nova entrada aqui **e** em `docs/DECISIONS.md` com a data — não editar direto no HTML sem atualizar este arquivo, senão a próxima sessão relitiga um texto já decidido.
 
-Regras editoriais (linter completo em `README.md`): sentence case rigoroso; veto a dois-pontos e travessões em conteúdo — usar ponto, vírgula, parênteses e o middot `·`.
+Regras editoriais em `docs/EDITORIAL-GUIDELINES.md`: sentence case rigoroso; evitar dois-pontos e travessões em conteúdo visível — usar ponto, vírgula, parênteses e o middot `·`.
 
 PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres — se a estrutura de uma frase em PT muda, a tradução muda junto.
 
