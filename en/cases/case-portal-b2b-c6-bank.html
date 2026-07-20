@@ -101,7 +101,7 @@
 </div>
 
 <!-- 01 THE CONTEXT -->
-<section class="block" id="b01" data-stage="01" data-name="The context">
+<section class="block case-section--context" id="b01" data-stage="01" data-name="The context">
   <div class="wrap">
     <div class="block-grid">
       <div data-reveal="up">
@@ -112,7 +112,7 @@
         <h2 data-reveal="up">Screens and rules accumulated in the legacy system</h2>
         <p class="body-text" data-reveal="up" data-d="1">The portal had grown in layers, with screens and rules added as operations demanded, leaving sales, receivables, and history organized around the system’s internal structure rather than the sequence merchants used at cash close.</p>
       </div>
-      <div class="idea-grid idea-grid-2 full-slot" data-reveal="fade">
+      <div class="idea-grid idea-grid-2 full-slot" data-reveal="fade" hidden>
         <div class="img-slot" style="aspect-ratio:auto; height:auto;">
           <picture>
             <source srcset="../../assets/img/c6-pay-portal-legado-transacoes.webp" type="image/webp">
@@ -126,7 +126,7 @@
           </picture>
         </div>
       </div>
-      <div class="idea-grid idea-grid-2 full-slot" data-reveal="fade">
+      <div class="idea-grid idea-grid-2 full-slot" data-reveal="fade" hidden>
         <div class="c-card">
           <h3 class="sub-h">User experience</h3>
           <ul class="prob-list">
@@ -151,6 +151,10 @@
           <h3 class="sub-h">Turning to support</h3>
           <p class="body-text">Simple operational questions frequently became support tickets.</p>
         </div>
+      </div>
+      <div class="context-evidence full-slot">
+        <div class="img-slot" data-reveal="fade" style="aspect-ratio:2240 / 1112;"><picture><source srcset="../../assets/img/c6-pay-portal-legado-transacoes.webp" type="image/webp"><img src="../../assets/img/c6-pay-portal-legado-transacoes.jpg" loading="lazy" decoding="async" width="2240" height="1112" alt="Legacy portal transaction table with an excess of technical columns" style="object-fit:contain;"></picture></div>
+        <div class="context-problems"><div class="c-card"><span class="c-num">01</span><h3 class="sub-h">Checking data across several screens</h3><p class="body-text">Cash close depended on cross-referencing information across different areas of the portal.</p></div><div class="c-card"><span class="c-num">02</span><h3 class="sub-h">Interpreting the system’s logic</h3><p class="body-text">The portal reflected the system’s internal organization rather than the merchant’s routine.</p></div><div class="c-card"><span class="c-num">03</span><h3 class="sub-h">Turning to support</h3><p class="body-text">Simple operational questions frequently became support tickets.</p></div></div>
       </div>
     </div>
   </div>
@@ -178,13 +182,13 @@
       <div class="idea-grid idea-grid-2 full-slot" data-reveal="fade">
         <div class="c-card">
           <span class="c-num">01</span>
-          <h3 class="sub-h">Helping with daily cash close</h3>
-          <p class="body-text">By analyzing support tickets, I identified that most questions arose during the cash close. Merchants had difficulty locating and interpreting financial information in the portal. This became the main problem of the project.</p>
+          <h3 class="sub-h">Sales and receivables in separate areas</h3>
+          <p class="body-text">The system structure spread information across screens merchants had to cross-reference at cash close.</p>
         </div>
         <div class="c-card">
           <span class="c-num">02</span>
-          <h3 class="sub-h">Prioritizing what really mattered</h3>
-          <p class="body-text">In the merchant's day-to-day operations, they needed to quickly know their financial position for that day. I reorganized the interface to give visibility to essential information and make this response immediate, without relying on tables and filters.</p>
+          <h3 class="sub-h">Cash closing assembled outside the portal</h3>
+          <p class="body-text">Statuses and amounts had to be interpreted and combined to form a cash view.</p>
         </div>
       </div>
     </div>
@@ -243,7 +247,7 @@
         <span class="stage solucao">financial view</span>
         <span class="stage-num">05</span>
       </div>
-      <div class="block-body">
+      <div class="block-body block-body--split">
         <h2 data-reveal="up">The financial position before the details</h2>
         <p class="body-text" data-reveal="up" data-d="1">In the tickets followed by CX, finding sales and receivables was only part of the task. Merchants still had to confirm whether the amounts closed at the end of the day, which led the summary to open with the financial position and continue to the details used in the review.</p>
       </div>
