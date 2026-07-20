@@ -91,6 +91,8 @@ O padding de abertura do hero mobile não acompanha 1:1 o crescimento do desktop
 
 `.idea-grid-2` (grids de cards em 2 colunas) ganhou `grid-template-columns: repeat(auto-fit, minmax(360px,1fr))` em `≥1024px` — evita 1 card órfão esticado quando o grid tem número ímpar de itens (ex. 5 cards). Vídeos embedados (`.img-slot:has(iframe)`) ganharam teto `max-width: 1120px` no mesmo breakpoint — sem isso, um iframe 16:9 full-width em 1440px de conteúdo fica com ~756px de altura, grande demais.
 
+**Cases, tipografia e grids (2026-07-19):** títulos de seção usam 36px, narrativa 18px, títulos de card 20px e corpo de card 16px em desktop. A ≤1023px, título e narrativa passam para 32px e 16px. Grids genéricos de três cards passam a uma coluna a ≤900px; grids de duas colunas permanecem até 768px. No C6, a validação mantém quatro critérios em 2×2 até 768px, quando empilha. A composição específica usa `.case-c6`, não uma classe experimental.
+
 ## Componentes
 
 ### Botões (`.btn`, `.btn-primary`, `.btn-ghost`)
