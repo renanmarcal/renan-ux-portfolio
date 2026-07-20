@@ -123,6 +123,12 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 - PT: Facilitando a conferência do histórico de vendas · EN: Streamlining the sales history review · ES: Facilitando la revisión del historial de ventas.
 - **Regra**: título precisa se diferenciar do bloco 04 ("Uma visão clara da operação financeira") — bloco 04 é a tela de resumo consolidado, bloco 05 é especificamente a tela de histórico de vendas usada pra conferência do fechamento de caixa. Os dois não podem ficar ancorados no mesmo termo genérico ("fechamento de caixa") sem diferenciar qual tela cada um resolve.
 
+## Case C6 Pay — bloco 01
+- Card 01: Conferir dados em várias telas · O fechamento de caixa dependia de cruzar informações entre diferentes áreas do portal.
+- Card 02: Interpretar a lógica do sistema · A estrutura do portal reproduzia a organização interna do sistema, distante da rotina do lojista.
+- Card 03: Recorrer ao suporte · Dúvidas operacionais simples frequentemente terminavam em chamados para o atendimento.
+- **Regra**: não usar um card-contêiner com o título genérico "O que isso causava". Cada problema deve ser uma unidade escaneável com número, título prático e descrição.
+
 ## Case C6 Pay — bloco 06 (fundamentação), limitação técnica real
 - PT: Mapeamento do funcionamento do sistema legado para entender como os dados chegavam ao portal. Muitas métricas exigiam cálculo no front-end em vez de vir prontas do back-end, o que era aceitável em alguns casos, mas para métricas críticas eu precisava alinhar com engenharia antes de definir a prioridade.
 - EN: Mapping the legacy system's operation to understand how data reached the portal. Many metrics required front-end calculation instead of coming pre-computed from the back-end, which was fine in some cases, but for critical metrics I needed to align with engineering before deciding what to prioritize.
@@ -131,6 +137,30 @@ PT é a fonte da verdade. EN/ES são traduções fiéis, não reescritas livres 
 
 ## Case C6 Pay — bloco 07 (impacto), sem alegação vaga
 - Regra: cortada a frase "e o acesso aos relatórios aumentou" — não havia número real por trás. O bloco 07 fica só com os 2 números reais (−36% chamados, tempo na tela quase pela metade) + o resultado qualitativo da biblioteca de componentes.
+
+## Case C6 Pay PT — revisão de voz 2026-07-19
+
+### Referências e estrutura — 2026-07-19
+
+- A narrativa do C6 segue oito etapas: contexto, descoberta, ideação, lógica, visão financeira, fechamento de caixa, fundamentação e impacto.
+- Stone e PagSeguro aparecem na ideação como referências de produto de 2020, com alt descritivo e assets WebP semânticos. A imagem antiga da descoberta permanece oculta até ganhar uma função narrativa.
+
+Referência de voz: perguntas reais dos lojistas, decisões pequenas e sujeitos concretos. Evitar frases-veredito como "esse insight redefiniu o projeto", conectores automáticos como "em paralelo", antíteses montadas no formato "não é X, é Y", sequências de frases curtas e paráfrases que repetem a mesma ideia com outras palavras. Preferir períodos contínuos, usando subordinação e coordenação quando as ideias pertencem ao mesmo raciocínio.
+
+- Hero: Quando a PayGo entrou no ecossistema do C6 Bank, o portal passou a fazer parte da rotina financeira de milhares de lojistas ainda organizado pela lógica do sistema legado. Meu trabalho foi aproximar essa estrutura do dia a dia do lojista dentro do que a plataforma conseguia entregar.
+- Bloco 01, título: Telas e regras acumuladas no legado.
+- Bloco 02, título: Onde as dúvidas viravam chamados.
+- Bloco 02, cards: Começar pelo fechamento de caixa · Responder quanto entra hoje.
+- Bloco 03, título: Do resumo esperado ao que cabia na sprint.
+- Bloco 04, título: Três decisões para responder quanto vou receber.
+- Bloco 04, cards: Ver o que entra hoje e nos próximos dias · Ler o caixa numa única sequência · Encontrar respostas antes dos filtros.
+- Bloco 05, título: A posição financeira antes dos detalhes.
+- Bloco 06, título: Encontrar a venda que não fechava.
+- Bloco 06: começar pela divergência que o lojista precisava investigar, depois explicar períodos, filtros e horário de sincronização sem anunciar genericamente um "fluxo de investigação".
+- Bloco 07, título: O que conferi antes de desenvolver.
+- Bloco 07, cards: Chamados no fechamento de caixa · Métricas calculadas no front-end · Navegação revisada com design · Testes com lojistas.
+- Bloco 08, título: Menos chamados e uma conferência mais rápida.
+- Bloco 08: começar pelos resultados observados nos três meses seguintes e nomear diretamente quem acompanhou cada indicador.
 
 ## Case Priorização — bloco 06, número real de validação
 - PT: Validei o protótipo com cinco representantes comerciais... · EN: I validated the prototype with five field representatives... · ES: Validé el prototipo con cinco representantes comerciales...

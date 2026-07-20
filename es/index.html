@@ -98,6 +98,8 @@
 html { scroll-behavior: smooth; }
 h1, h2, h3 { letter-spacing: -0.025em; line-height: 1.15; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.skip-link { position: fixed; top: var(--s-2); left: var(--s-2); z-index: 100; padding: var(--s-1) var(--s-2); background: var(--ink); color: var(--paper); border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transform: translateY(calc(-100% - var(--s-3))); transition: transform 180ms cubic-bezier(.16,1,.3,1); }
+.skip-link:focus { transform: translateY(0); }
 body {
   background: var(--paper);
   color: var(--ink);
@@ -482,6 +484,8 @@ body {
 </style>
 </head>
 <body>
+
+<a class="skip-link" href="#cases">Saltar al contenido</a>
 
 <header class="topbar">
   <div class="wrap">
