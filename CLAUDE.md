@@ -4,7 +4,7 @@ Portfólio de produto de Renan Marçal. Público-alvo: líderes de design/produt
 
 ## Mapa do projeto
 
-- Site estático puro (HTML + CSS + JS inline), sem build step. Deploy = commit direto na `main` do GitHub Pages (`renanmarcal.github.io/renan-ux-portfolio`).
+- Site estático puro (HTML + CSS + JS inline), sem build step. Deploy = push direto na `main`, publicado via Cloudflare Workers (não GitHub Pages — ver `docs/ARCHITECTURE.md` para diagnóstico de deploy que falhou silenciosamente).
 - 3 idiomas, PT é a fonte da verdade: `index.html` (PT), `en/index.html`, `es/index.html` — cada um com seu próprio `<style>` embutido (hoje duplicado, ver `docs/BACKLOG.md`).
 - `case.css` é compartilhado por **todos** os cases nas 3 línguas — editar uma vez, vale para PT/EN/ES.
 - `cases/*.html`, `en/cases/*.html`, `es/cases/*.html` — mesma estrutura, 1 arquivo por case por idioma.
