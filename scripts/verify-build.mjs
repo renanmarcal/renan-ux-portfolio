@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 
 const root = process.cwd();
@@ -33,6 +33,14 @@ function expectIncludes(route, html, value, label) {
   if (!html.includes(value)) {
     failures.push(`${route.id}: ${label} ausente (${value})`);
   }
+}
+
+function findFiles(directory, predicate) {
+  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const path = resolve(directory, entry.name);
+    if (entry.isDirectory()) return findFiles(path, predicate);
+    return predicate(path) ? [path] : [];
+  });
 }
 
 for (const route of fixture.routes) {
@@ -107,6 +115,10 @@ for (const forbidden of [".git", ".github", "docs", ".private", "node_modules"])
   if (existsSync(resolve(dist, forbidden))) {
     failures.push(`artefato interno publicado: dist/${forbidden}`);
   }
+}
+
+for (const markdownFile of findFiles(dist, (path) => path.endsWith(".md"))) {
+  failures.push(`arquivo Markdown interno publicado: ${markdownFile.slice(dist.length + 1)}`);
 }
 
 const outputFiles = fixture.routes.map((route) => readOutput(route.output)).join("\n");
