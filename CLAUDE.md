@@ -4,11 +4,10 @@ Portfólio de produto de Renan Marçal. Público-alvo: líderes de design/produt
 
 ## Mapa do projeto
 
-- Site estático puro (HTML + CSS + JS inline), sem build step. Deploy = push direto na `main`, publicado via Cloudflare Workers (não GitHub Pages — ver `docs/ARCHITECTURE.md` para diagnóstico de deploy que falhou silenciosamente).
-- 3 idiomas, PT é a fonte da verdade: `index.html` (PT), `en/index.html`, `es/index.html` — cada um com seu próprio `<style>` embutido de CSS de *layout* (hero/home), ainda duplicado entre os 3 (ver `docs/BACKLOG.md`, migração Astro). Os *tokens* (cor, tipografia base, espaçamento, escala de labels), porém, não duplicam mais — vivem em `tokens.css`, linkado pelos 3 index + `404.html` e importado por `case.css`.
-- `case.css` é compartilhado por **todos** os cases nas 3 línguas — editar uma vez, vale para PT/EN/ES. Importa `tokens.css` via `@import` na primeira linha; mantém localmente só as variáveis exclusivas de página de case.
-- `tokens.css` é a fonte única de tokens de design system — mudar cor/espaçamento/tipografia base aqui, nunca redefinir essas variáveis dentro de `index.html`/`en/index.html`/`es/index.html`/`case.css`/`404.html`.
-- `cases/*.html`, `en/cases/*.html`, `es/cases/*.html` — mesma estrutura, 1 arquivo por case por idioma.
+- Astro em SSG: `npm run build` gera `dist/`; deploy Cloudflare usa `dist/` e nunca ocorre sem pedido explícito.
+- 3 idiomas: PT é a fonte principal; as rotas vivem em `src/pages/` e as cópias editoriais localizadas dos cases em `src/case-studies/`.
+- `src/styles/tokens.css` é a fonte única dos tokens. `src/styles/home.css`, `case.css` e `not-found.css` concentram os estilos de cada superfície.
+- `src/components/` concentra head, topbars, footer e scripts de comportamento; preservar o contrato de analytics documentado.
 - `docs/EDITORIAL-GUIDELINES.md` contém as diretrizes editoriais do projeto. Sempre respeitar em trabalhos de conteúdo visível.
 
 ## Antes de qualquer trabalho de design/copy

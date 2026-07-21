@@ -2,9 +2,9 @@
 
 ## Visão geral
 
-O portfólio é um site estático feito com HTML, CSS e JavaScript. Não há etapa de build.
+O portfólio é gerado pelo Astro como site estático. `npm run build` produz `dist/`, sem adapter SSR ou runtime de framework no navegador.
 
-O domínio `renanmarcal.com` é servido por um projeto **Cloudflare Workers & Pages** chamado `renan-ux-portfolio`, com deploy automático a cada push na branch `main` via `npx wrangler deploy` (config em `wrangler.jsonc`, publica `assets.directory: "."`, ou seja, a raiz do repo inteira). O repositório também tem um workflow legado "pages build and deployment" do GitHub Pages — ele roda e reporta sucesso, mas **não é quem serve o site no domínio customizado**; é decorativo e pode ser ignorado para efeitos de diagnóstico de deploy.
+O domínio `renanmarcal.com` é servido por um projeto Cloudflare Workers chamado `renan-ux-portfolio`. O Wrangler publica somente `assets.directory: "./dist"`, com `not_found_handling: "404-page"`. O workflow legado do GitHub Pages não serve o domínio customizado.
 
 O português é a fonte principal do conteúdo. As versões em inglês e espanhol ficam em diretórios próprios e espelham a estrutura das páginas em português.
 
@@ -24,13 +24,12 @@ Se uma mudança publicada não aparecer em `renanmarcal.com`:
 
 | Caminho | Função |
 | --- | --- |
-| `index.html` | Página inicial em português. |
-| `cases/` | Cases em português. |
-| `en/` | Página inicial e cases em inglês. |
-| `es/` | Página inicial e cases em espanhol. |
-| `assets/` | Imagens, ícones e outros recursos estáticos. |
-| `case.css` | Estilos compartilhados pelas páginas de case nos três idiomas. |
-| `404.html` | Página de erro do site. |
+| `src/pages/` | Rotas Astro, incluindo 404 e sitemap. |
+| `src/case-studies/` | Corpos editoriais localizados dos cases. |
+| `src/components/` | Layout, navegação, footer, SEO e scripts compartilhados. |
+| `src/styles/` | Tokens e estilos de home, case e 404. |
+| `public/assets/` | Imagens, ícones e outros recursos estáticos. |
+| `public/planilha-mei-limite/` | Landing independente, mantida fora do Astro. |
 | `CNAME` | Domínio personalizado usado pelo GitHub Pages. |
 | `docs/` | Documentação interna do projeto. |
 | `CLAUDE.md` | Instruções para agentes que trabalham neste repositório. |

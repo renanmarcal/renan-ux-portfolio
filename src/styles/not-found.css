@@ -1,0 +1,6 @@
+.not-found-main { min-height: calc(100dvh - 52px); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--s-6) var(--s-3); text-align: center; }
+.not-found-main h1 { font-size: 72px; margin-bottom: var(--s-3); }
+@media (max-width: 430px) { .not-found-main h1 { font-size: 52px; } }
+.not-found-main .lead { font-size: 16px; color: var(--ink-soft); max-width: 38ch; margin: 0 auto var(--s-5); }
+.not-found-main .back-link { font-family: var(--font-mono); font-size: var(--fs-label); letter-spacing: var(--ls-label-wide); text-transform: uppercase; color: var(--ink-faint); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; transition: color .2s, border-color .2s; }
+.not-found-main .back-link:hover { color: var(--accent); border-color: var(--accent); }

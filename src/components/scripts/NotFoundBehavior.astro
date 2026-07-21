@@ -1,0 +1,11 @@
+<script is:inline>
+  (function(){
+    document.addEventListener('click', e => {
+      const el = e.target.closest('[data-gtag-event]');
+      if (!el || typeof gtag !== 'function') return;
+      const params = { page_lang: document.documentElement.lang };
+      for (const attr of el.attributes) if (attr.name.startsWith('data-gtag-') && attr.name !== 'data-gtag-event') params[attr.name.slice('data-gtag-'.length).replace(/-/g, '_')] = attr.value;
+      gtag('event', el.dataset.gtagEvent, params);
+    });
+  })();
+</script>

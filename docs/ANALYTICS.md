@@ -8,7 +8,7 @@ Como o rastreamento de dados do portfólio funciona — o que está instalado, o
 - **Microsoft Clarity** (`xl7ajvipib`, via `clarity.ms/tag`) — gravador de sessão/heatmap, captura cliques/scroll/rage-clicks automaticamente sem instrumentação, mais visão própria do tráfego vindo do Bing (Webmaster Tools/Bing Ads).
 - ~~**Contentsquare**~~ — removido em 2026-07-15 (auditoria de Core Web Vitals): baixava 583 KB e ~2s no `<head>`, era o maior contribuinte pro LCP/TBT ruins no mobile (score 83, LCP 3.7s). Era redundante em propósito com o Clarity (os dois cobrem sessão/heatmap); a única cobertura exclusiva do Contentsquare não compensava o custo de performance.
 
-Os dois scripts ficam no `<head>`, logo depois do favicon e antes do CSS, replicados nas 10 páginas (sem exceção — não há injeção via JS externo nem tag manager). **`404.html` também está incluído** — é o caso mais valioso de "não perder detalhe": link quebrado, URL digitada errada, backlink desatualizado, tudo isso vira pageview + evento igual a qualquer outra página.
+Os dois scripts ficam no `<head>`, logo depois do favicon e antes do CSS, gerados por `AnalyticsHead.astro` nas 10 páginas monitoradas. **`404.html` também está incluído** — é o caso mais valioso de "não perder detalhe": link quebrado, URL digitada errada, backlink desatualizado, tudo isso vira pageview + evento igual a qualquer outra página.
 
 ## Eventos customizados do GA4
 
@@ -60,7 +60,7 @@ Todo parâmetro usa valores **em inglês, consistentes entre as 3 línguas** (ex
 
 ## O que NÃO fazer
 
-- Não duplicar a lógica do listener em cada página com pequenas variações — é o mesmo bloco de JS nas 10 páginas, byte a byte (checar com diff antes de considerar uma mudança concluída, mesmo padrão usado pro CSS embutido). Nas 9 páginas do site, o listener vive dentro da IIFE que já cuida do `IntersectionObserver`; em `404.html` (que não tem reveal animation) ele vive na sua própria IIFE — o corpo do listener em si é idêntico.
+- Não criar listeners por página: as homes usam `HomeBehavior.astro`, os cases usam `CaseBehavior.astro` e a 404 usa `NotFoundBehavior.astro`. Os três mantêm o mesmo contrato de `data-gtag-*`, `page_lang` e parâmetros documentados.
 - Não inventar um novo nome de evento para a mesma ação em lugares diferentes (ex. não criar `whatsapp_hero_click` separado de `whatsapp_click` com `location=hero`) — usar o parâmetro pra diferenciar, não o nome do evento, senão o GA4 fragmenta o relatório.
 - Não usar `onclick` inline nos elementos — o padrão é `data-gtag-*` + o listener delegado, que centraliza a lógica de captura num único lugar por página.
 - Não esquecer de propagar um evento novo pras 3 línguas — mesma regra de paridade do resto do site.

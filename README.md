@@ -12,34 +12,35 @@ Visite o portfólio em [renanmarcal.com](https://renanmarcal.com).
 
 ## Tecnologias e características
 
-- HTML, CSS e JavaScript puros.
-- Site estático, sem etapa de build.
+- Astro em modo estático, sem runtime de framework no navegador.
+- HTML, CSS e JavaScript estáticos gerados por `npm run build`.
 - Versões em português, inglês e espanhol.
 - Cases com layout responsivo e estilos compartilhados em `case.css`.
 - Analytics com Google Analytics 4 e Microsoft Clarity.
-- Deploy pelo GitHub Pages.
+- Deploy via Cloudflare Workers (`dist/`).
 
 ## Estrutura do repositório
 
 ```text
-index.html          Página inicial em português
-cases/              Cases em português
-en/                 Versão em inglês e seus cases
-es/                 Versão em espanhol e seus cases
-assets/             Imagens, ícones e outros recursos estáticos
-case.css            Estilos compartilhados pelos cases
+src/pages/          Rotas Astro
+src/components/     Layouts e comportamentos compartilhados
+src/case-studies/   Corpos editoriais localizados dos cases
+src/styles/         Tokens e estilos compartilhados
+public/assets/      Imagens, ícones e recursos estáticos
+public/planilha-mei-limite/ Landing independente preservada
 docs/               Documentação interna do projeto
 ```
 
 ## Executar localmente
 
-Como o site é estático, basta servir a pasta do repositório com um servidor HTTP local:
+Instale as dependências e inicie o servidor de desenvolvimento:
 
 ```sh
-python3 -m http.server 8000
+npm ci
+npm run dev
 ```
 
-Depois, acesse [http://localhost:8000](http://localhost:8000).
+Para validar o contrato público antes de publicar, use `npm run verify`.
 
 ## Contato
 
