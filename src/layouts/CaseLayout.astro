@@ -3,9 +3,10 @@ import AnalyticsHead from "../components/AnalyticsHead.astro";
 import CaseBehavior from "../components/scripts/CaseBehavior.astro";
 import "../styles/case.css";
 
-interface Props { lang: string; ogLocale: string; title: string; description: string; canonical: string; ogImageAlt: string; }
-const { lang, ogLocale, title, description, canonical, ogImageAlt } = Astro.props;
-const ogImage = "https://renanmarcal.com/assets/img/thumb-priorizacao-visitas-comerciais.jpg";
+interface Props { lang: string; ogLocale?: string; title: string; description: string; canonical: string; ogImage: string; ogImageAlt?: string; analytics?: boolean; bodyClass?: string; alternates?: Record<"pt" | "en" | "es" | "x-default", string>; }
+const { lang, ogLocale, title, description, canonical, ogImage, ogImageAlt, analytics = true, bodyClass, alternates } = Astro.props;
+const defaultAlternates = { pt: "https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html", en: "https://renanmarcal.com/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html", es: "https://renanmarcal.com/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html", "x-default": "https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html" };
+const resolvedAlternates = analytics ? (alternates ?? defaultAlternates) : undefined;
 ---
 <!doctype html>
 <html lang={lang}>
@@ -20,18 +21,15 @@ const ogImage = "https://renanmarcal.com/assets/img/thumb-priorizacao-visitas-co
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content={ogLocale} />
+    {ogLocale && <meta property="og:locale" content={ogLocale} />}
     <meta property="og:site_name" content="Renan Marçal" />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:alt" content={ogImageAlt} />
+    {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
     <meta property="og:url" content={canonical} />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="pt" href="https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html" />
-    <link rel="alternate" hreflang="en" href="https://renanmarcal.com/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html" />
-    <link rel="alternate" hreflang="es" href="https://renanmarcal.com/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html" />
-    <link rel="alternate" hreflang="x-default" href="https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html" />
+    {resolvedAlternates && <>{Object.entries(resolvedAlternates).map(([hreflang, href]) => <link rel="alternate" hreflang={hreflang} href={href} />)}</>}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <AnalyticsHead />
+    {analytics && <AnalyticsHead />}
   </head>
-  <body><slot /><CaseBehavior /></body>
+  <body class={bodyClass}><slot /><CaseBehavior /></body>
 </html>

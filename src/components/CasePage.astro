@@ -6,12 +6,14 @@ import type { PrioritizationCaseData } from "../data/cases";
 
 interface Props { data: PrioritizationCaseData; source: string; }
 const { data, source } = Astro.props;
-const editorial = source.match(/<main id="main-content">[\s\S]*?<\/main>\s*<a class="next-case"[\s\S]*?<\/a>/)?.[0];
+const editorial = source.match(/<main id="main-content">[\s\S]*?<\/main>(?:\s*<a class="next-case"[\s\S]*?<\/a>)?/)?.[0];
+const legacyFooter = data.footer ? undefined : source.match(/<footer class="footer"[\s\S]*?<\/footer>/)?.[0];
 if (!editorial) throw new Error("Não foi possível extrair o conteúdo editorial do case de priorização.");
+if (!data.footer && !legacyFooter) throw new Error("Não foi possível extrair o footer do case legado.");
 ---
 <CaseLayout {...data}>
   <a class="skip-link" href="#main-content">{data.skipLink}</a>
-  <CaseTopbar crumb={data.crumb} locale={data.locale} />
+  <CaseTopbar crumb={data.crumb} locale={data.locale} showLanguageSwitch={data.showLanguageSwitch} tracking={data.analytics} />
   <Fragment set:html={editorial} />
-  <SiteFooter locale={data.locale} {...data.footer} />
+  {data.footer ? <SiteFooter locale={data.locale} {...data.footer} /> : <Fragment set:html={legacyFooter} />}
 </CaseLayout>

@@ -1,6 +1,6 @@
 # Plano de migração para Astro
 
-**Status:** T4 concluída em 2026-07-21; próxima tarefa: T5
+**Status:** T5 concluída em 2026-07-21; próxima tarefa: T6
 **Data:** 2026-07-21
 **Modo de execução:** uma tarefa vertical por sessão Terra; mudanças de produção só após `pode executar` explícito.
 
@@ -373,6 +373,7 @@ A migração está concluída somente quando:
 - **Feito na T2:** `/` é gerada por `src/pages/index.astro`; `HomeLayout.astro` concentra head, SEO, JSON-LD e analytics; `home.css` e `tokens.css` são folhas externas; `HomeBehavior.astro` contém o listener delegado, reveals, magnetismo e o calibrador da foto. A cópia transitória `public/index.html` foi removida, mas o HTML legado da raiz permanece somente como referência até T6.
 - **Feito na T3:** `HomePage.astro` concentra a estrutura das três homes; `/`, `/en/` e `/es/` usam os mesmos layout, CSS e comportamento, alimentados por `src/data/locales/{pt,en,es}.ts`. Cada idioma preserva copy, CTAs, eventos, canonical, OG e JSON-LD próprios, bem como a calibração aprovada do hero (PT `90px/32vw`, EN `17px/37vw`, ES `48px/35vw`). As cópias transitórias `public/en/index.html` e `public/es/index.html` foram removidas após as rotas Astro equivalentes serem criadas.
 - **Feito na T4:** as três URLs de priorização de visitas são geradas por rotas Astro e mantêm seus corpos editoriais localizados. `CaseLayout.astro`, `CaseTopbar.astro`, `SiteFooter.astro`, `CaseBehavior.astro` e `src/styles/case.css` concentram head, analytics, topbar, footer, progress bar, reveals, eventos e magnetismo. As cópias transitórias correspondentes em `public/` foram removidas. O corpo editorial ainda é carregado dos HTMLs legados de referência, até a remoção final prevista na T6.
-- **Próxima tarefa:** T5 — migrar o Portal C6 Pay em PT/EN/ES e o case oculto de Landing Pages em PT, mantendo visibilidade e URLs atuais.
+- **Feito na T5:** as três URLs do Portal C6 Pay e a URL privada de Landing Pages são geradas por Astro. `CaseLayout.astro` foi generalizado para canonical, OG e alternates por case, sem alterar o contrato de priorização. Landing Pages mantém a ausência de seletor de idioma, GA4 e Clarity, além de continuar fora da home e do sitemap. As quatro cópias transitórias correspondentes em `public/` foram removidas.
+- **Próxima tarefa:** T6 — concluir sitemap, 404, SEO, analytics e documentação; remover somente os HTMLs legados que tiverem substituto definitivo.
 - **Arquivos relevantes:** `src/components/{CasePage,CaseTopbar,SiteFooter,HomePage}.astro`, `src/components/scripts/{CaseBehavior,HomeBehavior}.astro`, `src/layouts/{CaseLayout,HomeLayout}.astro`, `src/data/{cases,locales/{pt,en,es}}.ts`, `src/pages/{cases,en/cases,es/cases}/`, `src/styles/{tokens,home,case}.css`, `fixtures/public-routes.json`, `scripts/verify-build.mjs`.
 - **Verificação concluída:** `npm run verify` passa sem diagnósticos, com 11 rotas, 9 indexáveis e 10 páginas monitoradas. A validação visual continua pendente para o Renan, sem uso de browser pelo agente.

@@ -1,6 +1,6 @@
 ---
-interface Props { crumb: string; locale: "pt" | "en" | "es"; }
-const { crumb, locale } = Astro.props;
+interface Props { crumb: string; locale: "pt" | "en" | "es"; showLanguageSwitch?: boolean; tracking?: boolean; }
+const { crumb, locale, showLanguageSwitch = true, tracking = true } = Astro.props;
 const paths = { pt: "/cases/case-priorizacao-visitas-comerciais-mercado-pago.html", en: "/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html", es: "/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html" } as const;
 ---
-<header class="topbar"><div class="wrap"><a href={locale === "pt" ? "/" : `/${locale}/`} data-gtag-event="logo_home_click" data-gtag-location="case">← Renan Marçal</a><span class="crumb">{crumb}</span><nav class="lang-switch" aria-label="Language / Idioma">{(["pt", "en", "es"] as const).map((item, index) => <><a href={paths[item]} hreflang={item} aria-current={item === locale ? "page" : undefined} data-gtag-event="lang_switch_click" data-gtag-target-lang={item}>{item.toUpperCase()}</a>{index < 2 && <span aria-hidden="true">·</span>}</>)}</nav></div><div class="progress-bar" id="progress"></div></header>
+<header class="topbar"><div class="wrap"><a href={locale === "pt" ? "/" : `/${locale}/`} data-gtag-event={tracking ? "logo_home_click" : undefined} data-gtag-location={tracking ? "case" : undefined}>← Renan Marçal</a><span class="crumb">{crumb}</span>{showLanguageSwitch && <nav class="lang-switch" aria-label="Language / Idioma">{(["pt", "en", "es"] as const).map((item, index) => <><a href={paths[item]} hreflang={item} aria-current={item === locale ? "page" : undefined} data-gtag-event="lang_switch_click" data-gtag-target-lang={item}>{item.toUpperCase()}</a>{index < 2 && <span aria-hidden="true">·</span>}</>)}</nav>}</div><div class="progress-bar" id="progress"></div></header>
