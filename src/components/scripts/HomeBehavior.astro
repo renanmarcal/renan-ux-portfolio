@@ -1,0 +1,56 @@
+<script is:inline>
+  (function(){
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+    }, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+    document.querySelectorAll('.pillars, .footer').forEach(zone => {
+      zone.style.overflow = 'hidden';
+      const glow = document.createElement('div');
+      glow.style.cssText = 'position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(184,69,31,.22) 0%,transparent 68%);filter:blur(72px);pointer-events:none;transform:translate(-50%,-50%);opacity:0;transition:opacity .5s;will-change:left,top;';
+      zone.style.position = 'relative'; zone.appendChild(glow);
+      zone.addEventListener('mouseenter', () => glow.style.opacity = '1');
+      zone.addEventListener('mouseleave', () => glow.style.opacity = '0');
+      zone.addEventListener('mousemove', e => { const r = zone.getBoundingClientRect(); glow.style.left = (e.clientX-r.left)+'px'; glow.style.top = (e.clientY-r.top)+'px'; });
+    });
+    document.addEventListener('click', e => {
+      const el = e.target.closest('[data-gtag-event]');
+      if (!el || typeof gtag !== 'function') return;
+      const params = { page_lang: document.documentElement.lang };
+      for (const attr of el.attributes) if (attr.name.startsWith('data-gtag-') && attr.name !== 'data-gtag-event') params[attr.name.slice('data-gtag-'.length).replace(/-/g, '_')] = attr.value;
+      gtag('event', el.dataset.gtagEvent, params);
+    });
+    function calibrateBoldPhoto() {
+      var photo = document.getElementById('bg-photo'), hl = document.querySelector('.bold-h1 .hl');
+      if (!photo || !hl) return;
+      if (window.innerWidth > 900) { photo.style.removeProperty('--bp-w'); return; }
+      var txt = hl.firstChild;
+      if (!txt || txt.nodeType !== 3 || !txt.data.length) return;
+      var range = document.createRange(); range.setStart(txt, txt.data.length-1); range.setEnd(txt, txt.data.length);
+      var s = range.getBoundingClientRect(), photoRight = photo.parentElement.getBoundingClientRect().right;
+      var desired = photoRight - (s.right - s.width*.5), vw = window.innerWidth, maxW = Math.min(380, Math.max(220, .32*vw)), w;
+      if (desired <= maxW) w = Math.max(96, desired);
+      else { var t = Math.min(1, Math.max(0, (vw-530)/(900-530))); w = 200 + (maxW-200)*t; }
+      photo.style.setProperty('--bp-w', Math.min(w,maxW).toFixed(1)+'px');
+    }
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(calibrateBoldPhoto);
+      var bpT; window.addEventListener('resize', function(){ clearTimeout(bpT); bpT=setTimeout(calibrateBoldPhoto,120); });
+      window.addEventListener('orientationchange', calibrateBoldPhoto);
+    }
+  })();
+</script>
+<script is:inline>
+  (function(){
+    var reduced=window.matchMedia('(prefers-reduced-motion: reduce)'); if(reduced.matches)return;
+    var photo=document.getElementById('bg-photo');
+    photo.addEventListener('pointermove',function(e){var r=photo.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,angle=Math.atan2(e.clientY-cy,e.clientX-cx)*180/Math.PI+90;photo.style.setProperty('--spot-angle',angle+'deg');});
+    document.querySelectorAll('.magnet').forEach(function(btn){
+      var x=0,y=0,vx=0,vy=0,dx=0,dy=0,raf=null,stiffness=170,damping=26,last=null;
+      btn.addEventListener('pointermove',function(e){var r=btn.getBoundingClientRect();dx=(e.clientX-(r.left+r.width/2))*.18;dy=(e.clientY-(r.top+r.height/2))*.3;start();});
+      btn.addEventListener('pointerleave',function(){dx=0;dy=0;start();});
+      function start(){if(!raf){last=performance.now();raf=requestAnimationFrame(step);}}
+      function step(now){var dt=Math.min((now-last)/1000,.032);last=now;var ax=stiffness*(dx-x)-damping*vx,ay=stiffness*(dy-y)-damping*vy;vx+=ax*dt;vy+=ay*dt;x+=vx*dt;y+=vy*dt;btn.style.transform='translate('+x.toFixed(2)+'px,'+y.toFixed(2)+'px)';if(Math.abs(dx-x)>.05||Math.abs(dy-y)>.05||Math.abs(vx)>.05||Math.abs(vy)>.05)raf=requestAnimationFrame(step);else{x=dx;y=dy;vx=0;vy=0;btn.style.transform=dx===0&&dy===0?'':'translate('+dx+'px,'+dy+'px)';raf=null;}}
+    });
+  })();
+</script>

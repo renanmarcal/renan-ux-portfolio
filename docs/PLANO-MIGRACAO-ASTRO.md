@@ -1,6 +1,6 @@
 # Plano de migração para Astro
 
-**Status:** T1 concluída em 2026-07-21; próxima tarefa: T2
+**Status:** T2 concluída em 2026-07-21; próxima tarefa: T3
 **Data:** 2026-07-21
 **Modo de execução:** uma tarefa vertical por sessão Terra; mudanças de produção só após `pode executar` explícito.
 
@@ -370,7 +370,8 @@ A migração está concluída somente quando:
 - **Decisão atual:** SSG puro, `build.format: "preserve"`, Workers Builds e modelo híbrido de conteúdo descrito neste plano.
 - **Feito na T0:** alterações locais consolidadas em `89f8229`; `origin/main` integrado em `d484c8a`; branch de execução criada como `chore/astro-migration`; fixture pública criada em `fixtures/public-routes.json`.
 - **Feito na T1:** Astro 7.1.3, check, TypeScript e Wrangler 4.112.0 fixados no lockfile; SSG configurado; `wrangler.jsonc` aponta para `./dist` com 404 explícito; o site legado está em `public/` como ponte transitória; `scripts/verify-build.mjs` valida o contrato público.
-- **Próxima tarefa:** T2 — migrar somente a home PT. Antes de criar `src/pages/index.astro`, remover a cópia transitória `public/index.html`; o HTML original na raiz permanece como referência até a portagem estar validada.
-- **Arquivos relevantes:** `fixtures/public-routes.json`, `scripts/verify-build.mjs`, `public/`, `package.json`, `astro.config.mjs`, `wrangler.jsonc`, `.assetsignore`, `docs/ARCHITECTURE.md`, `CLAUDE.md`.
-- **Verificação concluída:** fixture confere com os HTMLs atuais: 11 rotas, 9 indexáveis e 10 páginas monitoradas; `npm ci && npm run build` passa; `npm run verify` passa sem diagnósticos; `origin/main` é ancestral de `chore/astro-migration`.
-- **Dúvida aberta para T2:** nenhuma. A cópia transitória em `public/` define uma substituição incremental, uma rota por vez.
+- **Feito na T2:** `/` é gerada por `src/pages/index.astro`; `HomeLayout.astro` concentra head, SEO, JSON-LD e analytics; `home.css` e `tokens.css` são folhas externas; `HomeBehavior.astro` contém o listener delegado, reveals, magnetismo e o calibrador da foto. A cópia transitória `public/index.html` foi removida, mas o HTML legado da raiz permanece somente como referência até T6.
+- **Próxima tarefa:** T3 — propagar a home para EN e ES com o mesmo layout/CSS. Remover `public/en/index.html` e `public/es/index.html` somente no momento em que suas rotas Astro equivalentes existirem.
+- **Arquivos relevantes:** `src/pages/index.astro`, `src/layouts/HomeLayout.astro`, `src/components/AnalyticsHead.astro`, `src/components/scripts/HomeBehavior.astro`, `src/data/locales/pt.ts`, `src/styles/{tokens,home}.css`, `fixtures/public-routes.json`, `scripts/verify-build.mjs`.
+- **Verificação concluída:** `npm run verify` passa sem diagnósticos, com 11 rotas, 9 indexáveis e 10 páginas monitoradas. A validação visual continua pendente para o Renan, sem uso de browser pelo agente.
+- **Dúvida aberta para T3:** extrair os textos da home para dados EN/ES sem alterar a calibração aprovada do hero por idioma (`17px/37vw` EN, `48px/35vw` ES).

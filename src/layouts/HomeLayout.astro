@@ -1,0 +1,66 @@
+---
+import AnalyticsHead from "../components/AnalyticsHead.astro";
+import "../styles/tokens.css";
+import "../styles/home.css";
+
+interface Props {
+  lang: string;
+  title: string;
+  description: string;
+  canonical: string;
+  ogImage: string;
+  ogImageAlt: string;
+  heroPhotoOffset: string;
+  heroPhotoFallbackWidth: string;
+}
+
+const { lang, title, description, canonical, ogImage, ogImageAlt, heroPhotoOffset, heroPhotoFallbackWidth } = Astro.props;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  dateCreated: "2026-07-09",
+  mainEntity: {
+    "@type": "Person", name: "Renan Marçal", alternateName: "Renan Marcal", jobTitle: "Product Designer",
+    description: "Product Designer com 6 anos de experiência em fintech e B2B, com cases no C6 Bank e Mercado Pago.",
+    url: "https://renanmarcal.com/", image: "https://renanmarcal.com/assets/img/renan-avatar.jpg", email: "renanmarccal@gmail.com",
+    sameAs: ["https://linkedin.com/in/rnmrc90"],
+    knowsAbout: ["Product Design", "UX Design", "UI Design", "Design Systems", "User Research", "Fintech", "B2B SaaS", "Prototyping", "Figma"],
+    worksFor: [{ "@type": "Organization", name: "Mercado Pago" }, { "@type": "Organization", name: "C6 Bank" }],
+    workLocation: { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "São Paulo", addressCountry: "BR" } }
+  }
+};
+---
+<!doctype html>
+<html lang={lang} style={`--hero-photo-offset: ${heroPhotoOffset}; --hero-photo-fallback-width: ${heroPhotoFallbackWidth};`}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&family=Figtree:wght@400;500;600&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&family=Figtree:wght@400;500;600&display=swap" media="print" onload={"this.media='all'"} />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&family=Figtree:wght@400;500;600&display=swap" /></noscript>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Renan Marçal" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta property="og:url" content={canonical} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="pt" href="https://renanmarcal.com/" />
+    <link rel="alternate" hreflang="en" href="https://renanmarcal.com/en/" />
+    <link rel="alternate" hreflang="es" href="https://renanmarcal.com/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://renanmarcal.com/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/assets/img/renan-avatar.webp" as="image" fetchpriority="high" type="image/webp" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
+    <AnalyticsHead />
+  </head>
+  <body><slot /></body>
+</html>
