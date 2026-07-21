@@ -1,6 +1,6 @@
 # Plano de migração para Astro
 
-**Status:** planejado, não iniciado
+**Status:** T0 concluída em 2026-07-21; próxima tarefa: T1
 **Data:** 2026-07-21
 **Modo de execução:** uma tarefa vertical por sessão Terra; mudanças de produção só após `pode executar` explícito.
 
@@ -363,3 +363,13 @@ A migração está concluída somente quando:
 - Cloudflare, Astro estático em Workers: https://developers.cloudflare.com/workers/framework-guides/web-apps/astro/
 - Cloudflare Workers Builds: https://developers.cloudflare.com/workers/ci-cd/builds/configuration/
 - Cloudflare, SSG e custom 404: https://developers.cloudflare.com/workers/static-assets/routing/static-site-generation/
+
+## 9. Handoff atual
+
+- **Objetivo:** migrar o portfólio para Astro sem alterar URLs, conteúdo, SEO, analytics ou comportamento visível.
+- **Decisão atual:** SSG puro, `build.format: "preserve"`, Workers Builds e modelo híbrido de conteúdo descrito neste plano.
+- **Feito na T0:** alterações locais consolidadas em `89f8229`; `origin/main` integrado em `d484c8a`; branch de execução criada como `chore/astro-migration`; fixture pública criada em `fixtures/public-routes.json`.
+- **Próxima tarefa:** T1 — scaffold Astro e contrato de build. Não iniciar T2 nesta mesma sessão.
+- **Arquivos relevantes:** `fixtures/public-routes.json`, `wrangler.jsonc`, `.assetsignore`, `docs/ARCHITECTURE.md`, `CLAUDE.md`.
+- **Verificação concluída:** fixture confere com os HTMLs atuais: 11 rotas, 9 indexáveis e 10 páginas monitoradas; `origin/main` é ancestral de `chore/astro-migration`; árvore Git limpa.
+- **Dúvida aberta para T1:** atualizar `wrangler.jsonc` de `assets.directory: "."` para `"./dist"` somente quando o primeiro build Astro gerar `dist/`.
