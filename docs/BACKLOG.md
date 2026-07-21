@@ -14,8 +14,8 @@ Pendências conhecidas. Marcar com data quando resolvido e mover para `docs/DECI
 ## Conteúdo / SEO
 
 - [x] 2026-07-20 · Criar imagem de og:image própria da home (1200×630) — feito em 2026-07-12 (`assets/img/og-hero-{pt,en,es}.jpg`, já referenciados nos 3 `index.html`); item ficou órfão no backlog, sem correção de código nesta sessão.
-- [ ] `cases/case-dashboard-carteira-mercado-pago.html`: stub com `[ a preencher ]`, já tem `noindex` mas segue sem conteúdo real — decidir se vira case completo ou é removido do repo.
-- [ ] `cases/case-landing-pages-checkout-mercado-pago.html`: existe mas está comentado/oculto na home, sem tradução EN/ES. Decidir: publicar ou remover.
+- [x] 2026-07-21 · `cases/case-dashboard-carteira-mercado-pago.html`: stub com `[ a preencher ]`, sem nenhum link ativo (só aparecia neste backlog) — removido do repo.
+- [ ] `cases/case-landing-pages-checkout-mercado-pago.html`: existe, conteúdo completo em PT, mas segue comentado/oculto na home e sem tradução EN/ES — decisão 2026-07-21: manter oculto por enquanto, revisitar depois.
 
 ## Acessibilidade / craft
 
