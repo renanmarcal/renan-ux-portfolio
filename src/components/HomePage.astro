@@ -1,0 +1,68 @@
+---
+import HomeBehavior from "./scripts/HomeBehavior.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
+
+export interface HomeData {
+  lang: string;
+  ogLocale: string;
+  title: string;
+  description: string;
+  canonical: string;
+  ogImage: string;
+  ogImageAlt: string;
+  heroPhotoOffset: string;
+  heroPhotoFallbackWidth: string;
+  structuredDescription: string;
+  skipLink: string;
+  navigationLabel: string;
+  navigation: { about: string; cases: string; contact: string; contactId: string };
+  locale: "pt" | "en" | "es";
+  hero: {
+    kicker: string;
+    lines: [string, string, string];
+    imageAlt: string;
+    bio: { before: string; c6: string; middle: string; mercadoPago: string; after: string };
+    whatsappUrl: string;
+    whatsappLabel: string;
+    linkedinLabel: string;
+    experience: string;
+    specialties: string;
+  };
+  pillars: { title: string; description: string }[];
+  casesTitle: string;
+  cases: {
+    href: string;
+    trackingCase: string;
+    imageWebp: string;
+    imageJpg: string;
+    imageAlt: string;
+    kicker: string;
+    title: string;
+    description: string;
+    metrics: { value: string; label: string }[];
+    invite: string;
+  }[];
+  footer: {
+    titleBefore: string;
+    titleHighlight: string;
+    titleAfter: string;
+    description: string;
+    whatsappLabel: string;
+    location: string;
+    copyright: string;
+  };
+}
+
+const { data } = Astro.props as { data: HomeData };
+const locales = ["pt", "en", "es"] as const;
+const localePaths = { pt: "/", en: "/en/", es: "/es/" } as const;
+---
+<HomeLayout {...data}>
+  <a class="skip-link" href="#cases">{data.skipLink}</a>
+  <header class="topbar"><div class="wrap"><nav class="topbar-nav" aria-label={data.navigationLabel}><a href="#top" data-gtag-event="topbar_nav_click" data-gtag-target="about">{data.navigation.about}</a><a href="#cases" data-gtag-event="topbar_nav_click" data-gtag-target="cases">{data.navigation.cases}</a><a href={`#${data.navigation.contactId}`} data-gtag-event="topbar_nav_click" data-gtag-target="contact">{data.navigation.contact}</a></nav><nav class="lang-switch" aria-label="Language / Idioma">{locales.map((locale, index) => <><a href={localePaths[locale]} hreflang={locale} aria-current={locale === data.locale ? "page" : undefined} data-gtag-event="lang_switch_click" data-gtag-target-lang={locale}>{locale.toUpperCase()}</a>{index < locales.length - 1 && <span aria-hidden="true">·</span>}</>)}</nav></div></header>
+  <header class="hero bold-hero" id="top"><div class="wrap"><div class="bold-stage"><p class="bold-kicker">{data.hero.kicker}</p><h1 class="bold-h1"><span class="bh1-line">{data.hero.lines[0]}</span><span class="bh1-line">{data.hero.lines[1]}</span><span class="bh1-line"><span class="hl">{data.hero.lines[2]}</span></span></h1><div class="bold-photo" id="bg-photo"><picture><source srcset="/assets/img/renan-avatar.webp" type="image/webp" /><img src="/assets/img/renan-avatar.jpg" alt={data.hero.imageAlt} width="760" height="760" loading="eager" fetchpriority="high" /></picture></div></div><div class="bold-lower"><p class="hero-bio">{data.hero.bio.before}<b>{data.hero.bio.c6}</b>{data.hero.bio.middle}<b>{data.hero.bio.mercadoPago}</b>{data.hero.bio.after}</p><div class="hero-actions"><a class="btn btn-primary magnet" href={data.hero.whatsappUrl} target="_blank" rel="noopener" data-gtag-event="whatsapp_click" data-gtag-location="hero">{data.hero.whatsappLabel}</a><a class="btn btn-ghost magnet" href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener" data-gtag-event="linkedin_click" data-gtag-location="hero">{data.hero.linkedinLabel}</a></div></div><div class="bold-ticker"><div class="t-group"><span class="logo-row"><img src="/assets/img/logo-mercado-pago.svg" alt="Mercado Pago" width="90" height="20" loading="eager" /><img src="/assets/img/logo-c6-bank.svg" class="invert" alt="C6 Bank" width="110" height="20" loading="eager" /></span></div><div class="t-group"><span class="t-value">{data.hero.experience}</span></div><div class="t-group"><span class="t-value">{data.hero.specialties}</span></div></div></div></header>
+  <section class="pillars"><div class="wrap"><div class="pillars-grid">{data.pillars.map((pillar, index) => <div class="pillar" data-reveal="up" data-d={index || undefined}><span class="pillar-num">{String(index + 1).padStart(2, "0")}</span><h3 class="pillar-verb">{pillar.title}</h3><p class="pillar-desc">{pillar.description}</p></div>)}</div></div></section>
+  <main class="cases" id="cases"><div class="wrap"><div class="cases-header"><h2 data-reveal="up">{data.casesTitle}</h2></div><div class="case-grid">{data.cases.map((caseStudy, index) => <a href={caseStudy.href} class="case-card" data-reveal="up" data-d={index || undefined} data-gtag-event="case_card_click" data-gtag-case={caseStudy.trackingCase}><div class="case-thumb"><picture><source srcset={caseStudy.imageWebp} type="image/webp" /><img src={caseStudy.imageJpg} width="2240" height="1400" loading="lazy" alt={caseStudy.imageAlt} /></picture></div><div class="case-info"><p class="case-kicker">{caseStudy.kicker}</p><h3>{caseStudy.title}</h3><p class="case-desc">{caseStudy.description}</p><div class="case-metrics">{caseStudy.metrics.map((metric) => <div class="metric-inline"><span class="m-val">{metric.value}</span> <span class="m-label">{metric.label}</span></div>)}</div><p class="case-invite">{caseStudy.invite}</p></div></a>)}</div></div></main>
+  <footer class="footer" id={data.navigation.contactId}><div class="wrap footer-inner"><div class="f3-grid"><h2 class="f-title">{data.footer.titleBefore}<span class="hl">{data.footer.titleHighlight}</span><br />{data.footer.titleAfter}</h2><div class="f3-cta"><p class="f-sub">{data.footer.description}</p><a class="btn btn-primary magnet" href={data.hero.whatsappUrl} target="_blank" rel="noopener" data-gtag-event="whatsapp_click" data-gtag-location="footer">{data.footer.whatsappLabel}</a></div></div></div><div class="wrap"><div class="close-ticker"><span>{data.footer.location}</span><a href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener" data-gtag-event="linkedin_click" data-gtag-location="footer">linkedin.com/in/rnmrc90</a></div><div class="footer-rule"></div><p class="footer-copy">{data.footer.copyright}</p></div></footer>
+  <HomeBehavior />
+</HomeLayout>

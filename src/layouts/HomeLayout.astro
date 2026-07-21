@@ -5,6 +5,7 @@ import "../styles/home.css";
 
 interface Props {
   lang: string;
+  ogLocale: string;
   title: string;
   description: string;
   canonical: string;
@@ -12,17 +13,18 @@ interface Props {
   ogImageAlt: string;
   heroPhotoOffset: string;
   heroPhotoFallbackWidth: string;
+  structuredDescription: string;
 }
 
-const { lang, title, description, canonical, ogImage, ogImageAlt, heroPhotoOffset, heroPhotoFallbackWidth } = Astro.props;
+const { lang, ogLocale, title, description, canonical, ogImage, ogImageAlt, heroPhotoOffset, heroPhotoFallbackWidth, structuredDescription } = Astro.props;
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   dateCreated: "2026-07-09",
   mainEntity: {
     "@type": "Person", name: "Renan Marçal", alternateName: "Renan Marcal", jobTitle: "Product Designer",
-    description: "Product Designer com 6 anos de experiência em fintech e B2B, com cases no C6 Bank e Mercado Pago.",
-    url: "https://renanmarcal.com/", image: "https://renanmarcal.com/assets/img/renan-avatar.jpg", email: "renanmarccal@gmail.com",
+    description: structuredDescription,
+    url: canonical, image: "https://renanmarcal.com/assets/img/renan-avatar.jpg", email: "renanmarccal@gmail.com",
     sameAs: ["https://linkedin.com/in/rnmrc90"],
     knowsAbout: ["Product Design", "UX Design", "UI Design", "Design Systems", "User Research", "Fintech", "B2B SaaS", "Prototyping", "Figma"],
     worksFor: [{ "@type": "Organization", name: "Mercado Pago" }, { "@type": "Organization", name: "C6 Bank" }],
@@ -45,7 +47,7 @@ const structuredData = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale" content={ogLocale} />
     <meta property="og:site_name" content="Renan Marçal" />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
