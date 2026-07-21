@@ -1,6 +1,6 @@
 # Plano de migração para Astro
 
-**Status:** T0 concluída em 2026-07-21; próxima tarefa: T1
+**Status:** T1 concluída em 2026-07-21; próxima tarefa: T2
 **Data:** 2026-07-21
 **Modo de execução:** uma tarefa vertical por sessão Terra; mudanças de produção só após `pode executar` explícito.
 
@@ -369,7 +369,8 @@ A migração está concluída somente quando:
 - **Objetivo:** migrar o portfólio para Astro sem alterar URLs, conteúdo, SEO, analytics ou comportamento visível.
 - **Decisão atual:** SSG puro, `build.format: "preserve"`, Workers Builds e modelo híbrido de conteúdo descrito neste plano.
 - **Feito na T0:** alterações locais consolidadas em `89f8229`; `origin/main` integrado em `d484c8a`; branch de execução criada como `chore/astro-migration`; fixture pública criada em `fixtures/public-routes.json`.
-- **Próxima tarefa:** T1 — scaffold Astro e contrato de build. Não iniciar T2 nesta mesma sessão.
-- **Arquivos relevantes:** `fixtures/public-routes.json`, `wrangler.jsonc`, `.assetsignore`, `docs/ARCHITECTURE.md`, `CLAUDE.md`.
-- **Verificação concluída:** fixture confere com os HTMLs atuais: 11 rotas, 9 indexáveis e 10 páginas monitoradas; `origin/main` é ancestral de `chore/astro-migration`; árvore Git limpa.
-- **Dúvida aberta para T1:** atualizar `wrangler.jsonc` de `assets.directory: "."` para `"./dist"` somente quando o primeiro build Astro gerar `dist/`.
+- **Feito na T1:** Astro 7.1.3, check, TypeScript e Wrangler 4.112.0 fixados no lockfile; SSG configurado; `wrangler.jsonc` aponta para `./dist` com 404 explícito; o site legado está em `public/` como ponte transitória; `scripts/verify-build.mjs` valida o contrato público.
+- **Próxima tarefa:** T2 — migrar somente a home PT. Antes de criar `src/pages/index.astro`, remover a cópia transitória `public/index.html`; o HTML original na raiz permanece como referência até a portagem estar validada.
+- **Arquivos relevantes:** `fixtures/public-routes.json`, `scripts/verify-build.mjs`, `public/`, `package.json`, `astro.config.mjs`, `wrangler.jsonc`, `.assetsignore`, `docs/ARCHITECTURE.md`, `CLAUDE.md`.
+- **Verificação concluída:** fixture confere com os HTMLs atuais: 11 rotas, 9 indexáveis e 10 páginas monitoradas; `npm ci && npm run build` passa; `npm run verify` passa sem diagnósticos; `origin/main` é ancestral de `chore/astro-migration`.
+- **Dúvida aberta para T2:** nenhuma. A cópia transitória em `public/` define uma substituição incremental, uma rota por vez.

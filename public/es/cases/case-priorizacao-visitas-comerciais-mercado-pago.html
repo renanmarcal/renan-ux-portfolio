@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&family=Figtree:wght@400;500;600&display=swap">
+<title>Priorización de visitas comerciales en Mercado Pago, estudio de caso de diseño · Renan Marçal</title>
+<meta name="description" content="Estudio de caso de UX: rediseño de la priorización de visitas comerciales en el CRM interno de Mercado Pago para representantes de campo en Brasil, México y Argentina.">
+<meta property="og:title" content="Priorización de visitas comerciales en Mercado Pago, estudio de caso de diseño · Renan Marçal">
+<meta property="og:description" content="Estudio de caso de UX: rediseño de la priorización de visitas comerciales en el CRM interno de Mercado Pago para representantes de campo en Brasil, México y Argentina.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Renan Marçal">
+<meta property="og:image" content="https://renanmarcal.com/assets/img/thumb-priorizacao-visitas-comerciais.jpg">
+<meta property="og:image:alt" content="Mockup de la app de priorización de visitas de Mercado Pago mostrando la agenda y el detalle de visita">
+<meta property="og:url" content="https://renanmarcal.com/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html">
+<link rel="canonical" href="https://renanmarcal.com/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html">
+<link rel="alternate" hreflang="pt" href="https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html">
+<link rel="alternate" hreflang="en" href="https://renanmarcal.com/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html">
+<link rel="alternate" hreflang="es" href="https://renanmarcal.com/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html">
+<link rel="alternate" hreflang="x-default" href="https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M66N19ZT36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M66N19ZT36');
+</script>
+<!-- Clarity tracking code for https://renanmarcal.com/ -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xl7ajvipib");
+</script>
+<link rel="stylesheet" href="../../case.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="../index.html" data-gtag-event="logo_home_click" data-gtag-location="case">← Renan Marçal</a>
+    <span class="crumb">Priorización de visitas</span>
+    <nav class="lang-switch" aria-label="Language / Idioma">
+      <a href="../../cases/case-priorizacao-visitas-comerciais-mercado-pago.html" hreflang="pt" data-gtag-event="lang_switch_click" data-gtag-target-lang="pt">PT</a>
+      <span aria-hidden="true">·</span>
+      <a href="../../en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html" hreflang="en" data-gtag-event="lang_switch_click" data-gtag-target-lang="en">EN</a>
+      <span aria-hidden="true">·</span>
+      <a href="case-priorizacao-visitas-comerciais-mercado-pago.html" hreflang="es" aria-current="page" data-gtag-event="lang_switch_click" data-gtag-target-lang="es">ES</a>
+    </nav>
+  </div>
+  <div class="progress-bar" id="progress"></div>
+</header>
+
+<main id="main-content">
+<section class="hero" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">Mercado Pago · 2024–2025</p>
+        <h1>
+          <span class="h1-line">Priorización de</span>
+          <span class="h1-line">visitas comerciales</span>
+        </h1>
+      </div>
+      <div class="hero-right">
+        <p class="hero-summary">Los representantes recibían alertas de prioridad, pero la herramienta no ayudaba a transformarlas en un plan de visitas viable. El desafío era rediseñar este flujo para Brasil, México y Argentina sin fragmentar el comportamiento del producto entre mercados.</p>
+        <div class="spec">
+          <div><div class="s-label">Rol</div><div class="s-val">Product Designer · UX Research</div></div>
+          <div><div class="s-label">Impacto</div><div class="s-val">+15% productividad diaria · −5% churn</div></div>
+          <div><div class="s-label">Equipo</div><div class="s-val">2 PMs · 4 Devs</div></div>
+          <div><div class="s-label">Duración</div><div class="s-val">3 meses</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hero-img-strip">
+  <div class="wrap">
+    <picture>
+          <source srcset="../../assets/img/mockup-priorizacao-visitas-comerciais.webp" type="image/webp">
+          <img src="../../assets/img/mockup-priorizacao-visitas-comerciais.jpg" loading="eager" alt="Mockup de la app de priorización de visitas de Mercado Pago mostrando la agenda y el detalle de visita" class="hero-mockup-full">
+        </picture>
+  </div>
+</div>
+
+<!-- 01 ESTRUCTURA -->
+<section class="block" id="b01" data-stage="01" data-name="Estructura">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage problema">estructura</span>
+        <span class="stage-num">01</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Una herramienta en el centro de las operaciones de campo</h2>
+      </div>
+      <div class="idea-grid full-slot" data-reveal="fade">
+        <div class="c-card">
+          <span class="c-num">01</span>
+          <h3 class="sub-h">El producto</h3>
+          <p class="body-text">Trabajé en la vertical de adquirencia de Mercado Pago, en un CRM interno utilizado por equipos comerciales de campo para la gestión de carteras de PYMEs.</p>
+        </div>
+        <div class="c-card">
+          <span class="c-num">02</span>
+          <h3 class="sub-h">El contexto</h3>
+          <p class="body-text">El producto cubre todo el ciclo comercial, desde la prospección hasta el mantenimiento de la base, en un contexto con muchos clientes por región y fuerte presión de ejecución en campo.</p>
+        </div>
+        <div class="c-card">
+          <span class="c-num">03</span>
+          <h3 class="sub-h">Mi enfoque</h3>
+          <p class="body-text">Mi enfoque fue mejorar la experiencia de priorización de visitas, una etapa central en la planificación diaria de los representantes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 CONTEXTO -->
+<section class="block" id="b02" data-stage="02" data-name="Contexto">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage problema">contexto</span>
+        <span class="stage-num">02</span>
+      </div>
+      <div class="b-split" style="grid-template-columns: 5fr 7fr;">
+        <div class="block-body">
+          <h2 data-reveal="up">Mejorando la experiencia de prioridades del CRM</h2>
+          <p class="body-text" data-reveal="up" data-d="1">La aplicación ya mostraba alertas de la cartera, pero requería navegar entre distintas pantallas para relacionarlas con los establecimientos y entender qué visitas debían realizarse ese día.</p>
+        </div>
+        <div class="img-slot" data-reveal="fade">
+          <picture>
+            <source srcset="../../assets/img/crm-alertas-antes-priorizacao.webp" type="image/webp">
+            <img src="../../assets/img/crm-alertas-antes-priorizacao.jpg" width="2240" height="1260" loading="lazy" alt="Pantalla antigua del CRM mostrando una lista de alertas de prioridad sin contexto para la planificación de visitas">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 INVESTIGACIÓN -->
+<section class="block" id="b03" data-stage="03" data-name="Investigación">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage discovery">investigación</span>
+        <span class="stage-num">03</span>
+      </div>
+      <div class="block-body block-body--split">
+        <h2 data-reveal="up">De la investigación a la oportunidad de producto</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Reuní los principales aprendizajes del discovery en un único mapa de la operación, conectando análisis del producto existente, coordinaciones con equipos asociados y conversaciones periódicas con los consultores comerciales. Esta síntesis orientó la definición de prioridades del proyecto y la mejora de la experiencia de gestión de visitas.</p>
+        <p class="body-text" data-reveal="up" data-d="2">Para estructurar este proceso, usé NotebookLM para organizar las fuentes del discovery, ayudando a enmarcar mejor el problema, mapear posibles restricciones y verificar la alineación con el PRD antes de avanzar hacia las direcciones de solución.</p>
+      </div>
+      <div class="img-slot full-slot" data-reveal="fade" style="aspect-ratio: 1640 / 1299; max-width: 840px; justify-self: center;">
+        <picture>
+          <source srcset="../../assets/img/mapa-operacao-discovery.webp" type="image/webp">
+          <img src="../../assets/img/mapa-operacao-discovery.jpg" loading="lazy" alt="Mapa de la operación creado durante el discovery sintetizando fuentes de demanda, problemas en la aplicación e impacto en la rutina de los consultores comerciales" style="object-fit: contain;">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 DIRECCIONES EXPLORADAS -->
+<section class="block" id="b04" data-stage="04" data-name="Direcciones exploradas">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage discovery">direcciones exploradas</span>
+        <span class="stage-num">04</span>
+      </div>
+      <div class="block-body">
+        <h2 data-reveal="up">Tres propuestas en baja fidelidad</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Para explorar las tres direcciones rápidamente, combiné una dinámica de Crazy 8s con stakeholders y Figma Make, transformando las ideas en prototipos reales en poco tiempo y sin comprometer el cronograma del proyecto.</p>
+      </div>
+      <div class="idea-grid full-slot" data-reveal="up" data-d="1">
+        <div class="c-card">
+          <span class="c-num">A</span>
+          <h3 class="sub-h">Mapa de visitas</h3>
+          <ul class="prob-list">
+            <li>✓ Visualiza la cartera geográficamente</li>
+            <li>✓ Planificación espacial</li>
+            <li>✕ Alta complejidad técnica</li>
+          </ul>
+        </div>
+        <div class="c-card" style="border-color: var(--accent-2);">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: var(--s-2);">
+            <span class="c-num" style="margin-bottom:0;">B</span>
+            <span style="font-family:var(--font-mono);font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-2);">Elegida</span>
+          </div>
+          <h3 class="sub-h">Agenda priorizada</h3>
+          <ul class="prob-list">
+            <li>✓ Organiza el día de trabajo</li>
+            <li>✓ Aprovecha datos existentes</li>
+            <li>✓ Menor esfuerzo de ingeniería</li>
+          </ul>
+        </div>
+        <div class="c-card">
+          <span class="c-num">C</span>
+          <h3 class="sub-h">Cartera priorizada</h3>
+          <ul class="prob-list">
+            <li>✓ Bajo costo</li>
+            <li>✕ Poco beneficio en la organización de visitas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 LA NUEVA EXPERIENCIA -->
+<section class="block" id="b05" data-stage="05" data-name="La nueva experiencia">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage discovery">la nueva experiencia</span>
+        <span class="stage-num">05</span>
+      </div>
+      <div class="block-body block-body--split">
+        <h2 data-reveal="up">La nueva experiencia centrada en la claridad</h2>
+        <p class="body-text" data-reveal="up" data-d="1">La nueva interfaz organizó el día del representante a través de una navegación por fechas, mostrando los niveles de prioridad y los motivos de las visitas directamente en la pantalla principal de agenda. Este diseño eliminó la necesidad de adivinar el próximo paso o buscar en perfiles individuales, permitiendo que el profesional entendiera el contexto y la urgencia de cada comerciante incluso antes de tocar la pantalla.</p>
+      </div>
+      <div class="img-slot full-slot" data-reveal="fade">
+        <picture>
+          <source srcset="../../assets/img/fluxo-agenda.webp" type="image/webp">
+          <img src="../../assets/img/fluxo-agenda.jpg" width="2240" height="1260" loading="lazy" alt="Flujo completo de la nueva experiencia de agenda mostrando la navegación por fechas y el listado de visitas con contexto de prioridad">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 REFINAMIENTO -->
+<section class="block" id="b06" data-stage="06" data-name="Refinamiento">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage solucao">refinamiento</span>
+        <span class="stage-num">06</span>
+      </div>
+      <div class="block-body block-body--split">
+        <h2 data-reveal="up">Refinando la experiencia para el lanzamiento</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Validé el prototipo con cinco representantes comerciales para confirmar si la nueva estructura de agenda era comprendida durante la planificación de visitas. Las pruebas mostraron que la navegación por fechas era intuitiva, pero aún existía la necesidad de abrir el perfil de cada cliente para entender por qué la visita había sido marcada como prioritaria.</p>
+        <p class="body-text" data-reveal="up" data-d="2">Antes de la implementación, incorporé esta información directamente en el listado a través de etiquetas, reduciendo un paso de navegación y haciendo la agenda más escaneable para la planificación del día.</p>
+        <p class="body-text" data-reveal="up" data-d="3">Usé NotebookLM para identificar los términos que más se repetían en las entrevistas, palabras que parecían reflejar el modelo mental de los consultores, y ChatGPT y Claude para transformar esos términos en variaciones de wording más accesibles para las etiquetas, alineadas con el lenguaje que ya usaban en su día a día.</p>
+        <div class="spec" style="margin-top: var(--s-5);" data-reveal="up" data-d="3">
+          <div>
+            <div class="s-label">Lanzamiento cross-market</div>
+            <div class="s-val">Brasil, Argentina y México, con adaptaciones de contenido e idioma adaptadas a cada mercado.</div>
+          </div>
+          <div>
+            <div class="s-label">Escala para gestores</div>
+            <div class="s-val">Versión de escritorio con contexto adaptado a la gestión de equipos de representantes.</div>
+          </div>
+        </div>
+      </div>
+      <p class="flow-title full-slot" data-reveal="up">Flujo · crear un agendamiento</p>
+      <div class="img-slot full-slot" data-reveal="fade" style="aspect-ratio: 2880 / 2158; margin-top: var(--s-2);">
+        <picture>
+          <source srcset="../../assets/img/fluxo-criar-agendamento.webp" type="image/webp">
+          <img src="../../assets/img/fluxo-criar-agendamento.jpg" loading="lazy" alt="Flujo completo de handoff de Figma para crear un agendamiento, desde la agenda hasta el formulario y la confirmación" style="object-fit: contain;">
+        </picture>
+      </div>
+      <p class="flow-title full-slot" data-reveal="up">Flujo · registrar una atención</p>
+      <div class="img-slot full-slot" data-reveal="fade" style="aspect-ratio: 2880 / 1783; margin-top: var(--s-2);">
+        <picture>
+          <source srcset="../../assets/img/fluxo-registrar-atendimento.webp" type="image/webp">
+          <img src="../../assets/img/fluxo-registrar-atendimento.jpg" loading="lazy" alt="Flujo completo de handoff de Figma para registrar una atención, desde el detalle de la visita hasta la confirmación del registro" style="object-fit: contain;">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 RESULTADO -->
+<section class="block" id="b07" data-stage="07" data-name="Resultado">
+  <div class="wrap">
+    <div class="block-grid">
+      <div data-reveal="up">
+        <span class="stage resultado">resultado</span>
+        <span class="stage-num">07</span>
+      </div>
+      <div class="block-body block-body--split">
+        <h2 data-reveal="up">Más productividad diaria y menos rotación en la cartera</h2>
+        <p class="body-text" data-reveal="up" data-d="1">Después del lanzamiento, la productividad diaria de los representantes creció un 15% y el churn de la cartera cayó un 5%. Con el motivo de cada prioridad visible en la agenda a través de las tags, el representante pasó a dedicar menos tiempo a abrir perfil por perfil y más tiempo en campo, lo que se reflejó en estos dos números. La agenda priorizada mantuvo un único comportamiento de producto para Brasil, México y Argentina, con adaptaciones puntuales de contenido e idioma en lugar de flujos paralelos por mercado, y se extendió a una versión de escritorio para que los gestores supervisaran equipos completos de representantes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<a class="next-case" href="case-portal-b2b-c6-bank.html" data-gtag-event="next_case_click" data-gtag-case="portal-c6-bank">
+  <div class="wrap">
+    <span class="next-kicker">Próximo caso</span>
+    <span class="next-title">Portal de gestión para comercios C6 Pay <span class="arrow">→</span></span>
+  </div>
+</a>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="f3-grid">
+      <h2 class="f-title">¿Tienes un <span class="hl">desafío</span><br>de producto?</h2>
+      <div class="f3-cta">
+        <p class="f-sub">Abierto a oportunidades como Product Designer, consultorías en UX/UI y proyectos de alto impacto.</p>
+        <a class="btn btn-primary magnet" href="https://wa.me/5511966101996?text=Hola%20Renan%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad" target="_blank" rel="noopener" data-gtag-event="whatsapp_click" data-gtag-location="case_footer">Contáctame →</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="close-ticker">
+      <span>São Paulo, Brasil</span>
+      <a href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener" data-gtag-event="linkedin_click" data-gtag-location="case_footer">linkedin.com/in/rnmrc90</a>
+    </div>
+    <div class="footer-rule"></div>
+    <p class="footer-copy">© 2026 Renan Marçal · São Paulo, Brasil</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+  }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  const bar = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
+  }, { passive: true });
+
+  // GA4 event tracking — ver docs/ANALYTICS.md antes de adicionar/alterar eventos
+  document.addEventListener('click', e => {
+    const el = e.target.closest('[data-gtag-event]');
+    if (!el || typeof gtag !== 'function') return;
+    const params = { page_lang: document.documentElement.lang };
+    for (const attr of el.attributes) {
+      if (attr.name.startsWith('data-gtag-') && attr.name !== 'data-gtag-event') {
+        params[attr.name.slice('data-gtag-'.length).replace(/-/g, '_')] = attr.value;
+      }
+    }
+    gtag('event', el.dataset.gtagEvent, params);
+  });
+})();
+</script>
+<script>
+(function () {
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduced.matches) return;
+
+  document.querySelectorAll('.magnet').forEach(function (btn) {
+    var x = 0, y = 0, vx = 0, vy = 0, dx = 0, dy = 0, raf = null;
+    var stiffness = 170, damping = 26;
+    var last = null;
+    btn.addEventListener('pointermove', function (e) {
+      var r = btn.getBoundingClientRect();
+      dx = (e.clientX - (r.left + r.width / 2)) * .18;
+      dy = (e.clientY - (r.top + r.height / 2)) * .3;
+      start();
+    });
+    btn.addEventListener('pointerleave', function () { dx = 0; dy = 0; start(); });
+    function start() { if (!raf) { last = performance.now(); raf = requestAnimationFrame(step); } }
+    function step(now) {
+      var dt = Math.min((now - last) / 1000, .032); last = now;
+      var ax = stiffness * (dx - x) - damping * vx;
+      var ay = stiffness * (dy - y) - damping * vy;
+      vx += ax * dt; vy += ay * dt;
+      x += vx * dt; y += vy * dt;
+      btn.style.transform = 'translate(' + x.toFixed(2) + 'px,' + y.toFixed(2) + 'px)';
+      if (Math.abs(dx - x) > .05 || Math.abs(dy - y) > .05 || Math.abs(vx) > .05 || Math.abs(vy) > .05) {
+        raf = requestAnimationFrame(step);
+      } else {
+        x = dx; y = dy; vx = 0; vy = 0;
+        btn.style.transform = dx === 0 && dy === 0 ? '' : 'translate(' + dx + 'px,' + dy + 'px)';
+        raf = null;
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
