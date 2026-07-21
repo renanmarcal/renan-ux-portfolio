@@ -1,0 +1,227 @@
+{
+  "site": "https://renanmarcal.com",
+  "analytics": {
+    "ga4MeasurementId": "G-M66N19ZT36",
+    "clarityProjectId": "xl7ajvipib"
+  },
+  "routes": [
+    {
+      "id": "home-pt",
+      "source": "index.html",
+      "output": "index.html",
+      "url": "/",
+      "indexable": true,
+      "analytics": true,
+      "lang": "pt-BR",
+      "title": "Renan Marçal — Product Designer · Fintech e B2B",
+      "canonical": "https://renanmarcal.com",
+      "ogUrl": "https://renanmarcal.com",
+      "ogImage": "https://renanmarcal.com/assets/img/og-hero-pt.jpg",
+      "alternates": {
+        "pt": "https://renanmarcal.com/",
+        "en": "https://renanmarcal.com/en/",
+        "es": "https://renanmarcal.com/es/",
+        "x-default": "https://renanmarcal.com/"
+      }
+    },
+    {
+      "id": "home-en",
+      "source": "en/index.html",
+      "output": "en/index.html",
+      "url": "/en/",
+      "indexable": true,
+      "analytics": true,
+      "lang": "en",
+      "title": "Renan Marçal — Product Designer · Fintech & B2B",
+      "canonical": "https://renanmarcal.com/en/",
+      "ogUrl": "https://renanmarcal.com/en/",
+      "ogImage": "https://renanmarcal.com/assets/img/og-hero-en.jpg",
+      "alternates": {
+        "pt": "https://renanmarcal.com/",
+        "en": "https://renanmarcal.com/en/",
+        "es": "https://renanmarcal.com/es/",
+        "x-default": "https://renanmarcal.com/"
+      }
+    },
+    {
+      "id": "home-es",
+      "source": "es/index.html",
+      "output": "es/index.html",
+      "url": "/es/",
+      "indexable": true,
+      "analytics": true,
+      "lang": "es",
+      "title": "Renan Marçal — Product Designer · Fintech y B2B",
+      "canonical": "https://renanmarcal.com/es/",
+      "ogUrl": "https://renanmarcal.com/es/",
+      "ogImage": "https://renanmarcal.com/assets/img/og-hero-es.jpg",
+      "alternates": {
+        "pt": "https://renanmarcal.com/",
+        "en": "https://renanmarcal.com/en/",
+        "es": "https://renanmarcal.com/es/",
+        "x-default": "https://renanmarcal.com/"
+      }
+    },
+    {
+      "id": "portal-c6-pt",
+      "source": "cases/case-portal-b2b-c6-bank.html",
+      "output": "cases/case-portal-b2b-c6-bank.html",
+      "url": "/cases/case-portal-b2b-c6-bank.html",
+      "indexable": true,
+      "analytics": true,
+      "lang": "pt-BR",
+      "title": "Portal C6 Pay, estudo de caso de design de produto · Renan Marçal",
+      "canonical": "https://renanmarcal.com/cases/case-portal-b2b-c6-bank.html",
+      "ogUrl": "https://renanmarcal.com/cases/case-portal-b2b-c6-bank.html",
+      "ogImage": "https://renanmarcal.com/assets/img/portal-c6-saude-financeira.jpg"
+    },
+    {
+      "id": "portal-c6-en",
+      "source": "en/cases/case-portal-b2b-c6-bank.html",
+      "output": "en/cases/case-portal-b2b-c6-bank.html",
+      "url": "/en/cases/case-portal-b2b-c6-bank.html",
+      "indexable": true,
+      "analytics": true,
+      "lang": "en",
+      "title": "C6 Pay management portal, product design case study · Renan Marçal",
+      "canonical": "https://renanmarcal.com/en/cases/case-portal-b2b-c6-bank.html",
+      "ogUrl": "https://renanmarcal.com/en/cases/case-portal-b2b-c6-bank.html",
+      "ogImage": "https://renanmarcal.com/assets/img/portal-c6-saude-financeira.jpg"
+    },
+    {
+      "id": "portal-c6-es",
+      "source": "es/cases/case-portal-b2b-c6-bank.html",
+      "output": "es/cases/case-portal-b2b-c6-bank.html",
+      "url": "/es/cases/case-portal-b2b-c6-bank.html",
+      "indexable": true,
+      "analytics": true,
+      "lang": "es",
+      "title": "Portal de gestión C6 Pay, estudio de caso de diseño de producto · Renan Marçal",
+      "canonical": "https://renanmarcal.com/es/cases/case-portal-b2b-c6-bank.html",
+      "ogUrl": "https://renanmarcal.com/es/cases/case-portal-b2b-c6-bank.html",
+      "ogImage": "https://renanmarcal.com/assets/img/portal-c6-saude-financeira.jpg"
+    },
+    {
+      "id": "priorizacao-visitas-pt",
+      "source": "cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "output": "cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "url": "/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "indexable": true,
+      "analytics": true,
+      "lang": "pt-BR",
+      "title": "Priorização de visitas comerciais no Mercado Pago · Renan Marçal",
+      "canonical": "https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "ogUrl": "https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "ogImage": "https://renanmarcal.com/assets/img/thumb-priorizacao-visitas-comerciais.jpg"
+    },
+    {
+      "id": "priorizacao-visitas-en",
+      "source": "en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "output": "en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "url": "/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "indexable": true,
+      "analytics": true,
+      "lang": "en",
+      "title": "Sales visit prioritization at Mercado Pago, product design case study · Renan Marçal",
+      "canonical": "https://renanmarcal.com/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "ogUrl": "https://renanmarcal.com/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "ogImage": "https://renanmarcal.com/assets/img/thumb-priorizacao-visitas-comerciais.jpg"
+    },
+    {
+      "id": "priorizacao-visitas-es",
+      "source": "es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "output": "es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "url": "/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "indexable": true,
+      "analytics": true,
+      "lang": "es",
+      "title": "Priorización de visitas comerciales en Mercado Pago, estudio de caso de diseño · Renan Marçal",
+      "canonical": "https://renanmarcal.com/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "ogUrl": "https://renanmarcal.com/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+      "ogImage": "https://renanmarcal.com/assets/img/thumb-priorizacao-visitas-comerciais.jpg"
+    },
+    {
+      "id": "landing-pages-hidden-pt",
+      "source": "cases/case-landing-pages-checkout-mercado-pago.html",
+      "output": "cases/case-landing-pages-checkout-mercado-pago.html",
+      "url": "/cases/case-landing-pages-checkout-mercado-pago.html",
+      "indexable": false,
+      "analytics": false,
+      "lang": "pt-BR",
+      "title": "Sistema de landing pages do Mercado Pago · Renan Marçal",
+      "canonical": "https://renanmarcal.com/cases/case-landing-pages-checkout-mercado-pago.html",
+      "ogUrl": "https://renanmarcal.com/cases/case-landing-pages-checkout-mercado-pago.html",
+      "ogImage": "https://renanmarcal.com/assets/img/lps-componentes.png"
+    },
+    {
+      "id": "not-found",
+      "source": "404.html",
+      "output": "404.html",
+      "url": "/404.html",
+      "indexable": false,
+      "analytics": true,
+      "lang": "pt-BR",
+      "title": "Página não encontrada · Renan Marçal"
+    }
+  ],
+  "translationGroups": [
+    {
+      "id": "portal-c6",
+      "routeIds": ["portal-c6-pt", "portal-c6-en", "portal-c6-es"],
+      "alternates": {
+        "pt": "https://renanmarcal.com/cases/case-portal-b2b-c6-bank.html",
+        "en": "https://renanmarcal.com/en/cases/case-portal-b2b-c6-bank.html",
+        "es": "https://renanmarcal.com/es/cases/case-portal-b2b-c6-bank.html",
+        "x-default": "https://renanmarcal.com/cases/case-portal-b2b-c6-bank.html"
+      }
+    },
+    {
+      "id": "priorizacao-visitas",
+      "routeIds": ["priorizacao-visitas-pt", "priorizacao-visitas-en", "priorizacao-visitas-es"],
+      "alternates": {
+        "pt": "https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+        "en": "https://renanmarcal.com/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+        "es": "https://renanmarcal.com/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html",
+        "x-default": "https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html"
+      }
+    }
+  ],
+  "sitemap": {
+    "source": "sitemap.xml",
+    "output": "sitemap.xml",
+    "url": "/sitemap.xml",
+    "routeIds": [
+      "home-pt",
+      "home-en",
+      "home-es",
+      "portal-c6-pt",
+      "portal-c6-en",
+      "portal-c6-es",
+      "priorizacao-visitas-pt",
+      "priorizacao-visitas-en",
+      "priorizacao-visitas-es"
+    ]
+  },
+  "passthrough": [
+    {
+      "source": "planilha-mei-limite/index.html",
+      "output": "planilha-mei-limite/index.html",
+      "url": "/planilha-mei-limite/"
+    },
+    {
+      "source": "robots.txt",
+      "output": "robots.txt",
+      "url": "/robots.txt"
+    },
+    {
+      "source": "llms.txt",
+      "output": "llms.txt",
+      "url": "/llms.txt"
+    },
+    {
+      "source": "BingSiteAuth.xml",
+      "output": "BingSiteAuth.xml",
+      "url": "/BingSiteAuth.xml"
+    }
+  ]
+}
