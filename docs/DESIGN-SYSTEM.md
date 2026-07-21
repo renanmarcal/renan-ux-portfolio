@@ -2,6 +2,8 @@
 
 Tokens e componentes decididos para o portfólio. Fonte de verdade para qualquer trabalho de design — antes de propor algo novo, checar se já existe aqui. Atualizar este arquivo sempre que uma decisão visual for tomada (ver `docs/DECISIONS.md` para o porquê de cada uma).
 
+**2026-07-20**: todos os tokens abaixo (cor, tipografia base, escala de espaçamento, escala de labels) vivem em `tokens.css`, arquivo único linkado por `index.html`/`en/index.html`/`es/index.html`/`404.html` e importado (`@import`) no topo de `case.css` — este último herda para todos os `cases/*.html` nas 3 línguas automaticamente. Antes, `index.html` e `case.css` mantinham cada um seu próprio `:root` com os mesmos valores copiados manualmente; uma mudança de token não propagava entre os dois. Editar um token agora é editar `tokens.css` uma vez — nunca redefinir essas variáveis em outro lugar. `case.css` mantém só as 5 variáveis exclusivas de página de case (`--topbar-bg`, `--fs-case-section-title`, `--fs-case-narrative`, `--fs-case-card-title`, `--fs-case-card-body`), que não fazem sentido no `tokens.css` compartilhado.
+
 ## Tokens de cor
 
 ```css

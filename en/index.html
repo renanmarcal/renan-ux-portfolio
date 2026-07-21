@@ -27,6 +27,7 @@
 <link rel="alternate" hreflang="x-default" href="https://renanmarcal.com/">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../assets/img/renan-avatar.webp" as="image" fetchpriority="high" type="image/webp">
+<link rel="stylesheet" href="../tokens.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,25 +75,6 @@
     })(window, document, "clarity", "script", "xl7ajvipib");
 </script>
 <style>
-:root {
-  --paper:    #f3efe7;
-  --paper-2:  #ece7dc;
-  --card:     #faf7f2;
-  --ink:      #1c1916;
-  --ink-soft: #5c554b;
-  --ink-faint:#6a6052;
-  --line:     #d8d0c0;
-  --accent:   #b8451f;
-  --accent-2: #2f5d50;
-  --font-sans: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'Figtree', sans-serif;
-  --s-1:   8px;  --s-2:  16px; --s-3:  24px; --s-4:  32px; --s-5:  40px;
-  --s-6:  48px;  --s-7:  64px; --s-8:  80px; --s-9:  96px; --s-10: 120px;
-  --s-11: 128px;
-  --fs-label: 11px;
-  --ls-label-wide: .14em;
-  --ls-label-tight: .08em;
-}
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -333,6 +315,7 @@ body {
   .cases-header { margin-bottom: var(--s-4); }
   .case-grid { grid-template-columns: 1fr; }
   .case-info { padding: var(--s-3) var(--s-3) var(--s-3); }
+  .case-desc, .metric-inline { font-size: 16px; }
 }
 
 .case-info {
@@ -353,13 +336,13 @@ body {
   margin-bottom: var(--s-2);
 }
 .case-desc {
-  font-size: 14px; color: var(--ink-soft); line-height: 1.5;
+  font-size: 18px; color: var(--ink-soft); line-height: 1.5;
   margin-bottom: var(--s-3);
 }
 .case-metrics {
   display: flex; flex-direction: column; gap: var(--s-1); flex: 1; align-items: stretch;
 }
-.metric-inline { font-size: 14px; line-height: 1.5; }
+.metric-inline { font-size: 18px; line-height: 1.5; }
 .metric-inline .m-val { font-family: 'Work Sans', sans-serif; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
 .metric-inline .m-label { color: var(--ink-soft); }
 .case-invite {
@@ -432,7 +415,7 @@ body {
   line-height: 1; margin-bottom: var(--s-3);
 }
 .pillar-desc {
-  font-size: 14px; color: var(--ink-soft);
+  font-size: 18px; color: var(--ink-soft);
   line-height: 1.5;
   max-width: 26ch;
 }
@@ -441,6 +424,7 @@ body {
   .pillars-grid { grid-template-columns: 1fr; }
   .pillar { padding: var(--s-4) 0; border-right: none; border-bottom: 1px solid var(--line); }
   .pillar:last-child { border-bottom: none; }
+  .pillar-desc { font-size: 16px; }
 }
 
 /* ─── language switcher ─── */
