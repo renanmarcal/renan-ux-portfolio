@@ -1,0 +1,18 @@
+export interface PrioritizationCaseData {
+  lang: string;
+  locale: "pt" | "en" | "es";
+  ogLocale: string;
+  title: string;
+  description: string;
+  canonical: string;
+  ogImageAlt: string;
+  skipLink: string;
+  crumb: string;
+  footer: { titleBefore: string; titleHighlight: string; titleAfter: string; description: string; whatsappUrl: string; whatsappLabel: string; location: string; copyright: string; };
+}
+
+export const prioritizationCases: Record<"pt" | "en" | "es", PrioritizationCaseData> = {
+  pt: { lang: "pt-BR", locale: "pt", ogLocale: "pt_BR", title: "Priorização de visitas comerciais no Mercado Pago · Renan Marçal", description: "Estudo de caso de UX: redesenho da priorização de visitas comerciais no CRM interno do Mercado Pago para representantes de campo no Brasil, México e Argentina.", canonical: "https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html", ogImageAlt: "Mockup do aplicativo de priorização de visitas comerciais do Mercado Pago mostrando a agenda e o detalhe de visita", skipLink: "Pular para o conteúdo", crumb: "Priorização de visitas", footer: { titleBefore: "Tem um ", titleHighlight: "desafio", titleAfter: "de produto?", description: "Aberto a oportunidades como Product Designer, consultorias em UX/UI e projetos alto impacto.", whatsappUrl: "https://wa.me/5511966101996?text=Oi%20Renan%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade", whatsappLabel: "Entrar em contato →", location: "São Paulo, Brasil", copyright: "© 2026 Renan Marçal · São Paulo, Brasil" } },
+  en: { lang: "en", locale: "en", ogLocale: "en_US", title: "Sales visit prioritization at Mercado Pago, product design case study · Renan Marçal", description: "UX case study: redesign of sales visit prioritization in Mercado Pago's internal CRM for field representatives in Brazil, Mexico, and Argentina.", canonical: "https://renanmarcal.com/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html", ogImageAlt: "Mockup of the Mercado Pago visit prioritization app showing the schedule and visit detail", skipLink: "Skip to content", crumb: "Visit prioritization", footer: { titleBefore: "Got a ", titleHighlight: "challenge", titleAfter: "with your product?", description: "Open to opportunities as a Product Designer, UX/UI consulting, and high-impact projects.", whatsappUrl: "https://wa.me/5511966101996?text=Hi%20Renan%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20an%20opportunity", whatsappLabel: "Get in touch →", location: "São Paulo, Brazil", copyright: "© 2026 Renan Marçal · São Paulo, Brazil" } },
+  es: { lang: "es", locale: "es", ogLocale: "es_ES", title: "Priorización de visitas comerciales en Mercado Pago, estudio de caso de diseño · Renan Marçal", description: "Estudio de caso de UX: rediseño de la priorización de visitas comerciales en el CRM interno de Mercado Pago para representantes de campo en Brasil, México y Argentina.", canonical: "https://renanmarcal.com/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html", ogImageAlt: "Mockup de la app de priorización de visitas de Mercado Pago mostrando la agenda y el detalle de visita", skipLink: "Saltar al contenido", crumb: "Priorización de visitas", footer: { titleBefore: "¿Tienes un ", titleHighlight: "desafío", titleAfter: "de producto?", description: "Abierto a oportunidades como Product Designer, consultorías en UX/UI y proyectos de alto impacto.", whatsappUrl: "https://wa.me/5511966101996?text=Hola%20Renan%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad", whatsappLabel: "Contáctame →", location: "São Paulo, Brasil", copyright: "© 2026 Renan Marçal · São Paulo, Brasil" } }
+};

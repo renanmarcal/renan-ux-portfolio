@@ -1,0 +1,32 @@
+<script is:inline>
+  (function(){
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+    const bar = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+      bar.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + '%';
+    }, { passive: true });
+    document.addEventListener('click', e => {
+      const el = e.target.closest('[data-gtag-event]');
+      if (!el || typeof gtag !== 'function') return;
+      const params = { page_lang: document.documentElement.lang };
+      for (const attr of el.attributes) if (attr.name.startsWith('data-gtag-') && attr.name !== 'data-gtag-event') params[attr.name.slice('data-gtag-'.length).replace(/-/g, '_')] = attr.value;
+      gtag('event', el.dataset.gtagEvent, params);
+    });
+  })();
+</script>
+<script is:inline>
+  (function () {
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)'); if (reduced.matches) return;
+    document.querySelectorAll('.magnet').forEach(function (btn) {
+      var x=0,y=0,vx=0,vy=0,dx=0,dy=0,raf=null,stiffness=170,damping=26,last=null;
+      btn.addEventListener('pointermove',function(e){var r=btn.getBoundingClientRect();dx=(e.clientX-(r.left+r.width/2))*.18;dy=(e.clientY-(r.top+r.height/2))*.3;start();});
+      btn.addEventListener('pointerleave',function(){dx=0;dy=0;start();});
+      function start(){if(!raf){last=performance.now();raf=requestAnimationFrame(step);}}
+      function step(now){var dt=Math.min((now-last)/1000,.032);last=now;var ax=stiffness*(dx-x)-damping*vx,ay=stiffness*(dy-y)-damping*vy;vx+=ax*dt;vy+=ay*dt;x+=vx*dt;y+=vy*dt;btn.style.transform='translate('+x.toFixed(2)+'px,'+y.toFixed(2)+'px)';if(Math.abs(dx-x)>.05||Math.abs(dy-y)>.05||Math.abs(vx)>.05||Math.abs(vy)>.05)raf=requestAnimationFrame(step);else{x=dx;y=dy;vx=0;vy=0;btn.style.transform=dx===0&&dy===0?'':'translate('+dx+'px,'+dy+'px)';raf=null;}}
+    });
+  })();
+</script>

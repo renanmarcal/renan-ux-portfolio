@@ -1,0 +1,37 @@
+---
+import AnalyticsHead from "../components/AnalyticsHead.astro";
+import CaseBehavior from "../components/scripts/CaseBehavior.astro";
+import "../styles/case.css";
+
+interface Props { lang: string; ogLocale: string; title: string; description: string; canonical: string; ogImageAlt: string; }
+const { lang, ogLocale, title, description, canonical, ogImageAlt } = Astro.props;
+const ogImage = "https://renanmarcal.com/assets/img/thumb-priorizacao-visitas-comerciais.jpg";
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&family=Figtree:wght@400;500;600&display=swap" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:site_name" content="Renan Marçal" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta property="og:url" content={canonical} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="pt" href="https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html" />
+    <link rel="alternate" hreflang="en" href="https://renanmarcal.com/en/cases/case-priorizacao-visitas-comerciais-mercado-pago.html" />
+    <link rel="alternate" hreflang="es" href="https://renanmarcal.com/es/cases/case-priorizacao-visitas-comerciais-mercado-pago.html" />
+    <link rel="alternate" hreflang="x-default" href="https://renanmarcal.com/cases/case-priorizacao-visitas-comerciais-mercado-pago.html" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <AnalyticsHead />
+  </head>
+  <body><slot /><CaseBehavior /></body>
+</html>

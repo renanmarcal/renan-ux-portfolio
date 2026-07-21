@@ -1,0 +1,5 @@
+---
+interface Props { locale: "pt" | "en" | "es"; titleBefore: string; titleHighlight: string; titleAfter: string; description: string; whatsappUrl: string; whatsappLabel: string; location: string; copyright: string; }
+const data = Astro.props;
+---
+<footer class="footer"><div class="wrap footer-inner"><div class="f3-grid"><h2 class="f-title">{data.titleBefore}<span class="hl">{data.titleHighlight}</span><br />{data.titleAfter}</h2><div class="f3-cta"><p class="f-sub">{data.description}</p><a class="btn btn-primary magnet" href={data.whatsappUrl} target="_blank" rel="noopener" data-gtag-event="whatsapp_click" data-gtag-location="case_footer">{data.whatsappLabel}</a></div></div></div><div class="wrap"><div class="close-ticker"><span>{data.location}</span><a href="https://linkedin.com/in/rnmrc90" target="_blank" rel="noopener" data-gtag-event="linkedin_click" data-gtag-location="case_footer">linkedin.com/in/rnmrc90</a></div><div class="footer-rule"></div><p class="footer-copy">{data.copyright}</p></div></footer>
